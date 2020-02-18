@@ -1,13 +1,13 @@
 import React from 'react';
-import './asset/css/style.css';
+//import PizzaMenu from './PizzaMenu/MenuMain';
+import Route from './Route/route';
 
 function App() {
   return (
-    <html className="App">
-      
-
-      
-    </html>
+    <div className="App">
+     <Route />
+       
+    </div>
   );
 }
 
