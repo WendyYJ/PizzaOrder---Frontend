@@ -1,11 +1,13 @@
 import React from 'react';
-//import PizzaMenu from './PizzaMenu/MenuMain';
-import Route from './Route/route';
+import PizzaMenu from './PizzaMenu/PizzaMenu';
+// import Route from './Route/route';
 
 function App() {
   return (
     <div className="App">
-     <Route />
+      <p>Hello Hello </p>
+      <PizzaMenu />
+      
        
     </div>
   );

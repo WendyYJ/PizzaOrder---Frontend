@@ -9,6 +9,7 @@
     "helmet": "^3.21.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
     "sass": "^1.25.0"
   },
@@ -34,17 +35,6 @@
     ]
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/WendyYJ/PizzaOrder---Frontend.git"
-  },
-  "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/WendyYJ/PizzaOrder---Frontend/issues"
-  },
-  "homepage": "https://github.com/WendyYJ/PizzaOrder---Frontend#readme"
+  "license": "ISC"
 }
