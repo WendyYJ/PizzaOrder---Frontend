@@ -5,9 +5,7 @@ import Filter from './PizzaMenu//Filter';
 function App() {
   return (
     <div className="App">
- 
-      {/* <Filter /> */}
-      <PizzaMenu/>
+      <PizzaMenu />
       
        
 

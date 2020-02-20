@@ -1,18 +1,17 @@
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap");
+@import './theme';
+
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-body {
-  background-color: #3F3F3F;
+body{
+  background-color: $smokegrey;
 }
 
-.Menu-container {
-  background: #3F3F3F;
-  height: 100px;
-  position: relative;
+.Menu-container{
+  background: $smokegrey;
+	height: 100px;
+	position: relative;
 }
 
 header h3 {
@@ -21,10 +20,10 @@ header h3 {
   top: 13px;
   color: #D94F2B;
   size: 6px;
-  font-family: "Pacifico", cursive;
+  font-family: $logo;
 }
 
-nav {
+nav{
   border: solid 1px white;
   background-color: transparent;
   width: 200px;
@@ -35,15 +34,15 @@ nav {
   left: 35px;
 }
 
-nav p {
+nav p{
   color: white;
   font-size: 12px;
   margin-left: 20px;
-  margin-top: 7px;
-  font-family: "Josefin Sans", sans-serif;
+  margin-top: -5px;
+  font-family: $body;
 }
 
-sidebar ul {
+sidebar ul{
   list-style: none;
   position: relative;
   top: -10px;
@@ -52,78 +51,78 @@ sidebar ul {
   color: white;
   font-size: 15px;
   margin-bottom: 55px;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: $body;
 }
-
-li a {
+ 
+li a{
   color: white;
   text-decoration: none;
 }
 
-menu h1 {
+menu h1{
   position: relative;
   text-align: center;
   top: -450px;
   left: -20px;
   color: white;
-  font-family: "Abril Fatface", cursive;
+  font-family: $heading;
 }
 
-sample h2 {
+sample h2{
   position: relative;
   bottom: 300px;
   left: 10%;
   text-align: center;
-  color: #FDBC2C;
-  font-family: "Josefin Sans", sans-serif;
+  color:#FDBC2C;
+  font-family: $body;
 }
 
-cart {
+cart{
   float: right;
   position: relative;
-  bottom: 720px;
+  bottom: 740px; 
   right: 5%;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: $body;
 }
 
-cart h2 {
-  color: #FDBC2C;
+cart h2{
+  color:#FDBC2C;
 }
 
-cart ul {
+cart ul{
   list-style: none;
-  position: relative;
+  position: relative; 
 }
 
-cart h4 {
+cart h4{
   color: #FDBC2C;
 }
 
-cart h3 {
+cart h3{
   color: #D94F2B;
 }
 
-cart span {
+cart span{
   margin-left: 40px;
 }
 
-.viewCart-btn {
+.viewCart-btn{
   border: solid 1px #FDBC2C;
   background-color: black;
-  color: #FDBC2C;
   font-size: 9px;
   padding: 7px 10px 7px 2px;
   width: 200px;
   margin-bottom: 7px;
 }
 
-.checkout-btn {
+
+.checkout-btn{
   border: solid 1px #FDBC2C;
   background-color: #FDBC2C;
-  color: black;
   font-size: 9px;
   padding: 7px 10px 7px 2px;
   width: 200px;
 }
 
-/*# sourceMappingURL=pizzamenu.css.map */
+
+

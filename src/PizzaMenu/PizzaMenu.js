@@ -1,29 +1,17 @@
 import React from 'react';
-import '../PizzaMenu/Style/PizzaMenu.css';
-import { NavLink } from 'react-router-dom';
-import PIZZAMENU_URL from '../Route/route';
-import HOME_URL from '../Route/route';
-import PIZZABUILDER_URL from '../Route/route';
-import BLOG_URL from '../Route/route';
-import PAGES_URL from '../Route/route';
-import ABOUTUS_URL from '../Route/route';
-import CONTACT_URL from '../Route/route';
-import LOGIN_URL from '../Route/route';
-import MYACCOUNT_URL from '../Route/route';
-import CHECKOUT_URL from '../Route/route';
+import '../PizzaMenu/Style/pizzamenu.scss';
+import { NavLink, Link } from 'react-router-dom';
+import { PIZZAMENU_URL, HOME_URL, PIZZABUILDER_URL, BLOG_URL, ABOUTUS_URL, PAGES_URL, CONTACT_URL,LOGIN_URL, MYACCOUNT_URL, CHECKOUT_URL} from '../Route/URLMap';
+import Header from '../PizzaMenu/Components/Header';
 
 
 const PizzaMenu = () => {
+  
   return (
     <div className="Menu-container">
-     
-      <header>
-        <h3>Margherita</h3> 
-      </header>
+    
+      <Header />
       
-      <nav>
-        <p>Search</p> 
-      </nav>
         
       <sidebar>
          <ul>
@@ -76,8 +64,8 @@ const PizzaMenu = () => {
           </ul><br></br>
 
           <h3>Order Total <span>$79.00</span></h3>
-          <button className="viewCart-btn">VIEW SHOPPING CART</button><br></br>
-          <button className="checkout-btn">CHECKOUT</button>
+          <button className="viewCart-btn"><Link style={{color: "#FDBC2C", textDecoration: "none"}}to={MYACCOUNT_URL}>VIEW SHOPPING CART</Link></button><br></br>
+          <button className="checkout-btn"><Link style={{color: "black", textDecoration: "none"}}to={CHECKOUT_URL}>CHECKOUT</Link></button>
     </cart>
 
     </div>
