@@ -30,7 +30,7 @@ nav{
   height: 30px;
   margin-left: 10px;
   position: relative;
-  top: -35px;
+  top: -60px;
   left: 35px;
   
   p{
@@ -42,13 +42,16 @@ nav{
   }
 }
 
+sidebar{
+  background-color: #3F3F3F;
+}
+
 sidebar ul{
   list-style: none;
   position: relative;
-  top: -10px;
+  top: -30px;
   left: 1px;
   line-height: 40px;
-  color: white;
   font-size: 15px;
   margin-bottom: 55px;
   font-family: $body;
@@ -85,19 +88,23 @@ cart{
   bottom: 740px; 
   right: 5%;
   font-family: $body;
-  text-align:left;
+  
 
   p{
       color: white;
       font-size: 10px;
       font-family: $body;
     }
+
   span{
     color: $flame;
   }
 
   h2{
     color:#FDBC2C;
+    position: relative;
+    top: 2px;
+    left: -30px;
   }
 
   ul{
@@ -107,6 +114,8 @@ cart{
 
   h4{
     color: #FDBC2C;
+    position: relative;
+      top: 20px;
   }
 
   h3{
