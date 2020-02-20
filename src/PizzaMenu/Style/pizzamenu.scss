@@ -5,11 +5,11 @@
 }
 
 body{
-  background-color: $smokegrey;
+  background-color: black;
 }
 
 .Menu-container{
-  background: $smokegrey;
+  background: black;
 	height: 100px;
 	position: relative;
 }
@@ -32,14 +32,14 @@ nav{
   position: relative;
   top: -35px;
   left: 35px;
-}
-
-nav p{
-  color: white;
-  font-size: 12px;
-  margin-left: 20px;
-  margin-top: -5px;
-  font-family: $body;
+  
+  p{
+    color: white;
+    font-size: 12px;
+    margin-left: 20px;
+    margin-top: -5px;
+    font-family: $body;
+  }
 }
 
 sidebar ul{
@@ -83,7 +83,18 @@ cart{
   bottom: 740px; 
   right: 5%;
   font-family: $body;
-}
+  text-align:left;
+
+  p{
+      color: white;
+      size: 2px;
+      font-family: $body;
+    }
+  span{
+    color: $flame;
+  }
+  }
+
 
 cart h2{
   color:#FDBC2C;
