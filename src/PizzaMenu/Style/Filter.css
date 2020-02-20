@@ -1,0 +1,119 @@
+.maincontainer{
+    width: 100%;
+  
+ 
+    background: rgb(44, 39, 39);
+}
+.icon{
+    color:orangered;
+  
+}
+
+.headercontainer{
+    width:60%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3%;
+}
+.headercontainer h2{
+color: orangered;
+font-size:1em;
+font-family: Georgia;
+margin-top: 0;
+
+}
+.filtercontainer{
+margin-top: 1%;
+    width:60%;
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    background:black;
+    border-top: 5px solid orangered;
+
+}
+
+.checkboxcontainer{
+    display: flex;
+    margin-bottom: 1em;
+    padding: 2% 1px 7px 5%;
+  
+    
+}
+.listcontainer{
+    width:25%
+}
+label { color:#FFF; }
+input[type="checkbox"]:checked + label {
+    color: orangered;
+}
+input[type="checkbox"]{
+    margin-bottom: 1em;
+    margin-right: 1em;
+}
+h1{
+    color:#FFF;
+    font-size: 0.9em;
+    height: 4%;
+}
+
+.veggiecontainer{
+    display: flex;
+    width: 25%;
+ 
+}
+.btncontainer{
+ text-align: center;
+
+
+}
+
+
+.filter-btn{
+    border: solid 1px gold;
+    background-color: gold;
+    color: black;
+    font-size: 11px;
+    padding: 7px 10px 7px 2px;
+    width: 200px;
+    margin-bottom: 1em;
+ 
+
+  
+ 
+  }
+  .pizzacontainer{
+      width:60%;
+      height:50%;
+      display: flex;
+      margin: auto;
+  }
+
+  .pizza{
+      width: 25%;
+
+      padding: 2% 1px 7px 2%;
+      text-align: center;
+  }
+  .pizza h2{
+   font-size:0.9em;
+   color: rgb(231, 161, 9);
+}
+
+.pizza p{
+    font-size:0.7em;
+    color: white;
+ }
+
+ .pizza h3{
+    font-size:0.8em;
+    color: orangered;
+ }
+ .dot {
+    height: 120px;
+    width: 120px;
+    background-color: orangered;
+    border-radius: 50%;
+    display: inline-block;
+  }
