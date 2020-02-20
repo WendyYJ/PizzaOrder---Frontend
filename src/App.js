@@ -5,7 +5,6 @@ import PizzaMenu from './PizzaMenu/PizzaMenu';
 function App() {
   return (
     <div className="App">
-      <p>Hello Hello </p>
       <PizzaMenu />
       
        
