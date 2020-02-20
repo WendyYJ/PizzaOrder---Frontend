@@ -17,10 +17,11 @@ body{
 header h3 {
   position: relative;
   left: 45%;
-  top: 13px;
+  top: 2px;
   color: #D94F2B;
   size: 6px;
   font-family: $logo;
+  height: 3px;
 }
 
 nav{
@@ -30,7 +31,7 @@ nav{
   height: 30px;
   margin-left: 10px;
   position: relative;
-  top: -60px;
+  top: -45px;
   left: 35px;
   
   p{
@@ -49,7 +50,7 @@ sidebar{
 sidebar ul{
   list-style: none;
   position: relative;
-  top: -30px;
+  top: -20px;
   left: 1px;
   line-height: 40px;
   font-size: 15px;
@@ -85,7 +86,7 @@ h2{
 cart{
   float: right;
   position: relative;
-  bottom: 740px; 
+  bottom: 720px; 
   right: 5%;
   font-family: $body;
   

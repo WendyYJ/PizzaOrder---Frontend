@@ -86,6 +86,11 @@ cart {
   font-family: "Josefin Sans", sans-serif;
 }
 
+cart p{
+  color: white;
+  size: 8px;
+}
+
 cart h2 {
   color: #FDBC2C;
 }
@@ -106,6 +111,7 @@ cart h3 {
 cart span {
   margin-left: 40px;
 }
+
 
 .viewCart-btn {
   border: solid 1px #FDBC2C;

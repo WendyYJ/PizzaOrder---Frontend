@@ -1,14 +1,19 @@
 import React from 'react';
 
-  import PizzaMenu from './Menu';
-  import PeriPeri from './Sample';
 
-  function Main() {
+  const Main = () => {
     return (
-      <main>
-        <Menu />
-        <Sample />
-      </main>
+    <div className="menumain">
+     <menu>
+      <h1>PIZZA MENU</h1> 
+      
+     </menu>
+     <sample>
+      <h2>Peri-Peri</h2> 
+      <i className="fal fa-circle" />
+      
+      </sample>
+    </div>
     );
   }
 

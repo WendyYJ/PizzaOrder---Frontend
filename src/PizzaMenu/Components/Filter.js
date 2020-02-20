@@ -1,29 +1,23 @@
 import React from 'react';
-import '../PizzaMenu/Style/Filter.css';
+import '.././Style/Filter.css';
 import MenuIcon from '@material-ui/icons/Menu';
 
 
 function Filter(props){
-
-
-
-
 	return (
+			<section className="maincontainer">
+			  <div className="headercontainer">
+					<div className="iconcontainer">
+					<MenuIcon   fontSize="small" className="icon"/>
+					</div>
+			   <div>
+						<h2>FILTER</h2>
+				 </div>
+			  </div>
+			<section className="filtercontainer">
 
-
-<section className="maincontainer">
-<div className="headercontainer">
-    <div className="iconcontainer">
-    <MenuIcon   fontSize="small" className="icon"/>
-    </div>
-<div>
-            <h2>FILTER</h2>
-            </div>
-            </div>
-		<section className="filtercontainer">
-
-<div className="checkboxcontainer">
-	 
+			<div className="checkboxcontainer">
+				
 			
 			
 

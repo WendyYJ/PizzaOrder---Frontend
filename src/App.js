@@ -1,14 +1,11 @@
 import React from 'react';
-import PizzaMenu from './PizzaMenu/PizzaMenu';
-// import Route from './Route/route';
-import Filter from './PizzaMenu//Filter';
+import Route from './Route/route';
+import ShopCatalog from './PizzaMenu/ShopCatalog';
+
 function App() {
   return (
-    <div className="App">
-      <PizzaMenu />
-      
-       
-
+    <div className="Pizza-App">
+         <Route /> 
     </div>
   );
 }
