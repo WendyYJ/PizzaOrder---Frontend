@@ -11,7 +11,7 @@ function Filter(props){
 	return (
 
 
-        <section className="maincontainer">
+<section className="maincontainer">
 <div className="headercontainer">
     <div className="iconcontainer">
     <MenuIcon   fontSize="small" className="icon"/>
