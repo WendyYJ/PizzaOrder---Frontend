@@ -52,12 +52,13 @@ sidebar ul{
   font-size: 15px;
   margin-bottom: 55px;
   font-family: $body;
+
+  li a{
+    color: white;
+    text-decoration: none;
+  }
 }
  
-li a{
-  color: white;
-  text-decoration: none;
-}
 
 menu h1{
   position: relative;
@@ -69,7 +70,7 @@ menu h1{
   font-size: 30px;
 }
 
-sample h2{
+h2{
   position: relative;
   bottom: 300px;
   left: 10%;
@@ -94,47 +95,48 @@ cart{
   span{
     color: $flame;
   }
+
+  h2{
+    color:#FDBC2C;
   }
 
+  ul{
+    list-style: none;
+    position: relative; 
+  }
 
-cart h2{
-  color:#FDBC2C;
+  h4{
+    color: #FDBC2C;
+  }
+
+  h3{
+    color: #D94F2B;
+  }
+
+  span{
+    margin-left: 40px;
+  }
+
+  .viewCart-btn{
+    border: solid 1px #FDBC2C;
+    background-color: black;
+    font-size: 9px;
+    padding: 7px 10px 7px 2px;
+    width: 200px;
+    margin-bottom: 7px;
+  }
+  
+  
+  .checkout-btn{
+    border: solid 1px #FDBC2C;
+    background-color: #FDBC2C;
+    font-size: 9px;
+    padding: 7px 10px 7px 2px;
+    width: 200px;
+  }
 }
 
-cart ul{
-  list-style: none;
-  position: relative; 
-}
 
-cart h4{
-  color: #FDBC2C;
-}
-
-cart h3{
-  color: #D94F2B;
-}
-
-cart span{
-  margin-left: 40px;
-}
-
-.viewCart-btn{
-  border: solid 1px #FDBC2C;
-  background-color: black;
-  font-size: 9px;
-  padding: 7px 10px 7px 2px;
-  width: 200px;
-  margin-bottom: 7px;
-}
-
-
-.checkout-btn{
-  border: solid 1px #FDBC2C;
-  background-color: #FDBC2C;
-  font-size: 9px;
-  padding: 7px 10px 7px 2px;
-  width: 200px;
-}
 
 
 
