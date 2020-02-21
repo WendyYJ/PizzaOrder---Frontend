@@ -4,6 +4,7 @@ import Header from '../PizzaMenu/Components/Header';
 import Sidebar from '../PizzaMenu/Components/Sidebar';
 import Cart from '../PizzaMenu/Components/Cart';
 import Main from '../PizzaMenu/Components/Main';
+import Horizon from '../PizzaMenu/Components/Horizon';
 
 
 const PizzaMenu = () => {
@@ -13,6 +14,7 @@ const PizzaMenu = () => {
       <Sidebar />
       <Main />
       <Cart />
+      <Horizon />
     </div>
   );
 }
