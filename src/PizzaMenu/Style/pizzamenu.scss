@@ -15,7 +15,7 @@ body{
 }
 
 .sidebar-container{
-  background: rgb(44, 39, 39);
+  background: black;
   width: 25%;
   height: 100%;
 }
@@ -173,7 +173,7 @@ cart{
   }
 
   span{
-    margin-left: 40px;
+    margin-left: 5px;
   }
 
   .viewCart-btn{
@@ -194,14 +194,36 @@ cart{
     width: 200px;
   }
 
+  .ordered1{
+    position: relative;
+    right: 60px;
+    top: 20px;
+    display: flex;
+  
+    .dot {
+      height: 50px;
+      width: 50px;
+      background-color: #D94F2B;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 5px;
+      p{
+        position: relative;
+        right: 17px;
+        top: 0px;
+        font-size: 16px;
+      }
+    }
 
-.dot {
-  height: 50px;
-  width: 50px;
-  background-color: #D94F2B;
-  border-radius: 50%;
-  display: inline-block;
+    .text{
+      position: relative;
+      right: -10px;
+      top: -40px;
+    }
+  }
+
+
 }
-}
+
 
 
