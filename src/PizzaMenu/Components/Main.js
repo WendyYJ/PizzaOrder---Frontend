@@ -1,6 +1,7 @@
 import React from 'react';
 import '.././Style/pizzamenu.scss';
 import title from "../../icons/title.png";
+import titleNav from "../../icons/title_nav.png";
 
 
   const Main = () => {
@@ -8,6 +9,7 @@ import title from "../../icons/title.png";
     <div className="menumain">
      <menu>
       <img src={title} alt="title" id="title" />
+      <img src={titleNav} alt="title_nav" id="title_nav" />
       
      </menu>
      <sample>
