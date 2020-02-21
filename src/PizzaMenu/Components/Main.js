@@ -2,6 +2,7 @@ import React from 'react';
 import '.././Style/pizzamenu.scss';
 import title from "../../icons/title.png";
 import titleNav from "../../icons/title_nav.png";
+import sampleMenu from "../../icons/sample_menu.png";
 
 
   const Main = () => {
@@ -13,10 +14,8 @@ import titleNav from "../../icons/title_nav.png";
       
      </menu>
      <sample>
-      <h2>Peri-Peri</h2> 
-      <i className="fal fa-circle" />
-      
-      </sample>
+      <img src={sampleMenu} alt="sample_menu" id="sample_menu" />
+     </sample>
     </div>
     );
   }

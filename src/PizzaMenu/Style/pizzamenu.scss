@@ -111,8 +111,15 @@ menu h1{
 
 #horizon{
   position: relative;
-  top: 350px;
+  top: 330px;
   left: 18%;
+  width: 50%;
+}
+
+#sample_menu{
+  position: relative;
+  top: -350px;
+  left: 27%;
   width: 50%;
 }
 
@@ -128,7 +135,7 @@ h2{
 cart{
   float: right;
   position: relative;
-  bottom: 810px; 
+  bottom: 1030px; 
   right: 5%;
   font-family: $body;
   
