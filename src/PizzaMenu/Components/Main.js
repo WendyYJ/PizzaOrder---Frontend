@@ -1,11 +1,13 @@
 import React from 'react';
+import '.././Style/pizzamenu.scss';
+import title from "../../icons/title.png";
 
 
   const Main = () => {
     return (
     <div className="menumain">
      <menu>
-      <h1>PIZZA MENU</h1> 
+      <img src={title} alt="title" id="title" />
       
      </menu>
      <sample>

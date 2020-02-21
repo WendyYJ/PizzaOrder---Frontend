@@ -8,12 +8,13 @@ import '.././Style/pizzamenu.scss';
 
 const Sidebar = () => {
   return (
-    <div className="sidebar">
+    <div className="sidebar-container">
 
       <sidebar>
         <nav>
           <p>Search <SearchIcon style={{position:"relative", left:"100px", top:"8px"}}/></p>
         </nav>
+        
         <ul>
             <li><NavLink to={HOME_URL}>HOME</NavLink></li>
             <li><NavLink to={PIZZAMENU_URL}>PIZZA MENU</NavLink></li>
