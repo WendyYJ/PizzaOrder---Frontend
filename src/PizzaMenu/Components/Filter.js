@@ -11,7 +11,7 @@ function Filter(props){
 					<MenuIcon   fontSize="small" className="icon"/>
 					</div>
 			   <div>
-						<h2>FILTER</h2>
+						<h4>FILTER</h4>
 				 </div>
 			  </div>
 			<section className="filtercontainer">
@@ -277,7 +277,7 @@ Broccoli
 
             <div className="pizza">
             <span class="dot"></span>
-                <h2>Kimchi BBQ chicken</h2>
+                <h4>Kimchi BBQ chicken</h4>
                 <p>descriptdsasjdankasnd <br/>ksandkjasndnkasnd
             <br/>ksandkjasndnkasnd<br/>ksandkjasndnkasnd</p>
             <h3>$21.00</h3>
@@ -285,7 +285,7 @@ Broccoli
 
             <div className="pizza">
             <span class="dot"></span>
-            <h2>Kimchi BBQ chicken</h2>
+            <h4>Kimchi BBQ chicken</h4>
             <p>descriptdsasjdankasnd <br/>ksandkjasndnkasnd
             <br/>ksandkjasndnkasnd<br/>ksandkjasndnkasnd</p>
             <h3>$21.00</h3>
@@ -293,7 +293,7 @@ Broccoli
 
             <div className="pizza">
             <span class="dot"></span>
-            <h2>Kimchi BBQ chicken</h2>
+            <h4>Kimchi BBQ chicken</h4>
             <p>descriptdsasjdankasnd <br/>ksandkjasndnkasnd
             <br/>ksandkjasndnkasnd<br/>ksandkjasndnkasnd</p>
             <h3>$21.00</h3>
@@ -301,7 +301,7 @@ Broccoli
 
             <div className="pizza">
             <span class="dot"></span>
-            <h2>Kimchi BBQ chicken</h2>
+            <h4>Kimchi BBQ chicken</h4>
             <p>descriptdsasjdankasnd <br/>ksandkjasndnkasnd
             <br/>ksandkjasndnkasnd<br/>ksandkjasndnkasnd</p>
             <h3>$21.00</h3>

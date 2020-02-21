@@ -15,11 +15,12 @@
     padding-top: 3%;
 }
 
-.headercontainer h2{
+.headercontainer h4{
     color: #D94F2B;
+
     font-size:1em;
     font-family: Georgia;
-    margin-top: 0;
+    margin-top: 0.06em;
 
 }
 .filtercontainer{
@@ -98,7 +99,7 @@ h1{
     color: white;
  }
 
- .pizza h3{
+ .pizza h4{
     font-size:0.8em;
     color: #D94F2B;
  }
