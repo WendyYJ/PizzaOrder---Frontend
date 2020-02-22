@@ -1,6 +1,5 @@
 import React from 'react';
-// import '../PizzaMenu/Style/pizzamenu.scss';
-import Header from '../PizzaMenu/Components/Header';
+import Header from '../PageLayout/Header/Header';
 import Filter from '../PizzaMenu/Components/Filter';
 
 const ShopCatalog = () => {

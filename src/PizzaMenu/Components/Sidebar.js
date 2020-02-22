@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { NavLink} from 'react-router-dom';
 import { PIZZAMENU_URL, HOME_URL, PIZZABUILDER_URL, 
   BLOG_URL, ABOUTUS_URL, PAGES_URL, CONTACT_URL, 
@@ -6,14 +6,31 @@ import { PIZZAMENU_URL, HOME_URL, PIZZABUILDER_URL,
 import SearchIcon from '@material-ui/icons/Search';
 import '.././Style/pizzamenu.scss';
 
-const Sidebar = () => {
-  return (
-    <div className="sidebar-container">
+class Sidebar extends Component {
 
+  render() {
+     return (
+      <div className="sidebar-container">
       <sidebar>
-        <nav>
-          <p>Search <SearchIcon style={{position:"relative", left:"100px", top:"8px"}}/></p>
-        </nav>
+       <nav className="navbar navbar-expand-md navbar-light fixed-top">
+          <div className="container-fluid">
+            <a className="navbar" href="/"> 
+            </a>
+            
+            <form className="input">
+             <SearchIcon style={{position:"relative", left:"100px", top:"8px"}}/> 
+              <i className="fas fa-search" />
+              <input
+                className="control mr-sm-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+          </div>
+       </nav>    
+      
+      
         
         <ul>
             <li><NavLink to={HOME_URL}>HOME</NavLink></li>
@@ -33,6 +50,7 @@ const Sidebar = () => {
       </sidebar>
     </div>
   );
+}
 }
 
 export default Sidebar;

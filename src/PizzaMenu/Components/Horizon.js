@@ -1,5 +1,5 @@
 import React from 'react';
-import horizon from "../../icons/horizon.png";
+import horizon from "../../asset/icon/horizon.png";
 import '.././Style/pizzamenu.scss';
 
 const horizonBar = () => {

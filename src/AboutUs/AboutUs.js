@@ -2,7 +2,7 @@ import React from 'react';
 
 import Information from './components/Infomation'
 
-const ShopCatalog = () => {
+const AboutUs = () => {
   
    return (
 
@@ -11,4 +11,4 @@ const ShopCatalog = () => {
 }
 
 
-export default ShopCatalog;
+export default AboutUs;

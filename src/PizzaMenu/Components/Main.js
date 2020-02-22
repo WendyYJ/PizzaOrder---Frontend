@@ -1,8 +1,8 @@
 import React from 'react';
 import '.././Style/pizzamenu.scss';
-import title from "../../icons/title.png";
-import titleNav from "../../icons/title_nav.png";
-import sampleMenu from "../../icons/sample_menu.png";
+import title from "../../asset/icon/title.png";
+import titleNav from "../../asset/icon/title_nav.png";
+import sampleMenu from "../../asset/icon/sample_menu.png";
 
 
   const Main = () => {
