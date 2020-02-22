@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import { NavLink} from 'react-router-dom';
 import { PIZZAMENU_URL, HOME_URL, PIZZABUILDER_URL, 
   BLOG_URL, ABOUTUS_URL, PAGES_URL, CONTACT_URL, 
-  LOGIN_URL, MYACCOUNT_URL, CHECKOUT_URL } from '../../Route/URLMap';
+  LOGIN_URL, MYACCOUNT_URL, CHECKOUT_URL } from '../Route/URLMap';
 import SearchIcon from '@material-ui/icons/Search';
-import '.././Style/pizzamenu.scss';
+import '.././PageLayout/Style/PageStyle.scss';
 
 class Sidebar extends Component {
 
   render() {
      return (
       <div className="sidebar-container">
-      <sidebar>
+      <div className="sidebar">
        <nav className="navbar navbar-expand-md navbar-light fixed-top">
           <div className="container-fluid">
             <a className="navbar" href="/"> 
@@ -30,8 +30,6 @@ class Sidebar extends Component {
           </div>
        </nav>    
       
-      
-        
         <ul>
             <li><NavLink to={HOME_URL}>HOME</NavLink></li>
             <li><NavLink to={PIZZAMENU_URL}>PIZZA MENU</NavLink></li>
@@ -45,9 +43,8 @@ class Sidebar extends Component {
             <li><NavLink to={LOGIN_URL}>LOGIN</NavLink></li>
             <li><NavLink to={MYACCOUNT_URL}>MY ACCOUNT</NavLink></li>
             <li><NavLink to={CHECKOUT_URL}>CHECKOUT</NavLink></li>
-          </ul>
-            
-      </sidebar>
+          </ul>     
+      </div>
     </div>
   );
 }
