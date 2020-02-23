@@ -1,0 +1,29 @@
+@import './theme';
+
+.secondary-header h1{
+font-family: 'Abril Fatface';
+color: $white;
+font-size: 2.6em;
+margin: 0;
+margin-bottom: 0.7em;
+
+}
+
+.secondary-header{
+text-align: center;
+background-color: $smokegrey;
+padding-top: 3.5em;
+padding-bottom: 3.5em;
+    }
+
+.link-container{
+    display: flex;
+    font-size: 01.2em;
+    align-items: center;
+    justify-content: center;
+    color: $saffron;
+}
+.arrowicon{
+   margin-left: 0.6em;
+   margin-right: 0.6em;
+}

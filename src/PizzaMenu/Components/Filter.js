@@ -1,5 +1,5 @@
 import React from 'react';
-import '.././Style/Filter.css';
+import '.././Style/Filter.scss';
 import MenuIcon from '@material-ui/icons/Menu';
 
 

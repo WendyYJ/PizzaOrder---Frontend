@@ -1,9 +1,11 @@
+@import './theme';
+
 .maincontainer{
     width: 100%;
     background: rgb(44, 39, 39);
 }
 .icon{
-    color:#D94F2B;
+    color:$flame;
   
 }
 
@@ -16,7 +18,7 @@
 }
 
 .headercontainer h4{
-    color: #D94F2B;
+    color: $flame;
 
     font-size:1em;
     font-family: Georgia;
@@ -30,7 +32,7 @@
     margin-left: auto;
     margin-right: auto;
     background:black;
-    border-top: 5px solid #D94F2B;
+    border-top: 5px solid $flame;
 }
 
 .checkboxcontainer{
@@ -42,16 +44,16 @@
 .listcontainer{
     width:25%
 }
-label { color:#FFF; }
+label { color:$white; }
 input[type="checkbox"]:checked + label {
-    color: #D94F2B;
+    color: $flame;
 }
 input[type="checkbox"]{
     margin-bottom: 1em;
     margin-right: 1em;
 }
-h1{
-    color:#FFF;
+.listcontainer h1{
+    color:$white;
     font-size: 0.9em;
     height: 4%;
 }
@@ -66,8 +68,8 @@ h1{
 }
 
 .filter-btn{
-    border: solid 1px #FDBC2C;
-    background-color: #FDBC2C;
+    border: solid 1px $saffron;
+    background-color: $saffron;
     color: black;
     font-size: 11px;
     padding: 7px 10px 7px 2px;
@@ -91,22 +93,22 @@ h1{
   }
   .pizza h4{
    font-size:0.9em;
-   color: #FDBC2C;
+   color:$saffron;
 }
 
 .pizza p{
     font-size:0.7em;
-    color: white;
+    color:$white;
  }
 
  .pizza h3{
     font-size:0.8em;
-    color: #D94F2B;
+    color: $flame;
  }
  .dot {
     height: 120px;
     width: 120px;
-    background-color: #D94F2B;
+    background-color: $flame;
     border-radius: 50%;
     display: inline-block;
   }

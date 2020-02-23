@@ -1,12 +1,13 @@
 import React from 'react';
 import Header from '../PageLayout/Header/Header';
 import Filter from '../PizzaMenu/Components/Filter';
-
+import SecondartHeader from '../PageLayout/Header/SecondaryHeader'
 const ShopCatalog = () => {
   
    return (
     <div className="Catalog-container">
        <Header />
+       <SecondartHeader headername={"Pizza Menu"}/>
        <Filter />
     </div>
    );
