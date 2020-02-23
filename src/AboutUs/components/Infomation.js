@@ -25,7 +25,7 @@ function Information(props){
 
 <div className="topcontainer">
            <div className="carefulcontainer">
-           <img src={icon1} height="50px" width="30px"></img>
+           <img src={icon1} height="50px" width="30px" alt='icon'></img>
        <h1>We're Careful</h1>
        <p>
            The curst is stored in a separate container, on a<br/>
@@ -38,7 +38,7 @@ function Information(props){
        </div>
 
        <div className="carefulcontainer">
-       <img src={icon2}height="50px" width="30px"></img>
+       <img src={icon2}height="50px" width="30px"alt='icon'></img>
        <h1>We're Certified</h1>
        <p>
            Our cheese-only and cheese-and-pepperoni<br/>
@@ -51,7 +51,7 @@ function Information(props){
        </div>
 
        <div className="carefulcontainer">
-       <img src={icon3} height="50px" width="30px"></img>
+       <img src={icon3} height="50px" width="30px" alt='icon'></img>
        <h1>We're Creative</h1>
        <p>
            For those simply looking to reduce gluten in their<br/>
