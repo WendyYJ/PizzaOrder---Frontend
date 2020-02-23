@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
+import Homepage from '../Homepage/Homepage';
 import PizzaMenu from '../PizzaMenu/PizzaMenu';
 import ShopCatalog from '../PizzaMenu/ShopCatalog';
 import PizzaBuilder from '../PizzaBuilder/PizzaBuilder';
@@ -11,7 +12,7 @@ import {
     SHOPCATALOG_URL,
     PIZZABUILDER_URL,
     SHOPPINGCART_URL,
-    ABOUTUS_URL
+    ABOUTUS_URL,
 } from './URLMap';
 
 
@@ -21,6 +22,7 @@ const Routes = () => {
       <BrowserRouter>
         <Switch>
            <Redirect exact from="/" to={HOME_URL} />
+           <Route exact path={HOME_URL} component={Homepage}/>
            <Route exact path={PIZZAMENU_URL} component={PizzaMenu} />
            <Route exact path={SHOPCATALOG_URL} component={ShopCatalog} />
            <Route exact path={PIZZABUILDER_URL} component={PizzaBuilder} /> 
