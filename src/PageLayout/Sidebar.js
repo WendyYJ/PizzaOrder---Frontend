@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { NavLink} from 'react-router-dom';
 import { PIZZAMENU_URL, HOME_URL, PIZZABUILDER_URL, 
   BLOG_URL, ABOUTUS_URL, PAGES_URL, CONTACT_URL, 
-  LOGIN_URL, MYACCOUNT_URL, CHECKOUT_URL } from '../Route/URLMap';
+  LOGIN_URL, MYACCOUNT_URL, CHECKOUT_URL } from '../route/URLMap';
 import SearchIcon from '@material-ui/icons/Search';
 import '.././PageLayout/Style/PageStyle.scss';
 

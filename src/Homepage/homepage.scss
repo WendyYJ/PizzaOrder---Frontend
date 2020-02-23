@@ -2,14 +2,15 @@
 @import '../asset/mixin.scss';
 
 
+
+
 .homepage{
     background-color: $smokegrey;
-
+    margin-bottom: 2vh;
     text-align: center;
 
     &__welcome{
     height: 100vh;
-    margin: auto;
     color:$saffron;
 
     display:flex;
@@ -19,29 +20,65 @@
 
     &-heading{
         @include chalk-heading();
+        color: $white;
     }
 
     &-span{
         @include heading();
+        color: $saffron;
         padding: 1em;
     }
 
     &-button{
-        font-size: 1.5vw;
+        font-size: $button-size;
         @include button();
     }
     
 
     }
 
-    &__aboutUs{
+    &__menu{
+       
+        display: flex;
+        flex-direction: row;
+        background-color: $flame;
+        text-align: left;
+        padding-left: 15%;
+        padding-right:15%;
+
         &-heading{
-            font-family: $heading;
-            color:$saffron;
+            @include heading();
+            color:$white;
+        }
+        &-price{
+            font-size:$sub-heading-size;
+            font-family: $chalk;
+            color:$black
+        }
+
+        &-button{
+            text-align: center;
+            width:10vw;
+            font-size: $button-size;
+            @include button-filled();
+        }
+
+        &-more{
+            font-size:$body-size;
+            color:$white;
+        }
+
+        &-right{
+            img{
+                border-radius: 50%;
+            }
+            
+            
         }
 
 
     }
+
     
 
 }

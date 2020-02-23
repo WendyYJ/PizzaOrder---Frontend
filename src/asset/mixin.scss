@@ -1,23 +1,34 @@
 @import'./theme.scss';
 
+
+
 @mixin chalk-heading{
-    color: $white;
     font-family: $chalk;
     font-size: 4vw;
 }
 
 
+
 @mixin heading{
-    color: $saffron;
     font-family: $heading;
-    font-size: 2vw;
+    font-size: $sub-heading-size;
 }
 
 
 @mixin button{
+    font-variant: small-caps;
     color:$saffron;
     padding-left:15px;
     padding-right: 15px;
     border: 2px solid $saffron;
    
+}
+
+@mixin button-filled {
+    font-variant: small-caps;
+    color:$black;
+    background-color: $saffron;
+    padding-left:15px;
+    padding-right: 15px;
+    border: 2px solid $saffron;
 }
