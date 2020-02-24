@@ -1,5 +1,5 @@
 import React from 'react';
-import '.././Style/Information.css';
+import '.././Style/Information.scss';
 import icon1 from '../../asset/img/aboutus1.png';
 import icon2 from '../../asset/img/aboutus2.png';
 import icon3 from '../../asset/img/aboutus3.png';

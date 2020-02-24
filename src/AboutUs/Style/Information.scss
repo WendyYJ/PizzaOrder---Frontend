@@ -1,3 +1,5 @@
+
+@import './theme';
 .maincontainer{
     height:100%;
     width: 100%;
@@ -16,6 +18,8 @@
 .infobody{
     height: 70%;
     text-align: center;
+    padding-left: 3em;
+    padding-bottom: 2em;
 }
 .topcontainer{
     display: flex;
@@ -61,13 +65,46 @@ p{
 /* middle-css */
 
 .middlecontainer{
-    background: orangered;
-    height: 30%;
-    padding: 10%,20%,10%,20%;
+    background: url("../../asset/img/organgebackground.png");
+    height: 18em;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em,1em,1em,1em;
   
 }
 
 .middlecontainer h3{
+
+
+    
    margin: 0;
+   color:$white;
+   font-size: 2em;;
   
+}
+
+.desc-container{
+    margin-right: 4em;
+    margin-left: 4em;
+}
+
+
+  .squarescontainer{
+height:18em ;
+width: 19em;
+
+margin-right: 4em;
+  }
+
+  .squarescontainer img{
+    height:18em ;
+    width: 19em;
+      }
+
+.imgcontainer img{
+    height: 2em;
+    width:2em;
 }
