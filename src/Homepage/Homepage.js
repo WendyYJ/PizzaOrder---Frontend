@@ -60,9 +60,36 @@ const Homepage = props =>{
 
          </div>
         
-                
-                
+        <div className='homepage__comment'>
+            <h2>
+                Here's what some customers are saying...
+            </h2>
+            <p>
+                customer service and product quality are our top priority. Although we strive to make every customer experience as easy as possible, it's how our customers<br/> rate us that really matters. Because it makes our customers happy! And we love making people happy.
+            </p>
+            <div>
+                <div>
+                    <div className='homepage__comment__profile-picture'>
+
+                    </div>
+                    <h3 className='homepage__comment__profile-name'>Floretieno Wihite</h3>
+                    <p>&#9733; &#9733; &#9733; &#9734; &#9734;</p>
+                    <p>" We are serving pizza, your pizza is the fave of our family. Pick us as the  pizza winner!</p>
+                    <p>Daneirl Black</p>
+                    <p>www.pizzatempo.com</p>
+                </div>
             </div>
+
+
+
+        </div>
+                
+                
+            
+            
+            
+            
+        </div>
             
 
 
