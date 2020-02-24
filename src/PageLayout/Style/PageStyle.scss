@@ -175,6 +175,47 @@ body{
   }
 }
 
+.arrowicon2{
+  margin-left: 0.6em;
+  margin-right: 0.6em;
+  color: $flame;
+  padding: 8px 8px;
+  border: 1px solid; 
+  float: right;
+  position: relative;
+  right: 15%;
+  top: 10px;
+}
+
+.arrowicon3{
+  position: relative;
+  left: -2px;
+  top: 4px;
+}
+
+.horizon{
+  margin-top: 40px;
+  margin-left: 180px;
+  border-bottom: 2px solid $flame;
+  width: 70%;
+}
+
+.horizonbar{
+  p{
+    position: relative;
+    top: 30px;
+    margin-left: 15%;
+    color: white;
+    font-size: 10px;
+    font-family: $body;
+  }
+}
+
+
+
+
+
+
 
 
 
