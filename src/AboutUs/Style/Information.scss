@@ -1,0 +1,199 @@
+
+@import './theme';
+.maincontainer{
+    height:100%;
+    width: 100%;
+}
+.bigcontainer{
+    width:75%;
+    margin: auto;
+
+}
+.infoheader{
+    height: 30%;
+    text-align: center;
+    margin-bottom: 2em;
+    padding-top: 2em;
+}
+.infobody{
+    height: 70%;
+    text-align: center;
+    padding-left: 3em;
+    padding-bottom: 2em;
+}
+.topcontainer{
+    display: flex;
+    margin: auto;
+}
+.topcontainer h1{
+    margin-bottom: 1em;
+}
+.carefulcontainer{
+    width:33%;
+    text-align: left;
+}
+.bottomcontainer{
+    display:flex;
+}
+.leftcontainer{
+    width:50%;
+}
+.rightcontainer{
+    width:50%;
+}
+h1{
+    font-size: 1.5em;
+    color:#FDBC2C;
+    
+}
+p{
+    color:white;
+    font-family: 'Josefin Sans';
+    font-size: 0.65em;
+    line-height: 1.9em;
+}
+.bottomcontainer{
+    text-align: left;
+}
+.bottomcontainer h1{
+    margin-top: 0.3em;
+}
+
+
+
+
+/* middle-css */
+
+.middlecontainer{
+    background: url("../../asset/img/organgebackground.png");
+    height: 18em;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em,1em,1em,1em;
+  
+}
+
+.middlecontainer h3{
+
+
+    
+   margin: 0;
+   color:$white;
+   font-size: 2em;;
+  
+}
+
+.desc-container{
+    margin-right: 4em;
+    margin-left: 4em;
+}
+
+
+  .squarescontainer{
+height:18em ;
+width: 19em;
+
+margin-right: 4em;
+  }
+
+  .squarescontainer img{
+    height:18em ;
+    width: 19em;
+      }
+
+.imgcontainer img{
+    height: 2em;
+    width:2em;
+}
+
+
+// question
+
+.questioncontainer h1{
+    font-size: 2em;
+    margin:0;
+ 
+  
+
+}
+
+
+.questioncontainer h2{
+    font-size: 0.6em;
+   color:$white;
+   font-family: $body;
+   margin-bottom: 4em;
+   margin-top: 3em;
+
+}
+.questioncontainer{
+background: #2c2727;
+text-align: center;
+width:100%;
+padding:3em;
+}
+.qu-container{
+    border-top: 0.6px solid gray;
+    text-align: left;
+    width:70%;
+ 
+    margin:auto;
+}
+
+.qu-container p{
+    color: $saffron;
+    font-family: $heading;
+    font-size:1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.qu-container1{
+    border-top: 0.6px solid gray;
+    border-bottom: 0.6px solid gray;
+    text-align: left;
+    width:70%;
+    position: relative;
+    margin:auto;
+   
+}
+
+.qu-container1 p{
+    color: $saffron;
+    font-family: $heading;
+    font-size:1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.qu-container1 img{
+height:2em;
+width:2em;
+}
+
+
+.qu-container img{
+    height:2em;
+    width:2em;
+    }
+
+.qu-container{
+position: relative;
+    }
+
+    .qu-container img{
+        position: absolute;
+        right:10px;
+        top:25%;
+
+            }
+.qu-container1 img{
+    position: absolute;
+    right:10px;
+
+    top:25%;
+        }               
+    
