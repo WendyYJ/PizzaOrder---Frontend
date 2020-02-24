@@ -5,7 +5,7 @@ import Sidebar from '../PageLayout/Sidebar';
 import Cart from '../PageLayout/Cart';
 import Main from '../PizzaMenu/Components/Main';
 import Horizon from '../PizzaMenu/Components/Horizon';
-import Search from '../PizzaMenu/Components/Search';
+// import Search from '../PizzaMenu/Components/Search';
 
 
 const PizzaMenu = () => {
@@ -16,7 +16,7 @@ const PizzaMenu = () => {
       <Main />
       <Cart />
       <Horizon />
-      <Search />
+      
     </div>
   );
 }

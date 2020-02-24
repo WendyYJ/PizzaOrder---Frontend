@@ -20,7 +20,7 @@ function Cart() {
                 <p>SIZE: Large</p>
                 <p><span>1 x</span> $19.00</p>
               </div>
-          </div>
+          </div><br></br>
             
             <div className="ordered1">
               <div>
