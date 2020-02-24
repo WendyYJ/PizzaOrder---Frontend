@@ -3,7 +3,7 @@ import '../PizzaMenu/Style/pizzamenu.scss';
 import Header from '../PageLayout/Header/Header'
 import SecondaryHeader from '../PageLayout/Header/SecondaryHeader'
 
-const PizzaMenuMain = () => {
+const MenuMain = () => {
   return (
     <div className ="MenuMain-container">
       <Header />
@@ -14,4 +14,4 @@ const PizzaMenuMain = () => {
   );
 }
 
-export default PizzaMenuMain;
+export default MenuMain;
