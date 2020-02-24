@@ -9,8 +9,8 @@ const AboutUs = () => {
   
    return (
       <div className="about-container">
-         <Header/>
-<SecondaryHeader headername={"About Us"}/>
+       <Header/>
+       <SecondaryHeader headername={"About Us"}/>
        <Information/>
        <Middle/>
        <Question/>

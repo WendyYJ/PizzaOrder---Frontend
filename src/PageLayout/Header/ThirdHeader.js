@@ -12,6 +12,8 @@ class SecondaryHeader extends Component {
             Home
            <ArrowForwardIosIcon style={{ fontSize: 14 }} className="arrowicon"/>
            {this.props.headername}
+           <ArrowForwardIosIcon style={{ fontSize: 14 }} className="arrowicon"/>
+           {this.props.headername2}
           </div>
       
          
