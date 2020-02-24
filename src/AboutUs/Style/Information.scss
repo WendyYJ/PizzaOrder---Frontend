@@ -108,3 +108,92 @@ margin-right: 4em;
     height: 2em;
     width:2em;
 }
+
+
+// question
+
+.questioncontainer h1{
+    font-size: 2em;
+    margin:0;
+ 
+  
+
+}
+
+
+.questioncontainer h2{
+    font-size: 0.6em;
+   color:$white;
+   font-family: $body;
+   margin-bottom: 4em;
+   margin-top: 3em;
+
+}
+.questioncontainer{
+background: #2c2727;
+text-align: center;
+width:100%;
+padding:3em;
+}
+.qu-container{
+    border-top: 0.6px solid gray;
+    text-align: left;
+    width:70%;
+ 
+    margin:auto;
+}
+
+.qu-container p{
+    color: $saffron;
+    font-family: $heading;
+    font-size:1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.qu-container1{
+    border-top: 0.6px solid gray;
+    border-bottom: 0.6px solid gray;
+    text-align: left;
+    width:70%;
+    position: relative;
+    margin:auto;
+   
+}
+
+.qu-container1 p{
+    color: $saffron;
+    font-family: $heading;
+    font-size:1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.qu-container1 img{
+height:2em;
+width:2em;
+}
+
+
+.qu-container img{
+    height:2em;
+    width:2em;
+    }
+
+.qu-container{
+position: relative;
+    }
+
+    .qu-container img{
+        position: absolute;
+        right:10px;
+        top:25%;
+
+            }
+.qu-container1 img{
+    position: absolute;
+    right:10px;
+
+    top:25%;
+        }               
+    
