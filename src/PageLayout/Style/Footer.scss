@@ -1,0 +1,14 @@
+@import './theme';
+
+.ingredientcontainer{
+    display: flex;
+    height:12em;
+    justify-content: center;
+    align-items: center;
+}
+
+.circlecontainer img{
+    height:4em;
+     margin-right: 1.5em;
+}
+
