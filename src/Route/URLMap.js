@@ -10,3 +10,5 @@ export const LOGIN_URL = "/Login";
 export const MYACCOUNT_URL ="/MyAccount";
 export const CHECKOUT_URL ="/Checkout";
 export const SHOPCATALOG_URL = "/ShopCatalog";
+export const PIZZAMENUMAIN_URL = '/PizzaMenu';
+ 
