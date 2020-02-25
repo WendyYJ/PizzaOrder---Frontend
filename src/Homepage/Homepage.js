@@ -4,6 +4,7 @@ import './homepage.scss';
 import periperi from '../asset/img/PeriPeri.png';
 import Information from '../AboutUs/components/Infomation';
 import profile from '../asset/img/proni.png';    
+import phone from '../asset/icon/iphone-6s-logo.png';
 
 
 const Homepage = props =>{
@@ -102,16 +103,77 @@ const Homepage = props =>{
                 </div>
             </div>
 
-
-
-        </div>
-                
-                
-            
-            
-            
+  
             
         </div>
+
+        <div className='homepage__app'>
+            <div className='homepage__app-container'>
+            <img src={phone} alt='phone'/> 
+            <div className='homepage__app-content'>
+            
+                <h2 className='homepage__app-content-heading'>Get the newest version of our mobile app for your phone.</h2>
+                <span className='homepage__app-content-span'>
+                    Do you have an iPhone, Android device or on an web-enabled mobile? Then it's easier that ever to order hot and fresh pizza - no phone calls are necessary! Mobile ordering lets you access all the best pizza.
+                </span>
+                <h3 className='homepage__app-content-subheading'>Here's why it's great:</h3>
+                <ul className='homepage__app-content-listing'>
+                    <li>It's free</li>
+                    <li>No registration required</li>
+                    <li>Order from the full menu</li>
+                    <li>Find local deals </li>
+                    <li>Pay directly from the app</li>
+                </ul>
+                
+                </div>
+               
+                
+            </div>
+
+
+            </div>
+        
+        <div className='homepage__news'  >
+            <h2 className='homepage__news-heading'> Latest News & Recipes</h2>
+            <div className='homepage__news__container'>
+            <div className='homepage__news-content'>
+            <img className='homepage__news-content-picture' src='https://cdn0.woolworths.media/content/recipes/wk23-dinner-made-easy-aussie-pizza.jpg' alt='profile' />
+            <p className='homepage__news-content-time' >January 22, 2019</p>
+            <h3 className='homepage__news-content-heading'>Perfect Pizza Using Baking Steel Broiler Method</h3>
+            <p className='homepage__news-content-span'>
+            elementum integer enim. Sed eget velit aliquet. Scelerisque varius morbi enim nunc faucibus a. Neque volutpat ac tincidunt vitae.             </p>
+            <p className='homepage__news-content-button'>read more</p>
+                
+                </div>
+
+            <div className='homepage__news-content'>
+            <img className='homepage__news-content-picture' src='https://cdn0.woolworths.media/content/recipes/wk23-dinner-made-easy-aussie-pizza.jpg' alt='profile' />
+            <p className='homepage__news-content-time' >Feburary 8, 2019</p>
+            <h3 className='homepage__news-content-heading'>Brussels Sprouts, Pepper and Bacon Hot Pizza is HERE!    </h3>
+            <p className='homepage__news-content-span'>
+                elementum integer enim. Sed eget velit aliquet. Scelerisque varius morbi enim nunc faucibus a. Neque volutpat ac tincidunt vitae.             </p>
+            <p className='homepage__news-content-button'>read more</p>
+            
+                </div>
+
+            <div className='homepage__news-content'> 
+            <img className='homepage__news-content-picture' src='https://cdn0.woolworths.media/content/recipes/wk23-dinner-made-easy-aussie-pizza.jpg' alt='profile' />
+            <p className='homepage__news-content-time' >December 18, 2019</p>
+            <h3 className='homepage__news-content-heading'>Green Capsicum & Blue Cheese Recipe</h3>
+            <p className='homepage__news-content-span'>
+            elementum integer enim. Sed eget velit aliquet. Scelerisque varius morbi enim nunc faucibus a. Neque volutpat ac tincidunt vitae.             </p>
+            <p className='homepage__news-content-button'>read more</p>
+            
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+    </div>
+
             
 
 
