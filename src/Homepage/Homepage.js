@@ -3,7 +3,7 @@ import React from 'react';
 import './homepage.scss';
 import periperi from '../asset/img/PeriPeri.png';
 import Information from '../AboutUs/components/Infomation';
-
+import profile from '../asset/img/proni.png';    
 
 
 const Homepage = props =>{
@@ -61,22 +61,44 @@ const Homepage = props =>{
          </div>
         
         <div className='homepage__comment'>
-            <h2>
+            <h2 className='homepage__comment-heading'>
                 Here's what some customers are saying...
             </h2>
-            <p>
+            <p className='homepage__comment-heading-span'>
                 customer service and product quality are our top priority. Although we strive to make every customer experience as easy as possible, it's how our customers<br/> rate us that really matters. Because it makes our customers happy! And we love making people happy.
             </p>
-            <div>
-                <div>
-                    <div className='homepage__comment__profile-picture'>
-
+            <div className='homepage__comment__details'>
+               <div>
+                    <div>
+                    <img className='homepage__comment__details-profile' src={profile} alt="profile"/>
                     </div>
-                    <h3 className='homepage__comment__profile-name'>Floretieno Wihite</h3>
-                    <p>&#9733; &#9733; &#9733; &#9734; &#9734;</p>
-                    <p>" We are serving pizza, your pizza is the fave of our family. Pick us as the  pizza winner!</p>
-                    <p>Daneirl Black</p>
-                    <p>www.pizzatempo.com</p>
+                    <h3 className='homepage__comment__details-dish'>Floretieno Richotta</h3>
+                    <p className='homepage__comment__details-rating'>&#9733; &#9734; &#9734; &#9734; &#9734;</p>
+                    <p className='homepage__comment__details-content'>" We are serving pizza, your pizza is the fave of our family. Pick us as the  pizza winner!</p>
+                    <p className='homepage__comment__details-name'>Daneirl Black</p>
+                    <p className='homepage__comment__details-origin'>www.pizzatempo.com</p>
+                </div>
+            
+                <div>
+                <div>
+                    <img className='homepage__comment__details-profile' src={profile} alt="profile"/>
+                    </div>
+                    <h3 className='homepage__comment__details-dish'>Garlic Chicken</h3>
+                    <p className='homepage__comment__details-rating'>&#9733; &#9733; &#9733; &#9734; &#9734;</p>
+                    <p className='homepage__comment__details-content'>" We are serving pizza, your pizza is the fave of our family. Pick us as the  pizza winner!</p>
+                    <p className='homepage__comment__details-name'>Daneirl Black</p>
+                    <p className='homepage__comment__details-origin'>www.pizzatempo.com</p>
+                </div>
+                
+                <div>
+                    <div>
+                    <img className='homepage__comment__details-profile' src={profile} alt="profile"/>
+                    </div>
+                    <h3 className='homepage__comment__details-dish'>Kimchi BBQ Chicken</h3>
+                    <p className='homepage__comment__details-rating'>&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+                    <p className='homepage__comment__details-content'>" We are serving pizza, your pizza is the fave of our family. Pick us as the  pizza winner!</p>
+                    <p className='homepage__comment__details-name'>Daneirl Black</p>
+                    <p className='homepage__comment__details-origin'>www.pizzatempo.com</p>
                 </div>
             </div>
 

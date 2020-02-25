@@ -44,8 +44,7 @@
         flex-direction: row;
         background-color: $flame;
         text-align: left;
-        padding-left: 15%;
-        padding-right:15%;
+        @include padding-center();
         
 
         &-heading{
@@ -86,8 +85,7 @@
     }
 
     &__pizza-builder{
-        padding-left: 15%;
-        padding-right:15%;
+        @include padding-center();
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -140,6 +138,55 @@
             
         }
     }
-    
+
+    &__comment{
+        @include padding-center();
+        
+
+        &-heading{
+            @include heading;
+            font-size: $heading-size ;
+            color:$saffron;
+            &-span{
+                font-size: $body-size;
+                padding-bottom: 2em;
+            }
+        }
+        &__details{
+            @include padding-center();
+
+            color:$white;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            &-profile{
+                width:10vw;
+                border-radius:50% ;
+            }
+            &-dish{
+                @include heading();
+                color:$saffron;
+            }
+            &-rating{
+                font-size: $body-size;
+                color:$flame;
+            }
+            &-content{
+                @include heading();
+                width: 30vw;
+            }
+            &-name{
+                font-size: $body-size;
+            }
+            &-origin{
+                font-size: $body-size;
+                color: $flame;
+
+
+            }
+        }
+    }
 
 }

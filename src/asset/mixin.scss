@@ -32,3 +32,9 @@
     border: 2px solid $saffron;
     font-weight: bold;
 }
+
+@mixin padding-center {
+    padding-left: 15%;
+    padding-right: 15%;
+    
+}
