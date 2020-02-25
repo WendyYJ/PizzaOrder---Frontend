@@ -1,8 +1,10 @@
 import React from 'react';
-import '../PizzaMenu/Style/pizzamenu.scss';
+import '.././PageLayout/Style/PageStyle.scss';
 import Header from '../PageLayout/Header/Header';
 import ThirdHeader from '../PageLayout/Header/ThirdHeader';
 import HorizonBar from '../PageLayout/HorizonBar';
+import SampleMenu from './Components/SampleMenu';
+import Counter from '../PageLayout/Counter';
 
 const MenuMain = () => {
   return (
@@ -10,7 +12,9 @@ const MenuMain = () => {
       <Header />
       <ThirdHeader headername={"Pizza Menu"} headername2={"Peri-Peri"} />
 
-      <HorizonBar />
+      <HorizonBar className="horizonbar" />
+      <SampleMenu />
+      <Counter />
     </div>
   );
 }
