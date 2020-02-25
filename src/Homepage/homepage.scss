@@ -145,7 +145,7 @@
 
         &-heading{
             @include heading;
-            font-size: $heading-size ;
+            font-size: $heading-size*0.9 ;
             color:$saffron;
             &-span{
                 font-size: $body-size;
@@ -154,12 +154,15 @@
         }
         &__details{
             @include padding-center();
-
             color:$white;
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
+
+            &-container{
+                margin:2vw;
+            }
 
             &-profile{
                 width:10vw;
@@ -173,9 +176,27 @@
                 font-size: $body-size;
                 color:$flame;
             }
-            &-content{
+            &-bubble{
                 @include heading();
-                width: 30vw;
+                font-size: $body-size;
+                width: 25vw;
+                position: relative;
+                background: $flame;
+            }
+
+            &-bubble:after{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 50%;
+                width: 0;
+                height: 0;
+                border: 0.656em solid transparent;
+                border-bottom-color: $flame;
+                border-top: 0;
+                margin-left: -0.656em;
+                margin-top: -0.656em;
+
             }
             &-name{
                 font-size: $body-size;
@@ -183,7 +204,6 @@
             &-origin{
                 font-size: $body-size;
                 color: $flame;
-
 
             }
         }

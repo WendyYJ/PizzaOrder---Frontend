@@ -68,37 +68,37 @@ const Homepage = props =>{
                 customer service and product quality are our top priority. Although we strive to make every customer experience as easy as possible, it's how our customers<br/> rate us that really matters. Because it makes our customers happy! And we love making people happy.
             </p>
             <div className='homepage__comment__details'>
-               <div>
+               <div className='homepage__comment__details-container'>
                     <div>
                     <img className='homepage__comment__details-profile' src={profile} alt="profile"/>
                     </div>
                     <h3 className='homepage__comment__details-dish'>Floretieno Richotta</h3>
                     <p className='homepage__comment__details-rating'>&#9733; &#9734; &#9734; &#9734; &#9734;</p>
-                    <p className='homepage__comment__details-content'>" We are serving pizza, your pizza is the fave of our family. Pick us as the  pizza winner!</p>
-                    <p className='homepage__comment__details-name'>Daneirl Black</p>
-                    <p className='homepage__comment__details-origin'>www.pizzatempo.com</p>
+                    <p className='homepage__comment__details-bubble'>" We are serving pizza, your pizza is the fave of our family. Pick us as the  pizza winner!</p>
+                    <p className='homepage__comment__details-name'>Jenice Black</p>
+                    <p className='homepage__comment__details-origin'>www.tripAdvisor.com</p>
                 </div>
             
-                <div>
+                <div className='homepage__comment__details-container'>
                 <div>
                     <img className='homepage__comment__details-profile' src={profile} alt="profile"/>
                     </div>
                     <h3 className='homepage__comment__details-dish'>Garlic Chicken</h3>
                     <p className='homepage__comment__details-rating'>&#9733; &#9733; &#9733; &#9734; &#9734;</p>
-                    <p className='homepage__comment__details-content'>" We are serving pizza, your pizza is the fave of our family. Pick us as the  pizza winner!</p>
+                    <p className='homepage__comment__details-bubble'>" We are serving pizza, your pizza is the fave of our family. Pick us as the  pizza winner!</p>
                     <p className='homepage__comment__details-name'>Daneirl Black</p>
                     <p className='homepage__comment__details-origin'>www.pizzatempo.com</p>
                 </div>
                 
-                <div>
+                <div className='homepage__comment__details-container'>
                     <div>
                     <img className='homepage__comment__details-profile' src={profile} alt="profile"/>
                     </div>
                     <h3 className='homepage__comment__details-dish'>Kimchi BBQ Chicken</h3>
                     <p className='homepage__comment__details-rating'>&#9733; &#9733; &#9733; &#9733; &#9733;</p>
-                    <p className='homepage__comment__details-content'>" We are serving pizza, your pizza is the fave of our family. Pick us as the  pizza winner!</p>
-                    <p className='homepage__comment__details-name'>Daneirl Black</p>
-                    <p className='homepage__comment__details-origin'>www.pizzatempo.com</p>
+                    <p className='homepage__comment__details-bubble'>" We are serving pizza, your pizza is the fave of our family. Pick us as the  pizza winner!</p>
+                    <p className='homepage__comment__details-name'>Merty white</p>
+                    <p className='homepage__comment__details-origin'>www.pizzaroo.com</p>
                 </div>
             </div>
 
