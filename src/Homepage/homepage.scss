@@ -71,16 +71,14 @@
         }
 
         &-right{
+            display: flex;
+            align-items: center;
             img{
                 border-radius: 50%;
-                height: 80vh;
+                height: 50vh;
             }
-            
-            
+  
         }
-
-
-
 
     }
 

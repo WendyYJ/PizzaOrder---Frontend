@@ -1,11 +1,11 @@
 import React from 'react';
-//import Carousel from './Carousel';
+import Carousel from './Carousel/Carousel';
 import './homepage.scss';
 import periperi from '../asset/img/PeriPeri.png';
 import Information from '../AboutUs/components/Infomation';
 import profile from '../asset/img/proni.png';    
 import phone from '../asset/icon/iphone-6s-logo.png';
-
+import Header from '../'
 
 const Homepage = props =>{
 
@@ -25,8 +25,9 @@ const Homepage = props =>{
             </main>
             
         <Information/> 
-        <div className='homepage__menu row'>
-            <div className='homepage__menu-left col-md-4'>
+        <Carousel />
+        <div className='homepage__menu '>
+            <div className='homepage__menu-left'>
             <h2 className='homepage__menu-heading'>
                 Peri-Peri
             </h2>
@@ -41,7 +42,7 @@ const Homepage = props =>{
                 order now
             </p>
             </div>
-            <div className='homepage__menu-right col-md-4'>
+            <div className='homepage__menu-right'>
             <img src={periperi} alt='Peri Peri Pizza' />
             </div>
          </div>
@@ -167,8 +168,7 @@ const Homepage = props =>{
                 </div>
             </div>
         </div>
-        
-        
+       
         
         
         
