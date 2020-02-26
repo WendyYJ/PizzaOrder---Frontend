@@ -4,7 +4,9 @@ import Header from '../PageLayout/Header/Header';
 import Sidebar from '../PageLayout/Sidebar';
 import Cart from '../PageLayout/Cart';
 import Main from '../PizzaMenu/Components/Main';
-import Horizon from '../PizzaMenu/Components/Horizon';
+//import Horizon from '../PizzaMenu/Components/Horizon';
+import HorizonBar from '../PageLayout/HorizonBar';
+//import '.././PageLayout/Style/PageStyle.scss';
 // import Search from '../PizzaMenu/Components/Search';
 
 
@@ -15,7 +17,7 @@ const PizzaMenu = () => {
       <Sidebar />
       <Main />
       <Cart />
-      <Horizon />
+      <HorizonBar style={{position:"relative", left:"100px", top:"-800px"}}/>
       
     </div>
   );

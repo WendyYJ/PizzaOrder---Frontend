@@ -2,6 +2,7 @@
 
 body{
   background-color:  black;
+  opacity: 0.8;
 }
 
 
@@ -40,7 +41,7 @@ body{
   position: relative;
   left: 45%;
   top: -10px;
-  color: #D94F2B;
+  color: $flame;
   size: 6px;
   font-family: $logo;
   height: 3px;
@@ -103,7 +104,7 @@ body{
   }
 
   h2{
-    color:#FDBC2C;
+    color: $saffron;
     position: relative;
     top: 2px;
     left: -30px;
@@ -115,13 +116,13 @@ body{
   }
 
   h4{
-    color: #FDBC2C;
+    color: $saffron;
     position: relative;
     top: -10px;
   }
 
   h3{
-    color: #D94F2B;
+    color: $flame;
   }
 
   span{
@@ -129,7 +130,7 @@ body{
   }
 
   .viewCart-btn{
-    border: solid 1px #FDBC2C;
+    border: solid 1px $saffron;
     background-color: black;
     font-size: 9px;
     padding: 7px 10px 7px 2px;
@@ -139,8 +140,8 @@ body{
   
   
   .checkout-btn{
-    border: solid 1px #FDBC2C;
-    background-color: #FDBC2C;
+    border: solid 1px $saffron;
+    background-color: $saffron;
     font-size: 9px;
     padding: 7px 10px 7px 2px;
     width: 200px;
@@ -155,7 +156,7 @@ body{
     .dot {
       height: 50px;
       width: 50px;
-      background-color: #D94F2B;
+      background-color: $flame;
       border-radius: 50%;
       display: inline-block;
       margin-right: 5px;
@@ -183,8 +184,8 @@ body{
   border: 1px solid; 
   float: right;
   position: relative;
-  right: 15%;
-  top: 10px;
+  right: 8%;
+  top: 12px;
 }
 
 .arrowicon3{
@@ -194,29 +195,67 @@ body{
 }
 
 .horizon{
-  margin-top: 40px;
+  margin-top: 35px;
   margin-left: 180px;
   border-bottom: 2px solid $flame;
   width: 70%;
 }
 
+
 .horizonbar{
+  position: relative;
+  top: 10px;
   p{
     position: relative;
-    top: 30px;
-    margin-left: 15%;
+    top: 20px;
+    margin-left: 22%;
     color: white;
     font-size: 10px;
     font-family: $body;
   }
 }
 
+.sample_menu{
+  display: flex;
+  position: relative;
+  left: 300px;
+  top: 20px;
 
+    .dot2{
+      height: 200px;
+      width: 200px;
+      background-color: $flame;
+      border-radius: 50%;
+      display: inline-block;
+      margin-left:  100px;
+      margin-top: 5%;
+  }
 
+  .sample_text{
+    color: $saffron;
+    position: relative;
+    left: 70px;
+  }
+}
 
+#available-size{
+  width: 300px;
+}
 
+.sample_text{
+  h2{
+    font-size: 30px;
+  }
+  h3{
+    font-size: 26px;
+    color: $flame;
+  }
+}
 
-
-
-
-
+.counterButton{
+  position: relative;
+  left: 70%;
+  padding: 10px, 10px;
+  color: pink;
+  background: pink;
+}

@@ -15,7 +15,7 @@ function Cart() {
             <div>
                <span className="dot"><p>x</p></span>
               </div>
-              <div Name="text">
+              <div className="text">
                 <h4>Moorish Lamb</h4>
                 <p>SIZE: Large</p>
                 <p><span>1 x</span> $19.00</p>
