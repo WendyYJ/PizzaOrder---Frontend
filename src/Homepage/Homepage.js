@@ -5,12 +5,14 @@ import periperi from '../asset/img/PeriPeri.png';
 import Information from '../AboutUs/components/Infomation';
 import profile from '../asset/img/proni.png';    
 import phone from '../asset/icon/iphone-6s-logo.png';
-import Header from '../'
+import Header from '../PageLayout/Header/Header';
 
 const Homepage = props =>{
 
     return(
+        
         <div className='homepage'>
+            <Header />
             <main className='homepage__welcome'>
             <h1 className='homepage__welcome-heading'>
                 Get it while it's hot!

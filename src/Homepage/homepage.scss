@@ -7,9 +7,7 @@
 .homepage{
     background-color: $smokegrey;
     margin-bottom: 2vh;
-    text-align: center;
     
-
     &__welcome{
     height: 100vh;
     color:$saffron;
@@ -139,7 +137,7 @@
 
     &__comment{
         @include padding-center();
-        
+        text-align: center;
 
         &-heading{
             @include heading;

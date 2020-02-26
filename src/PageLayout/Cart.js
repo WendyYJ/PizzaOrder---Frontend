@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MYACCOUNT_URL, CHECKOUT_URL } from '../route/URLMap';
+import { MYACCOUNT_URL, CHECKOUT_URL } from '../routes/URLMap';
 import '.././PageLayout/Style/PageStyle.scss';
 
 function Cart() {
