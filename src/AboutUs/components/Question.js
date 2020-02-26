@@ -1,6 +1,7 @@
 import React from 'react';
 import '.././Style/Information.scss';
 import plus from '../../asset/img/plus.png';
+import minus from '../../asset/img/minus.png';
 import {connect} from  'react-redux';
 import {showAnswer} from '../../redux/actions/questionActions'
 
@@ -55,8 +56,10 @@ class Question extends React.Component{
   :(null)}
     </div>
     <div>
-    <img src={plus} alt="+button"/>
-    <button onClick={this.props.showAnswer}></button>
+    {this.props.isShowing?
+    <img src={minus} onClick={this.props.showAnswer} alt="+button"/>
+    :(<img src={plus} onClick={this.props.showAnswer} alt="+button"/>)}
+   
     </div>
 </div>
 
