@@ -1,5 +1,5 @@
 import React from 'react';
-import Carousel from './Carousel/Carousel';
+//import Carousel from './Carousel/Carousel';
 import './homepage.scss';
 import periperi from '../asset/img/PeriPeri.png';
 import Information from '../AboutUs/components/Infomation';
@@ -25,7 +25,6 @@ const Homepage = props =>{
             </main>
             
         <Information/> 
-        <Carousel />
         <div className='homepage__menu '>
             <div className='homepage__menu-left'>
             <h2 className='homepage__menu-heading'>
