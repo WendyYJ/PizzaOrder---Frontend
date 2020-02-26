@@ -1,5 +1,5 @@
 import React from 'react';
-import Route from './Route/route';
+import Route from './route/route';
 import ShopCatalog from './PizzaMenu/ShopCatalog';
 
 function App() {
