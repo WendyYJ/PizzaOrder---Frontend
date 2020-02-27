@@ -10,8 +10,6 @@ class Counter extends Component {
    }
  }
   
-
-  // change code below this line
   incrementCount = () => {
     this.setState(prevState => {
       return { count: prevState.count + 1 }
@@ -26,14 +24,13 @@ class Counter extends Component {
   }
 }
   
-  // change code above this line
   render() {
     return (
-
+   
    <div className="counterButton">
-     <button className="buttonOne" style={{fontSize: "20px", color: "black", width: "30px", height: "30px", display: "inline-block"}} className='dec' onClick={this.decrementCount}>-</button>
-     <span style={{fontSize: "20px", color: "white", width: "30px", height: "30px", display: "inline-block"}} className='blank'>{this.state.count}</span>
-     <button className="buttonOne" style={{fontSize: "20px", color: "black", width: "30px", height: "30px",  display: "inline-block"}} className='inc' onClick={this.incrementCount}>+</button>
+     <button className='decButton' onClick={this.decrementCount}>-</button>
+     <span className='count'>{this.state.count}</span>
+     <button className='incButton' onClick={this.incrementCount}>+</button>
    </div>
     );
   }
