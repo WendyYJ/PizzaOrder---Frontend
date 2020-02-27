@@ -2,6 +2,7 @@ export const HOME_URL = "/Homepage";
 export const PIZZAMENU_URL = "/PizzaMenu";
 export const PIZZABUILDER_URL = "/PizzaBuilder";
 export const SHOPPINGCART_URL = "/ShoppingCart";
+export const SHOPPRODUCT_URL = "/ShopProduct";
 export const BLOG_URL = "/Blog";
 export const PAGES_URL = "/Pages";
 export const ABOUTUS_URL = "/AboutUs";

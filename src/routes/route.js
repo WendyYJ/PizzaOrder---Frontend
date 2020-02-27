@@ -6,12 +6,12 @@ import ShopCatalog from '../PizzaMenu/ShopCatalog';
 import PizzaBuilder from '../PizzaBuilder/PizzaBuilder';
 import ShoppingCart from '../ShoppingCart/ShoppingCart';
 import AboutUs from '../AboutUs/AboutUs';
-import MenuMain from '../PizzaMenu/MenuMain';
+import ShopProduct from '../PizzaMenu/ShopProduct';
 
 import {
     HOME_URL,
     PIZZAMENU_URL,
-    PIZZAMENUMAIN_URL,
+    SHOPPRODUCT_URL,
     SHOPCATALOG_URL,
     PIZZABUILDER_URL,
     SHOPPINGCART_URL,
@@ -31,7 +31,7 @@ const Routes = () => {
            <Route exact path={PIZZABUILDER_URL} component={PizzaBuilder} /> 
            <Route exact path={SHOPPINGCART_URL} component={ShoppingCart} />
            <Route exact path={ABOUTUS_URL} component={AboutUs} />
-           <Route exact path={PIZZAMENUMAIN_URL} component={MenuMain} />
+           <Route exact path={SHOPPRODUCT_URL} component={ShopProduct} />
        </Switch>
       </BrowserRouter>
     
