@@ -10,7 +10,7 @@ class ThirdHeader extends Component {
  
           <h1> {this.props.headername}</h1> 
 
-          <div className="link-container">
+          <div className="link-containerTwo">
             Home
            <ArrowForwardIosIcon style={{ fontSize: 14 }} className="arrowicon"/>
            {this.props.headername}

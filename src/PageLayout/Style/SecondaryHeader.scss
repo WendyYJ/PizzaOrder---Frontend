@@ -23,13 +23,25 @@ padding-bottom: 3.5em;
     font-size: 1.2em;
     align-items: center;
     padding:0.8em;
-
     margin: auto;
     width:15%;
     justify-content: center;
     color: $saffron;
     border:2px solid $saffron;
 }
+
+.link-containerTwo{
+    display: flex;
+    font-size: 1.2em;
+    align-items: center;
+    padding:0.8em;
+    margin: auto;
+    width: 25%;
+    justify-content: center;
+    color: $saffron;
+    border:2px solid $saffron;
+}
+
 .arrowicon{
    margin-left: 0.6em;
    margin-right: 0.6em;
@@ -62,7 +74,6 @@ padding-bottom: 3.5em;
         font-size: 1.2em;
         align-items: center;
         padding:0.8em;
-    
         margin: auto;
         width:30%;
         justify-content: center;
@@ -70,3 +81,17 @@ padding-bottom: 3.5em;
         border:2px solid $saffron;
     }
   }
+
+  @media only screen and (max-width: 1000px) {
+  .link-containerTwo{
+    display: flex;
+    font-size: 1.2em;
+    align-items: center;
+    padding:0.8em;
+    margin: auto;
+    width: 50%;
+    justify-content: center;
+    color: $saffron;
+    border:2px solid $saffron;
+ }
+}

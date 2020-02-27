@@ -228,13 +228,13 @@ body{
   top: 20px;
 
     .dot2{
-      height: 200px;
-      width: 200px;
+      height: 300px;
+      width: 300px;
       background-color: $flame;
       border-radius: 50%;
       display: inline-block;
-      margin-left:  100px;
-      margin-top: 5%;
+      margin-left:  0px;
+      margin-top: 15%;
   }
 
   .sample_text{
@@ -362,8 +362,60 @@ body{
   }
 }
 
-.reviewForm-title{
+.reviewForm-container{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10%;
+  
+
+  .reviewForm-title{
     font-size: 24px;
     font-family: $body;
     color: $saffron;
+    position: relative;
+    top: -670px;
+    left: 15%;
+   
 }
+}
+
+.review-form{
+  position: relative;
+  top: -600px;
+  left: 1%;
+
+  input{
+    padding: 7px 20px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+  }
+}
+
+.submit-form{
+  position: relative;
+  top: -590px;
+  left: 1%;
+  input{
+    padding: 40px 20px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+  }
+}
+
+.submit-button{
+  position: relative;
+  top: -610px;
+  left: 1%;
+  input{
+    padding: 6px 22px;
+    background-color: $saffron;
+    border: 1px solid $saffron;
+  }
+}
+
+
+
+
+

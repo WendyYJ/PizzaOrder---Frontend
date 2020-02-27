@@ -4,6 +4,7 @@ import Header from '../PageLayout/Header/Header';
 import ThirdHeader from '../PageLayout/Header/ThirdHeader';
 import HorizonBar from '../PageLayout/HorizonBar';
 import SampleMenu from './Components/SampleMenu';
+import ReviewForm from '../PageLayout/ReviewForm';
 import Counter from '../PageLayout/Counter';
 import StarIcon from '@material-ui/icons/Star';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
@@ -25,6 +26,7 @@ const MenuMain = () => {
         <p className="active">REVIEWS(4)</p>
       </div>
     
+    <div className="menumain-review">
       <div className="reviewCountainer">
          <h3>Bradley Taylor</h3>
          <span>October 2, 2014</span>
@@ -90,7 +92,10 @@ const MenuMain = () => {
 
       <div className="reviewForm-container">
         <h2 className="reviewForm-title">Add a review</h2>
+        <ReviewForm />
       </div>
+    </div>
+
     </div>
   );
 }
