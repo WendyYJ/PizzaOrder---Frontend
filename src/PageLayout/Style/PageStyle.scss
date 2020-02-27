@@ -29,7 +29,7 @@ body{
 #menu_icon{
   position: relative;
   margin-left: 1%;
-  margin-top: -30px;
+  margin-top: -15px;
   width: 40px;
   display: flex;
   justify-content:  flex-start;   
@@ -37,14 +37,15 @@ body{
 
 .header {
    width: 100%;
-   height: 30px;
-   background-color: black;
+   height: 45px;
+   margin-top: -15px;
+   background-color:  rgba(0, 0, 0, 0.900);
 }
 
 .header h3 {
   position: relative;
   left: 45%;
-  top: -10px;
+  top: -2px;
   color: $flame;
   size: 6px;
   font-family: $logo;
@@ -276,6 +277,7 @@ body{
     width: 30px;
     height: 30px;
     display: inline-block;
+    border: 1px solid white;
   }
 
   .incButton{
@@ -286,6 +288,7 @@ body{
     width: 30px;
     height: 30px;
     display: inline-block;
+    border: 1px solid white;
   }
 
 
@@ -299,3 +302,68 @@ body{
   }
 }
 
+.addButton{
+  position: relative;
+  left: 110px;
+  top: 12px;
+  padding: 8px 40px;
+  background-color: $saffron;
+  color: black;
+  font-family: $body;
+  border: 1px solid $saffron;
+}
+
+.horizonbar-Two{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5%;
+  border-bottom: 2px solid $flame;
+  width: 70%;
+  position: relative;
+  margin-left: 15%;
+  
+
+  p{
+    font-size: 14px;
+    font-family: $body;
+    color: white;
+    
+  }
+
+  .active{
+    font-size: 14px;
+    font-family: $body;
+    color: $flame;
+  }
+}
+
+.reviewCountainer{
+  position: relative;
+  margin-left: 10%;
+  margin-top: 5%;
+
+  h3{
+    font-size: 16px;
+    font-family: $body;
+    color: $saffron;
+  }
+  span{
+    font-size: 14px;
+    font-family: $body;
+    color: $flame;
+  }
+  p{
+    font-size: 12px;
+    font-family: $body;
+    color: white;
+  }
+  .five-starRate{
+    margin-left: 38%;
+  }
+}
+
+.reviewForm-title{
+    font-size: 24px;
+    font-family: $body;
+    color: $saffron;
+}

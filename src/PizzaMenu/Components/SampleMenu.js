@@ -26,7 +26,12 @@ const SampleMenu = () => {
         <p style={{fontSize: "14px"}}>AVAILABLE SIZES</p>
         <img src={availableSizes} alt="available-size" id="available-size" />
         <h3>Price: $21</h3>
-        <p style={{fontSize: "14px", margin: "2px"}}>QUANTITY</p> <br></br>
+        <p style={{fontSize: "14px", margin: "2px"}}>QUANTITY</p> 
+        <button className="addButton"
+              
+        >
+          ADD TO CART
+        </button>
 
         </div>
         </div>
