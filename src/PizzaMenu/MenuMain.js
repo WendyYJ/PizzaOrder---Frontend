@@ -8,6 +8,7 @@ import ReviewForm from '../PageLayout/ReviewForm';
 import Counter from '../PageLayout/Counter';
 import StarIcon from '@material-ui/icons/Star';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
+import RelatedProduct from './Components/RelatedProduct';
 
 const MenuMain = () => {
   return (
@@ -94,6 +95,7 @@ const MenuMain = () => {
         <h2 className="reviewForm-title">Add a review</h2>
         <ReviewForm />
       </div>
+      <RelatedProduct />
     </div>
 
     </div>

@@ -54,3 +54,57 @@
   margin-left: 12%;
 }
 
+.relatedProduct-container{
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  position: relative;
+  margin-top: -290px;
+  margin-left: 5%;
+
+  .related-title{
+    font-family: $heading;
+    font-size: 26px;
+    color: $saffron;
+    position: relative;
+    margin-top: -65px;
+    left: 50%;
+    width: 100%;
+  }
+  .pizza{
+    width: 30%;
+    padding: 2% 1px 7px 2%;
+    text-align: center;
+    position: relative;
+    margin-top: 40%;
+    margin: 1%;
+  }
+
+  .pizza h4{
+  font-size:0.9em;
+  color:$saffron;
+  margin-top: 20%;
+  }
+  
+  .pizza p{
+  font-size:0.7em;
+  color:$white;
+  }
+  
+  .pizza h3{
+  font-size:0.8em;
+  color: $flame;
+  }
+  
+  .dot {
+  height: 120px;
+  width: 120px;
+  background-color: $flame;
+  border-radius: 50%;
+  display: inline-block;
+  } 
+}
+
+
+  
