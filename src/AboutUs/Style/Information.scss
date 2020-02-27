@@ -112,6 +112,24 @@ margin-right: 4em;
 }
 
 
+@media only screen and (max-width: 1200px) {
+    .desc-container p{
+      line-height: 13px;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 // question
 
 .questioncontainer h1{
@@ -207,3 +225,4 @@ position: relative;
     top:25%;
         }               
     
+

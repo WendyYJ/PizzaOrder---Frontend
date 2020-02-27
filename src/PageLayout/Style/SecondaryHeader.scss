@@ -15,14 +15,20 @@ background-color: rgb(37, 35, 35);
 opacity: 0.9;
 padding-top: 3.5em;
 padding-bottom: 3.5em;
+
     }
 
 .link-container{
     display: flex;
-    font-size: 01.2em;
+    font-size: 1.2em;
     align-items: center;
+    padding:0.8em;
+
+    margin: auto;
+    width:15%;
     justify-content: center;
     color: $saffron;
+    border:2px solid $saffron;
 }
 .arrowicon{
    margin-left: 0.6em;
@@ -48,3 +54,19 @@ padding-bottom: 3.5em;
     
 
 
+
+
+  @media only screen and (max-width: 1000px) {
+    .link-container{
+        display: flex;
+        font-size: 1.2em;
+        align-items: center;
+        padding:0.8em;
+    
+        margin: auto;
+        width:30%;
+        justify-content: center;
+        color: $saffron;
+        border:2px solid $saffron;
+    }
+  }
