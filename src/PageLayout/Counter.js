@@ -19,19 +19,21 @@ class Counter extends Component {
   }
   
   decrementCount = () => {
+    if(this.state.count > 0){
     this.setState(prevState => {
       return { count: prevState.count - 1 }
     })
   }
+}
   
   // change code above this line
   render() {
     return (
 
    <div className="counterButton">
-     <button style={{fontSize: "20px", color: "black"}} className='dec' onClick={this.decrementCount}>-</button>
-     <h1 style={{fontSize: "20px", color: "white"}} className='blank'>{this.state.count}</h1>
-     <button style={{fontSize: "20px", color: "black"}} className='inc' onClick={this.incrementCount}>+</button>
+     <button className="buttonOne" style={{fontSize: "20px", color: "black", width: "30px", height: "30px", display: "inline-block"}} className='dec' onClick={this.decrementCount}>-</button>
+     <span style={{fontSize: "20px", color: "white", width: "30px", height: "30px", display: "inline-block"}} className='blank'>{this.state.count}</span>
+     <button className="buttonOne" style={{fontSize: "20px", color: "black", width: "30px", height: "30px",  display: "inline-block"}} className='inc' onClick={this.incrementCount}>+</button>
    </div>
     );
   }

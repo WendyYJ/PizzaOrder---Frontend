@@ -19,16 +19,20 @@ body{
 
 #header_cart{
   position: relative;
-  left: 93%;
-  top: -42px;
+  margin-top: -38px;
+  margin-left: 93%; 
   width: 50px;
+  display: flex;
+  justify-content:  flex-end; 
 }
 
 #menu_icon{
   position: relative;
-  left: 1%;
-  top: -52px;
+  margin-left: 1%;
+  margin-top: -30px;
   width: 40px;
+  display: flex;
+  justify-content:  flex-start;   
 }
 
 .header {
@@ -45,6 +49,7 @@ body{
   size: 6px;
   font-family: $logo;
   height: 3px;
+  display: flex;
 }
 
 .navbar{
@@ -255,7 +260,10 @@ body{
 .counterButton{
   position: relative;
   left: 70%;
-  padding: 10px, 10px;
-  color: pink;
-  background: pink;
+}
+
+.buttonOne{
+  font-size: "20px";
+
+
 }
