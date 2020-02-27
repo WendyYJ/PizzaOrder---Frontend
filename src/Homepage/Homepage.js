@@ -8,6 +8,7 @@ import phone from '../asset/icon/iphone-6s-logo.png';
 import Header from '../PageLayout/Header/Header';
 import Sidebar from '../PageLayout/Sidebar';
 import Toggle from '../PageLayout/Toggle';
+import Ingredients from '../PageLayout/Footer/Ingredient';
 
 const Homepage =  ({children})  => {
     const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -86,6 +87,7 @@ const Homepage =  ({children})  => {
             <p className='homepage__pizza-builder-button'>create your own pizza</p>
 
          </div>
+         <Ingredients/>
         
         <div className='homepage__comment'>
             <h2 className='homepage__comment-heading'>
@@ -184,6 +186,12 @@ const Homepage =  ({children})  => {
             
             </div>
         </div>
+        
+        
+       
+        
+        
+        
     </div>
     </Fragment>
     </div>
