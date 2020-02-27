@@ -1,17 +1,33 @@
 @import './theme';
 
 .ingredientcontainer{
+
+    height:14em;
+ 
+    padding-right: 3em;
     display: flex;
-    height:12em;
+    width:80%;
+  
     justify-content: center;
     align-items: center;
-    padding-left: 7em;
-
+margin:auto;
 }
 
+.circlebigcontainer{
+    display: flex;
+    width:80%;
+ 
+}
+.circlecontainer{
+    width:20%;
+    margin-left: 8%;
+}
 .circlecontainer img{
-    height:4em;
-     margin-right: 2em;
+width:130%;
+    margin-left: 12%;
+
+
+  
 
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import Route from './Route/route';
-import ShopCatalog from './PizzaMenu/ShopCatalog';
+import Route from './routes/route';
+//import ShopCatalog from './PizzaMenu/ShopCatalog';
 
 function App() {
   return (

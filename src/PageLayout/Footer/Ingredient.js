@@ -5,11 +5,14 @@ import circle3 from '../../asset/img/circle3.png';
 import circle4 from '../../asset/img/circle4.png';
 import circle5 from '../../asset/img/circle5.png';
 import circle6 from '../../asset/img/circle6.png';
+
 import '../Style/Footer.scss'
 
 const Ingredient = () => {
     return (
         <div className="ingredientcontainer">
+
+            <div className="circlebigcontainer">
             <div className="circlecontainer">
 <img src={circle1}></img>
 </div>
@@ -28,6 +31,8 @@ const Ingredient = () => {
 
 <div className="circlecontainer">
 <img src={circle6}></img>
+</div>
+
 </div>
 
             </div>

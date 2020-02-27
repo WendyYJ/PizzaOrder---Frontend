@@ -89,7 +89,9 @@ p{
 .desc-container{
     margin-right: 4em;
     margin-left: 4em;
+  
 }
+
 
 
   .squarescontainer{
@@ -133,7 +135,8 @@ margin-right: 4em;
 background: #2c2727;
 text-align: center;
 width:100%;
-padding:3em;
+padding-top:3em;
+padding-bottom: 3em;
 }
 .qu-container{
     border-top: 0.6px solid gray;
@@ -149,6 +152,7 @@ padding:3em;
     font-size:1em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+    width:90%;
 }
 
 .qu-container1{
@@ -167,6 +171,7 @@ padding:3em;
     font-size:1em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+    width:90%;
 }
 
 .qu-container1 img{
@@ -179,7 +184,12 @@ width:2em;
     height:2em;
     width:2em;
     }
-
+    .qu-container p{
+        width:90%;
+    }
+    .qu-container1 p{
+        width:90%;
+    }
 .qu-container{
 position: relative;
     }
