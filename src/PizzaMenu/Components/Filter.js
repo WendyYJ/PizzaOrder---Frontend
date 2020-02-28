@@ -1,9 +1,49 @@
 import React from 'react';
 import '.././Style/Filter.scss';
 import MenuIcon from '@material-ui/icons/Menu';
+import CourseCard from './PizzaCard';
+import { fetchCourses } from '../../api/course'
+import { SHOPCATALOG_URL} from '../../routes/URLMap';
 
 
-function Filter(props){
+class Filter extends React.Component {
+	constructor(props) {
+		const mockImage = 'https://sdtimes.com/wp-content/uploads/2018/03/jW4dnFtA_400x400.jpg';
+        super(props);
+
+        this.state = {
+			
+			pizzas: 
+			[{code:1,name:"pizza1",description:"11111",pizzaImage:mockImage,price:16.00},
+			{code:2,name:"pizza2",description:"11111",pizzaImage:mockImage,price:16.00},
+			{code:3,name:"pizza3",description:"11111",pizzaImage:mockImage,price:16.00},
+			{code:3,name:"pizza3",description:"11111",pizzaImage:mockImage,price:16.00},
+			{code:4,name:"pizza3",description:"11111",pizzaImage:mockImage,price:16.00},
+			{code:5,name:"pizza3",description:"11111",pizzaImage:mockImage,price:16.00},
+	
+		],
+            error: null,
+            isLoading: false,
+    
+        };
+    }
+	
+// 	componentDidMount() {
+// 		this.setState({isLoading:true},()=>{
+// 			fetchCourses()
+// 			.then(courses=>{
+// 				this.setState({courses, isLoading:false});
+		
+// 		})
+// 		.catch(error=>{
+// 			this.setState({error,isLoading:false});
+
+// 		})
+        
+// 	});
+// }
+	render() {
+		
 	return (
 		<section className="maincontainer">
 		<div className="headercontainer">
@@ -214,42 +254,21 @@ function Filter(props){
 		   </div>
 		</section>
 		<div className="pizzacontainer">
-		   <div className="pizza">
-			  <span class="dot"></span>
-			  <h4>Kimchi BBQ chicken</h4>
-			  <p>descriptdsasjdankasnd <br/>ksandkjasndnkasnd
-				 <br/>ksandkjasndnkasnd<br/>ksandkjasndnkasnd
-			  </p>
-			  <h3>$21.00</h3>
-		   </div>
-		   <div className="pizza">
-			  <span class="dot"></span>
-			  <h4>Kimchi BBQ chicken</h4>
-			  <p>descriptdsasjdankasnd <br/>ksandkjasndnkasnd
-				 <br/>ksandkjasndnkasnd<br/>ksandkjasndnkasnd
-			  </p>
-			  <h3>$21.00</h3>
-		   </div>
-		   <div className="pizza">
-			  <span class="dot"></span>
-			  <h4>Kimchi BBQ chicken</h4>
-			  <p>descriptdsasjdankasnd <br/>ksandkjasndnkasnd
-				 <br/>ksandkjasndnkasnd<br/>ksandkjasndnkasnd
-			  </p>
-			  <h3>$21.00</h3>
-		   </div>
-		   <div className="pizza">
-			  <span class="dot"></span>
-			  <h4>Kimchi BBQ chicken</h4>
-			  <p>descriptdsasjdankasnd <br/>ksandkjasndnkasnd
-				 <br/>ksandkjasndnkasnd<br/>ksandkjasndnkasnd
-			  </p>
-			  <h3>$21.00</h3>
-		   </div>
+		{this.state.pizzas.map(pizza => (
+                            <CourseCard
+                                pizzaDescription={pizza.description}
+                                pizzaImage={pizza.pizzaImage}
+								pizzaName={pizza.name}
+								pizzaPrice={pizza.price}
+                                key={pizza.code}
+                           
+                            />
+                        ))}
 		</div>
 	 </section>
 		
 	);
+}
 }
 
 

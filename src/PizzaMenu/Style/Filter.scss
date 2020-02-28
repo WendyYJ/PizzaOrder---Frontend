@@ -80,35 +80,67 @@ input[type="checkbox"]{
 
   .pizzacontainer{
       width:60%;
-      height:50%;
+ height: 60%;
       display: flex;
       margin: auto;
+      margin-top: 2em;
+      justify-content: center;
+      background:rgb(44, 39, 39);
+      flex-wrap: wrap;
   }
+.cardcontainer{
+    text-align: center;
+    height:15em;
+    width:25%;
+    margin-bottom: 1em;
+    
+   
+  
+ 
 
-  .pizza{
-      width: 25%;
-
-      padding: 2% 1px 7px 2%;
-      text-align: center;
-  }
-  .pizza h4{
-   font-size:0.9em;
-   color:$saffron;
 }
 
-.pizza p{
-    font-size:0.7em;
-    color:$white;
- }
+.contentcontainer h2{
+    font-size: 1.2em;
+  color:$saffron
+}
 
- .pizza h3{
-    font-size:0.8em;
-    color: $flame;
- }
- .dot {
-    height: 120px;
-    width: 120px;
-    background-color: $flame;
-    border-radius: 50%;
-    display: inline-block;
-  }
+.contentcontainer p{
+  color: $white;
+}
+
+.contentcontainer h3{
+  color: $flame;  font-size: 1.2em;
+}
+.cardcontainer .circlecontainer{
+
+margin:auto;
+text-align: center;
+
+text-align: center;
+}
+.cardcontainer .circlecontainer img{
+    height:80px;
+    width:80px;
+    text-align: center;
+    margin:auto;
+}
+.pizza-card{text-align: center;
+}
+
+
+
+
+
+
+
+//   pizzacard
+
+Image{
+    width:20px;
+    height:20px
+}
+
+.pizza-card{
+    width:30%;
+}
