@@ -19,40 +19,41 @@ body{
   float: right;
 }
 
-#header_cart{
-  position: relative;
-  margin-top: -38px;
-  margin-left: 93%; 
-  width: 50px;
-  display: flex;
-  justify-content:  flex-end; 
-}
-
-#menu_icon{
-  position: relative;
-  margin-left: 1%;
-  margin-top: -15px;
-  width: 40px;
-  display: flex;
-  justify-content:  flex-start;   
-}
 
 .header {
    width: 100%;
    height: 45px;
    margin-top: -15px;
    background-color:  rgba(0, 0, 0, 0.900);
-}
 
-.header h3 {
-  position: relative;
-  left: 45%;
-  top: -2px;
-  color: $flame;
-  size: 6px;
-  font-family: $logo;
-  height: 3px;
-  display: flex;
+   #header_cart{
+    position: relative;
+    margin-top: -37px;
+    margin-left: 93%; 
+    width: 50px;
+    display: flex;
+    justify-content:  flex-end; 
+  }
+  
+  #menu_icon{
+    position: relative;
+    margin-left: 1%;
+    margin-top: -15px;
+    width: 40px;
+    display: flex;
+    justify-content:  flex-start;   
+  }
+
+  h3 {
+    position: relative;
+    left: 45%;
+    top: -2px;
+    color: $flame;
+    size: 6px;
+    font-family: $logo;
+    height: 3px;
+    display: flex;
+  }
 }
 
 .navbar{
@@ -210,7 +211,6 @@ body{
   width: 47vw;
 }
 
-
 .horizonbar{
   position: relative;
   top: 10px;
@@ -249,7 +249,6 @@ body{
   .clickCount{
     position: relative;
     left: 10px;
-
   }
   }
 }
@@ -300,7 +299,6 @@ body{
     display: inline-block;
     border: 1px solid white;
   }
-
 
   .count{
     font-size: 1.3em;
