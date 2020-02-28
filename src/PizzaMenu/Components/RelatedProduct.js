@@ -6,7 +6,7 @@ const RelatedProduct = () =>{
       <div className="relatedProduct-container">
         <h2>Related Products</h2>
 		   <div className="pizza">
-			  <span class="dot333"></span>
+			  <span class="dot_333"></span>
 			  <h4>Florentine Ricotta</h4>
 			  <p>descriptdsasjdankasnd <br/>ksandkjasndnkasnd
 				 <br/>ksandkjasndnkasnd<br/>ksandkjasndnkasnd
@@ -14,7 +14,7 @@ const RelatedProduct = () =>{
 			  <h3>$18.00</h3>
 		   </div>
 		   <div className="pizza">
-			  <span class="dot333"></span>
+			  <span class="dot_333"></span>
 			  <h4>Margherita</h4>
 			  <p>descriptdsasjdankasnd <br/>ksandkjasndnkasnd
 				 <br/>ksandkjasndnkasnd<br/>ksandkjasndnkasnd
@@ -22,7 +22,7 @@ const RelatedProduct = () =>{
 			  <h3>$16.00</h3>
 		   </div>
 		   <div className="pizza">
-			  <span class="dot333"></span>
+			  <span class="dot_333"></span>
 			  <h4>Vege Supreme</h4>
 			  <p>descriptdsasjdankasnd <br/>ksandkjasndnkasnd
 				 <br/>ksandkjasndnkasnd<br/>ksandkjasndnkasnd
@@ -30,7 +30,7 @@ const RelatedProduct = () =>{
 			  <h3>$22.00</h3>
 		   </div>
 		   <div className="pizza">
-			  <span class="dot333"></span>
+			  <span class="dot_333"></span>
 			  <h4>Roast Beetroot</h4>
 			  <p>descriptdsasjdankasnd <br/>ksandkjasndnkasnd
 				 <br/>ksandkjasndnkasnd<br/>ksandkjasndnkasnd
