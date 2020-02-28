@@ -1,4 +1,6 @@
 @import './theme';
+@import '../../asset/theme.scss';
+@import '../../asset/mixin.scss';
 
 body{
   background-color: rgba(0, 0, 0, 0.900);
@@ -166,6 +168,7 @@ body{
       border-radius: 50%;
       display: inline-block;
       margin-right: 5px;
+
       p{
         position: relative;
         right: 17px;
@@ -223,13 +226,13 @@ body{
 
 .sample_menu{
   display: flex;
+  justify-content: center;
   position: relative;
-  left: 300px;
   top: 20px;
 
     .dot2{
-      height: 300px;
-      width: 300px;
+      height: 25vw;
+      width: 25vw;
       background-color: $flame;
       border-radius: 50%;
       display: inline-block;
@@ -241,11 +244,17 @@ body{
     color: $saffron;
     position: relative;
     left: 70px;
+
+  .clickCount{
+    position: relative;
+    left: 10px;
+
+  }
   }
 }
 
 #available-size{
-  width: 300px;
+  width: 25vw;
 }
 
 .sample_text{
@@ -260,43 +269,43 @@ body{
 
 .counterButton{
   position: relative;
-  left: 670px;
+  left: -7px;
   color: white;
   background-color: rgba(0, 0, 0, 0.900);
   opacity: 1;
-  height: 30px;
-  width: 90px;
+  height: 3vw;
+  width: 9vw;
   border: 1px solid white;
    
   
   .decButton{
-    font-size: 20px;
+    font-size: 1.3em;
     color: white;
     background-color: rgba(0, 0, 0, 0.900);
     opacity: 1;
-    width: 30px;
-    height: 30px;
+    width: 3vw;
+    height: 3vw;
     display: inline-block;
     border: 1px solid white;
   }
 
   .incButton{
-    font-size: 20px;
+    font-size: 1.3em;
     color: white;
     background-color: rgba(0, 0, 0, 0.900);
     opacity: 1;
-    width: 30px;
-    height: 30px;
+    width: 3vw;
+    height: 3vw;
     display: inline-block;
     border: 1px solid white;
   }
 
 
   .count{
-    font-size: 20px;
+    font-size: 1.3em;
     text-align: center;
-    width: 30px;
-    height: 30px;
+    width: 3vw;
+    height: 3vw;
     display: inline-block;
     color: white;
   }
@@ -304,13 +313,14 @@ body{
 
 .addButton{
   position: relative;
-  left: 110px;
-  top: 12px;
-  padding: 8px 40px;
+  left: 135px;
+  top: -38px;
+  padding: 1vw 4vw;
   background-color: $saffron;
   color: black;
   font-family: $body;
   border: 1px solid $saffron;
+  font-size: 0.8em;
 }
 
 .horizonbar-Two{
@@ -337,10 +347,24 @@ body{
   }
 }
 
+.pizza-review {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-left: 10%;
+  margin-top: 3%;
+}
+
+.menumain-review{
+  width: 100%;
+}
+
 .reviewCountainer{
   position: relative;
-  margin-left: 10%;
+  margin-left: 5%;
   margin-top: 5%;
+  width: 100%;
+
 
   h3{
     font-size: 16px;
@@ -363,26 +387,28 @@ body{
 }
 
 .reviewForm-container{
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 10%;
+  margin-right: 5%;
+  width: 100%;
   
 
-  .reviewForm-title{
+  h2{
     font-size: 24px;
     font-family: $heading;
     color: $saffron;
     position: relative;
-    top: -670px;
-    left: 15%;
-   
-}
-}
+    top: 20px;
+    left: 25%;  
+    width: 100%;
+ }
 
-.review-form{
+ .five-starRate{
+   width: 100%;
+ }
+
+ .review-form{
   position: relative;
-  top: -600px;
-  left: 1%;
+  top: 30px;
+  left: 25%;
 
   input{
     padding: 7px 20px;
@@ -394,8 +420,8 @@ body{
 
 .submit-form{
   position: relative;
-  top: -590px;
-  left: 1%;
+  top: 40px;
+  left: 25%;
   input{
     padding: 40px 20px;
     color: white;
@@ -406,14 +432,17 @@ body{
 
 .submit-button{
   position: relative;
-  top: -610px;
-  left: 1%;
+  top: 30px;
+  left: 25%;
   input{
     padding: 6px 22px;
     background-color: $saffron;
     border: 1px solid $saffron;
   }
 }
+}
+
+
 
 
 

@@ -3,18 +3,20 @@ import '../../PageLayout/Style/PageStyle.scss';
 import StarIcon from '@material-ui/icons/Star';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 import availableSizes from "../../asset/icon/available_sizes.png";
+import Counter from '../../PageLayout/Counter';
 
 
 
 const SampleMenu = () => {
   return (
     <div className="sample_menu">
-      <div>
+      <div className="pizza-sample">
           <span className="dot2"></span>
        </div>
+      <div className="sample-info">
        <div className="sample_text">
           <h2>Peri-Peri</h2>
-       <div className="five-star">
+        <div className="five-star">
           <StarIcon style={{color: "#D94F2B", fontSize: "20px"}} />
           <StarIcon style={{color: "#D94F2B", fontSize: "20px"}} />
           <StarIcon style={{color: "#D94F2B", fontSize: "20px"}} />
@@ -26,15 +28,19 @@ const SampleMenu = () => {
         <p style={{fontSize: "14px"}}>AVAILABLE SIZES</p>
         <img src={availableSizes} alt="available-size" id="available-size" />
         <h3>Price: $21</h3>
-        <p style={{fontSize: "14px", margin: "2px"}}>QUANTITY</p> 
+        <div class="clickCount">
+          <p style={{fontSize: "14px", margin: "2px"}}>QUANTITY</p>
+          <Counter /> 
+        </div>
         <button className="addButton"
               
         >
           ADD TO CART
         </button>
-        </div>
+      </div>
       </div>
     </div>
+  </div>
   );
 }
 

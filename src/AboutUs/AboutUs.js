@@ -5,6 +5,7 @@ import Middle from './components/Middle'
 import Question from './components/Question'
 import SecondaryHeader from '../PageLayout/Header/SecondaryHeader'
 import Ingredient from '../PageLayout/Footer/Ingredient'
+
 const AboutUs = () => {
   
    return (

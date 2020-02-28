@@ -4,7 +4,7 @@ import '.././Style/pizzamenu.scss';
 const RelatedProduct = () =>{
   return(
       <div className="relatedProduct-container">
-        <h2 className="related-title">Related Products</h2>
+        <h2>Related Products</h2>
 		   <div className="pizza">
 			  <span class="dot"></span>
 			  <h4>Florentine Ricotta</h4>
