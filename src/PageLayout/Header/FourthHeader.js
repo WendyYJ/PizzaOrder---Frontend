@@ -3,19 +3,18 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import '../Style/SecondaryHeader.scss';
 
 
-class ThirdHeader extends Component {
+class FourthHeader extends Component {
   render(){
     return (
-      <div className="third-header">
+      <div className="forth-header">
  
           <h1> {this.props.headername}</h1> 
 
-          <div className="link-containerTwo">
+          <div className="link-containerThree">
             Home
            <ArrowForwardIosIcon style={{ fontSize: 14 }} className="arrowicon"/>
            {this.props.headername}
-           <ArrowForwardIosIcon style={{ fontSize: 14 }} className="arrowicon"/>
-           {this.props.headername2}
+           
           </div>
     
       </div>
@@ -23,4 +22,4 @@ class ThirdHeader extends Component {
   }
 }
   
-  export default ThirdHeader;
+  export default FourthHeader;

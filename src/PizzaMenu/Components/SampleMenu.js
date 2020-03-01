@@ -4,6 +4,7 @@ import StarIcon from '@material-ui/icons/Star';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 import availableSizes from "../../asset/icon/available_sizes.png";
 import Counter from '../../PageLayout/Counter';
+import PeriPeri from '../../asset/img/PeriPeri.png';
 
 
 
@@ -11,7 +12,7 @@ const SampleMenu = () => {
   return (
     <div className="sample_menu">
       <div className="pizza-sample">
-          <span className="dot2"></span>
+          <img className='dot2' src={PeriPeri} alt="pizza"/>
        </div>
       <div className="sample-info">
        <div className="sample_text">

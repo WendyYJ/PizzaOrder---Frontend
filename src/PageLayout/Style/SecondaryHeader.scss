@@ -40,28 +40,55 @@
     border:2px solid $saffron;
 }
 
+.link-containerThree{
+    display: flex;
+    font-size: 1.2em;
+    align-items: center;
+    padding:0.8em;
+    margin: auto;
+    width: 20%;
+    justify-content: center;
+    color: $saffron;
+    border:2px solid $saffron;
+}
+
 .arrowicon{
    margin-left: 0.6em;
    margin-right: 0.6em;
 }
 
-.third-header h1{
-    font-family: $chalk;
-    color: $white;
-    font-size: 2.6em;
-    margin: 0;
-    margin-bottom: 0.7em;
-    
-    }
-    
 .third-header{
     text-align: center;
     background-color: rgb(37, 35, 35);
     opacity: 0.9;
     padding-top: 3.5em;
     padding-bottom: 3.5em;
+
+    h1{
+        font-family: $chalk;
+        color: $white;
+        font-size: 2.6em;
+        margin: 0;
+        margin-bottom: 0.7em;
+        }
   }
     
+.forth-header{
+    text-align: center;
+    background-color: rgb(37, 35, 35);
+    opacity: 0.9;
+    padding-top: 3.5em;
+    padding-bottom: 3.5em;
+
+    h1{
+        font-family: $chalk;
+        color: $white;
+        font-size: 2.6em;
+        margin: 0;
+        margin-bottom: 0.7em;
+        }
+
+}
 
 
 

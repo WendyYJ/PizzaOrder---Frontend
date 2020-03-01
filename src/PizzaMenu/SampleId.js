@@ -7,7 +7,7 @@ import SampleMenu from './Components/SampleMenu';
 import ReviewForm from '../PageLayout/ReviewForm';
 import RelatedProduct from './Components/RelatedProduct';
 
-const ShopProduct = () => {
+const MenuSamples = () => {
   return (
     <div className ="MenuMain-container">
       <Header />
@@ -22,17 +22,10 @@ const ShopProduct = () => {
         <p>ORDER DELIVERY</p>
         <p className="active">REVIEWS(4)</p>
       </div>
-      
-          <ReviewForm />
-          <RelatedProduct />
-     
-    </div>
-    
-
-     
-  
-
+        <ReviewForm />
+        <RelatedProduct />
+     </div>
   );
 }
 
-export default ShopProduct;
+export default MenuSamples;
