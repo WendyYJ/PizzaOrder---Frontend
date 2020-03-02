@@ -1,9 +1,10 @@
 import React from 'react';
 import '.././Style/Filter.scss';
 import MenuIcon from '@material-ui/icons/Menu';
-import CourseCard from './PizzaCard';
-import { fetchCourses } from '../../api/course'
-import { SHOPCATALOG_URL} from '../../routes/URLMap';
+import PizzaCard from './PizzaCard';
+import { fetchPizza } from '../../api/pizza'
+import { PIZZAMENU_URL} from '../../routes/URLMap';
+import { Button, Container, Pagination, Segment } from 'semantic-ui-react';
 
 
 class Filter extends React.Component {
@@ -14,34 +15,36 @@ class Filter extends React.Component {
         this.state = {
 			
 			pizzas: 
-			[{code:1,name:"pizza1",description:"11111",pizzaImage:mockImage,price:16.00},
-			{code:2,name:"pizza2",description:"11111",pizzaImage:mockImage,price:16.00},
-			{code:3,name:"pizza3",description:"11111",pizzaImage:mockImage,price:16.00},
-			{code:3,name:"pizza3",description:"11111",pizzaImage:mockImage,price:16.00},
-			{code:4,name:"pizza3",description:"11111",pizzaImage:mockImage,price:16.00},
-			{code:5,name:"pizza3",description:"11111",pizzaImage:mockImage,price:16.00},
+			[
+			// 	{code:1,name:"pizza1",description:"11111",pizzaImage:mockImage,price:16.00},
+			// {code:2,name:"pizza2",description:"11111",pizzaImage:mockImage,price:16.00},
+			// {code:3,name:"pizza3",description:"11111",pizzaImage:mockImage,price:16.00},
+			// {code:3,name:"pizza3",description:"11111",pizzaImage:mockImage,price:16.00},
+			// {code:4,name:"pizza3",description:"11111",pizzaImage:mockImage,price:16.00},
+			// {code:5,name:"pizza3",description:"11111",pizzaImage:mockImage,price:16.00},
 	
 		],
             error: null,
-            isLoading: false,
+			isLoading: false,
+			pagination:{},
     
         };
     }
 	
-// 	componentDidMount() {
-// 		this.setState({isLoading:true},()=>{
-// 			fetchCourses()
-// 			.then(courses=>{
-// 				this.setState({courses, isLoading:false});
+	componentDidMount() {
+		this.setState({isLoading:true},()=>{
+			fetchPizza()
+			.then(pizzas=>{
+				this.setState({pizzas, isLoading:false});
 		
-// 		})
-// 		.catch(error=>{
-// 			this.setState({error,isLoading:false});
+		})
+		.catch(error=>{
+			this.setState({error,isLoading:false});
 
-// 		})
+		})
         
-// 	});
-// }
+	});
+}
 	render() {
 		
 	return (
@@ -253,19 +256,26 @@ class Filter extends React.Component {
 			  <button className="filter-btn">FILTER SELECTED</button>
 		   </div>
 		</section>
+
+		<Segment basic loading={this.state.isLoading}>
 		<div className="pizzacontainer">
 		{this.state.pizzas.map(pizza => (
-                            <CourseCard
-                                pizzaDescription={pizza.description}
+                            <PizzaCard
+                                pizzaDescription={pizza.Description}
                                 pizzaImage={pizza.pizzaImage}
-								pizzaName={pizza.name}
-								pizzaPrice={pizza.price}
-                                key={pizza.code}
+								pizzaName={pizza.PizzaName}
+								pizzaPrice={pizza.UnitPrice}
+								key={pizza._id}
+								to={`${PIZZAMENU_URL}/${pizza._id}`}
                            
                             />
                         ))}
 		</div>
+		</Segment>
+		<Pagination
+		/>
 	 </section>
+	 
 		
 	);
 }
