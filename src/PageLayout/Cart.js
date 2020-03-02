@@ -46,8 +46,8 @@ function Cart() {
           <p>CART SUBTOTAL <span>$79.00</span></p>
           <p>SHIPPING AND HANDLING <span>Free Shipping</span></p> <br></br>
           <h3>Order Total <span>$79.00</span></h3>
-          <button className="viewCart-btn"><Link style={{color: "#FDBC2C", textDecoration: "none"}}to={MYACCOUNT_URL}>VIEW SHOPPING CART</Link></button><br></br>
-          <button className="checkout-btn"><Link style={{color: "black", textDecoration: "none"}}to={CHECKOUT_URL}>CHECKOUT</Link></button>  
+          <button className="viewCart-btn"><Link style={{color: "#FDBC2C", textDecoration: "none"}}to={MYACCOUNT_URL}>UPDATE CART</Link></button><br></br>
+          <button className="checkout-btn"><Link style={{color: "black", textDecoration: "none"}}to={CHECKOUT_URL}>PROCEED TO CHECKOUT</Link></button>  
         </div>
      </div>
   );
