@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-axios.defaults.baseURL = 'https://jr-cms.herokuapp.com/v1';
+axios.defaults.baseURL = 'http://pizzadeploy-env.dn37p3zqw3.ap-southeast-2.elasticbeanstalk.com';
 
 
 export const get = (url) =>
