@@ -1,53 +1,48 @@
-import React, { Component } from 'react';
-import { NavLink} from 'react-router-dom';
-import { PIZZAMENU_URL, HOME_URL, PIZZABUILDER_URL, 
-  BLOG_URL, ABOUTUS_URL, PAGES_URL, CONTACT_URL, 
-  LOGIN_URL, MYACCOUNT_URL, CHECKOUT_URL } from '../routes/URLMap';
-import SearchIcon from '@material-ui/icons/Search';
+import React, { useState } from 'react';
 import '.././PageLayout/Style/PageStyle.scss';
+import { NavLink} from 'react-router-dom';
+import {HOME_URL, PIZZAMENU_URL, ABOUTUS_URL, PIZZABUILDER_URL, CONTACT_URL
+, LOGIN_URL, MYACCOUNT_URL, CHECKOUT_URL} from '../routes/URLMap';
+import SearchIcon from '@material-ui/icons/Search';
 
-class Sidebar extends Component {
 
-  render() {
-     return (
-      <div className="sidebar-container">
-      <div className="sidebar">
-       <nav className="navbar navbar-expand-md navbar-light fixed-top">
-          <div className="container-fluid">
-            <a className="navbar" href="/"> 
-            </a>
-            
-            <form className="input">
-             <SearchIcon style={{position:"relative", left:"100px", top:"8px"}}/> 
-              <i className="fas fa-search" />
-              <input
-                className="control mr-sm-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-            </form>
-          </div>
-       </nav>    
-      
-        <ul>
-            <li><NavLink to={HOME_URL}>HOME</NavLink></li>
-            <li><NavLink to={PIZZAMENU_URL}>PIZZA MENU</NavLink></li>
-            <li><NavLink to={PIZZABUILDER_URL}>PIZZA BUILDER</NavLink></li>
-            <li><NavLink to={BLOG_URL}>BLOG</NavLink></li>
-            <li><NavLink to={PAGES_URL}>PAGES</NavLink></li>
-            <li><NavLink to={ABOUTUS_URL}>ABOUT US</NavLink></li>
-            <li><NavLink to={CONTACT_URL}>CONTACT</NavLink></li>
-          </ul>
-          <ul>
-            <li><NavLink to={LOGIN_URL}>LOGIN</NavLink></li>
-            <li><NavLink to={MYACCOUNT_URL}>MY ACCOUNT</NavLink></li>
-            <li><NavLink to={CHECKOUT_URL}>CHECKOUT</NavLink></li>
-          </ul>     
+const Sidebar = (props) => {
+  const [sidebarClass, setSidebarClass] = useState(props.sidebar);
+
+  
+  const closeHandler = (e) => {
+    e.preventDefault();
+    setSidebarClass("sidebar close");
+    setTimeout(() => {
+      props.close();
+    }, 1000)
+  }
+  
+  return(
+    <div className ={sidebarClass}>
+     
+     <div id="close" onclick={closeHandler}></div>
+     <div className="navbar">
+      <div className="search">
+          <input type="text" className="searchTerm"
+          placeholder="Search"></input>
+          <button type="submit" className="searchButton"><SearchIcon /></button>
       </div>
     </div>
-  );
-}
+  
+      <ul>
+        <li><NavLink to={HOME_URL}>HOME</NavLink></li>
+        <li><NavLink to={PIZZAMENU_URL}>PIZZA MENU</NavLink></li>
+        <li><NavLink to={PIZZABUILDER_URL}>PIZZA BUILDER</NavLink></li>
+        <li><NavLink to={ABOUTUS_URL}>ABOUT US</NavLink></li>
+        <li><NavLink to={CONTACT_URL}>CONTACT</NavLink></li><br></br>
+        <li><NavLink to={LOGIN_URL}>LOGIN</NavLink></li>
+        <li><NavLink to={MYACCOUNT_URL}>MY ACCOUNT</NavLink></li>
+        <li><NavLink to={CHECKOUT_URL}>CHECKOUT</NavLink></li>
+
+      </ul>
+    </div>
+  )
 }
 
 export default Sidebar;

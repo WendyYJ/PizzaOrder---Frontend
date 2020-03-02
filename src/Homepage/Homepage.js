@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment, useState} from 'react';
 //import Carousel from './Carousel/Carousel';
 import './homepage.scss';
 import periperi from '../asset/img/PeriPeri.png';
@@ -6,13 +6,40 @@ import Information from '../AboutUs/components/Infomation';
 import profile from '../asset/img/proni.png';    
 import phone from '../asset/icon/iphone-6s-logo.png';
 import Header from '../PageLayout/Header/Header';
+import Sidebar from '../PageLayout/Sidebar';
+import Toggle from '../PageLayout/Toggle';
+// import { Sidebar } from 'semantic-ui-react';
 
-const Homepage = props =>{
+const Homepage =  ({children})  => {
+    const [sidebarOpen, setSidebarOpen] = useState(false)
+
+    const openHandler = () => {
+        if(!sidebarOpen){
+            setSidebarOpen(true);
+        }else{
+            setSidebarOpen(false);
+        }
+    }
+
+    const sidebarCloseHandler = () => {
+        setSidebarOpen(false);
+    }
+
+
+
+    let sidebar
+    if (sidebarOpen) {
+        sidebar = <Sidebar close={sidebarCloseHandler} sidebar={"sidebar"} />
+    }
 
     return(
-        
         <div className='homepage'>
+         <Fragment>
             <Header />
+            {sidebar}
+            <Toggle click={openHandler}/>
+            <p>{children}</p>
+            
             <main className='homepage__welcome'>
             <h1 className='homepage__welcome-heading'>
                 Get it while it's hot!
@@ -169,38 +196,9 @@ const Homepage = props =>{
                 </div>
             </div>
         </div>
-       
-        
-        
-        
+        </Fragment>
     </div>
-
-            
-
-
-
-
-
-
-
-                
-
-
-    
-                
-
-
-
-
-
-
-
-    
-
-
-    )
+  )
 }
-
-
 
 export default Homepage;

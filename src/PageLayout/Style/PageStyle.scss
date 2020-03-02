@@ -15,7 +15,7 @@ body{
 
    #header_cart{
     position: relative;
-    margin-top: -37px;
+    margin-top: -27px;
     margin-left: 93%; 
     width: 50px;
     display: flex;
@@ -42,49 +42,6 @@ body{
     display: flex;
   }
 }
-
-.sidebar-container{
-  width: 25%;
-  height: 100%;
-
-  .navbar{
-    border: solid 1px white;
-    background-color: transparent;
-    width: 200px;
-    height: 30px;
-    margin-left: 10px;
-    position: relative;
-    top: -40px;
-    left: 35px;
-    
-    p{
-      color: white;
-      font-size: 12px;
-      margin-left: 20px;
-      margin-top: -5px;
-      font-family: $body;
-    }
-  }
-
-  .sidebar ul{
-    list-style: none;
-    position: relative;
-    top: -40px;
-    left: 1px;
-    line-height: 40px;
-    font-size: 15px;
-    margin-bottom: 55px;
-    font-family: $body;
-
-    li a{
-      color: white;
-      text-decoration: none;
-    }
-  }
-  
-}
-
-
 
 .arrowicon2{
   margin-left: 0.6em;
@@ -479,3 +436,95 @@ body{
     color: white;  
   }
 }
+
+.sidebar {
+  height: 100vh;
+  padding-left: 20px;
+  background-color: #161616;
+  opacity: 0.8;
+  color: white;
+  width: 163px;
+  position: fixed;
+  z-index: 3;
+  left: -100%;
+  animation: slide-open .75s forwards;
+
+  #close {
+    left: 0;
+    animation: slide-closed 1.0s forwards;
+  }
+
+  ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    position: relative;
+    top: 7vh;
+    left: -3vw;
+    line-height: 7vh;
+    font-size: 15px;
+    font-family: $body;
+    
+    
+    li a{
+      color: white;
+      text-decoration: none;
+      }
+  
+    }
+  }
+
+
+
+@keyframes slide-open { 
+  100% { left: 0 }
+}
+
+@keyframes slide-closed { 
+  100% { left: -100% }
+}
+
+#toggle{
+  position: relative;
+  left: 1vw;
+  top: -6vh;
+  background-color: rgba(0, 0, 0, 0.900);
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.900);
+  font-size: 28px;
+  z-index: 3;
+}
+
+.navbar{
+  position: relative;
+  top: 4vh;
+  left: -1vw;
+  width: 80%;
+
+  .search {
+    position: relative;
+    display: flex;
+    border: none;
+  }
+  
+  .searchTerm{
+    background-color: transparent;
+    border-right: none;
+    height: 20px;
+    outline: none;
+    color: white;
+    width: 25vw;
+    font-family: $body;
+  }
+
+  .searchButton{
+    height: 26px;
+    width: 2.5vw;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+  }
+
+}
+
+  
