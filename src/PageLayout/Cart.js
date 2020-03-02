@@ -17,7 +17,7 @@ function Cart() {
                 <h4>Moorish Lamb</h4>
                 <p>SIZE: Large</p>
               </div>
-          </div><br></br>
+          </div>
             
             <div className="ordered1">
               <div>

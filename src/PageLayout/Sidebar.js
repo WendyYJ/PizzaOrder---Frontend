@@ -31,7 +31,7 @@ const Sidebar = (props) => {
     </div>
   
       <ul>
-        <li><NavLink to={HOME_URL}>HOME</NavLink></li>
+        <li><NavLink to={HOME_URL} className="nav_link">HOME</NavLink></li>
         <li><NavLink to={PIZZAMENU_URL}>PIZZA MENU</NavLink></li>
         <li><NavLink to={PIZZABUILDER_URL}>PIZZA BUILDER</NavLink></li>
         <li><NavLink to={ABOUTUS_URL}>ABOUT US</NavLink></li>

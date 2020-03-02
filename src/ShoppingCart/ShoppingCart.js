@@ -13,9 +13,11 @@ const ShoppingCart = () => {
      <div className="shoppingCart1">
      <div className="horizonbar-Three">
         <p>PRODUCT</p>
-        <p>PRICE</p>
+        
+        <span className="price"><p>PRICE</p></span>
         <p>QTY</p>
         <p>TOTAL</p>
+        
       </div>
         <Cart />
     </div>

@@ -322,9 +322,15 @@ body{
     ul{
       list-style: none;
       position: relative; 
+      margin-left: -3vw;
     }
 
     .ordered1{
+      margin: 0;
+      height: 18vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
 
       .dot {
         height: 6vw;
@@ -332,31 +338,36 @@ body{
         background-color: $flame;
         border-radius: 50%;
         display: inline-block;
-        margin-right: 5px;
+        position: relative;
+        left: -3vw;
+        
 
         p{
           position: relative;
-          left: -4vw;
+          left: -3vw;
           top: 22%;
         }
       }
 
+      .text{
+        width: 100%;
+        
 
         h4{
             position: relative;
             top: -7vw;
-            left: 8vw;
+            left: 6vw;
             color: $saffron;
             width: 100%;
         }
-
+      
         p{
           color: white;
           font-size: 10px;
           font-family: $body;
           position: relative;
-          top: -8vw;
-          left: 8vw;
+          top: -7vw;
+          left: 6vw;
         }
     
         span{
@@ -374,31 +385,51 @@ body{
         h3{
           color: $flame;
           width: 100%;
+  
         } 
-
     }
   }
+}
+
 
   .total{
     position: relative;
-    top: -37vh;
+    top: -15vh;
     left: 40vw;
     font-family: $body;
+    padding: 25px 25px;
+    background-color: rgba(0, 0, 0, 0.205);
 
     h2{
       color: $saffron;
       position: relative;
-      top: 2px;
-      left: -30px;
-    }
-
-    span{
-      color: $flame;
+      top: -5vh;
+      left: 0vw;
     }
 
     h3{
       color: $flame;
+      position: relative;
+      top: -3vh;
+      left: 0vw;
+
+      span{
+        color: $flame;
+      }
     }
+
+    p{
+      position: relative;
+      top: -3vh;
+      left: 0vw;
+    }
+
+    span{
+      color: white;
+      text-align: right;
+      margin-left: 1vw;
+    }
+
 
     .viewCart-btn{
       border: solid 1px $saffron;
@@ -407,6 +438,9 @@ body{
       padding: 7px 10px 7px 2px;
       width: 200px;
       margin-bottom: 7px;
+      position: relative;
+      top: -3vh;
+      left: 0vw;
     }
     
     
@@ -416,6 +450,9 @@ body{
       font-size: 9px;
       padding: 7px 10px 7px 2px;
       width: 200px;
+      position: relative;
+      top: -3vh;
+      left: 0vw;
     }
   }
 }
@@ -425,15 +462,20 @@ body{
   justify-content: space-evenly;
   margin-top: 5%;
   border-bottom: 2px solid $flame;
-  width: 50%;
+  width: 55%;
   position: relative;
-  margin-left: -5vw;
+  margin-left: -7vw;
   
 
   p{
     font-size: 14px;
     font-family: $body;
     color: white;  
+    margin-left: 5vw;
+  }
+
+  .price{
+    margin-left: 8vw;
   }
 }
 
@@ -445,7 +487,6 @@ body{
   color: white;
   width: 163px;
   position: fixed;
-  z-index: 3;
   left: -100%;
   animation: slide-open .75s forwards;
 
@@ -470,7 +511,12 @@ body{
       color: white;
       text-decoration: none;
       }
-  
+
+    li a:hover{
+      cursor: pointer;
+      opacity: 0.5;  
+      transition: 0.3s;;
+    }
     }
   }
 
