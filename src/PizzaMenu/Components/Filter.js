@@ -6,7 +6,7 @@ import { fetchPizza } from '../../api/pizza'
 import { PIZZAMENU_URL} from '../../routes/URLMap';
 import { Button, Container, Pagination, Segment } from 'semantic-ui-react';
 
-
+import ErrorMessage from '../../asset/errorMessage';
 class Filter extends React.Component {
 	constructor(props) {
 		const mockImage = 'https://sdtimes.com/wp-content/uploads/2018/03/jW4dnFtA_400x400.jpg';
@@ -32,19 +32,28 @@ class Filter extends React.Component {
     }
 	
 	componentDidMount() {
-		this.setState({isLoading:true},()=>{
-			fetchPizza()
-			.then(pizzas=>{
-				this.setState({pizzas, isLoading:false});
-		
-		})
-		.catch(error=>{
-			this.setState({error,isLoading:false});
-
-		})
-        
-	});
+		this.loadPizzas();
 }
+loadPizzas=page=>{
+	this.setState({isLoading:true,pizzas:[]},()=>{
+		fetchPizza(page)
+		.then(pizzaData=>{
+			this.setState({pizzas:pizzaData.pizzas, 
+				isLoading:false,
+			pagination:pizzaData.pagination});
+	
+	})
+	.catch(error=>{
+		this.setState({error,isLoading:false});
+
+	})
+	
+});
+};
+
+handlePageChange=(_,{activePage})=>{
+this.loadPizzas(activePage);
+};
 	render() {
 		
 	return (
@@ -256,8 +265,9 @@ class Filter extends React.Component {
 			  <button className="filter-btn">FILTER SELECTED</button>
 		   </div>
 		</section>
-
+		{/* <ErrorMessage error={this.state.error} /> */}
 		<Segment basic loading={this.state.isLoading}>
+			
 		<div className="pizzacontainer">
 		{this.state.pizzas.map(pizza => (
                             <PizzaCard
@@ -272,8 +282,12 @@ class Filter extends React.Component {
                         ))}
 		</div>
 		</Segment>
-		<Pagination
+		{this.state.pagination&&this.state.pagination.page&&<Pagination
+		activePage={this.state.pagination.page}
+		totalPages={this.state.pagination.pages}
+		onPageChange={this.handlePageChange}
 		/>
+		}
 	 </section>
 	 
 		
