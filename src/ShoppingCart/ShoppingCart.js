@@ -30,23 +30,23 @@ const ShoppingCart = ({children}) => {
   return (
     <div className="shoppingCart-container">
       <Fragment>
-      <Header />
-      {sidebar}
-      <Toggle click={openHandler}/>
-      <p>{children}</p>
+        <Header />
+        {sidebar}
+        <Toggle click={openHandler}/>
+        <p>{children}</p>
 
-      <FourthHeader headername={"Shopping Cart"} style={{width: "100%"}}/>
-      <div className="shoppingCart1">
-      <div className="horizonbar-Three">
-        <p>PRODUCT</p>
-        
-        <span className="price"><p>PRICE</p></span>
-        <p>QTY</p>
-        <p>TOTAL</p>
-        
-      </div>
+        <FourthHeader headername={"Shopping Cart"} style={{width: "100%"}}/>
+        <div className="shoppingCart1">
+        <div className="horizonbar-Three">
+          <p>PRODUCT</p>
+          
+          <span className="price"><p>PRICE</p></span>
+          <p>QTY</p>
+          <p>TOTAL</p>
+          
+        </div>
         <Cart />
-    </div>
+      </div>
     </Fragment>
     </div>
 

@@ -8,7 +8,6 @@ import phone from '../asset/icon/iphone-6s-logo.png';
 import Header from '../PageLayout/Header/Header';
 import Sidebar from '../PageLayout/Sidebar';
 import Toggle from '../PageLayout/Toggle';
-// import { Sidebar } from 'semantic-ui-react';
 
 const Homepage =  ({children})  => {
     const [sidebarOpen, setSidebarOpen] = useState(false)

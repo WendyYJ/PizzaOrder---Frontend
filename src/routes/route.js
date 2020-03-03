@@ -6,6 +6,7 @@ import SampleId from '../PizzaMenu/SampleId';
 import PizzaBuilder from '../PizzaBuilder/PizzaBuilder';
 import ShoppingCart from '../ShoppingCart/ShoppingCart';
 import AboutUs from '../AboutUs/AboutUs';
+import Contact from '../Contact/Contact';
 
 import {
     HOME_URL,
@@ -13,6 +14,7 @@ import {
     PIZZABUILDER_URL,
     SHOPPINGCART_URL,
     ABOUTUS_URL,
+    CONTACT_URL,
 } from './URLMap';
 
 
@@ -28,6 +30,7 @@ const Routes = () => {
            <Route exact path={PIZZABUILDER_URL} component={PizzaBuilder} /> 
            <Route exact path={SHOPPINGCART_URL} component={ShoppingCart} />
            <Route exact path={ABOUTUS_URL} component={AboutUs} />
+           <Route exact path={CONTACT_URL} component={Contact} />
        </Switch>
       </BrowserRouter>
     
