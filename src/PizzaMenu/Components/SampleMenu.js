@@ -8,7 +8,10 @@ import PeriPeri from '../../asset/img/PeriPeri.png';
 
 
 
-const SampleMenu = () => {
+
+  const SampleMenu = props => {
+
+ 
   return (
     <div className="sample_menu">
       <div className="pizza-sample">
@@ -16,7 +19,7 @@ const SampleMenu = () => {
        </div>
       <div className="sample-info">
        <div className="sample_text">
-          <h2>Peri-Peri</h2>
+          <h2> {props.pizzaname}</h2>
         <div className="five-star">
           <StarIcon style={{color: "#D94F2B", fontSize: "20px"}} />
           <StarIcon style={{color: "#D94F2B", fontSize: "20px"}} />
@@ -43,6 +46,7 @@ const SampleMenu = () => {
     </div>
   </div>
   );
-}
+  }
+
 
 export default SampleMenu;

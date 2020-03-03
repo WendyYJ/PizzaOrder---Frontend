@@ -6,15 +6,39 @@ import HorizonBar from '../PageLayout/HorizonBar';
 import SampleMenu from './Components/SampleMenu';
 import ReviewForm from '../PageLayout/ReviewForm';
 import RelatedProduct from './Components/RelatedProduct';
+import {fetchPizzaById} from '../api/pizza'
 
-const MenuSamples = () => {
+class SampleId extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+        pizza: {},
+        error: null,
+        isLoading: false,
+    };
+}
+
+componentDidMount() {
+  const pizzaId = this.props.match.params.SampleId;
+  this.loadCourse(pizzaId);
+}
+
+loadCourse = pizzaId => this.setState({ isLoading: true }, () => {
+  fetchPizzaById(pizzaId)
+      .then(pizza => this.setState({ pizza, isLoading: false }))
+      .catch(error=>this.setState({error}));
+});
+  render() {
   return (
     <div className ="MenuMain-container">
       <Header />
-      <ThirdHeader headername={"Pizza Menu"} headername2={"Peri-Peri"} />
+      <ThirdHeader headername={"Pizza Menu"} headername2={this.state.pizza.PizzaName} />
 
       <HorizonBar className="horizonbar" />
-      <SampleMenu />
+      <SampleMenu
+      pizzaname={this.state.pizza.PizzaName} />
      
       <div className="horizonbar-Two">
         <p>DESCRIPTION</p>
@@ -27,5 +51,7 @@ const MenuSamples = () => {
      </div>
   );
 }
+}
 
-export default MenuSamples;
+
+export default SampleId;
