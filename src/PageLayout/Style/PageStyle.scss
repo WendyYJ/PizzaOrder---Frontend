@@ -624,6 +624,7 @@ body{
   position: fixed;
   left: -100%;
   animation: slide-open .75s forwards;
+  z-index: 3;
 }
 
   #close {
