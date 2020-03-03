@@ -15,7 +15,7 @@ const Sidebar = (props) => {
     setSidebarClass("sidebar close");
     setTimeout(() => {
       props.close();
-    }, 1000)
+    }, 1000);
   }
   
   return(
@@ -25,7 +25,7 @@ const Sidebar = (props) => {
      <div className="navbar">
       <div className="search">
           <input type="text" className="searchTerm"
-          placeholder="Search"></input>
+          placeholder="  Search"></input>
           <button type="submit" className="searchButton"><SearchIcon /></button>
       </div>
     </div>

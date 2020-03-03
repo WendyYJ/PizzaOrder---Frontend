@@ -131,9 +131,6 @@ const Homepage =  ({children})  => {
                     <p className='homepage__comment__details-origin'>www.pizzaroo.com</p>
                 </div>
             </div>
-
-  
-            
         </div>
 
         <div className='homepage__app'>

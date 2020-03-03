@@ -301,7 +301,7 @@ body{
 .shoppingCart1{
   position: relative;
   width: 100%;
-  left: 15%;
+  left: 18%;
 }
 
 .cart-container{
@@ -316,7 +316,8 @@ body{
 
   .cart{
     position: relative;
-    top: 1vw;
+    top: -4vw;
+    margin-left: 2vw;
     font-family: $body;
 
     ul{
@@ -326,7 +327,6 @@ body{
     }
 
     .ordered1{
-      margin: 0;
       height: 18vh;
       width: 100%;
       display: flex;
@@ -347,6 +347,7 @@ body{
           left: -3vw;
           top: 22%;
         }
+
       }
 
       .text{
@@ -366,7 +367,7 @@ body{
           font-size: 10px;
           font-family: $body;
           position: relative;
-          top: -7vw;
+          top: -9vw;
           left: 6vw;
         }
     
@@ -387,6 +388,42 @@ body{
           width: 100%;
   
         } 
+
+        .total_price{
+          display: flex;
+          flex-direction: row;
+          position: relative;
+          top: -12vh;
+
+          span{
+            padding: 5px 11px;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            border: 1px solid white;
+            background-color: transparent;
+            position: relative;
+            left: 21vw;
+            top: 2vh;
+        }
+          
+          .price{
+            position: relative;
+            left: 21vw;
+            font-family: $body;
+            font-size: 18px;
+            color: $flame;
+          }
+
+          .totalprice{
+            position: relative;
+            left: 34vw;
+            font-family: $body;
+            font-size: 18px;
+            color: $flame;
+          }
+
+        }
     }
   }
 }
@@ -394,11 +431,13 @@ body{
 
   .total{
     position: relative;
-    top: -15vh;
-    left: 40vw;
+    top: -10vh;
+    left: 34vw;
     font-family: $body;
-    padding: 25px 25px;
+    padding: 25px 22px;
     background-color: rgba(0, 0, 0, 0.205);
+    display: flex;
+    flex-direction: column;
 
     h2{
       color: $saffron;
@@ -415,6 +454,7 @@ body{
 
       span{
         color: $flame;
+        margin-left: 3vw;
       }
     }
 
@@ -451,9 +491,104 @@ body{
       padding: 7px 10px 7px 2px;
       width: 200px;
       position: relative;
-      top: -3vh;
+      top: -5.5vh;
       left: 0vw;
     }
+  }
+}
+
+.shipping_method{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 10%;
+ 
+
+  .shipping{
+    color: $saffron;
+    position: relative;
+    top: 35vh;
+    left: -39vw;
+    font-size: 24px;
+  }
+
+  .promotion{
+    color: $saffron;
+    position: relative;
+    top: 35vh;
+    left: -50vw;
+    font-size: 24px;
+  }
+}
+
+.forms_container{
+  height: 100%;
+ 
+
+  .shipping_form{
+    display: flex;
+    position: relative;
+    left: -55vw;
+    top: 48vh;
+    height: 4vh;
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+    
+    .selectedValue{
+
+    }
+  }
+
+  .current_state{
+    position: relative;
+    left: -55vw;
+    top: 50vh;
+    height: 4vh;
+    border: 1px solid white;
+    color: white;
+  }
+
+  .postcode_zip{
+    position: relative;
+    left: -55vw;
+    top: 52vh;
+    height: 4vh;
+    border: 1px solid white;
+    color: white;
+  }
+
+  .updateButton{
+    font-size: 10px;
+    font-family: $body;
+    width: 11vw;
+    height: 5vh;
+    position: relative;
+    left: -55vw;
+    top: 55vh;
+    background-color: $saffron;
+    border: 1px solid $saffron;
+  }
+
+  .promotion_code{
+    position: relative;
+    top: 30vh;
+    left: -30vw;
+    height: 4vh;
+    border: 1px solid white;
+    color: white;
+  }
+
+  .applyButton{
+    font-size: 10px;
+    font-family: $body;
+    width: 8vw;
+    height: 5vh;
+    position: relative;
+    left: -30vw;
+    top: 34vh;
+    background-color: $saffron;
+    border: 1px solid $saffron;
   }
 }
 
@@ -489,11 +624,32 @@ body{
   position: fixed;
   left: -100%;
   animation: slide-open .75s forwards;
+}
 
   #close {
     left: 0;
     animation: slide-closed 1.0s forwards;
   }
+
+  @keyframes slide-open { 
+    100% { left: 0 }
+  }
+  
+  @keyframes slide-closed { 
+    100% { left: -100% }
+  }
+  
+  #toggle{
+    position: relative;
+    left: 1vw;
+    top: -6vh;
+    background-color: rgba(0, 0, 0, 0.900);
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.900);
+    font-size: 28px;
+    z-index: 3;
+  }
+
 
   ul{
     display: flex;
@@ -518,29 +674,7 @@ body{
       transition: 0.3s;;
     }
     }
-  }
-
-
-
-@keyframes slide-open { 
-  100% { left: 0 }
-}
-
-@keyframes slide-closed { 
-  100% { left: -100% }
-}
-
-#toggle{
-  position: relative;
-  left: 1vw;
-  top: -6vh;
-  background-color: rgba(0, 0, 0, 0.900);
-  color: white;
-  border: 1px solid rgba(0, 0, 0, 0.900);
-  font-size: 28px;
-  z-index: 3;
-}
-
+  
 .navbar{
   position: relative;
   top: 4vh;
