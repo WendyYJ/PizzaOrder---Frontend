@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment, useState} from 'react';
 import '.././PageLayout/Style/PageStyle.scss';
 import Header from '../PageLayout/Header/Header';
 import ThirdHeader from '../PageLayout/Header/ThirdHeader';
@@ -48,6 +48,7 @@ loadCourse = pizzaId => this.setState({ isLoading: true }, () => {
       </div>
         <ReviewForm />
         <RelatedProduct />
+  
      </div>
   );
 }

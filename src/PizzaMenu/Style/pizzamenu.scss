@@ -2,11 +2,6 @@
 @import '../../asset/theme.scss';
 @import '../../asset/mixin.scss';
 
-.Menu-container{
-  background:  transparent;
-  width: 100%;
-	position: relative;
-}
 
 .MenuMain-container{
   position: relative;
@@ -108,10 +103,12 @@
       font-size:0.7em;
       color: $flame;
       width: 100%;
-      }
-      
+      } 
   }
 }
 
-
+.Catalog-container{
+  background-color: rgb(37, 35, 35);
+  opacity: 0.9;
+}
   

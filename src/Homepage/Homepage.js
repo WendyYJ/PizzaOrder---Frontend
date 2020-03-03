@@ -25,8 +25,6 @@ const Homepage =  ({children})  => {
         setSidebarOpen(false);
     }
 
-
-
     let sidebar
     if (sidebarOpen) {
         sidebar = <Sidebar close={sidebarCloseHandler} sidebar={"sidebar"} />
@@ -150,13 +148,8 @@ const Homepage =  ({children})  => {
                     <li>Find local deals </li>
                     <li>Pay directly from the app</li>
                 </ul>
-                
-                </div>
-               
-                
-            </div>
-
-
+                </div>  
+             </div>
             </div>
         
         <div className='homepage__news'  >
@@ -190,10 +183,10 @@ const Homepage =  ({children})  => {
             elementum integer enim. Sed eget velit aliquet. Scelerisque varius morbi enim nunc faucibus a. Neque volutpat ac tincidunt vitae.             </p>
             <p className='homepage__news-content-button'>read more</p>
             
-                </div>
             </div>
         </div>
-        </Fragment>
+    </div>
+    </Fragment>
     </div>
   )
 }
