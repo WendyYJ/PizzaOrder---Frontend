@@ -1,5 +1,4 @@
 import React, {Fragment, useState} from 'react';
-//import Carousel from './Carousel/Carousel';
 import './homepage.scss';
 import periperi from '../asset/img/PeriPeri.png';
 import Information from '../AboutUs/components/Infomation';
@@ -87,7 +86,7 @@ const Homepage =  ({children})  => {
             <p className='homepage__pizza-builder-button'>create your own pizza</p>
 
          </div>
-         
+
         <div className='homepage__linebreaker'> <Ingredient /> </div>
         
         <div className='homepage__comment'>

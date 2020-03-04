@@ -140,6 +140,7 @@
             
         }
     }
+    
 
     &__comment{
         @include padding-center();
@@ -212,7 +213,6 @@
     }
 
     &__app{
-        height: 100vh;
         @include padding-center;
         display: flex;
         align-items: center;
@@ -221,8 +221,9 @@
             display: flex;
             flex-direction: row;
             img{
+                border-radius: 10%;
                 background-color: $flame;
-                width:30vw;
+                
             }
         }
         
