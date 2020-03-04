@@ -14,8 +14,8 @@ class Carousel extends React.Component{
       slidesToScroll: 1
     };
     return (
-      <Slider {...settings}>
-        <div className='homepage__menu '>
+      <Slider {...settings} className='homepage__menu__container'>
+        <div className='homepage__menu'>
             <div className='homepage__menu-left'>
             <h2 className='homepage__menu-heading'>
                 Peri-Peri
@@ -35,14 +35,14 @@ class Carousel extends React.Component{
             <img src={periperi} alt='Peri Peri Pizza' />
             </div>
          </div>
-        <div>
-          <h3>2</h3>
+        <div className='homepage__menu '>
+          <img src='https://images.unsplash.com/photo-1449034446853-66c86144b0ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80' alt='showcase'/>
+        </div>
+        <div className='homepage__menu '>
+        <h3>3</h3>
         </div>
         <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
+        <h3>4</h3>
         </div>
         <div>
           <h3>5</h3>
