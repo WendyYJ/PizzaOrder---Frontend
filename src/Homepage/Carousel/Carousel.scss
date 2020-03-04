@@ -1,53 +1,5 @@
 @import '../homepage.scss';
 
-.homepage{
-    &__menu{
-        margin:0;
-        display: flex;
-        flex-direction: row;
-        background-color: $flame;
-        text-align: left;
-        @include padding-center();
-        overflow: hidden;
-        width:100vw;
-        
-
-        &-heading{
-            @include heading();
-            font-size: $heading-size;
-            color:$white;
-        }
-        &-price{
-            font-size:$sub-heading-size*1.5;
-            font-family: $chalk;
-            color:$black
-        }
-
-        &-button{
-            text-align: center;
-            width:10vw;
-            font-size: $button-size;
-            @include button-filled();
-        }
-
-        &-more{
-            font-size:$body-size;
-            color:$white;
-        }
-
-        &-right{
-            display: flex;
-            align-items: center;
-            img{
-                border-radius: 50%;
-                height: 50vh;
-            }
-  
-        }
-
-    }
-}
-
 
 
   

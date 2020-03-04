@@ -35,7 +35,6 @@
         @include button();
     }
     
-
     }
 
     &__menu{
@@ -44,8 +43,7 @@
         flex-direction: row;
         background-color: $flame;
         text-align: left;
-        @include padding-center();
-        
+        @include padding-center;
 
         &-heading{
             @include heading();
@@ -216,18 +214,15 @@
         @include padding-center;
         display: flex;
         align-items: center;
-
         &-container{
             display: flex;
             flex-direction: row;
             img{
                 border-radius: 10%;
                 background-color: $flame;
-                
+                width:30vw;  
             }
         }
-        
-        
         
         &-content{
             padding-left:2vw;
@@ -248,8 +243,11 @@
                 font-size: $sub-heading-size*0.9;
             }
             &-listing{
-                color: $flame;
+                p{
+                line-height: normal;
+                color:$flame;
                 font-size: $body-size;
+                }
             }
 
         }

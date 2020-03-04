@@ -51,6 +51,7 @@ const Homepage =  ({children})  => {
             </main>
             
         <Information/> 
+
         <div className='homepage__menu '>
             <div className='homepage__menu-left'>
             <h2 className='homepage__menu-heading'>
@@ -87,7 +88,9 @@ const Homepage =  ({children})  => {
 
          </div>
 
-        <div className='homepage__linebreaker'> <Ingredient /> </div>
+        <div className='homepage__linebreaker'> 
+            <Ingredient /> 
+        </div>
         
         <div className='homepage__comment'>
             <h2 className='homepage__comment-heading'>
@@ -136,22 +139,23 @@ const Homepage =  ({children})  => {
             <div className='homepage__app-container'>
             <img src={phone} alt='phone'/> 
             <div className='homepage__app-content'>
-            
                 <h2 className='homepage__app-content-heading'>Get the newest version of our mobile app for your phone.</h2>
                 <span className='homepage__app-content-span'>
                     Do you have an iPhone, Android device or on an web-enabled mobile? Then it's easier that ever to order hot and fresh pizza - no phone calls are necessary! Mobile ordering lets you access all the best pizza.
                 </span>
                 <h3 className='homepage__app-content-subheading'>Here's why it's great:</h3>
-                <ul className='homepage__app-content-listing'>
-                    <li>It's free</li>
-                    <li>No registration required</li>
-                    <li>Order from the full menu</li>
-                    <li>Find local deals </li>
-                    <li>Pay directly from the app</li>
-                </ul>
-                </div>  
-             </div>
+                <div className='homepage__app-content-listing'>
+                    <p>It's free</p> 
+                    <p>No registration required</p>
+                    <p>Order from the full menu</p>
+                    <p>Find local deals </p>
+                    <p>Pay directly from the app</p>
+                </div>
             </div>
+                 
+        </div>
+    </div>
+      
         
         <div className='homepage__news'  >
             <h2 className='homepage__news-heading'> Latest News & Recipes</h2>
@@ -195,6 +199,8 @@ const Homepage =  ({children})  => {
     </div>
     </Fragment>
     </div>
+
+    
   )
 }
 
