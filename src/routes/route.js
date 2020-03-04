@@ -20,10 +20,8 @@ import {
     SLIDE_URL,
 } from './URLMap';
 
-
 const Routes = () => {
     return (
-      
       <BrowserRouter>
         <Switch>
            <Redirect exact from="/" to={HOME_URL} />
@@ -37,7 +35,6 @@ const Routes = () => {
            <Route exact path={SLIDE_URL} component={Carousel} />
        </Switch>
       </BrowserRouter>
-    
     );
 }
 
