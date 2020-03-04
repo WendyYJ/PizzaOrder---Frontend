@@ -3,28 +3,25 @@
 .ingredientcontainer{
 
     height:14em;
- 
-    padding-right: 3em;
     display: flex;
-    width:80%;
-  
-    justify-content: center;
+    width:65%;
     align-items: center;
-margin:auto;
+    margin:auto;
 }
 
 .circlebigcontainer{
     display: flex;
-    width:80%;
- 
+    justify-content: center;
+    align-items: center;
+    
 }
 .circlebigcontainer .circlecontainer{
-    width:20%;
-    margin-left: 8%;
+     width:20%;
+    // margin-left: 8%;
 }
 .circlebigcontainer .circlecontainer img{
-width:130%;
-    margin-left: 12%;
+     width:70%;
+    // margin-left: 12%;
 
 
   
