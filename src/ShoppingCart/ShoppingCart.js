@@ -48,7 +48,11 @@ const ShoppingCart = ({children}) => {
         <Cart />
       </div>
     </Fragment>
+    <div>
+
     </div>
+    </div>
+
 
   );
 }

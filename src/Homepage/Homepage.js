@@ -6,6 +6,7 @@ import Information from '../AboutUs/components/Infomation';
 import profile from '../asset/img/proni.png';    
 import phone from '../asset/icon/iphone-6s-logo.png';
 import Header from '../PageLayout/Header/Header';
+import Ingredient from '../PageLayout/Footer/Ingredient';
 import Sidebar from '../PageLayout/Sidebar';
 import Toggle from '../PageLayout/Toggle';
 import Ingredients from '../PageLayout/Footer/Ingredient';
@@ -33,7 +34,7 @@ const Homepage =  ({children})  => {
     return(
         <div className='homepage'>
          <Fragment>
-            <Header />
+            <Header  />
             {sidebar}
             <Toggle click={openHandler}/>
             <p>{children}</p>
@@ -43,8 +44,7 @@ const Homepage =  ({children})  => {
                 Get it while it's hot!
             </h1>
             <span className='homepage__welcome-span'>
-                We create custom, personal pizzas with quality   <br/> 
-                ingredients in only five minutes.
+                We create custom, personal pizzas with quality ingredients in only five minutes.
             </span>
             <p className='homepage__welcome-button'>
                 order online
@@ -87,14 +87,15 @@ const Homepage =  ({children})  => {
             <p className='homepage__pizza-builder-button'>create your own pizza</p>
 
          </div>
-         <Ingredients/>
+         
+        <div className='homepage__linebreaker'> <Ingredient /> </div>
         
         <div className='homepage__comment'>
             <h2 className='homepage__comment-heading'>
                 Here's what some customers are saying...
             </h2>
             <p className='homepage__comment-heading-span'>
-                customer service and product quality are our top priority. Although we strive to make every customer experience as easy as possible, it's how our customers<br/> rate us that really matters. Because it makes our customers happy! And we love making people happy.
+                customer service and product quality are our top priority. Although we strive to make every customer experience as easy as possible, it's how our customers rate us that really matters. Because it makes our customers happy! And we love making people happy.
             </p>
             <div className='homepage__comment__details'>
                <div className='homepage__comment__details-container'>
