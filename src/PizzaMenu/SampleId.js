@@ -42,7 +42,10 @@ loadCourse = pizzaId => this.setState({ isLoading: true }, () => {
 
       <HorizonBar className="horizonbar" />
       <SampleMenu
-      pizzaname={this.state.pizza.PizzaName} />
+      pizzaname={this.state.pizza.PizzaName}
+      description={this.state.pizza.Description}
+      price={this.state.pizza.UnitPrice}
+      />
      
       <div className="horizonbar-Two">
         <p>DESCRIPTION</p>

@@ -23,12 +23,11 @@ import PeriPeri from '../../asset/img/PeriPeri.png';
           <StarIcon style={{color: "#D94F2B", fontSize: "20px"}} />
           <StarIcon style={{color: "#D94F2B", fontSize: "20px"}} />
           <StarBorderIcon style={{color: "#D94F2B", fontSize: "20px"}} />
-        <p style={{fontSize: "14px"}}>Marinated Chicken Breast Fillets, Shallots, Roasted Capscum, Caramelised <br></br>
-          Onions & Bocconichi on a Tomato base, topped with Peri-Peri sauce
+        <p style={{fontSize: "14px"}}>{props.description}
         </p>
         <p style={{fontSize: "14px"}}>AVAILABLE SIZES</p>
         <img src={availableSizes} alt="available-size" id="available-size" />
-        <h3>Price: $21</h3>
+        <h3>${props.price}</h3>
         <div class="clickCount">
           <p style={{fontSize: "14px", margin: "2px"}}>QUANTITY</p>
           <Counter /> 
