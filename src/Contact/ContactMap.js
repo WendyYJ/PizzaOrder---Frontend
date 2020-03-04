@@ -1,54 +1,68 @@
 import './Contact.scss';
-import React from "react"
-import { compose, withProps } from "recompose"
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+import React, { Component } from 'react';
+import { Map, GoogleApiWrapper, InfoWindow, Marker  } from 'google-maps-react';
 
-/*
-const MyMapComponent = compose(
-  withProps({
-    googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places",
-    loadingElement: <div style={{ height: `100%` }} />,
-    containerElement: <div style={{ height: `400px` }} />,
-    mapElement: <div style={{ height: `100%` }} />,
-  }),
-  withScriptjs,
-  withGoogleMap
-)((props) =>
-  <GoogleMap
-    defaultZoom={8}
-    defaultCenter={{ lat: -27.469770, lng: 153.025131 }}
-  >
-    {props.isMarkerShown && <Marker position={{ lat: -27.469770, lng: 153.025131 }} onClick={props.onMarkerClick} />}
-  </GoogleMap>
-))
+const mapStyles = {
+  width: '50%',
+  height: '50%',
+  margin: '2vw'
+};
 
-class MyFancyComponent extends React.PureComponent {
-  state = {
-    isMarkerShown: false,
-  }
+export class ContactMap extends Component {
+    state = {
+      showingInfoWindow: false,  
+      activeMarker: {},          
+      selectedPlace: {}         
+    };
 
-  componentDidMount() {
-    this.delayedShowMarker()
-  }
+    onMarkerClick = (props, marker, e) =>
+      this.setState({
+      selectedPlace: props,
+      activeMarker: marker,
+      showingInfoWindow: true
+    });
 
-  delayedShowMarker = () => {
-    setTimeout(() => {
-      this.setState({ isMarkerShown: true })
-    }, 3000)
-  }
-
-  handleMarkerClick = () => {
-    this.setState({ isMarkerShown: false })
-    this.delayedShowMarker()
-  }
+    onClose = props => {
+     if (this.state.showingInfoWindow) {
+      this.setState({
+        showingInfoWindow: false,
+        activeMarker: null
+      });
+    }
+  };
 
   render() {
     return (
-      <MyMapComponent
-        isMarkerShown={this.state.isMarkerShown}
-        onMarkerClick={this.handleMarkerClick}
-      />
-    )
+    <div class="contact-map">
+      <Map
+        google={this.props.google}
+        zoom={12}
+        style={mapStyles}
+        initialCenter={{
+         lat: -27.469770,
+         lng: 153.025131
+        }}
+      >
+        <Marker
+          onClick={this.onMarkerClick}
+          name={'Brisbane City Council'}
+        />
+        <InfoWindow
+          marker={this.state.activeMarker}
+          visible={this.state.showingInfoWindow}
+          onClose={this.onClose}
+        >
+          <div>
+            <h4>{this.state.selectedPlace.name}</h4>
+          </div>
+        </InfoWindow>
+
+       </Map>
+      </div>
+    );
   }
 }
-*/
+
+export default GoogleApiWrapper({
+  apiKey: 'AIzaSyB8Z-VcYZ2LEtVuD6DnLboC3EEPMWjGe8k'
+})(ContactMap);

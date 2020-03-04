@@ -1,11 +1,12 @@
-.contactMap{
-  position: relative;
-  top: -15vh;
-  left: 10vw;
+@import '../asset/theme.scss';
 
-  
+.map-container{
+  width: 53vw;
+  height: 56vh;
+  border: 2px solid #D94F2B;
+  margin-left: 22%;
 }
 
-text{
-  color: red;
+.contact-map{
+  margin-bottom: 0vw;
 }
