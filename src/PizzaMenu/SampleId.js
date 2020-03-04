@@ -7,9 +7,11 @@ import SampleMenu from './Components/SampleMenu';
 import ReviewForm from '../PageLayout/ReviewForm';
 import RelatedProduct from './Components/RelatedProduct';
 import {fetchPizzaById} from '../api/pizza'
+import Sidebar from '../PageLayout/Sidebar';
+import Toggle from '../PageLayout/Toggle';
 
 class SampleId extends React.Component {
-
+  
   constructor(props) {
     super(props);
 
@@ -30,6 +32,8 @@ loadCourse = pizzaId => this.setState({ isLoading: true }, () => {
       .then(pizza => this.setState({ pizza, isLoading: false }))
       .catch(error=>this.setState({error}));
 });
+
+
   render() {
   return (
     <div className ="MenuMain-container">

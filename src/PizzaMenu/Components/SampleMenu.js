@@ -6,9 +6,6 @@ import availableSizes from "../../asset/icon/available_sizes.png";
 import Counter from '../../PageLayout/Counter';
 import PeriPeri from '../../asset/img/PeriPeri.png';
 
-
-
-
   const SampleMenu = props => {
 
  

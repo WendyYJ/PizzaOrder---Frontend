@@ -17,10 +17,8 @@ import {
     CONTACT_URL,
 } from './URLMap';
 
-
 const Routes = () => {
     return (
-      
       <BrowserRouter>
         <Switch>
            <Redirect exact from="/" to={HOME_URL} />
@@ -33,7 +31,6 @@ const Routes = () => {
            <Route exact path={CONTACT_URL} component={Contact} />
        </Switch>
       </BrowserRouter>
-    
     );
 }
 
