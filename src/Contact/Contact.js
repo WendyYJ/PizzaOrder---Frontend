@@ -5,7 +5,7 @@ import Header from '../PageLayout/Header/Header';
 import SecondaryHeader from '../PageLayout/Header/SecondaryHeader';
 //import Sidebar from '../PageLayout/Sidebar';
 //import Toggle from '../PageLayout/Toggle';
-import ContactMap from './ContactMap';
+// import ContactMap from './ContactMap';
 
 
 const Contact = () => {
@@ -18,7 +18,6 @@ return (
        
     
         <SecondaryHeader headername={"Contact Us"}/>
-        <ContactMap />
         
    
 
