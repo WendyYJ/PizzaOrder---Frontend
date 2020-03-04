@@ -64,7 +64,7 @@ render(){
           <p>YOUR MESSAGE</p> 
           <input
             type='text'
-            onChange={this.messageChangeHandler}
+            onChange={this.messageSubmitHandler}
           />
         </div>
       </div>
