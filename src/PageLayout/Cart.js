@@ -4,7 +4,7 @@ import { MYACCOUNT_URL, CHECKOUT_URL } from '../routes/URLMap';
 import '.././PageLayout/Style/PageStyle.scss';
 import ShippingForm from '../PageLayout/ShippingForm';
 
-function Cart() {
+const Cart = () => {
   return (
     <div className="cart-container">
     

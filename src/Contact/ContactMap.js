@@ -1,6 +1,6 @@
-import './Contact.scss';
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, InfoWindow, Marker  } from 'google-maps-react';
+import './Contact.scss';
 
 const mapStyles = {
   width: '50%',

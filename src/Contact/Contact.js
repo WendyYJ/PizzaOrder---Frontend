@@ -3,10 +3,11 @@ import './Contact.scss';
 import '.././PageLayout/Style/PageStyle.scss';
 import Header from '../PageLayout/Header/Header';
 import SecondaryHeader from '../PageLayout/Header/SecondaryHeader';
-
 import Sidebar from '../PageLayout/Sidebar';
 import Toggle from '../PageLayout/Toggle';
 import ContactMap from './ContactMap';
+import ContactForm from './ContactForm';
+import ContactDetails from './ContactDetails';
 
 
 
@@ -40,7 +41,11 @@ const Contact = ({children}) =>{
     <p>{children}</p>
     <SecondaryHeader headername={"Contact Us"}/>
     <div className="map-container">
-    <ContactMap />
+      <ContactMap />
+    </div>
+    <div className="contactUs-container">
+       <ContactForm />
+       <ContactDetails />
     </div>
   </Fragment>
   </div>
