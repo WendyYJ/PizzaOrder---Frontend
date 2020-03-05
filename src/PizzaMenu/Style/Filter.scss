@@ -41,7 +41,10 @@
     margin-bottom: 1em;
     padding: 2% 1px 7px 5%;  
 }
-
+.checkboxlists{
+    display: block;
+    width:25%;
+}
 .listcontainer{
     width:25%
 }
@@ -91,7 +94,7 @@ input[type="checkbox"]{
   }
 .cardcontainer{
     text-align: center;
-    height:15em;
+
     width:25%;
     margin-bottom: 1em;
 }

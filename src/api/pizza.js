@@ -3,6 +3,7 @@ import queryString from 'query-string';
 
 const mockImage = 'https://sdtimes.com/wp-content/uploads/2018/03/jW4dnFtA_400x400.jpg';
 const API_PIZZA_URL='/pizza';
+const API_INGREDIENT_URL='/ingredient'
 export const fetchPizza = (page=1,pageSize=10) => {
 
     const stringified = queryString.stringify({
@@ -24,4 +25,24 @@ export const fetchPizza = (page=1,pageSize=10) => {
 export const fetchPizzaById=pizzaId=>{
     const url = `${API_PIZZA_URL}/${pizzaId}`;
     return get(url).then(res=>res.data.data);
+}
+
+export const fetchMeats=()=>{
+    const url = `${API_INGREDIENT_URL}/MEATS`;
+    return get(url).then(res=>res.data.data.ingredients);
+}
+
+export const fetchSauces=()=>{
+    const url = `${API_INGREDIENT_URL}/SAUCES`;
+    return get(url).then(res=>res.data.data.ingredients);
+}
+
+export const fetchViggies=()=>{
+    const url = `${API_INGREDIENT_URL}/VEGGIGS`;
+    return get(url).then(res=>res.data.data.ingredients);
+}
+
+export const fetchCheeses=()=>{
+    const url = `${API_INGREDIENT_URL}/CHEESES`;
+    return get(url).then(res=>res.data.data.ingredients);
 }
