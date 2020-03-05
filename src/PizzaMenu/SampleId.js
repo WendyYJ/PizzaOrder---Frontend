@@ -23,8 +23,11 @@ class SampleId extends React.Component {
     };
 }
 
-
-loadCourse = pizzaId => this.setState({ isLoading: true }, () => {
+componentDidMount() {
+  const pizzaId = this.props.match.params.SampleId;
+  this.loadPizza(pizzaId);
+}
+loadPizza = pizzaId => this.setState({ isLoading: true }, () => {
   fetchPizzaById(pizzaId)
       .then(pizza => this.setState({ pizza, isLoading: false }))
       .catch(error=>this.setState({error}));
