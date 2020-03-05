@@ -6,9 +6,10 @@ import HorizonBar from '../PageLayout/HorizonBar';
 import SampleMenu from './Components/SampleMenu';
 import ReviewForm from '../PageLayout/ReviewForm';
 import RelatedProduct from './Components/RelatedProduct';
-import {fetchPizzaById} from '../api/pizza'
-import Sidebar from '../PageLayout/Sidebar';
-import Toggle from '../PageLayout/Toggle';
+import {fetchPizzaById} from '../api/pizza';
+import SampleSidebar from './Components/SampleSidebar';
+// import Sidebar from '../PageLayout/Sidebar';
+// import Toggle from '../PageLayout/Toggle';
 
 class SampleId extends React.Component {
   
@@ -22,10 +23,6 @@ class SampleId extends React.Component {
     };
 }
 
-componentDidMount() {
-  const pizzaId = this.props.match.params.SampleId;
-  this.loadCourse(pizzaId);
-}
 
 loadCourse = pizzaId => this.setState({ isLoading: true }, () => {
   fetchPizzaById(pizzaId)
@@ -33,16 +30,19 @@ loadCourse = pizzaId => this.setState({ isLoading: true }, () => {
       .catch(error=>this.setState({error}));
 });
 
-
-  render() {
+render() {
   return (
     <div className ="MenuMain-container">
-      <Header />
+      <SampleSidebar />
+     
       <ThirdHeader headername={"Pizza Menu"} headername2={this.state.pizza.PizzaName} />
 
       <HorizonBar className="horizonbar" />
       <SampleMenu
-      pizzaname={this.state.pizza.PizzaName} />
+      pizzaname={this.state.pizza.PizzaName}
+      description={this.state.pizza.Description}
+      price={this.state.pizza.UnitPrice}
+      />
      
       <div className="horizonbar-Two">
         <p>DESCRIPTION</p>
@@ -52,11 +52,10 @@ loadCourse = pizzaId => this.setState({ isLoading: true }, () => {
       </div>
         <ReviewForm />
         <RelatedProduct />
-  
+      
      </div>
   );
 }
 }
-
 
 export default SampleId;

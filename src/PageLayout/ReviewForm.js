@@ -140,7 +140,7 @@ class ReviewForm extends React.Component {
         <p>YOUR REVIEW</p> 
         <input
           type='text'
-          onChange={this.myChangeHandler}
+          onChange={this.reviewSubmitHandler }
         />
       </div>
       <div className="submit-button">

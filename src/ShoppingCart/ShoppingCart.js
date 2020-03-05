@@ -49,9 +49,8 @@ const ShoppingCart = ({children}) => {
       </div>
     </Fragment>
     <div>
-
-    </div>
-    </div>
+  </div>
+ </div>
 
 
   );

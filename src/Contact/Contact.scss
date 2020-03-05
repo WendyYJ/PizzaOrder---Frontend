@@ -1,11 +1,167 @@
-.contactMap{
-  position: relative;
-  top: -15vh;
-  left: 10vw;
+@import '../asset/theme.scss';
+@import '../asset/mixin.scss';
 
-  
+.map-container{
+  width: 53vw;
+  height: 56vh;
+  border: 2px solid #D94F2B;
+  margin-left: 22%;
 }
 
-text{
-  color: red;
+.contact-map{
+  margin-bottom: 0vw;
+}
+
+.contact-form{
+  text-align: left;
+  margin-top: 10vh;
+  margin-left: 14vw;
+  display: flex;
+  flex-direction: column;
+  @include heading();
+
+  h1{
+    color: $saffron;
+    font-size: 24px;
+    font-family: $heading;
+  }
+
+  .text{
+    font-size: 16px;
+    font-family: $body;
+    color: white;
+  }
+
+  .messageForm-container{
+    display: flex;
+    flex-direction: row;
+
+    .name{
+     margin-top: 1vh;
+    }
+
+    .email{
+      margin-top: 1vh;
+     
+    }
+
+    .email-input{
+      margin-left: 1.5vw;
+    }
+
+    input{
+      padding: 7px 41.5px;
+      color: white;
+      background-color: transparent;
+      border: 1px solid white;
+  }
+}
+
+.messageForm-containerTwo{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2vh;
+
+  input{
+    padding: 7px 174px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+  }
+
+  .message-form{
+    margin-top: 2vh;
+  }
+ }
+
+ .send-btn{
+  margin-top: -3vh;
+  
+  button{
+    padding: 9px 20px;
+    background-color: $saffron;
+    border: 1px solid $saffron;
+    font-family: $body;
+    font-size: 10px;
+  }
+ }
+}
+
+.contactDetails-container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -88vh;
+    left: 60vw;
+    width: 25vw;
+    height: 85vh;
+    background-color: rgba(0, 0, 0, 0.205);
+    @include heading();
+    
+
+  .GetInTouch{
+    text-align: left;
+    margin-left: 2vw;
+
+    h2{
+      font-family: $heading;
+      color: $saffron;
+      font-size: 22px;
+    }
+
+    p{
+      font-family: $body;
+      color: white;
+      font-size: 12px;
+      line-height: 1.5vh;
+
+      span{
+        color: $flame;
+      }
+    }
+  }
+
+  .StoreAddress{
+    text-align: left;
+    margin-left: 2vw;
+
+    h2{
+      font-family: $heading;
+      color: $saffron;
+      font-size: 22px;
+    }
+
+    h3{
+      font-family: $body;
+      color: white;
+      font-size: 14px;
+      line-height: 1.5vh;
+      width: 100%;
+    }
+
+    p{
+      font-family: $body;
+      color: white;
+      font-size: 12px;
+      line-height: 1.5vh;
+    }
+  }
+
+  .WorkingHours{
+    text-align: left;
+    margin-left: 2vw;
+
+    h2{
+      font-family: $heading;
+      color: $saffron;
+      font-size: 22px;
+    }
+
+    p{
+      font-family: $body;
+      color: white;
+      font-size: 12px;
+      line-height: 1.5vh;
+    }
+  }
 }
