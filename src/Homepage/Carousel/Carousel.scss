@@ -1,16 +1,23 @@
 @import '../homepage.scss';
 
-.homepage{
-    &__menu{
-        display: flex;
-        align-items: center;
+// .homepage{
+//     &__menu{
         
-        &__container{
-            width:80vw;
-            height: 50vh;
-
-        }
-    }
+//         &__container{
+//             width:80vw;
+//             
+//         }
+//     }
+// }
+.slick-slider{
+    width:90vw;
 }
+
+#carousel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
   
