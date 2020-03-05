@@ -3,6 +3,8 @@ import React from "react";
 import Slider from "react-slick";
 import './Carousel.scss';
 import periperi from '../../asset/img/PeriPeri.png';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 class Carousel extends React.Component{
   render() {
@@ -41,13 +43,13 @@ class Carousel extends React.Component{
         <div className='homepage__menu '>
         <h3>3</h3>
         </div>
-        <div>
-        <h3>4</h3>
+        <div className='homepage__menu'>
+        <h3 >4</h3>
         </div>
-        <div>
+        <div className='homepage__menu'>
           <h3>5</h3>
         </div>
-        <div>
+        <div className='homepage__menu'>
           <h3>6</h3>
         </div>
       </Slider>
