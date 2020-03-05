@@ -2,7 +2,12 @@ import React from 'react';
 import '.././Style/Filter.scss';
 import MenuIcon from '@material-ui/icons/Menu';
 import PizzaCard from './PizzaCard';
+import IngredientCard from './IngredientCard'
 import { fetchPizza } from '../../api/pizza'
+import { fetchMeats } from '../../api/pizza'
+import { fetchSauces } from '../../api/pizza'
+import { fetchViggies } from '../../api/pizza'
+import { fetchCheeses } from '../../api/pizza'
 import { PIZZAMENU_URL} from '../../routes/URLMap';
 import { Button, Container, Pagination, Segment } from 'semantic-ui-react';
 
@@ -24,6 +29,10 @@ class Filter extends React.Component {
 			// {code:5,name:"pizza3",description:"11111",pizzaImage:mockImage,price:16.00},
 	
 		],
+		meats:[],
+		sauces:[],
+		viggies:[],
+		cheeses:[],
             error: null,
 			isLoading: false,
 			pagination:{},
@@ -33,6 +42,10 @@ class Filter extends React.Component {
 	
 	componentDidMount() {
 		this.loadPizzas();
+		this.loadMeats();
+		this.loadSauces();
+		this.loadViggies();
+		this.loadCHeeses();
 }
 loadPizzas=page=>{
 	this.setState({isLoading:true,pizzas:[]},()=>{
@@ -51,6 +64,69 @@ loadPizzas=page=>{
 });
 };
 
+loadMeats=()=>{
+	this.setState({isLoading:true,meats:[]},()=>{
+		fetchMeats()
+		.then(meats=>{
+			this.setState({meats, isLoading:false});
+	
+	})
+	.catch(error=>{
+		this.setState({error,isLoading:false});
+
+	})
+	
+});
+};
+
+loadSauces=()=>{
+	this.setState({isLoading:true,sauces:[]},()=>{
+		fetchSauces()
+		.then(sauces=>{
+			this.setState({sauces, isLoading:false});
+	
+	})
+	.catch(error=>{
+		this.setState({error,isLoading:false});
+
+	})
+	
+});
+};
+
+loadViggies=()=>{
+	this.setState({isLoading:true,viggies:[]},()=>{
+		fetchViggies()
+		.then(viggies=>{
+			this.setState({viggies, isLoading:false});
+	
+	})
+	.catch(error=>{
+		this.setState({error,isLoading:false});
+
+	})
+	
+});
+};
+
+
+loadCHeeses=()=>{
+	this.setState({isLoading:true,cheeses:[]},()=>{
+		fetchCheeses()
+		.then(cheeses=>{
+			this.setState({cheeses, isLoading:false});
+	
+	})
+	.catch(error=>{
+		this.setState({error,isLoading:false});
+
+	})
+	
+});
+};
+
+
+
 handlePageChange=(_,{activePage})=>{
 this.loadPizzas(activePage);
 };
@@ -67,7 +143,93 @@ this.loadPizzas(activePage);
 		   </div>
 		</div>
 		<section className="filtercontainer">
-		   <div className="checkboxcontainer">
+			
+		<div className="checkboxcontainer">
+	
+
+<div className="checkboxlists">
+<h1>MEATS</h1>
+{this.state.meats.map(ingredients => (
+	<IngredientCard
+		
+		
+		ingredientName={ingredients.IngredientName}
+	
+		key={ingredients._id}
+
+   
+	/>
+))}
+
+</div>
+
+
+
+
+<div className="checkboxlists">
+<h1>SAUCES</h1>
+{this.state.sauces.map(ingredients => (
+	<IngredientCard
+		
+		
+		ingredientName={ingredients.IngredientName}
+	
+		key={ingredients._id}
+
+   
+	/>
+))}
+
+</div>
+
+
+
+<div className="checkboxlists">
+<h1>CHEESES</h1>
+{this.state.cheeses.map(ingredients => (
+	<IngredientCard
+		
+		
+		ingredientName={ingredients.IngredientName}
+	
+		key={ingredients._id}
+
+   
+	/>
+))}
+
+</div>
+
+
+
+
+
+
+
+<div className="checkboxlists">
+<h1>VIGGIES</h1>
+{this.state.viggies.map(ingredients => (
+	<IngredientCard
+		
+		
+		ingredientName={ingredients.IngredientName}
+	
+		key={ingredients._id}
+
+   
+	/>
+))}
+
+</div>
+
+
+
+
+
+
+			</div>
+
+		   {/* <div className="checkboxcontainer">
 			  <div className="listcontainer">
 				 <h1>SAUCE</h1>
 				 <div>
@@ -260,7 +422,7 @@ this.loadPizzas(activePage);
 					</label>
 				 </div>
 			  </div>
-		   </div>
+		   </div> */}
 		   <div className="btncontainer">
 			  <button className="filter-btn">FILTER SELECTED</button>
 		   </div>
