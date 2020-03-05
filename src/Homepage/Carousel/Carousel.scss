@@ -1,5 +1,16 @@
 @import '../homepage.scss';
 
+.homepage{
+    &__menu{
+        display: flex;
+        align-items: center;
+        
+        &__container{
+            width:80vw;
+            height: 50vh;
 
+        }
+    }
+}
 
   
