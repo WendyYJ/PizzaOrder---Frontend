@@ -27,6 +27,7 @@ componentDidMount() {
   const pizzaId = this.props.match.params.SampleId;
   this.loadPizza(pizzaId);
 }
+
 loadPizza = pizzaId => this.setState({ isLoading: true }, () => {
   fetchPizzaById(pizzaId)
       .then(pizza => this.setState({ pizza, isLoading: false }))

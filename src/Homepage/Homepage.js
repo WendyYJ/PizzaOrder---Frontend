@@ -9,6 +9,8 @@ import Ingredient from '../PageLayout/Footer/Ingredient';
 import Sidebar from '../PageLayout/Sidebar';
 import Toggle from '../PageLayout/Toggle';
 import Ingredients from '../PageLayout/Footer/Ingredient';
+// import ShoppingCartSidebar from '../PageLayout/Header/ShoppingCartSidebar/ShoppingCartSidebar';
+
 
 const Homepage =  ({children})  => {
     const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -37,6 +39,8 @@ const Homepage =  ({children})  => {
             {sidebar}
             <Toggle click={openHandler}/>
             <p>{children}</p>
+            
+            
             
             <main className='homepage__welcome'>
             <h1 className='homepage__welcome-heading'>
