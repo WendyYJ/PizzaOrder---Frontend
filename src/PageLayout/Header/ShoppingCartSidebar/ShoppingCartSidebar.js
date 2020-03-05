@@ -76,7 +76,7 @@ const ShoppingCartSidebar  = () =>{
     </footer>
   </div>
 </div>
-        </div>
+</div>
 
     )
 }

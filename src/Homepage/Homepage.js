@@ -1,6 +1,5 @@
 import React, {Fragment, useState} from 'react';
 import './homepage.scss';
-import periperi from '../asset/img/PeriPeri.png';
 import Information from '../AboutUs/components/Infomation';
 import profile from '../asset/img/proni.png';    
 import phone from '../asset/icon/iphone-6s-logo.png';
@@ -9,6 +8,9 @@ import Ingredient from '../PageLayout/Footer/Ingredient';
 import Sidebar from '../PageLayout/Sidebar';
 import Toggle from '../PageLayout/Toggle';
 import Ingredients from '../PageLayout/Footer/Ingredient';
+// import ShoppingCartSidebar from '../PageLayout/Header/ShoppingCartSidebar/ShoppingCartSidebar';
+import Carousel from './Carousel/Carousel';
+
 
 const Homepage =  ({children})  => {
     const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -38,6 +40,8 @@ const Homepage =  ({children})  => {
             <Toggle click={openHandler}/>
             <p>{children}</p>
             
+            
+            
             <main className='homepage__welcome'>
             <h1 className='homepage__welcome-heading'>
                 Get it while it's hot!
@@ -51,28 +55,10 @@ const Homepage =  ({children})  => {
             </main>
             
         <Information/> 
-
-        <div className='homepage__menu '>
-            <div className='homepage__menu-left'>
-            <h2 className='homepage__menu-heading'>
-                Peri-Peri
-            </h2>
-            
-            <p className='homepage__menu-price'>
-                $18-$37
-            </p>
-            <p className='homepage__menu-more'>
-                Marinated Chicken Breast Fillets, Shallots, Roasted Capsicum, Caramelised Onions & Bocconicini on a Tomato base, topped with Peri-Peri sauce.
-            </p>
-            <p className='homepage__menu-button'>
-                order now
-            </p>
-            </div>
-            <div className='homepage__menu-right'>
-            <img src={periperi} alt='Peri Peri Pizza' />
-            </div>
-         </div>
-
+        <div id='carousel'>
+            <Carousel/>
+        </div>
+        
          <div className='homepage__pizza-builder'>
         <div className='homepage__pizza-builder__container'>
              <h2 className='homepage__pizza-builder__heading'>Build Your Own Pizza</h2>
@@ -190,16 +176,9 @@ const Homepage =  ({children})  => {
             
             </div>
         </div>
-        
-        
-       
-        
-        
-        
-    </div>
+     </div>
     </Fragment>
     </div>
-
     
   )
 }
