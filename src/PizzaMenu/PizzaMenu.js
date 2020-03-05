@@ -1,43 +1,19 @@
-import React, {Fragment, useState} from 'react';
-import Header from '../PageLayout/Header/Header';
+import React, {Fragment} from 'react';
 import Filter from './Components/Filter';
 import SecondaryHeader from '../PageLayout/Header/SecondaryHeader';
-import Sidebar from '../PageLayout/Sidebar';
-import Toggle from '../PageLayout/Toggle';
+import PizzamenuSidebar from '../PageLayout/PizzamenuSidebar/PizzamenuSidebar';
 
-const PizzaMenu = ({children}) => {
-   const [sidebarOpen, setSidebarOpen] = useState(false)
-
-   const openHandler = () => {
-       if(!sidebarOpen){
-           setSidebarOpen(true);
-       }else{
-           setSidebarOpen(false);
-       }
-   }
-
-   const sidebarCloseHandler = () => {
-       setSidebarOpen(false);
-   }
-
-   let sidebar
-   if (sidebarOpen) {
-       sidebar = <Sidebar close={sidebarCloseHandler} sidebar={"sidebar"} />
-   }
-    
+const PizzaMenu = () => {
+   
       return (
       <div className="Catalog-container">
       <Fragment>
-            <Header />
-            {sidebar}
-            <Toggle click={openHandler}/>
-            <p>{children}</p>
+            <PizzamenuSidebar />
             <SecondaryHeader headername={"Pizza Menu"}/>
          <Filter />
       </Fragment>
       </div>
       );
    }
-
 
 export default PizzaMenu;

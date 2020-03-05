@@ -1,5 +1,5 @@
 import React, {Fragment} from "react";
-import '.././PageLayout/Style/TopHeader.scss';
+import '../../PageLayout/Style/TopHeader.scss';
 
 const Toggle = (props) => {
   return(

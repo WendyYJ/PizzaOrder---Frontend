@@ -1,49 +1,20 @@
-import React, {Fragment, useState} from 'react';
+import React, {Fragment} from 'react';
 import './homepage.scss';
 import Information from '../AboutUs/components/Infomation';
 import profile from '../asset/img/proni.png';    
 import phone from '../asset/icon/iphone-6s-logo.png';
-import Header from '../PageLayout/Header/Header';
 import Ingredient from '../PageLayout/Footer/Ingredient';
-import Sidebar from '../PageLayout/Sidebar';
-import Toggle from '../PageLayout/Toggle';
-import Ingredients from '../PageLayout/Footer/Ingredient';
-// import ShoppingCartSidebar from '../PageLayout/Header/ShoppingCartSidebar/ShoppingCartSidebar';
 import Carousel from './Carousel/Carousel';
+import PizzamenuSidebar from '../PageLayout/PizzamenuSidebar/PizzamenuSidebar';
+//import ShoppingCartSidebar from '../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar';
 
 
-
-const Homepage =  ({children})  => {
-    const [sidebarOpen, setSidebarOpen] = useState(false)
-
-    const openHandler = () => {
-        if(!sidebarOpen){
-            setSidebarOpen(true);
-        }else{
-            setSidebarOpen(false);
-        }
-    }
-
-    const sidebarCloseHandler = () => {
-        setSidebarOpen(false);
-    }
-
-    let sidebar
-    if (sidebarOpen) {
-        sidebar = <Sidebar close={sidebarCloseHandler} sidebar={"sidebar"} />
-    }
-
+const Homepage =  ()  => {
+    
     return(
         <div className='homepage'>
          <Fragment>
-            <Header  />
-            {sidebar}
-            <Toggle click={openHandler}/>
-            <p>{children}</p>
-            
-            
-            
-            
+           <PizzamenuSidebar />
             <main className='homepage__welcome'>
             <h1 className='homepage__welcome-heading'>
                 Get it while it's hot!

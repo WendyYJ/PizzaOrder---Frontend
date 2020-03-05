@@ -7,7 +7,7 @@ import SampleMenu from './Components/SampleMenu';
 import ReviewForm from '../PageLayout/ReviewForm';
 import RelatedProduct from './Components/RelatedProduct';
 import {fetchPizzaById} from '../api/pizza';
-import SampleSidebar from './Components/SampleSidebar';
+import PizzamenuSidebar from '../PageLayout/PizzamenuSidebar/PizzamenuSidebar';
 
 
 class SampleId extends React.Component {
@@ -36,7 +36,7 @@ loadPizza = pizzaId => this.setState({ isLoading: true }, () => {
 render() {
   return (
     <div className ="MenuMain-container">
-      <SampleSidebar />
+      <PizzamenuSidebar />
      
       <ThirdHeader headername={"Pizza Menu"} headername2={this.state.pizza.PizzaName} />
 

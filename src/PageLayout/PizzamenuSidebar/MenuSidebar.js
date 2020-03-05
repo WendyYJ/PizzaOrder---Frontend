@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
-import '.././PageLayout/Style/Sidebar.scss';
+import './MenuSidebar.scss';
 import { NavLink} from 'react-router-dom';
 import {HOME_URL, PIZZAMENU_URL, ABOUTUS_URL, PIZZABUILDER_URL, CONTACT_URL
-, LOGIN_URL, MYACCOUNT_URL, CHECKOUT_URL} from '../routes/URLMap';
+, LOGIN_URL, MYACCOUNT_URL, CHECKOUT_URL} from '../../routes/URLMap';
 import SearchIcon from '@material-ui/icons/Search';
 
 
 const Sidebar = (props) => {
   const [sidebarClass, setSidebarClass] = useState(props.sidebar);
 
-  
   const closeHandler = (e) => {
     e.preventDefault();
     setSidebarClass("sidebar close");
@@ -39,7 +38,6 @@ const Sidebar = (props) => {
         <li><NavLink to={LOGIN_URL}>LOGIN</NavLink></li>
         <li><NavLink to={MYACCOUNT_URL}>MY ACCOUNT</NavLink></li>
         <li><NavLink to={CHECKOUT_URL}>CHECKOUT</NavLink></li>
-
       </ul>
     </div>
   )

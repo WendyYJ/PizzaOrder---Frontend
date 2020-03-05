@@ -1,9 +1,9 @@
 import React, {Fragment, useState} from 'react';
-import Sidebar from '../../PageLayout/Sidebar';
-import Toggle from '../../PageLayout/Toggle';
-import Header from '../../PageLayout/Header/Header';
+import Sidebar from './MenuSidebar';
+import Toggle from './Toggle';
+import Header from '../Header/Header';
 
-const SampleSidebar = ({children}) => {
+const PizzamenuSidebar = ({children}) => {
 
   const [sidebarOpen, setSidebarOpen] = useState(false)
   
@@ -37,4 +37,4 @@ return(
 )
 }
 
-export default SampleSidebar;
+export default PizzamenuSidebar;
