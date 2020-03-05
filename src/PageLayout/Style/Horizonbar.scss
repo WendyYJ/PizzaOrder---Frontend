@@ -1,0 +1,65 @@
+@import '../../asset/theme.scss';
+
+.horizonbar{
+  position: relative;
+  top: 10px;
+
+  .arrowicon2{
+    margin-left: 0.6em;
+    margin-right: 0.6em;
+    color: $flame;
+    padding: 8px 8px;
+    border: 1px solid; 
+    float: right;
+    position: relative;
+    right: 22%;
+    top: 2vh;
+  }
+  
+  p{
+    position: relative;
+    top: 4.7vh;
+    margin-left: 23vw;
+    color: white;
+    font-size: 10px;
+    font-family: $body;
+    
+
+    .arrowicon3{
+      position: relative;
+      left: -2vw;
+      top: 0.5vh;
+    }
+  }
+
+  .horizon{
+    margin-top: 3vw;
+    margin-left: 21vw;
+    border-bottom: 2px solid $flame;
+    width: 55vw;
+  }
+}
+
+.horizonbar-Two{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5%;
+  border-bottom: 2px solid $flame;
+  width: 70%;
+  position: relative;
+  margin-left: 15%;
+  
+
+  p{
+    font-size: 14px;
+    font-family: $body;
+    color: white;
+    
+  }
+
+  .active{
+    font-size: 14px;
+    font-family: $body;
+    color: $flame;
+  }
+}

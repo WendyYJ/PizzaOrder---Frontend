@@ -1,4 +1,4 @@
-@import './theme';
+@import '../../asset/theme.scss';
 
 .secondary-header h1{
     font-family: $chalk;
@@ -95,9 +95,6 @@
         }
 
 }
-
-
-
 
   @media only screen and (max-width: 1000px) {
     .link-container{

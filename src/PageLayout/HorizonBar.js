@@ -2,7 +2,7 @@ import React from 'react';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import '.././PageLayout/Style/PageStyle.scss';
+import '.././PageLayout/Style/Horizonbar.scss';
 
 
 const HorizonBar = () => {
@@ -12,14 +12,12 @@ const HorizonBar = () => {
       <ArrowForwardIcon style={{ fontSize: 14 }} className="arrowicon2"/>
       <ArrowBackIcon style={{ fontSize: 14 }} className="arrowicon2"/>
      
-      <p><ChevronLeftIcon style={{ fontSize: 14 }} className="arrowicon3"/>BACK TO MENU</p>
+      <p><ChevronLeftIcon style={{ fontSize: 14 }} className="arrowicon3"/><span>BACK TO MENU</span></p>
       <div className="horizon">
 
       </div>
 
     </div>
-
-
   );
 }
 

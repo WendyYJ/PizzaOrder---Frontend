@@ -1,5 +1,5 @@
 import React from 'react';
-import '.././PageLayout/Style/PageStyle.scss';
+import '.././PageLayout/Style/TopHeader.scss';
 
 class ShippingForm extends React.Component {
   constructor(props) {

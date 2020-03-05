@@ -1,5 +1,5 @@
 import React from 'react';
-import '.././PageLayout/Style/PageStyle.scss';
+import '.././PageLayout/Style/ReviewForm.scss';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 import StarIcon from '@material-ui/icons/Star';
 

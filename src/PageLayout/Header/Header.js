@@ -1,5 +1,6 @@
-import React, {Fragment, useState} from 'react';
-import '../../PizzaMenu/Style/pizzamenu.scss';
+import React from 'react';
+// import '../../PizzaMenu/Style/pizzamenu.scss';
+import '../Style/TopHeader.scss';
 import cart from "../../asset/icon/header_cart.png";
 
 const Header = () => {

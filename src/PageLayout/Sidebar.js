@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '.././PageLayout/Style/PageStyle.scss';
+import '.././PageLayout/Style/Sidebar.scss';
 import { NavLink} from 'react-router-dom';
 import {HOME_URL, PIZZAMENU_URL, ABOUTUS_URL, PIZZABUILDER_URL, CONTACT_URL
 , LOGIN_URL, MYACCOUNT_URL, CHECKOUT_URL} from '../routes/URLMap';

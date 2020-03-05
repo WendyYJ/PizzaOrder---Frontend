@@ -1,0 +1,96 @@
+@import '../../asset/theme.scss';
+
+.pizza-review {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-left: 10%;
+  margin-top: 3%;
+
+  .reviewCountainer{
+    position: relative;
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 100%;
+  
+    h3{
+      font-size: 16px;
+      font-family: $body;
+      color: $saffron;
+    }
+
+    span{
+      font-size: 14px;
+      font-family: $body;
+      color: $flame;
+    }
+
+    p{
+      font-size: 12px;
+      font-family: $body;
+      color: white;
+    }
+  
+    .five-starRate{
+      position: relative;
+      left: 30vw;
+    }
+  }
+  
+  .reviewForm-container{
+    margin-right: 5%;
+    width: 100%;
+    
+  
+    h2{
+      font-size: 24px;
+      font-family: $heading;
+      color: $saffron;
+      position: relative;
+      top: 0vh;
+      left: 11vw;  
+      width: 100%;
+   }
+  
+   .five-starRate{
+     width: 100%;
+   }
+  
+   .review-form{
+    position: relative;
+    top: 1vh;
+    left: 25%;
+  
+    input{
+      padding: 7px 20px;
+      color: white;
+      background-color: transparent;
+      border: 1px solid white;
+    }
+  }
+  
+  .submit-form{
+    position: relative;
+    top: 2vh;
+    left: 25%;
+    input{
+      padding: 40px 20px;
+      color: white;
+      background-color: transparent;
+      border: 1px solid white;
+    }
+  }
+  
+  .submit-button{
+    position: relative;
+    top: 0vh;
+    left: 25%;
+    input{
+      padding: 6px 22px;
+      background-color: $saffron;
+      border: 1px solid $saffron;
+    }
+  }
+}
+}
+
