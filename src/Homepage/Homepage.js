@@ -12,6 +12,7 @@ import Ingredients from '../PageLayout/Footer/Ingredient';
 import Carousel from './Carousel/Carousel';
 
 
+
 const Homepage =  ({children})  => {
     const [sidebarOpen, setSidebarOpen] = useState(false)
 
@@ -39,6 +40,7 @@ const Homepage =  ({children})  => {
             {sidebar}
             <Toggle click={openHandler}/>
             <p>{children}</p>
+            
             
             
             
@@ -179,7 +181,6 @@ const Homepage =  ({children})  => {
      </div>
     </Fragment>
     </div>
-    
   )
 }
 

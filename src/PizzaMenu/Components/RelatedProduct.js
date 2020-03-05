@@ -1,5 +1,5 @@
 import React from 'react';
-import '.././Style/pizzamenu.scss';
+import '.././Style/RelatedProduct.scss';
 import Salami from '../../asset/img/Salami.jpg'; 
 import Shiitake from '../../asset/img/Shiitake.jpg';
 import proni from '../../asset/img/proni.png';

@@ -1,0 +1,97 @@
+@import '../../asset/theme.scss';
+
+.sample_menu{
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+  margin-left: 12vw;
+  width: 70%;
+  
+    .dot2{
+      height: 25vw;
+      width: 25vw;
+      background-color: $flame;
+      border-radius: 50%;
+      display: inline-block;
+      margin-left:  0px;
+      margin-top: 15%;
+  }
+
+  .sample_text{
+    color: $saffron;
+    position: relative;
+    left: 70px;
+
+      h2{
+        font-size: 30px;
+      }
+      h3{
+        font-size: 26px;
+        color: $flame;
+      }
+
+    .clickCount{
+      position: relative;
+      left: 10px;
+
+      .counterButton{
+        position: relative;
+        left: -7px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.900);
+        opacity: 1;
+        height: 3vw;
+        width: 9vw;
+        border: 1px solid white;
+        
+        
+        .decButton{
+          font-size: 1.3em;
+          color: white;
+          background-color: rgba(0, 0, 0, 0.900);
+          opacity: 1;
+          width: 3vw;
+          height: 3vw;
+          display: inline-block;
+          border: 1px solid white;
+        }
+      
+        .incButton{
+          font-size: 1.3em;
+          color: white;
+          background-color: rgba(0, 0, 0, 0.900);
+          opacity: 1;
+          width: 3vw;
+          height: 3vw;
+          display: inline-block;
+          border: 1px solid white;
+        }
+      
+        .count{
+          font-size: 1.3em;
+          text-align: center;
+          width: 3vw;
+          height: 3vw;
+          display: inline-block;
+          color: white;
+        }
+      } 
+    }
+  }
+}
+
+.addButton{
+  position: relative;
+  left: 13vw;
+  top: -6.3vh;
+  padding: 1vw 4vw;
+  background-color: $saffron;
+  color: black;
+  font-family: $body;
+  border: 1px solid $saffron;
+  font-size: 0.8em;
+}
+
+#available-size{
+  width: 25vw;
+}

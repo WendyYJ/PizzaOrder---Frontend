@@ -1,5 +1,5 @@
 import React, {Fragment, useState} from 'react';
-import '.././PageLayout/Style/PageStyle.scss';
+import './ShoppingCart.scss';
 import Header from '../PageLayout/Header/Header';
 import FourthHeader from '../PageLayout/Header/FourthHeader'
 import Cart from '../PageLayout/Cart';

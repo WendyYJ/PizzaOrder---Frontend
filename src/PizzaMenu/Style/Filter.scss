@@ -1,4 +1,4 @@
-@import './theme';
+@import '../../asset/theme.scss';
 
 .maincontainer{
     width: 100%;
@@ -7,7 +7,6 @@
 
 .icon{
     color:$flame;
-  
 }
 
 .headercontainer{

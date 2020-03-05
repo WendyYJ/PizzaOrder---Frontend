@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../PageLayout/Style/PageStyle.scss';
+import '.././Style/SampleMenu.scss';
 import StarIcon from '@material-ui/icons/Star';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 import availableSizes from "../../asset/icon/available_sizes.png";
@@ -33,7 +33,7 @@ import PeriPeri from '../../asset/img/PeriPeri.png';
           <Counter /> 
         </div>
         <button className="addButton"
-              
+
         >
           ADD TO CART
         </button>

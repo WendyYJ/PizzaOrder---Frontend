@@ -1,6 +1,6 @@
-import React, {Fragment, useState} from 'react';
-import '.././PageLayout/Style/PageStyle.scss';
-import Header from '../PageLayout/Header/Header';
+import React from 'react';
+import '.././PageLayout/Style/TopHeader.scss';
+import '.././PageLayout/Style/Horizonbar.scss';
 import ThirdHeader from '../PageLayout/Header/ThirdHeader';
 import HorizonBar from '../PageLayout/HorizonBar';
 import SampleMenu from './Components/SampleMenu';
@@ -8,8 +8,7 @@ import ReviewForm from '../PageLayout/ReviewForm';
 import RelatedProduct from './Components/RelatedProduct';
 import {fetchPizzaById} from '../api/pizza';
 import SampleSidebar from './Components/SampleSidebar';
-// import Sidebar from '../PageLayout/Sidebar';
-// import Toggle from '../PageLayout/Toggle';
+
 
 class SampleId extends React.Component {
   

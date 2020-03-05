@@ -1,6 +1,6 @@
 import React, {Fragment, useState} from 'react';
 import './Contact.scss';
-import '.././PageLayout/Style/PageStyle.scss';
+import '.././PageLayout/Style/TopHeader.scss';
 import Header from '../PageLayout/Header/Header';
 import SecondaryHeader from '../PageLayout/Header/SecondaryHeader';
 import Sidebar from '../PageLayout/Sidebar';
