@@ -1,0 +1,64 @@
+@import '../../../asset/mixin.scss';
+
+.footer{
+    &__insta{
+        @include padding-center;
+        font-size: $sub-heading-size;
+        text-align: center;
+        font-variant:small-caps;
+        font-weight: bold;
+        
+        &__arrow{
+            border-radius: 50%;
+            border:2px solid $white;
+            margin-left: 2vw;
+            margin-right: 2vw;
+        }
+        &__start{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:$white;
+            border: 3px solid $flame;
+        
+        }
+        &__span{
+            color:$flame;
+        }
+    }
+
+    &__sign-up{
+        text-align: center;
+        background-color: $saffron;
+        @include padding-center;
+        padding-bottom: 2vh;
+        margin-bottom: 5vh;
+
+        &__header{
+            @include heading;
+            color:$black;
+        }
+
+        &__button{
+            border-radius: 5%;
+            margin-top:1vw;
+            font-variant: small-caps;
+            color: $saffron;
+            background-color: $black;
+            font-size: $body-size;
+            border: 2px $black solid;
+            padding: 1.5vh;
+        }
+    }
+
+    &__contact-details{
+        @include chalk-heading;
+        color: $flame;
+        text-align: center;
+        margin:0;
+    }
+}
+
+
+
+

@@ -6,6 +6,7 @@ import phone from '../asset/icon/iphone-6s-logo.png';
 import Ingredient from '../PageLayout/Footer/Ingredient';
 import Carousel from './Carousel/Carousel';
 import PizzamenuSidebar from '../PageLayout/PizzamenuSidebar/PizzamenuSidebar';
+import Footer from '../PageLayout/Footer/Footer';
 //import ShoppingCartSidebar from '../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar';
 
 
@@ -150,6 +151,10 @@ const Homepage =  ()  => {
             </div>
         </div>
      </div>
+     <div className='homepage__footer'>
+     <Footer/>
+     </div>
+    
     </Fragment>
     </div>
   )
