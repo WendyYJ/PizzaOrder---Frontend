@@ -2,11 +2,11 @@
 
 .sidebar {
   height: 100vh;
-  padding-left: 20px;
+  padding-left: 2vw;
   background-color: rgb(37, 35, 35);
   opacity: 0.8;
   color: white;
-  width: 163px;
+  width: 14vw;
   position: fixed;
   left: -100%;
   animation: slide-open .75s forwards;
@@ -28,8 +28,8 @@
   
   #toggle{
     position: relative;
-    left: 1vw;
-    top: -6vh;
+    left: 2vw;
+    top: -7vh;
     background-color: rgba(0, 0, 0, 0.900);
     color: white;
     border: 1px solid rgba(0, 0, 0, 0.900);

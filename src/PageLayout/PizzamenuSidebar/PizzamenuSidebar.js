@@ -1,6 +1,6 @@
 import React, {Fragment, useState} from 'react';
-import Sidebar from './MenuSidebar';
-import Toggle from './Toggle';
+import MenuSidebar from './MenuSidebar';
+import MenuToggle from './MenuToggle';
 import Header from '../Header/Header';
 
 const PizzamenuSidebar = ({children}) => {
@@ -21,7 +21,7 @@ const PizzamenuSidebar = ({children}) => {
   
     let sidebar
     if (sidebarOpen) {
-        sidebar = <Sidebar close={sidebarCloseHandler} sidebar={"sidebar"} />
+        sidebar = <MenuSidebar close={sidebarCloseHandler} sidebar={"sidebar"} />
     }
 
 return(
@@ -29,7 +29,7 @@ return(
    <Fragment>
             <Header />
             {sidebar}
-            <Toggle click={openHandler}/>
+            <MenuToggle click={openHandler}/>
             <p>{children}</p>
    </Fragment>
 

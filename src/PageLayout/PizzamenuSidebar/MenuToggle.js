@@ -1,7 +1,7 @@
 import React, {Fragment} from "react";
-import '../../PageLayout/Style/TopHeader.scss';
+import './MenuSidebar.scss';
 
-const Toggle = (props) => {
+const MenuToggle = (props) => {
   return(
     <Fragment>
       <button id="toggle" onClick={props.click}>&#8801;</button>
@@ -9,4 +9,4 @@ const Toggle = (props) => {
   )
 }
 
-export default Toggle;
+export default MenuToggle;

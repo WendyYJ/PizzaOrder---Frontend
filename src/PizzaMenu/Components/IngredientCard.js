@@ -4,17 +4,26 @@ import React from 'react';
 
 import '.././Style/Filter.scss';
 
-const IngredientCard = props => {
+function IngredientCard (props) {
+
+    
+    
     return (
       
         <div>
-        <input type="checkbox" id="cb_0" ></input>
-        <label for="cb_0">
+        <input 	onChange={props.filterIngredient} type="checkbox" id={props.ingredientId} ></input>
+
+
+        <label  for={props.key}>
         {props.ingredientName}
         </label>
      </div>
      
     );
 };
+
+
+
+
 
 export default IngredientCard;

@@ -8,6 +8,7 @@ import Carousel from './Carousel/Carousel';
 import PizzamenuSidebar from '../PageLayout/PizzamenuSidebar/PizzamenuSidebar';
 import Footer from '../PageLayout/Footer/Footer';
 //import ShoppingCartSidebar from '../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar';
+import ShoppingCartSidebar from '../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar';
 
 
 const Homepage =  ()  => {
@@ -16,6 +17,10 @@ const Homepage =  ()  => {
         <div className='homepage'>
          <Fragment>
            <PizzamenuSidebar />
+           <ShoppingCartSidebar />
+          
+           
+          
             <main className='homepage__welcome'>
             <h1 className='homepage__welcome-heading'>
                 Get it while it's hot!
