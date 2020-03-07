@@ -19,13 +19,14 @@ class Filter extends React.Component {
 
         this.state = {
 			pizzas: [],
-			meats:[],
-			sauces:[],
-			viggies:[],
-			cheeses:[],
+			meats:[{ischecked:false}],
+			sauces:[{ischecked:false}],
+			viggies:[{ischecked:false}],
+			cheeses:[{ischecked:false}],
 			error: null,
 			isLoading: false,
 			pagination:{},
+			filter:[]
     
         };
     }
@@ -36,6 +37,7 @@ componentDidMount() {
 	this.loadSauces();
 	this.loadViggies();
 	this.loadCHeeses();
+
 }
 loadPizzas=page=>{
 	this.setState({isLoading:true,pizzas:[]},()=>{
@@ -51,6 +53,30 @@ loadPizzas=page=>{
 	
 });
 };
+
+filterPizza=()=>{
+    const checkbox1 =document.getElementsByClassName('checkbox1')
+
+        console.log("checked")
+
+}
+
+filterIngredient=e=>{
+
+	this.state.filter+=e.target.id+",";
+	console.log(this.state.filter)
+
+	// if (e.target.checked){
+	// 	this.setState({meats:[{ischecked:true}]})
+	
+	
+	// 	}
+	
+}
+
+
+
+
 
 loadMeats=()=>{
 	this.setState({isLoading:true,meats:[]},()=>{
@@ -120,6 +146,7 @@ this.loadPizzas(activePage);
 };
 	render() {
 		
+		
 	return (
 		<section className="maincontainer">
 		<div className="headercontainer">
@@ -140,10 +167,12 @@ this.loadPizzas(activePage);
 {this.state.meats.map(ingredients => (
 	<IngredientCard
 		
-		
+	    // ischecked={this.checked==true?true:false}
 		ingredientName={ingredients.IngredientName}
-	
+
 		key={ingredients._id}
+		ingredientId={ingredients._id}
+		filterIngredient={this.filterIngredient}
 
    
 	/>
@@ -159,11 +188,11 @@ this.loadPizzas(activePage);
 {this.state.sauces.map(ingredients => (
 	<IngredientCard
 		
-		
+		ingredientchecked={ingredients.ischecked}
 		ingredientName={ingredients.IngredientName}
 	
 		key={ingredients._id}
-
+		filterIngredient={this.filterIngredient}
    
 	/>
 ))}
@@ -176,8 +205,8 @@ this.loadPizzas(activePage);
 <h1>CHEESES</h1>
 {this.state.cheeses.map(ingredients => (
 	<IngredientCard
-		
-		
+	    ischecked="false"
+	    filterIngredient={this.filterIngredient}
 		ingredientName={ingredients.IngredientName}
 	
 		key={ingredients._id}
@@ -188,18 +217,12 @@ this.loadPizzas(activePage);
 
 </div>
 
-
-
-
-
-
-
 <div className="checkboxlists">
 <h1>VIGGIES</h1>
 {this.state.viggies.map(ingredients => (
 	<IngredientCard
 		
-		
+	    filterIngredient={this.filterIngredient}
 		ingredientName={ingredients.IngredientName}
 	
 		key={ingredients._id}
@@ -219,7 +242,7 @@ this.loadPizzas(activePage);
 
 
 		   <div className="btncontainer">
-			  <button className="filter-btn">FILTER SELECTED</button>
+			  <button onClick={()=>this.filterPizza()} className="filter-btn">FILTER SELECTED</button>
 		   </div>
 		</section>
 		{/* <ErrorMessage error={this.state.error} /> */}
@@ -234,6 +257,7 @@ this.loadPizzas(activePage);
 								pizzaPrice={pizza.UnitPrice}
 								key={pizza._id}
 								to={`${PIZZAMENU_URL}/${pizza._id}`}
+							
                            
                             />
                         ))}
