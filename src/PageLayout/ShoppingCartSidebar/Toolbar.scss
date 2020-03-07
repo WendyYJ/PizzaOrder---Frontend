@@ -1,0 +1,20 @@
+@import '../../asset/theme.scss';
+
+.toolbar{
+  position: fixed;
+  width: 14vw;
+  height: 100vh;
+  background:rgb(37, 35, 35);
+  margin-left: 85vw;
+  margin-top: -7vh;
+  font-family: $body;
+  font-size: 15px;
+
+  .toolbar__title{
+    color: $saffron;
+    font-family: $heading;
+    font-size: 24px;
+  }
+
+}
+

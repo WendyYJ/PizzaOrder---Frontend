@@ -6,7 +6,7 @@ import {HOME_URL, PIZZAMENU_URL, ABOUTUS_URL, PIZZABUILDER_URL, CONTACT_URL
 import SearchIcon from '@material-ui/icons/Search';
 
 
-const Sidebar = (props) => {
+const MenuSidebar = (props) => {
   const [sidebarClass, setSidebarClass] = useState(props.sidebar);
 
   const closeHandler = (e) => {
@@ -43,4 +43,4 @@ const Sidebar = (props) => {
   )
 }
 
-export default Sidebar;
+export default MenuSidebar;

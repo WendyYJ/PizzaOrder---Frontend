@@ -1,12 +1,12 @@
 import React, {Fragment} from "react";
 import '../../PageLayout/Style/TopHeader.scss';
 
-const Toggle = (props) => {
+const CartToggle = (props) => {
   return(
     <Fragment>
-      <button id="toggle" onClick={props.click}>&#8801;</button>
+      <button id="cart" onClick={props.click}>&#8801;</button>
     </Fragment>
   )
 }
 
-export default Toggle;
+export default CartToggle;
