@@ -147,7 +147,7 @@
 
         &-heading{
             @include heading;
-            font-size: $heading-size*0.9 ;
+            font-size: $heading-size;
             color:$saffron;
             &-span{
                 font-size: $body-size;
@@ -231,7 +231,7 @@
             &-heading{
                 @include heading;
                 color:$saffron;
-                font-size: $sub-heading-size*1.3;
+                font-size: $sub-heading-size;
             }
             &-span{
                 font-size: $body-size;
@@ -241,7 +241,7 @@
             &-subheading{
                 @include heading;
                 color:$saffron;
-                font-size: $sub-heading-size*0.9;
+                font-size: $sub-heading-size;
             }
             &-listing{
                 p{
@@ -303,5 +303,7 @@
 
         }
     }
+
+    
 
 }

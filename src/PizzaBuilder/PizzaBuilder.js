@@ -1,13 +1,5 @@
-import React from 'react';
+import React from "react";
 
-
-const PizzaBuilder = () =>{
-
-return(
-  <div>
-
-  </div>
- );
-}
+const PizzaBuilder = () => <div />;
 
 export default PizzaBuilder;
