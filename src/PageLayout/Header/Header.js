@@ -1,20 +1,15 @@
-import React from 'react';
+import React from "react";
 // import '../../PizzaMenu/Style/pizzamenu.scss';
-import '../Style/TopHeader.scss';
+import "../Style/TopHeader.scss";
 import cart from "../../asset/icon/header_cart.png";
 
-const Header = () => {
-
-  return (
-    <div className="header">
-     <header>
-        <h3>Margherita</h3> 
-        <img src={cart} alt="header_cart" id="header_cart" />
-      
+const Header = () => (
+  <div className="header">
+    <header>
+      <h3>Margherita</h3>
+      <img src={cart} alt="header_cart" id="header_cart" />
     </header>
-    </div>
-  );
-}
+  </div>
+);
 
 export default Header;
-    

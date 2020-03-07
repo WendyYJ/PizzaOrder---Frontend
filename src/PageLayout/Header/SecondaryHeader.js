@@ -1,24 +1,21 @@
-import React,{Component} from 'react';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import '../Style/SecondaryHeader.scss';
+import React, { Component } from "react";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import "../Style/SecondaryHeader.scss";
+
 class SecondaryHeader extends Component {
-    render(){
+  render() {
     return (
       <div className="secondary-header">
- 
-          <h1> {this.props.headername}</h1> 
+        <h1> {this.props.headername}</h1>
 
-          <div className="link-container">
-            Home
-           <ArrowForwardIosIcon style={{ fontSize: 14 }} className="arrowicon"/>
-           {this.props.headername}
-          </div>
-      
-         
-   
+        <div className="link-container">
+          Home
+          <ArrowForwardIosIcon style={{ fontSize: 14 }} className="arrowicon" />
+          {this.props.headername}
+        </div>
       </div>
     );
   }
 }
-  
-  export default SecondaryHeader;
+
+export default SecondaryHeader;
