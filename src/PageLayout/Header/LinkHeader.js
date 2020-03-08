@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import "../Style/SecondaryHeader.scss";
+import "../Style/LinkHeader.scss";
 
-class SecondaryHeader extends Component {
+class LinkHeader extends Component {
   render() {
     return (
       <div className="secondary-header">
@@ -18,4 +18,4 @@ class SecondaryHeader extends Component {
   }
 }
 
-export default SecondaryHeader;
+export default LinkHeader;

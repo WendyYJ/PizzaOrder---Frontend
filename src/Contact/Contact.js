@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import "./Contact.scss";
 import "../PageLayout/Style/TopHeader.scss";
-import SecondaryHeader from "../PageLayout/Header/SecondaryHeader";
+import LinkHeader from "../PageLayout/Header/LinkHeader";
 import ContactMap from "./ContactMap";
 import ContactForm from "./ContactForm";
 import ContactDetails from "./ContactDetails";
@@ -11,7 +11,7 @@ const Contact = () => (
   <div className="contact-container">
     <>
       <PizzamenuSidebar />
-      <SecondaryHeader headername="Contact Us" />
+      <LinkHeader headername="Contact Us" />
       <div className="map-container">
         <ContactMap />
       </div>

@@ -1,13 +1,13 @@
 import React, { Fragment } from "react";
 import Filter from "./Components/Filter";
-import SecondaryHeader from "../PageLayout/Header/SecondaryHeader";
+import LinkHeader from "../PageLayout/Header/LinkHeader";
 import PizzamenuSidebar from "../PageLayout/PizzamenuSidebar/PizzamenuSidebar";
 
 const PizzaMenu = () => (
   <div className="Catalog-container">
     <>
       <PizzamenuSidebar />
-      <SecondaryHeader headername="Pizza Menu" />
+      <LinkHeader headername="Pizza Menu" />
       <Filter />
     </>
   </div>

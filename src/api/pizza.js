@@ -33,7 +33,7 @@ export const fetchSauces = () => {
   return get(url).then(res => res.data.data.ingredients);
 };
 
-export const fetchViggies = () => {
+export const fetchVeggies = () => {
   const url = `${API_INGREDIENT_URL}/VEGGIGS`;
   return get(url).then(res => res.data.data.ingredients);
 };

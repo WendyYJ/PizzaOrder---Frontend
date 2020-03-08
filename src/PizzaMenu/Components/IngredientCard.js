@@ -6,12 +6,12 @@ function IngredientCard(props) {
   return (
     <div>
       <input
-        onChange={props.filterIngredient}
+        onChange={props.onChange}
         type="checkbox"
-        id={props.ingredientId}
+        id={props.id}
       />
 
-      <label htmlFor={props.key}>{props.ingredientName}</label>
+      <label htmlFor={props.id}>{props.ingredientName}</label>
     </div>
   );
 }

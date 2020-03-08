@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import "../Style/SecondaryHeader.scss";
+import "../Style/LinkHeader.scss";
 
 class FourthHeader extends Component {
   render() {
