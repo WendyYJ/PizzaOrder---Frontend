@@ -5,7 +5,6 @@ import { NavLink } from "react-router-dom";
 import { Button, Form, Input, Message, Segment } from 'semantic-ui-react';
 import { login as loginFunction } from '../api/auth';
 import { setToken } from '../utils/auth';
-// import CircularProgress from '@material-ui/core/CircularProgress';
 import {
   LOGIN_URL,
   MYACCOUNT_URL,
@@ -29,7 +28,7 @@ class Login extends Component {
         this.setState({ [key]: value } );
     }
 
-    login = () => {
+    Login = () => {
       this.setState({ error: null, isLoading: true }, () => {
           loginFunction(this.state.email, this.state.password)
               .then(jwtToken => {
@@ -45,8 +44,7 @@ class Login extends Component {
   }
 
     render() {
-      // const { isLoading } = this.state;
-      
+  
         return (
           <div className="login-container">
             <PizzamenuSidebar />
@@ -89,9 +87,9 @@ class Login extends Component {
                             size="large"
                             fluid
                             primary
-                            onClick={this.login}
+                            onClick={this.Login}
                         >
-                            Login
+                          Login
                         </Button>
                        <NavLink className="register" to={MYACCOUNT_URL}><p>Not registered yet?</p></NavLink>
                     </Segment>

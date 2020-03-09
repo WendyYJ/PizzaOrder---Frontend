@@ -1,5 +1,6 @@
 @import '../asset/theme.scss';
 
+
 .login-form {
   margin-top: 5rem;
   margin-left: 23rem;
@@ -12,7 +13,8 @@
   background-color: rgb(44, 43, 43);
   opacity: 0.8;
   border: 2px solid $flame;
-  
+  border-radius: 3px;
+
 
   h2{
     color: $saffron;
@@ -27,8 +29,9 @@
 
   Input{
     width: 18vw;
-    height: 4vh;
+    height: 5vh;
     border: 1px solid $saffron;
+    border-radius: 3px;
     position: relative;
     top: -12vh;
   }
@@ -38,6 +41,9 @@
     height: 5vh;
     background-color: $saffron;
     border: 1px solid $saffron;
+    border-radius: 3px;
+    position: relative;
+    top: -12vh;
     font-family: $body;
     position: relative;
     top: -12vh;
@@ -58,6 +64,11 @@
     top: -12vh;
     font-family: $body;
     font-size: 22px;
+    width: 18vw;
+    height: 11vh;
+    border: 1px solid $flame;
+    border-radius: 3px;
+    opacity: 0.5;
   }
 }
 
