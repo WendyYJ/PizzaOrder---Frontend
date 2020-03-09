@@ -1,90 +1,122 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import './Style.scss';
+import PizzamenuSidebar from "../PageLayout/PizzamenuSidebar/PizzamenuSidebar";
+import { NavLink } from "react-router-dom";
+import { Button, Form, Input, Message, Segment } from 'semantic-ui-react';
+import { register as registerFunction } from '../api/auth';
+import { setToken } from '../utils/auth';
+import {
+  LOGIN_URL,
+  MYACCOUNT_URL,
+} from "../routes/URLMap";
 
+class MyAccount extends Component {
+    constructor(props) {
+        super(props);
 
-export default class MyAccount extends Component {
-  constructor(props) {
-    super(props);
+        this.state = {
+            username:'',
+            email: '',
+            isLoading: false,
+            password: '',
+            password_confirmation: '',
+            registrationError: null,
+        };
+    }
 
-    this.state = {
-      email: "",
-      password: "",
-      password_confirmation: "",
-      registrationErrors: ""
-    };
+    handleChange = event => {
+        const key = event.target.name;
+        const value = event.target.value;
+        this.setState({ [key]: value } );
+    }
 
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleSubmit = this.handleChange.bind(this);
+    Register = () => {
+      this.setState({ error: null, isLoading: true }, () => {
+          registerFunction(this.state.email, this.state.password)
+              .then(jwtToken => {
+                  this.setState({ isLoading: false }, () => {
+                      setToken(jwtToken);
+                      const locationState = this.props.location.state;
+                      const redirectTo = (locationState && locationState.from) || MYACCOUNT_URL;
+                      this.props.history.replace(redirectTo);
+                  });
+              })
+              .catch(error => this.setState({ error, isLoading: false }));
+      });
   }
 
+    render() {
   
-  handleChange = event => {
-    const key = event.target.name;
-    const value = event.target.value;
-    this.setState({ [key]: value } );
-  }
-
-
-  handleSubmit(event) {
-    const { email, password, password_confirmation } = this.state;
-
-    axios
-    .post(
-      "http://localhost:3001/registrations",
-      {
-        user: {
-          email: email,
-          password: password,
-          password_confirmation: password_confirmation,
-        }
-      },
-      { withCredentials: true }
-    )
-    .then(response => {
-      console.log("res from login", response);
-
-    })
-    .catch(error => {
-      console.log("registration error", error);
-    });
-    event.preventDefault();
-  }
-
-  render() {
-    return (
-      <div className="registerForm-container">
-        <form onSubmit={this.handleSubmit}/>
-          <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={this.state.email}
-          onChange={this.handleChange}
-          required
-        />
-
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={this.state.password}
-          onChange={this.handleChange}
-          required
-        />
-
-       <input
-          type="password"
-          name="password_confirmation"
-          placeholder="Password confirmaton"
-          value={this.state.password_confirmation}
-          onChange={this.handleChange}
-          required
-        />
-
-        <button type="submit">Register</button> 
-    </div>
-
-    );
-  }
+        return (
+          <div className="myAccount-container">
+            <PizzamenuSidebar />
+                <Form
+                    className="register-form" 
+                    error={!!this.state.error}
+                    loading={this.state.isLoading}
+                >
+                <h2>Join Us</h2>
+                
+                <Segment stacked>
+                      <Form.Field>
+                          <Input className="register-input"
+                              icon='user'
+                              iconPosition='left'
+                              name="username"
+                              onChange={this.handleChange}
+                              placeholder='Your Name'
+                              value={this.state.username}
+                            />
+                      </Form.Field>
+                      <Form.Field>
+                          <Input className="register-input"
+                              icon='user'
+                              iconPosition='left'
+                              name="email"
+                              onChange={this.handleChange}
+                              placeholder='E-mail address'
+                              value={this.state.email}
+                            />
+                        </Form.Field>
+                        <Form.Field>
+                            <Input
+                              icon='lock'
+                              iconPosition='left'
+                              name="password"
+                              onChange={this.handleChange}
+                              placeholder='Password'
+                              type="password"
+                              value={this.state.password}
+                            />
+                        </Form.Field>
+                        <Form.Field>
+                            <Input
+                              icon='lock'
+                              iconPosition='left'
+                              name="password_confirmation"
+                              onChange={this.handleChange}
+                              placeholder='Password Confirmation'
+                              type="password_confirmation"
+                              value={this.state.password}
+                            />
+                        </Form.Field>
+                       {!!this.state.error && (
+                            <Message className="alart-message"
+                                content="Please check your password !"
+                            />
+                       )}
+                        <Button className="register-button"
+                            onClick={this.Register}
+                        >
+                          Register
+                        </Button>
+                       <NavLink className="login-link" to={LOGIN_URL}><p>Already registered ?</p></NavLink>
+                    </Segment>
+                </Form>
+            </div>
+        );
+    }
 }
+
+export default MyAccount;
 

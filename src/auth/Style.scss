@@ -8,7 +8,7 @@
   padding-left: 11vw;
   padding-right: 18.5vw;
   width: 12vw;
-  height: 20vh;
+  height: 25vh;
   line-height: 3em;
   background-color: rgb(44, 43, 43);
   opacity: 0.8;
@@ -19,7 +19,7 @@
   h2{
     color: $saffron;
     font-family: $heading;
-    font-size: px28;
+    font-size: 28px;
     text-align: center;
     width: 100%;
     position: relative;
@@ -33,7 +33,78 @@
     border: 1px solid $saffron;
     border-radius: 3px;
     position: relative;
+    top: -17vh;
+  }
+
+  .login-button{
+    width: 9vw;
+    height: 5vh;
+    background-color: $saffron;
+    border: 1px solid $saffron;
+    border-radius: 3px;
+    position: relative;
     top: -12vh;
+    font-family: $body;
+    position: relative;
+    top: -17vh;
+  }
+
+  .register-link{
+    position: relative;
+    font-family: $body;
+    font-size: 22px;
+    top: -25vh;
+    left: 10vw;
+    text-decoration: none;
+  }
+
+  .alart-message{
+    background-color: rgb(44, 43, 43);
+    position: relative;
+    top: -16vh;
+    font-family: $body;
+    font-size: 22px;
+    width: 18vw;
+    height: 11vh;
+    border: 1px solid $flame;
+    border-radius: 3px;
+    opacity: 0.5;
+  }
+}
+
+.register-form {
+  margin-top: 5rem;
+  margin-left: 23rem;
+  padding: 10vw 13vw;
+  padding-left: 11vw;
+  padding-right: 18.5vw;
+  width: 12vw;
+  height: 27vh;
+  line-height: 3em;
+  background-color: rgb(44, 43, 43);
+  opacity: 0.8;
+  border: 2px solid $flame;
+  border-radius: 3px;
+
+
+  h2{
+    color: $saffron;
+    font-family: $heading;
+    font-size: 28px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    top: -20vh;
+    left: 3vw;
+  }
+
+  Input{
+    width: 18vw;
+    height: 5vh;
+    border: 1px solid $saffron;
+    border-radius: 3px;
+    position: relative;
+    top: -17vh;
   }
 
   Button{
@@ -46,14 +117,14 @@
     top: -12vh;
     font-family: $body;
     position: relative;
-    top: -12vh;
+    top: -17vh;
   }
 
-  .register{
+  .login-link{
     position: relative;
     font-family: $body;
     font-size: 22px;
-    top: -20vh;
+    top: -25vh;
     left: 10vw;
     text-decoration: none;
   }
@@ -61,11 +132,11 @@
   .alart-message{
     background-color: rgb(44, 43, 43);
     position: relative;
-    top: -12vh;
+    top: -16vh;
     font-family: $body;
     font-size: 22px;
     width: 18vw;
-    height: 11vh;
+    height: 8vh;
     border: 1px solid $flame;
     border-radius: 3px;
     opacity: 0.5;

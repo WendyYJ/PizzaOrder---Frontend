@@ -8,6 +8,7 @@ import { setToken } from '../utils/auth';
 import {
   LOGIN_URL,
   MYACCOUNT_URL,
+  SHOPPINGCART_URL,
 } from "../routes/URLMap";
 
 class Login extends Component {
@@ -16,7 +17,7 @@ class Login extends Component {
 
         this.state = {
             email: '',
-            error: null,
+            loginError: null,
             isLoading: false,
             password: '',
         };
@@ -35,7 +36,7 @@ class Login extends Component {
                   this.setState({ isLoading: false }, () => {
                       setToken(jwtToken);
                       const locationState = this.props.location.state;
-                      const redirectTo = (locationState && locationState.from) || LOGIN_URL;
+                      const redirectTo = (locationState && locationState.from) || SHOPPINGCART_URL;
                       this.props.history.replace(redirectTo);
                   });
               })
@@ -49,7 +50,7 @@ class Login extends Component {
           <div className="login-container">
             <PizzamenuSidebar />
                 <Form
-                    className="login-form" size="large"
+                    className="login-form" 
                     error={!!this.state.error}
                     loading={this.state.isLoading}
                 >
@@ -58,36 +59,36 @@ class Login extends Component {
                 <Segment stacked>
                     <Form.Field>
                           <Input className="login-input"
-                                icon='user'
-                                iconPosition='left'
-                                name="email"
-                                onChange={this.handleChange}
-                                placeholder='E-mail address'
-                                value={this.state.email}
+                              icon='user'
+                              iconPosition='left'
+                              name="email"
+                              onChange={this.handleChange}
+                              placeholder='E-mail address'
+                              value={this.state.email}
                             />
                         </Form.Field>
                         <Form.Field>
                             <Input
-                                icon='lock'
-                                iconPosition='left'
-                                name="password"
-                                onChange={this.handleChange}
-                                placeholder='Password'
-                                type="password"
-                                value={this.state.password}
+                              icon='lock'
+                              iconPosition='left'
+                              name="password"
+                              onChange={this.handleChange}
+                              placeholder='Password'
+                              type="password"
+                              value={this.state.password}
                             />
                         </Form.Field>
                        {!!this.state.error && (
                             <Message className="alart-message"
-                                content="Please check your email and password"
+                                content="Please check your email and password !"
                             />
                        )}
-                        <Button className="login-button"
+                        <Button className="login-button" 
                             onClick={this.Login}
                         >
                           Login
                         </Button>
-                       <NavLink className="register" to={MYACCOUNT_URL}><p>Not registered yet?</p></NavLink>
+                       <NavLink className="register-link" to={MYACCOUNT_URL}><p>Not registered yet?</p></NavLink>
                     </Segment>
                 </Form>
             </div>
