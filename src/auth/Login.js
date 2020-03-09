@@ -79,14 +79,10 @@ class Login extends Component {
                         </Form.Field>
                        {!!this.state.error && (
                             <Message className="alart-message"
-                                error
                                 content="Please check your email and password"
                             />
                        )}
                         <Button className="login-button"
-                            size="large"
-                            fluid
-                            primary
                             onClick={this.Login}
                         >
                           Login
