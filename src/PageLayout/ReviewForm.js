@@ -13,8 +13,8 @@ class ReviewForm extends React.Component {
     };
   }
   reviewChangeHandler = event => {
-    let nam = event.target.name;
-    let val = event.target.value;
+    const nam = event.target.name;
+    const val = event.target.value;
     this.setState({ [nam]: val });
   };
 
