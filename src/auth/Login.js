@@ -93,7 +93,7 @@ class Login extends Component {
                         >
                             Login
                         </Button>
-                       <NavLink className="register" to={MYACCOUNT_URL}><p>Not register yet?</p></NavLink>
+                       <NavLink className="register" to={MYACCOUNT_URL}><p>Not registered yet?</p></NavLink>
                     </Segment>
                 </Form>
             </div>
