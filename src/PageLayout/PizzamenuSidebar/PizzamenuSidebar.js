@@ -25,12 +25,12 @@ const PizzamenuSidebar = ({ children }) => {
 
   return (
     <div className="sample-sidebar">
-      <>
+      <Fragment>
         <Header />
         {sidebar}
         <MenuToggle click={openHandler} />
         <p>{children}</p>
-      </>
+      </Fragment>
     </div>
   );
 };

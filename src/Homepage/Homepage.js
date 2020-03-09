@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import "./homepage.scss";
 import Information from "../AboutUs/components/Infomation";
 import profile from "../asset/img/proni.png";
@@ -7,15 +7,15 @@ import Ingredient from "../PageLayout/Footer/Ingredient";
 import Carousel from "./Carousel/Carousel";
 import PizzamenuSidebar from "../PageLayout/PizzamenuSidebar/PizzamenuSidebar";
 import Footer from "../PageLayout/Footer/Footer";
-// import ShoppingCartSidebar from '../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar';
-import ShoppingCartSidebar from "../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar";
+import Example from "../PageLayout/ShoppingCartSidebar/Example";
+//import AuthMain from "../auth/AuthMain";
 
 const Homepage = () => (
   <div className="homepage">
-    <>
       <PizzamenuSidebar />
-      <ShoppingCartSidebar />
-
+      <Example />
+      
+    
       <main className="homepage__welcome">
         <h1 className="homepage__welcome-heading">Get it while it's hot!</h1>
         <span className="homepage__welcome-span">
@@ -242,7 +242,7 @@ const Homepage = () => (
       <div className="homepage__footer">
         <Footer />
       </div>
-    </>
+    
   </div>
 );
 

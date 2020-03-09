@@ -1,0 +1,63 @@
+@import '../asset/theme.scss';
+
+.login-form {
+  margin-top: 5rem;
+  margin-left: 23rem;
+  padding: 10vw 13vw;
+  padding-left: 11vw;
+  padding-right: 18.5vw;
+  width: 12vw;
+  height: 20vh;
+  line-height: 3em;
+  background-color: rgb(44, 43, 43);
+  opacity: 0.8;
+  border: 2px solid $flame;
+  
+
+  h2{
+    color: $saffron;
+    font-family: $heading;
+    font-size: px28;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    top: -20vh;
+    left: 3vw;
+  }
+
+  Input{
+    width: 18vw;
+    height: 4vh;
+    border: 1px solid $saffron;
+    position: relative;
+    top: -12vh;
+  }
+
+  Button{
+    width: 9vw;
+    height: 5vh;
+    background-color: $saffron;
+    border: 1px solid $saffron;
+    font-family: $body;
+    position: relative;
+    top: -12vh;
+  }
+
+  .register{
+    position: relative;
+    font-family: $body;
+    font-size: 22px;
+    top: -20vh;
+    left: 10vw;
+    text-decoration: none;
+  }
+
+  .alart-message{
+    background-color: rgb(44, 43, 43);
+    position: relative;
+    top: -12vh;
+    font-family: $body;
+    font-size: 22px;
+  }
+}
+

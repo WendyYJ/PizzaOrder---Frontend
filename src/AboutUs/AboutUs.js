@@ -8,14 +8,14 @@ import PizzamenuSidebar from "../PageLayout/PizzamenuSidebar/PizzamenuSidebar";
 
 const AboutUs = () => (
   <div className="about-container">
-    <>
+    <Fragment>
       <PizzamenuSidebar />
       <LinkHeader headername="About Us" />
       <Information />
       <Middle />
       <Question />
       <Ingredient />
-    </>
+    </Fragment>
   </div>
 );
 

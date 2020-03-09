@@ -8,6 +8,8 @@ import ShoppingCart from "../ShoppingCart/ShoppingCart";
 import AboutUs from "../AboutUs/AboutUs";
 import Contact from "../Contact/Contact";
 import Checkout from "../Checkout/Checkout";
+import Login from "../auth/Login";
+import MyAccount from "../auth/MyAccount";
 
 import {
   HOME_URL,
@@ -16,7 +18,9 @@ import {
   SHOPPINGCART_URL,
   ABOUTUS_URL,
   CONTACT_URL,
-  CHECKOUT_URL
+  CHECKOUT_URL,
+  LOGIN_URL,
+  MYACCOUNT_URL
 } from "./URLMap";
 
 const Routes = () => (
@@ -31,6 +35,8 @@ const Routes = () => (
       <Route exact path={ABOUTUS_URL} component={AboutUs} />
       <Route exact path={CONTACT_URL} component={Contact} />
       <Route exact path={CHECKOUT_URL} component={Checkout} />
+      <Route exact path={LOGIN_URL} component={Login} />
+      <Route exact path={MYACCOUNT_URL} component={MyAccount} />
     </Switch>
   </BrowserRouter>
 );
