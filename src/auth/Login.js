@@ -30,7 +30,7 @@ class Login extends Component {
     }
 
     Login = () => {
-      this.setState({ error: null, isLoading: true }, () => {
+      this.setState({ loginError: null, isLoading: true }, () => {
           loginFunction(this.state.email, this.state.password)
               .then(jwtToken => {
                   this.setState({ isLoading: false }, () => {
@@ -40,7 +40,7 @@ class Login extends Component {
                       this.props.history.replace(redirectTo);
                   });
               })
-              .catch(error => this.setState({ error, isLoading: false }));
+              .catch(loginError => this.setState({ loginError, isLoading: false }));
       });
   }
 
@@ -50,30 +50,26 @@ class Login extends Component {
           <div className="login-container">
             <PizzamenuSidebar />
                 <Form
-                    className="login-form" 
+                    className="  login-form" 
                     error={!!this.state.error}
                     loading={this.state.isLoading}
                 >
                 <h2>Login Form</h2>
                 
-                <Segment stacked>
+                <Segment>
                     <Form.Field>
                           <Input className="login-input"
-                              icon='user'
-                              iconPosition='left'
                               name="email"
                               onChange={this.handleChange}
-                              placeholder='E-mail address'
+                              placeholder='  E-mail address'
                               value={this.state.email}
                             />
                         </Form.Field>
                         <Form.Field>
                             <Input
-                              icon='lock'
-                              iconPosition='left'
                               name="password"
                               onChange={this.handleChange}
-                              placeholder='Password'
+                              placeholder='  Password'
                               type="password"
                               value={this.state.password}
                             />

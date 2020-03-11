@@ -31,7 +31,7 @@ class MyAccount extends Component {
     }
 
     Register = () => {
-      this.setState({ error: null, isLoading: true }, () => {
+      this.setState({ isLoading: true }, () => {
           registerFunction(this.state.email, this.state.password)
               .then(jwtToken => {
                   this.setState({ isLoading: false }, () => {
@@ -41,7 +41,7 @@ class MyAccount extends Component {
                       this.props.history.replace(redirectTo);
                   });
               })
-              .catch(error => this.setState({ error, isLoading: false }));
+              .catch(registrationError => this.setState({ registrationError, isLoading: false }));
       });
   }
 
@@ -57,45 +57,37 @@ class MyAccount extends Component {
                 >
                 <h2>Join Us</h2>
                 
-                <Segment stacked>
+                <Segment>
                       <Form.Field>
                           <Input className="register-input"
-                              icon='user'
-                              iconPosition='left'
                               name="username"
                               onChange={this.handleChange}
-                              placeholder='Your Name'
+                              placeholder='  Your Name'
                               value={this.state.username}
                             />
                       </Form.Field>
                       <Form.Field>
                           <Input className="register-input"
-                              icon='user'
-                              iconPosition='left'
                               name="email"
                               onChange={this.handleChange}
-                              placeholder='E-mail address'
+                              placeholder='  E-mail address'
                               value={this.state.email}
                             />
                         </Form.Field>
                         <Form.Field>
                             <Input
-                              icon='lock'
-                              iconPosition='left'
                               name="password"
                               onChange={this.handleChange}
-                              placeholder='Password'
+                              placeholder='  Password'
                               type="password"
                               value={this.state.password}
                             />
                         </Form.Field>
                         <Form.Field>
                             <Input
-                              icon='lock'
-                              iconPosition='left'
                               name="password_confirmation"
                               onChange={this.handleChange}
-                              placeholder='Password Confirmation'
+                              placeholder='  Password Confirmation'
                               type="password_confirmation"
                               value={this.state.password}
                             />
