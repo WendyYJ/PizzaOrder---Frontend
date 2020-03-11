@@ -1,9 +1,9 @@
 import { post } from "./axios";
-const REGISTER_URL = "/api/users";
-const LOGIN_URL = "/api/auth";
+const API_REGISTER_URL = "/api/users";
+const API_LOGIN_URL = "/api/auth";
 
 export const register = (email, password, username) => {
-  return post(REGISTER_URL, {
+  return post(API_REGISTER_URL, {
     email,
     password,
     username,
@@ -11,7 +11,7 @@ export const register = (email, password, username) => {
 };
 
 export const login = (email, password) => {
-    return post(LOGIN_URL, {
+    return post(API_LOGIN_URL, {
       email,
       password,
     }).then(res => res.data.data.token);
