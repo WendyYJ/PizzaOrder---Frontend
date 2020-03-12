@@ -5,9 +5,11 @@ import { NavLink } from "react-router-dom";
 import { Button, Form, Input, Message, Segment } from 'semantic-ui-react';
 import { register } from '../api/auth';
 import { setToken } from '../utils/auth';
+import SocialRegister from './SocialRegister';
 import {
   LOGIN_URL,
 } from "../routes/URLMap";
+import { Grid } from '@material-ui/core';
 
 class MyAccount extends Component {
     constructor(props) {
@@ -78,6 +80,12 @@ class MyAccount extends Component {
         return (
           <div className="myAccount-container">
             <PizzamenuSidebar />
+            <Grid container 
+                  direction="row"
+                  justify="center"
+                  alignItems="center"
+                  spacing={3}>
+              <Grid item xs={6}>
                 <Form
                     className="register-form" 
                     error={!!this.state.error}
@@ -85,9 +93,8 @@ class MyAccount extends Component {
                 >
                 <p className="register-title">CREATE AN ACCOUNT</p>
                 
-                <Segment>
-                      <Form.Field>
-                          <Input className="register-input"
+                    <Form.Field>
+                        <Input className="register-input"
                               name="username"
                               type="username"
                               onChange={this.handleChange}
@@ -134,8 +141,16 @@ class MyAccount extends Component {
                           Register
                         </Button>
                        <NavLink className="login-link" to={LOGIN_URL}><p>Already registered ?</p></NavLink>
-                    </Segment>
-                </Form>
+                 </Form>
+                </Grid>
+                
+                <span>
+                 <p className="select-type">OR</p>
+                </span>
+                <Grid item xs={6}>
+                  <SocialRegister />
+                </Grid>
+            </Grid>
             </div>
         );
     }

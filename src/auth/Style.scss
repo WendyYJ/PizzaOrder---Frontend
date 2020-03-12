@@ -73,10 +73,10 @@
 
 .register-form {
   margin-top: 5rem;
-  margin-left: 23rem;
-  padding: 10vw 13vw;
-  padding-left: 11vw;
-  padding-right: 18.5vw;
+  margin-left: -10rem;
+  padding: 10vw 10vw;
+  padding-left: 8vw;
+  padding-right: 14vw;
   width: 12vw;
   height: 27vh;
   line-height: 3em;
@@ -93,18 +93,6 @@
     width: 100%;
     position: relative;
     top: -20vh;
-  }
-
-
-  h2{
-    color: $saffron;
-    font-family: $heading;
-    font-size: 28px;
-    text-align: center;
-    width: 100%;
-    position: relative;
-    top: -20vh;
-    left: 3vw;
   }
 
   Input{
@@ -152,3 +140,74 @@
   }
 }
 
+.select-type{
+  position: relative;
+  left: -24.5vw;
+  top: 3vh;
+  font-weight: $body;
+  color: white;
+  font-size: 30px;
+}
+
+.socialRegister-container{
+  margin-top: -27.5rem;
+  margin-left: 22rem;
+  padding: 10vw 10vw;
+  padding-left: 8vw;
+  padding-right: 14vw;
+  width: 12vw;
+  height: 27vh;
+  line-height: 3em;
+  background-color: rgb(44, 43, 43);
+  opacity: 0.8;
+  border: 2px solid $flame;
+  border-radius: 3px;
+
+  .socialRegister-title{
+    font-family: $body;
+    font-size: 20px;
+    color: white;
+    position: relative;
+    top: -15vh;
+  }
+
+  .socialRegister-link{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    top: -15vh;
+
+    Button{
+      width: 18vw;
+      height: 6vh;
+      margin-top: 2.5vh;
+      border-radius: 20px;
+      font-family: $body;
+    }
+     
+    #facebook{
+      background-color: royalblue;
+      border: 1px solid royalblue;
+      -webkit-box-shadow: 10px 10px 9px -10px rgba(110,106,110,1);
+      -moz-box-shadow: 10px 10px 9px -10px rgba(110,106,110,1);
+      box-shadow: 10px 10px 9px -10px rgba(110,106,110,1);
+    }
+
+    #google{
+      background-color: white;
+      border: 1px solid gray;
+      -webkit-box-shadow: 10px 10px 9px -10px rgba(110,106,110,1);
+      -moz-box-shadow: 10px 10px 9px -10px rgba(110,106,110,1);
+      box-shadow: 10px 10px 9px -10px rgba(110,106,110,1);
+    }
+
+    #paypal{
+      background-color: #30caf0;
+      border: 1px solid #30caf0;
+      -webkit-box-shadow: 10px 10px 9px -10px rgba(110,106,110,1);
+      -moz-box-shadow: 10px 10px 9px -10px rgba(110,106,110,1);
+      box-shadow: 10px 10px 9px -10px rgba(110,106,110,1);
+    }
+    } 
+  }

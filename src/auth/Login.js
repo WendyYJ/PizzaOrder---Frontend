@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import { Button, Input, Form, Message, Segment } from 'semantic-ui-react';
 import { login } from '../api/auth';
 import { setToken } from '../utils/auth';
+import FacebookIcon from '@material-ui/icons/Facebook';
 import {
   MYACCOUNT_URL,
   SHOPPINGCART_URL,
@@ -75,7 +76,6 @@ class Login extends Component {
         return (
           <div className="login-container">
             <PizzamenuSidebar />
-            
                 <Form
                     className="  login-form" 
                     error={!!this.state.error}
