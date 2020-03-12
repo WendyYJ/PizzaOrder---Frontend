@@ -3,11 +3,10 @@ import './Style.scss';
 import PizzamenuSidebar from "../PageLayout/PizzamenuSidebar/PizzamenuSidebar";
 import { NavLink } from "react-router-dom";
 import { Button, Form, Input, Message, Segment } from 'semantic-ui-react';
-import { register as registerFunction } from '../api/auth';
+import { register } from '../api/auth';
 import { setToken } from '../utils/auth';
 import {
   LOGIN_URL,
-  MYACCOUNT_URL,
 } from "../routes/URLMap";
 
 class MyAccount extends Component {
@@ -17,33 +16,62 @@ class MyAccount extends Component {
         this.state = {
             username:'',
             email: '',
-            isLoading: false,
             password: '',
             password_confirmation: '',
-            registrationError: null,
+            isLoading: false,
+            password_invalid: false,
+            error: null,
         };
     }
 
-    handleChange = event => {
-        const key = event.target.name;
-        const value = event.target.value;
-        this.setState({ [key]: value } );
-    }
 
-    Register = () => {
+    handleChange = event => {
+        const { key, value } = event.target;
+      
+        this.setState({
+            [key] : value 
+          }, () => {
+            if (key == 'password' || key == 'password_confirmation')
+              this.checkPassword();
+      }
+    );
+   }
+          
+    updateUserInput = () => {
+        const userInput = {
+            username: this.state.username,
+            email: this.state.email,
+            password: this.state.password,
+            password_confirmation: this.state.password_confirmation
+        };
+    
+   
       this.setState({ isLoading: true }, () => {
-          registerFunction(this.state.email, this.state.password)
-              .then(jwtToken => {
-                  this.setState({ isLoading: false }, () => {
-                      setToken(jwtToken);
-                      const locationState = this.props.location.state;
-                      const redirectTo = (locationState && locationState.from) || MYACCOUNT_URL;
-                      this.props.history.replace(redirectTo);
-                  });
-              })
-              .catch(registrationError => this.setState({ registrationError, isLoading: false }));
+          register(userInput)
+              .then(res => {
+                  this.setState({ userInput: true, isLoading: false }, () => {
+                     const { token } = res.data.data;
+                      setToken(token);
+                      this.setState({
+                              userInput: true,
+                              history: this.props.history
+                          });
+                      });
+                    })
+              .catch(error => this.setState({ error, isLoading: false }));
       });
-  }
+    }
+  
+    // check password validation
+    checkPassword() {
+        if(this.state.password != this.state.password_confirmation) {
+           this.setState({password_invalid: true});
+           alert('Your password is invalid');
+       }
+       else {
+           this.setState({password_invalid: false});
+       }
+   }
 
     render() {
   
@@ -55,12 +83,13 @@ class MyAccount extends Component {
                     error={!!this.state.error}
                     loading={this.state.isLoading}
                 >
-                <h2>Join Us</h2>
+                <p className="register-title">CREATE AN ACCOUNT</p>
                 
                 <Segment>
                       <Form.Field>
                           <Input className="register-input"
                               name="username"
+                              type="username"
                               onChange={this.handleChange}
                               placeholder='  Your Name'
                               value={this.state.username}
@@ -69,6 +98,7 @@ class MyAccount extends Component {
                       <Form.Field>
                           <Input className="register-input"
                               name="email"
+                              type="email"
                               onChange={this.handleChange}
                               placeholder='  E-mail address'
                               value={this.state.email}
@@ -77,19 +107,20 @@ class MyAccount extends Component {
                         <Form.Field>
                             <Input
                               name="password"
+                              type="password"
                               onChange={this.handleChange}
                               placeholder='  Password'
-                              type="password"
                               value={this.state.password}
                             />
                         </Form.Field>
                         <Form.Field>
                             <Input
                               name="password_confirmation"
+                              type="password"
                               onChange={this.handleChange}
                               placeholder='  Password Confirmation'
                               type="password_confirmation"
-                              value={this.state.password}
+                              value={this.state.password_confirmation}
                             />
                         </Form.Field>
                        {!!this.state.error && (
@@ -98,7 +129,7 @@ class MyAccount extends Component {
                             />
                        )}
                         <Button className="register-button"
-                            onClick={this.Register}
+                           onClick={this.updateUserInput}    
                         >
                           Register
                         </Button>

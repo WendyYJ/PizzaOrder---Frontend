@@ -15,17 +15,16 @@
   border: 2px solid $flame;
   border-radius: 3px;
 
-
-  h2{
-    color: $saffron;
-    font-family: $heading;
-    font-size: 28px;
-    text-align: center;
+  .login-title{
+    color:$saffron;
+    font-family: $body;
+    font-size: 20px;
+    text-align: left;
     width: 100%;
     position: relative;
     top: -20vh;
-    left: 3vw;
   }
+
 
   Input{
     width: 18vw;
@@ -85,6 +84,16 @@
   opacity: 0.8;
   border: 2px solid $flame;
   border-radius: 3px;
+
+  .register-title{
+    color:$saffron;
+    font-family: $body;
+    font-size: 20px;
+    text-align: left;
+    width: 100%;
+    position: relative;
+    top: -20vh;
+  }
 
 
   h2{
