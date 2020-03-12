@@ -27,7 +27,7 @@ const MenuSidebar = props => {
   return (
     <div className={sidebarClass}>
       <div id="close" onClick={closeHandler} />
-      <div className="navbar">
+      <div className="menu-navbar">
         <div className="search">
           <input type="text" className="searchTerm" placeholder="  Search" />
           <button type="submit" className="searchButton">
@@ -36,7 +36,7 @@ const MenuSidebar = props => {
         </div>
       </div>
 
-      <ul>
+      <ul className="menu-link">
         <li>
           <NavLink to={HOME_URL}>HOME</NavLink>
         </li>

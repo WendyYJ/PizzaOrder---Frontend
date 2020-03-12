@@ -3,7 +3,7 @@ import "./MenuSidebar.scss";
 
 const MenuToggle = props => (
   <Fragment>
-    <button id="toggle" onClick={props.click}>
+    <button id="menu-toggle" onClick={props.click}>
       &#8801;
     </button>
   </Fragment>

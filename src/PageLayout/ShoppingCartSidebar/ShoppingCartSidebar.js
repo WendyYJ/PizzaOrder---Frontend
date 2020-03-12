@@ -1,9 +1,9 @@
 import React, { Fragment, useState } from "react";
-import MenuSidebar from "./MenuSidebar";
-import MenuToggle from "./MenuToggle";
+import CartSidebar from "./CartSidebar";
+import CartToggle from "./CartToggle";
 import Header from "../Header/Header";
 
-const PizzamenuSidebar = ({ children }) => {
+const ShoppingCartSidebar = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const openHandler = () => {
@@ -18,18 +18,21 @@ const PizzamenuSidebar = ({ children }) => {
     setSidebarOpen(false);
   };
 
-  let menuSidebar;
+  let sidebar;
   if (sidebarOpen) {
-    menuSidebar = <MenuSidebar close={sidebarCloseHandler} menuSidebar="menuSidebar" />;
+    sidebar = <CartSidebar close={sidebarCloseHandler} sidebar="sidebar" />;
   }
 
   return (
-    <div className="menu-sidebar">
-        {menuSidebar}
-        <MenuToggle click={openHandler} />
+    <div className="cart-sidebar">
+      <Fragment>
+        <Header />
+        {sidebar}
+        <CartToggle click={openHandler} />
         <p>{children}</p>
+      </Fragment>
     </div>
   );
 };
 
-export default PizzamenuSidebar;
+export default ShoppingCartSidebar;

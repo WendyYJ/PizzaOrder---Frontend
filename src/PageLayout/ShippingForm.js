@@ -30,9 +30,7 @@ class ShippingForm extends React.Component {
     return (
       <div className="forms_container">
         <div>
-          
         <form className="shipping_form">
-         
           <select value={this.state.value} onChange={this.handleChange}>
             <option value="UK" className="selectedValue">
               United Kingdom (UK) 
@@ -62,15 +60,14 @@ class ShippingForm extends React.Component {
         </div>
 
       <div>  
-        <form>
+        <form noValidate autoComplete="off">
           <input
             type="text"
             placeholder="  Enter your promotional code"
             onChange={this.changeHandler}
           />
-        </form>
-
         <button className="applyButton">APPLY</button>
+        </form>
         </div>
       </div>
     );

@@ -1,0 +1,319 @@
+@import '../../asset/theme.scss';
+
+.sidebar {
+  height: 100vh;
+  padding-right: -10vw;
+  background-color: rgb(37, 35, 35);
+  color: white;
+  width: 14vw;
+  position: fixed;
+  right: 100%;
+  animation: slide-open .75s backwards;
+  z-index: 3;
+}
+
+  #close {
+    right: 0;
+    animation: slide-closed 1.0s forwards;
+  }
+
+  @keyframes slide-open { 
+    100% { right: 100% }
+  }
+  
+  @keyframes slide-closed { 
+    100% { right: 0 }
+  }
+  
+  #cart-toggle{
+    position: fixed;
+    left: 88vw;
+    top: 1vh;
+    background-color: rgba(0, 0, 0, 0.900);
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.900);
+    font-size: 28px;
+    z-index: 3;
+  }
+
+  .cart{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    position: relative;
+    top: -3vh;
+    left: 90vw;
+    line-height: 7vh;
+    font-size: 15px;
+    font-family: $body;
+    
+    
+    li a{
+      color: white;
+      text-decoration: none;
+      }
+
+    li a:hover{
+      cursor: pointer;
+      opacity: 0.5;  
+      transition: 0.3s;;
+    }
+}
+  
+.cart-total{
+  height: 20vh;
+  
+  .cart-title{
+    color: $saffron;
+    font-size: 24px;
+    font-family: $heading;
+    margin-top: -6vh;
+    margin-right: 0vw;
+  }
+
+  .cart{
+    display: flex;
+    flex-direction: column;
+
+    .ordered-list{
+      
+
+      .ordered-pizza{
+        height: 4vw;
+        width: 4vw;
+        background-color: $flame;
+        border-radius: 50%;
+        display: inline-block;
+        position: fixed;
+        right: 17vw;
+      }
+
+      p{
+        position: relative;
+        right: 1vw;
+        top: 22%;
+      }
+    }
+
+    .cart-text{
+      width: 100%;
+    
+      h4{
+        position: relative;
+        top: -3vw;
+        left: 5vw;
+        color: $saffron;
+        width: 100%;
+    }
+
+    p{
+      color: white;
+      font-size: 10px;
+      font-family: $body;
+      position: relative;
+      top: -5vw;
+      left: 6vw;
+    }
+
+    .price{
+      color: white;
+      font-size: 10px;
+      font-family: $body;
+      position: relative;
+      top: -6vw;
+      left: 6vw;
+    }
+
+    span{
+      color: $flame;
+      position: relative;
+      top: -2vw;
+      left: 0vw;
+    }
+
+    .totalprice{
+      color: white;
+      position: relative;
+      top: -9.3vw;
+      left: 8vw;
+    }
+  }
+  }
+}
+
+
+.ordered-list2{
+    position: relative;
+    top: -16vh;
+
+  .ordered-pizza{
+    height: 4vw;
+    width: 4vw;
+    background-color: $flame;
+    border-radius: 50%;
+    display: inline-block;
+    position: fixed;
+    right: 17vw;
+  }
+
+  p{
+    position: relative;
+    right: 1vw;
+    top: 22%;
+  }
+}
+
+.cart-text{
+  width: 100%;
+
+  h4{
+    position: relative;
+    top: -4vw;
+    left: 5vw;
+    color: $saffron;
+    width: 100%;
+    line-height: 4vh;
+}
+
+p{
+  color: white;
+  font-size: 10px;
+  font-family: $body;
+  position: relative;
+  top: -6vw;
+  left: 6vw;
+}
+
+.price{
+  color: white;
+  font-size: 10px;
+  font-family: $body;
+  position: relative;
+  top: -7vw;
+  left: 6vw;
+}
+
+span{
+  color: $flame;
+  position: relative;
+  top: -2vw;
+  left: 0vw;
+}
+
+.totalprice{
+  color: white;
+  position: relative;
+  top: -10.4vw;
+  left: 8vw;
+}
+}
+
+.ordered-list3{
+  position: relative;
+  top: -34vh;
+
+.ordered-pizza{
+  height: 4vw;
+  width: 4vw;
+  background-color: $flame;
+  border-radius: 50%;
+  display: inline-block;
+  position: fixed;
+  right: 17vw;
+}
+
+p{
+  position: relative;
+  right: 1vw;
+  top: 22%;
+}
+}
+
+.cart-text{
+width: 100%;
+
+h4{
+  position: relative;
+  top: -6vw;
+  left: 5vw;
+  color: $saffron;
+  width: 100%;
+  line-height: 4vh;
+}
+
+p{
+color: white;
+font-size: 10px;
+font-family: $body;
+position: relative;
+top: -6vw;
+left: 6vw;
+}
+
+.price{
+color: white;
+font-size: 10px;
+font-family: $body;
+position: relative;
+top: -7vw;
+left: 6vw;
+}
+
+span{
+color: $flame;
+position: relative;
+top: -2vw;
+left: 0vw;
+}
+
+.totalprice{
+color: white;
+position: relative;
+top: -10.4vw;
+left: 8vw;
+}
+
+}
+
+.order-total{
+
+  .order-title{
+    color: $flame;
+    font-family: $heading;
+    font-size: 16px;
+    position: relative;
+    top: 22vh;
+    left: 91vw;
+
+    span{
+     color: $flame;
+     font-family: $heading;
+     font-size: 16px;
+     margin-left: 1.7vw;
+    }
+  }
+}
+
+.viewCart-button{
+  background-color: black;
+  color:$saffron;
+  border: 1px solid $saffron;
+  font-size: 12px;
+  position: relative;
+  top: 24vh;
+  left: 91vw;
+  width: 15vw;
+  height: 5vh;
+}
+
+.checkout-button{
+  background-color: $saffron;
+  color: black;
+  border: 1px solid black;
+  font-size: 12px;
+  position: relative;
+  top: 25vh;
+  left: 91vw;
+  width: 15vw;
+  height: 5vh;
+}

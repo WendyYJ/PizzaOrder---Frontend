@@ -6,7 +6,7 @@ import PizzamenuSidebar from "../PageLayout/PizzamenuSidebar/PizzamenuSidebar";
 
 const ShoppingCart = () => (
   <div className="shoppingCart-container">
-    <>
+    <Fragment>
       <PizzamenuSidebar />
       <FourthHeader headername="Shopping Cart" style={{ width: "100%" }} />
       <div className="shoppingCart1">
@@ -20,7 +20,7 @@ const ShoppingCart = () => (
         </div>
         <Cart />
       </div>
-    </>
+    </Fragment>
     <div />
   </div>
 );

@@ -7,15 +7,13 @@ import Ingredient from "../PageLayout/Footer/Ingredient";
 import Carousel from "./Carousel/Carousel";
 import PizzamenuSidebar from "../PageLayout/PizzamenuSidebar/PizzamenuSidebar";
 import Footer from "../PageLayout/Footer/Footer";
-import Example from "../PageLayout/ShoppingCartSidebar/Example";
-//import AuthMain from "../auth/AuthMain";
+import ShoppingCartSidebar from "../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar";
 
 const Homepage = () => (
   <div className="homepage">
+      <ShoppingCartSidebar />
       <PizzamenuSidebar />
-      <Example />
-      
-    
+     
       <main className="homepage__welcome">
         <h1 className="homepage__welcome-heading">Get it while it's hot!</h1>
         <span className="homepage__welcome-span">

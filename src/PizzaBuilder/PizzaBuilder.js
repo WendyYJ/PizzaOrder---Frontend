@@ -1,5 +1,9 @@
 import React from "react";
 
-const PizzaBuilder = () => <div />;
+const PizzaBuilder = () => (
+  <div></div>
+
+);
+
 
 export default PizzaBuilder;

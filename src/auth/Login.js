@@ -78,21 +78,20 @@ class Login extends Component {
         return (
           <div className="login-container">
             <PizzamenuSidebar />
-                <Form
-                    className="  login-form" 
+                <Form className="  login-form" 
                     error={!!this.state.error}
                     loading={this.state.isLoading}
                 >
                 <p className="login-title">LOG IN WITH EMAIL</p>
                 
                   <Form.Field>
-                          <Input className="register-input"
-                              name="email"
-                              type="email"
-                              onChange={this.handleChange}
-                              placeholder='  E-mail address'
-                              value={this.state.email}
-                            />
+                        <Input className="register-input"
+                            name="email"
+                            type="email"
+                            onChange={this.handleChange}
+                            placeholder='  E-mail address'
+                            value={this.state.email}
+                        />
                         </Form.Field>
                         <Form.Field>
                             <Input
