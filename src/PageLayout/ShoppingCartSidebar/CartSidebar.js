@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 const CartSidebar = props => {
   const [sidebarClass, setSidebarClass] = useState(props.sidebar);
 
-  const closeHandler = e => {
-    e.preventDefault();
+  const closeHandler = event => {
+    event.preventDefault();
     setSidebarClass("sidebar close");
     setTimeout(() => {
       props.close();

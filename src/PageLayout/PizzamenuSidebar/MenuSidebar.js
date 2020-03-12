@@ -16,8 +16,8 @@ import {
 const MenuSidebar = props => {
   const [sidebarClass, setSidebarClass] = useState(props.sidebar);
 
-  const closeHandler = e => {
-    e.preventDefault();
+  const closeHandler = event => {
+    event.preventDefault();
     setSidebarClass("sidebar close");
     setTimeout(() => {
       props.close();
