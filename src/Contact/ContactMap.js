@@ -7,7 +7,6 @@ const mapStyles = {
   height: "50%",
   margin: "2vw"
 };
-
 export class ContactMap extends Component {
   state = {
     showingInfoWindow: false,
@@ -15,7 +14,7 @@ export class ContactMap extends Component {
     selectedPlace: {}
   };
 
-  onMarkerClick = (props, marker, e) =>
+  onMarkerClick = (props, marker, event) =>
     this.setState({
       selectedPlace: props,
       activeMarker: marker,

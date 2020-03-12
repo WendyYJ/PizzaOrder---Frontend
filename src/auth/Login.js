@@ -128,7 +128,6 @@ class Login extends Component {
                     <Link id="paypal"></Link>
                 </div>
                </Grid>
-                
             </div>
         );
     }

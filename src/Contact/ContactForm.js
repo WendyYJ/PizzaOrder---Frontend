@@ -12,13 +12,13 @@ class ContactForm extends React.Component {
     };
   }
 
-  messageChangeHandler = event => {
-    let nam = event.target.name;
+  ChangeHandler = event => {
+    let name = event.target.name;
     let val = event.target.value;
-    this.setState({ [nam]: val });
+    this.setState({ [name]: val });
   };
 
-  messageSubmitHandler = event => {
+  SubmitHandler = event => {
     event.preventDefault();
     alert("You are submitting " + this.state.message);
   };
@@ -40,7 +40,7 @@ class ContactForm extends React.Component {
             <input
               type="text"
               name="username"
-              onChange={this.messageChangeHandler}
+              onChange={this.ChangeHandler}
             />
           </div>
           <div className="email-input">
@@ -48,7 +48,7 @@ class ContactForm extends React.Component {
             <input
               type="text"
               name="email"
-              onChange={this.messageChangeHandler}
+              onChange={this.ChangeHandler}
             />
           </div>
         </div>
@@ -58,19 +58,19 @@ class ContactForm extends React.Component {
             <input
               type="text"
               name="subject"
-              onChange={this.messageChangeHandler}
+              onChange={this.ChangeHandler}
             />
           </div>
-
+  
           <div className="message-form">
             <p>YOUR MESSAGE</p>
-            <input type="text" onChange={this.messageSubmitHandler} />
+            <input type="text" onChange={this.SubmitHandler} />
           </div>
-        </div>
-        <div className="send-btn">
-          <br></br>
-          <button type="submit">SEND MESSAGE</button>
-        </div>
+          </div>
+          <div className="send-btn">
+            <br></br>
+            <button type="submit">SEND MESSAGE</button>
+          </div>
       </div>
     );
   }
