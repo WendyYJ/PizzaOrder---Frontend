@@ -10,7 +10,6 @@ import { fetchVeggies } from "../../api/pizza";
 import { fetchCheeses } from "../../api/pizza";
 import { PIZZAMENU_URL } from "../../routes/URLMap";
 import { Button, Container, Pagination, Segment } from "semantic-ui-react";
-
 import ErrorMessage from "../../asset/errorMessage";
 class Filter extends React.Component {
   constructor(props) {

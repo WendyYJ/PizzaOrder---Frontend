@@ -12,13 +12,13 @@ class ReviewForm extends React.Component {
       review: ""
     };
   }
-  reviewChangeHandler = event => {
-    const nam = event.target.name;
+  ChangeHandler = event => {
+    const name = event.target.name;
     const val = event.target.value;
-    this.setState({ [nam]: val });
+    this.setState({ [name]: val });
   };
 
-  reviewSubmitHandler = event => {
+  SubmitHandler = event => {
     event.preventDefault();
     alert("You are submitting " + this.state.review);
   };
@@ -102,13 +102,13 @@ class ReviewForm extends React.Component {
             <input
               type="text"
               name="username"
-              onChange={this.reviewChangeHandler}
+              onChange={this.ChangeHandler}
             />
             <p>EMAIL*</p>
             <input
               type="text"
               name="email"
-              onChange={this.reviewChangeHandler}
+              onChange={this.ChangeHandler}
             />
 
             <p>YOUR RATING</p>
@@ -144,7 +144,7 @@ class ReviewForm extends React.Component {
 
           <div className="submit-form">
             <p>YOUR REVIEW</p>
-            <input type="text" onChange={this.reviewSubmitHandler} />
+            <input type="text" onChange={this.SubmitHandler} />
           </div>
           <div className="submit-button">
             <br></br>

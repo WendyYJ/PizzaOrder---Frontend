@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import './Style.scss';
 import PizzamenuSidebar from "../PageLayout/PizzamenuSidebar/PizzamenuSidebar";
-import { NavLink } from "react-router-dom";
-import { Button, Input, Form, Message, Segment } from 'semantic-ui-react';
+import { NavLink, Link } from "react-router-dom";
+import { Button, Input, Form, Message } from 'semantic-ui-react';
 import { login } from '../api/auth';
 import { setToken } from '../utils/auth';
+import { Grid } from '@material-ui/core';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import {
   MYACCOUNT_URL,
   SHOPPINGCART_URL,
 } from "../routes/URLMap";
+
 
 class Login extends Component {
     constructor(props) {
@@ -83,8 +85,7 @@ class Login extends Component {
                 >
                 <p className="login-title">LOG IN WITH EMAIL</p>
                 
-                <Segment>
-                      <Form.Field>
+                  <Form.Field>
                           <Input className="register-input"
                               name="email"
                               type="email"
@@ -114,8 +115,19 @@ class Login extends Component {
                           Login
                         </Button>
                        <NavLink className="register-link" to={MYACCOUNT_URL}><p>Not registered yet?</p></NavLink>
-                    </Segment>
-                </Form>
+                   </Form>
+                <Grid
+                    container
+                    direction="row"
+                    justify="center"
+                    alignItems="center"
+                    >
+                <div className="socialLogin-container">
+                    <Link><FacebookIcon style={{ fontSize: 70, color: "royalblue" }} id="facebook"/></Link>
+                    <Link id="google"></Link>
+                    <Link id="paypal"></Link>
+                </div>
+               </Grid>
                 
             </div>
         );

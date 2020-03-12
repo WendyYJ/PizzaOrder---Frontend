@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import './Style.scss';
 import PizzamenuSidebar from "../PageLayout/PizzamenuSidebar/PizzamenuSidebar";
 import { NavLink } from "react-router-dom";
-import { Button, Form, Input, Message, Segment } from 'semantic-ui-react';
+import { Button, Form, Input, Message } from 'semantic-ui-react';
 import { register } from '../api/auth';
 import { setToken } from '../utils/auth';
 import SocialRegister from './SocialRegister';
+import { Grid } from '@material-ui/core';
 import {
   LOGIN_URL,
 } from "../routes/URLMap";
-import { Grid } from '@material-ui/core';
+
 
 class MyAccount extends Component {
     constructor(props) {
