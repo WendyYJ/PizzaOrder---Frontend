@@ -68,11 +68,11 @@ class MyAccount extends Component {
     // check password validation
     checkPassword() {
         if(this.state.password != this.state.password_confirmation) {
-           this.setState({password_invalid: true});
-           alert('Your password is invalid');
+           this.setState({ password_invalid: true });
+           Message('Your password is invalid');
        }
        else {
-           this.setState({password_invalid: false});
+           this.setState({ password_invalid: false });
        }
    }
 

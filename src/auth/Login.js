@@ -65,11 +65,11 @@ class Login extends Component {
   // check password validation
   checkPassword() {
     if(this.state.password != this.state.password_confirmed) {
-       this.setState({password_invalid: true});
+       this.setState({ password_invalid: true });
        Message('Your password is invalid');
    }
    else {
-       this.setState({password_invalid: false});
+       this.setState({ password_invalid: false });
    }
 }
   

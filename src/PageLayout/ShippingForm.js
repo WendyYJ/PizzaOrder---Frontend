@@ -26,7 +26,6 @@ class ShippingForm extends React.Component {
     });
   }
 
-
   render() {
     return (
       <div className="forms_container">
