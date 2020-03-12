@@ -6,6 +6,7 @@ import { Button, Input, Form, Message } from 'semantic-ui-react';
 import { login } from '../api/auth';
 import { setToken } from '../utils/auth';
 import { Grid } from '@material-ui/core';
+import ShoppingCartSidebar from "../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar";
 import FacebookIcon from '@material-ui/icons/Facebook';
 import {
   MYACCOUNT_URL,
@@ -78,6 +79,7 @@ class Login extends Component {
         return (
           <div className="login-container">
             <PizzamenuSidebar />
+            <ShoppingCartSidebar />
                 <Form className="  login-form" 
                     error={!!this.state.error}
                     loading={this.state.isLoading}

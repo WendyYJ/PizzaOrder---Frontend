@@ -8,6 +8,7 @@ import ReviewForm from "../PageLayout/ReviewForm";
 import RelatedProduct from "./Components/RelatedProduct";
 import { fetchPizzaById } from "../api/pizza";
 import PizzamenuSidebar from "../PageLayout/PizzamenuSidebar/PizzamenuSidebar";
+import ShoppingCartSidebar from "../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar";
 
 class SampleId extends React.Component {
   constructor(props) {
@@ -36,6 +37,7 @@ class SampleId extends React.Component {
     return (
       <div className="MenuMain-container">
         <PizzamenuSidebar />
+        <ShoppingCartSidebar />
 
         <ThirdHeader
           headername={"Pizza Menu"}

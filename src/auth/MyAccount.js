@@ -7,6 +7,7 @@ import { register } from '../api/auth';
 import { setToken } from '../utils/auth';
 import SocialRegister from './SocialRegister';
 import { Grid } from '@material-ui/core';
+import ShoppingCartSidebar from "../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar";
 import {
   LOGIN_URL,
 } from "../routes/URLMap";
@@ -81,6 +82,7 @@ class MyAccount extends Component {
         return (
           <div className="myAccount-container">
             <PizzamenuSidebar />
+            <ShoppingCartSidebar />
             <Grid container 
                   direction="row"
                   justify="center"
