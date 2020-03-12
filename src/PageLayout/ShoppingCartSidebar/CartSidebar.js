@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./CartSidebar.scss";
-import SearchIcon from "@material-ui/icons/Search";
 import { SHOPPINGCART_URL, CHECKOUT_URL } from "../../routes/URLMap";
 import { Link } from "react-router-dom";
 
@@ -18,14 +17,6 @@ const CartSidebar = props => {
   return (
     <div className={sidebarClass}>
       <div id="close" onClick={closeHandler} />
-      <div className="navbar">
-        <div className="search">
-          <input type="text" className="searchTerm" placeholder="  Search" />
-          <button type="submit" className="searchButton">
-            <SearchIcon />
-          </button>
-        </div>
-      </div>
 
       <div className="cart-total">
         <ul className="cart">
