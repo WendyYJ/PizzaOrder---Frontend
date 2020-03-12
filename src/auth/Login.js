@@ -85,6 +85,7 @@ class Login extends Component {
                     loading={this.state.isLoading}
                 >
                 <p className="login-title">LOG IN WITH EMAIL</p>
+                <Link className="get-password">Forgot password ?</Link>
                 
                   <Form.Field>
                         <Input className="register-input"

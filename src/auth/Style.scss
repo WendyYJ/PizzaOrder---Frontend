@@ -26,13 +26,24 @@
   }
 
 
+  .get-password{
+    font-family: $body;
+    color: white;
+    font-size: 14px;
+    text-align: left;
+    width: 100%;
+    text-decoration: none;
+    position: relative;
+    top: -20vh;
+  }
+
   Input{
     width: 18vw;
     height: 5vh;
     border: 1px solid $saffron;
     border-radius: 3px;
     position: relative;
-    top: -17vh;
+    top: -20vh;
   }
 
   .login-button{
@@ -45,14 +56,14 @@
     top: -12vh;
     font-family: $body;
     position: relative;
-    top: -17vh;
+    top: -20vh;
   }
 
   .register-link{
     position: relative;
     font-family: $body;
     font-size: 22px;
-    top: -25vh;
+    top: -28vh;
     left: 10vw;
     text-decoration: none;
   }
