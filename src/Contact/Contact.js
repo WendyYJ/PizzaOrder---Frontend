@@ -7,6 +7,7 @@ import ContactForm from "./ContactForm";
 import ContactDetails from "./ContactDetails";
 import PizzamenuSidebar from "../PageLayout/PizzamenuSidebar/PizzamenuSidebar";
 import ShoppingCartSidebar from "../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar";
+import Footer from "../PageLayout/Footer/Footer";
 
 const Contact = () => (
   <div className="contact-container">
@@ -19,6 +20,9 @@ const Contact = () => (
       <div className="contactUs-container">
         <ContactForm />
         <ContactDetails />
+      </div>
+      <div className="footer-container">
+       <Footer />
       </div>
   </div>
 );
