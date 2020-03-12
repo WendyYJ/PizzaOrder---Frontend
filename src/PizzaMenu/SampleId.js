@@ -1,6 +1,8 @@
 import React from "react";
 import ".././PageLayout/Style/TopHeader.scss";
 import ".././PageLayout/Style/Horizonbar.scss";
+import "../PizzaMenu/Style/RelatedProduct.scss";
+import "../PizzaMenu/Style/SampleMenu.scss";
 import ThirdHeader from "../PageLayout/Header/ThirdHeader";
 import HorizonBar from "../PageLayout/HorizonBar";
 import SampleMenu from "./Components/SampleMenu";
@@ -9,6 +11,7 @@ import RelatedProduct from "./Components/RelatedProduct";
 import { fetchPizzaById } from "../api/pizza";
 import PizzamenuSidebar from "../PageLayout/PizzamenuSidebar/PizzamenuSidebar";
 import ShoppingCartSidebar from "../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar";
+import Footer from "../PageLayout/Footer/Footer";
 
 class SampleId extends React.Component {
   constructor(props) {
@@ -59,6 +62,7 @@ class SampleId extends React.Component {
         </div>
         <ReviewForm />
         <RelatedProduct />
+        <Footer />
       </div>
     );
   }

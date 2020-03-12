@@ -1,4 +1,6 @@
 import React, { Fragment } from "react";
+import "../PizzaMenu/Style/RelatedProduct.scss";
+import "../PizzaMenu/Style/SampleMenu.scss";
 import Filter from "./Components/Filter";
 import LinkHeader from "../PageLayout/Header/LinkHeader";
 import PizzamenuSidebar from "../PageLayout/PizzamenuSidebar/PizzamenuSidebar";
