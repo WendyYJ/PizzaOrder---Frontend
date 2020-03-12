@@ -6,6 +6,7 @@ import LinkHeader from "../PageLayout/Header/LinkHeader";
 import Ingredient from "../PageLayout/Footer/Ingredient";
 import PizzamenuSidebar from "../PageLayout/PizzamenuSidebar/PizzamenuSidebar";
 import ShoppingCartSidebar from "../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar";
+import Footer from "../PageLayout/Footer/Footer";
 
 const AboutUs = () => (
   <div className="about-container">
@@ -17,6 +18,7 @@ const AboutUs = () => (
       <Middle />
       <Question />
       <Ingredient />
+      <Footer />
     </Fragment>
   </div>
 );
