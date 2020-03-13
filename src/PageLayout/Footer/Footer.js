@@ -28,19 +28,20 @@ const Footer = () => (
     </div>
     <div>
       <p className="footer__contact-details">+34 9 368 7050</p>
-      <p className="footer__contact-details">order@pizza.com</p>
+      <p className="footer__contact-details-span">order@pizza.com</p>
     </div>
     <div className="footer__social-media">
-      <h1>&</h1>
-      <div>
-        <ul>
-          <li>Facebook</li>
-          <li>Twitter</li>
-          <li>Instagram</li>
-          <li>Pinterest</li>
-          <li>Flicker</li>
+      <h1 className="footer__social-media__break" >- & -</h1>
+        <ul className='footer__social-media__start'> 
+          <li><a href="https://www.facebook.com/">Facebook</a></li>
+          <li><a href="https://twitter.com/?lang=en">Twitter</a></li>
+          <li><a href="https://www.instagram.com/?hl=en">Instagram</a></li>
+          <li><a href="https://www.pinterest.com.au/">Pinterest</a></li>
+          <li><a href="https://www.flickr.com/">Flicker</a></li>
         </ul>
-      </div>
+    </div>
+    <div className='footer__disclaimer'>
+      <p>Created with &#x2764; by Pizza Hackers &#x2022; All rights reserved</p>
     </div>
   </div>
 );

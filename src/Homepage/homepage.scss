@@ -52,7 +52,8 @@
             color:$white;
         }
         &-price{
-            font-size:$sub-heading-size*1.5;
+            margin:0;
+            font-size:$sub-heading-size;
             font-family: $chalk;
             color:$black
         }
@@ -107,7 +108,7 @@
         }
         &__process{
             color:$saffron;
-            font-size: $sub-heading-size*1.5;
+            font-size: $sub-heading-size;
             font-family: $heading;
             padding-top: 1em;
             padding-bottom: 1em;
@@ -282,9 +283,11 @@
             }
             &-time{
                 color:$flame;
-                font-size: $body-size*0.8;
+                font-size: $body-size;
+                
             }
             &-heading{
+                margin: 0;
                 @include heading;
                 color: $saffron;
             }

@@ -1,6 +1,7 @@
 @import '../../../asset/mixin.scss';
 
 .footer{
+    margin-bottom: 5vh;
     &__insta{
         @include padding-center;
         font-size: $sub-heading-size;
@@ -56,7 +57,44 @@
         color: $flame;
         text-align: center;
         margin:0;
+        &-span{
+            @include chalk-heading;
+            font-size: $sub-heading-size*1.1;
+            color:$flame;
+            text-align: center;
+             margin: 0;
+        }
     }
+
+    &__social-media{
+       
+        &__break{
+            @include chalk-heading;
+            text-align: center;
+            color:$flame;
+        }
+
+        &__start{
+            @include padding-center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            list-style: none;
+            color:$white;
+            font-family: $heading;
+            font-size: $sub-heading-size;
+            a{
+                text-decoration: none;
+                color: $white;
+            }
+        }
+    }
+    &__disclaimer{
+        padding-top: 5vh;
+        text-align: center;
+        font-size: $body-size;
+    }
+    
 }
 
 
