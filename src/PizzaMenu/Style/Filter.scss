@@ -83,7 +83,7 @@ input[type="checkbox"]{
 
   .pizzacontainer{
       width:60%;
- height: 60%;
+      height: 60%;
       display: flex;
       margin: auto;
       margin-top: 2em;
@@ -93,14 +93,14 @@ input[type="checkbox"]{
   }
 .cardcontainer{
     text-align: center;
-
     width:25%;
     margin-bottom: 1em;
+    text-decoration: none;
 }
 
 .contentcontainer h2{
     font-size: 1.2em;
-  color:$saffron
+    color:$saffron;
 }
 
 .contentcontainer p{
@@ -108,14 +108,14 @@ input[type="checkbox"]{
 }
 
 .contentcontainer h3{
-  color: $flame;  font-size: 1.2em;
+  color: $flame;  
+  font-size: 1.2em;
 }
+
 .cardcontainer .circlecontainer{
-
-margin:auto;
-text-align: center;
-
-text-align: center;
+ margin:auto;
+ text-align: center;
+ text-align: center;
 }
 .cardcontainer .circlecontainer img{
     height:80px;
