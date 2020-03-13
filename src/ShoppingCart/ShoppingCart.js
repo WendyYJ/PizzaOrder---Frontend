@@ -1,10 +1,11 @@
 import React, { Fragment } from "react";
 import "./ShoppingCart.scss";
 import FourthHeader from "../PageLayout/Header/FourthHeader";
-import Footer from "../PageLayout/Footer/Footer";
 import Cart from "../PageLayout/Cart";
 import PizzamenuSidebar from "../PageLayout/PizzamenuSidebar/PizzamenuSidebar";
 import ShoppingCartSidebar from "../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar";
+import Footer from "../PageLayout/Footer/Footer";
+
 
 const ShoppingCart = () => (
   <div className="shoppingCart-container">

@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";
 const JWT_TOKEN_NAME = "jwtToken-pizza-order";
 
+
 export const isLoggedIn = () => {
   const token = localStorage.getItem(JWT_TOKEN_NAME);
 

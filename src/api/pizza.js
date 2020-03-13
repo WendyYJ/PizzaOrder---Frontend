@@ -11,6 +11,7 @@ export const fetchPizza = (page = 1, pageSize = 10) => {
 
     page
   });
+  
   const url = `${API_PIZZA_URL}?${stringified}`;
   return get(url).then(res => ({
     pizzas: res.data.data.map(pizza => ({ ...pizza })),
