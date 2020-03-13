@@ -8,7 +8,7 @@ import { setToken } from "../utils/auth";
 import { Grid } from "@material-ui/core";
 import ShoppingCartSidebar from "../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar";
 import FacebookIcon from "@material-ui/icons/Facebook";
-import { MYACCOUNT_URL, SHOPPINGCART_URL } from "../routes/URLMap";
+import { SHOPPINGCART_URL, MYACCOUNT_URL } from "../routes/URLMap";
 
 class Login extends Component {
   constructor(props) {
@@ -24,8 +24,9 @@ class Login extends Component {
     };
   }
 
-  handleChange = event => {
-    const { key, value } = event.target;
+   handleChange = event => {
+    const key = event.target.name;
+    const value = event.target.value;
 
     this.setState(
       {
@@ -109,10 +110,10 @@ class Login extends Component {
               content="Please check your email and password !"
             />
           )}
-          <Button className="login-button" onClick={this.updateUserInput}>
+          <Button className="login-button" onClick={this.updateUserInput} >
             Login
           </Button>
-          <NavLink className="register-link" to={MYACCOUNT_URL}>
+          <NavLink className="register-link" to={ MYACCOUNT_URL }>
             <p>Not registered yet?</p>
           </NavLink>
         </Form>

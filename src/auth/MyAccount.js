@@ -8,7 +8,7 @@ import { setToken } from "../utils/auth";
 import SocialRegister from "./SocialRegister";
 import { Grid } from "@material-ui/core";
 import ShoppingCartSidebar from "../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar";
-import { LOGIN_URL } from "../routes/URLMap";
+import { LOGIN_URL, MYACCOUNT_URL } from "../routes/URLMap";
 
 class MyAccount extends Component {
   constructor(props) {
@@ -26,7 +26,8 @@ class MyAccount extends Component {
   }
 
   handleChange = event => {
-    const { key, value } = event.target;
+    const key = event.target.name;
+    const value = event.target.value;
 
     this.setState(
       {
@@ -144,7 +145,7 @@ class MyAccount extends Component {
               >
                 Register
               </Button>
-              <NavLink className="login-link" to={LOGIN_URL}>
+              <NavLink className="login-link" to={ LOGIN_URL }>
                 <p>Already registered ?</p>
               </NavLink>
             </Form>

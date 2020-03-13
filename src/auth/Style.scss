@@ -3,7 +3,7 @@
 
 .login-form {
   margin-top: 5rem;
-  margin-left: 23rem;
+  margin-left: 21rem;
   padding: 10vw 13vw;
   padding-left: 11vw;
   padding-right: 18.5vw;
@@ -14,6 +14,8 @@
   opacity: 0.8;
   border: 2px solid $flame;
   border-radius: 3px;
+  display: flex;
+  flex-direction: column;
 
   .login-title{
     color:$saffron;
@@ -23,6 +25,7 @@
     width: 100%;
     position: relative;
     top: -20vh;
+    margin-left: 0vw;
   }
 
 
@@ -48,23 +51,23 @@
 
   .login-button{
     width: 9vw;
-    height: 5vh;
+    height: 9vh;
     background-color: $saffron;
     border: 1px solid $saffron;
     border-radius: 3px;
     position: relative;
-    top: -12vh;
+    top: -18vh;
     font-family: $body;
     position: relative;
-    top: -20vh;
   }
 
   .register-link{
     position: relative;
     font-family: $body;
     font-size: 22px;
-    top: -28vh;
-    left: 10vw;
+    top: -25vh;
+    left: 2vw;
+    width: 100%;
     text-decoration: none;
   }
 
@@ -84,7 +87,7 @@
 
 .socialLogin-container{
   margin-top: -18vh;
-  margin-left: 5vw;
+  margin-left: -15vw;
   z-index: 3;
   display: flex;
   flex-direction: row;
@@ -93,7 +96,7 @@
 
 .register-form {
   margin-top: 5rem;
-  margin-left: -10rem;
+  margin-left: -5rem;
   padding: 10vw 10vw;
   padding-left: 8vw;
   padding-right: 14vw;
@@ -104,6 +107,8 @@
   opacity: 0.8;
   border: 2px solid $flame;
   border-radius: 3px;
+  display: flex;
+  flex-direction: column;
 
   .register-title{
     color:$saffron;
@@ -113,6 +118,7 @@
     width: 100%;
     position: relative;
     top: -20vh;
+    margin-left: 0vw;
   }
 
   Input{
@@ -141,9 +147,10 @@
     position: relative;
     font-family: $body;
     font-size: 22px;
-    top: -25vh;
-    left: 10vw;
+    top: -23vh;
+    left: 2vw;
     text-decoration: none;
+    width: 100%;
   }
 
   .alart-message{
@@ -162,7 +169,7 @@
 
 .select-type{
   position: relative;
-  left: -25vw;
+  left: -28vw;
   top: 3vh;
   font-weight: $body;
   color: white;
@@ -189,6 +196,8 @@
     color: white;
     position: relative;
     top: -10vh;
+    margin-left: 0vw;
+    width: 100%;
   }
 
   .socialRegister-link{
@@ -197,11 +206,13 @@
     justify-content: space-evenly;
     position: relative;
     top: -10vh;
+    margin-left: 2vw;
 
     Button{
       width: 18vw;
       height: 6vh;
       margin-top: 3vh;
+      margin-left: -2vw;
       border-radius: 20px;
       font-family: $body;
     }
