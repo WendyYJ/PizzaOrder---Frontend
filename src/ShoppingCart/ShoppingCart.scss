@@ -19,7 +19,7 @@
   .shoppingCart{
     position: relative;
     top: 2vw;
-    margin-left: 2vw;
+    margin-left: 0vw;
     font-family: $body;
 
     ul{
@@ -217,97 +217,8 @@
   }
 }
 
-.shipping_method{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin-top: 10%;
- 
-
-  .shipping{
-    color: $saffron;
-    position: relative;
-    top: 35vh;
-    left: -39vw;
-    font-size: 24px;
-  }
-
-  .promotion{
-    color: $saffron;
-    position: relative;
-    top: 35vh;
-    left: -50vw;
-    font-size: 24px;
-  }
+.footer-container{
+  position: relative;
+  top: 130vh;
 }
-
-.forms_container{
-  height: 100%;
  
-
-  .shipping_form{
-    display: flex;
-    position: relative;
-    left: -55vw;
-    top: 48vh;
-    height: 4vh;
-    border: 1px solid white;
-    color: white;
-    background-color: transparent;
-    
-    .selectedValue{
-
-    }
-  }
-
-  .current_state{
-    position: relative;
-    left: -55vw;
-    top: 50vh;
-    height: 4vh;
-    border: 1px solid white;
-    color: white;
-  }
-
-  .postcode_zip{
-    position: relative;
-    left: -55vw;
-    top: 52vh;
-    height: 4vh;
-    border: 1px solid white;
-    color: white;
-  }
-
-  .updateButton{
-    font-size: 10px;
-    font-family: $body;
-    width: 11vw;
-    height: 5vh;
-    position: relative;
-    left: -55vw;
-    top: 55vh;
-    background-color: $saffron;
-    border: 1px solid $saffron;
-  }
-
-  .promotion_code{
-    position: relative;
-    top: 30vh;
-    left: -30vw;
-    height: 4vh;
-    border: 1px solid white;
-    color: white;
-  }
-
-  .applyButton{
-    font-size: 10px;
-    font-family: $body;
-    width: 8vw;
-    height: 5vh;
-    position: relative;
-    left: -30vw;
-    top: 34vh;
-    background-color: $saffron;
-    border: 1px solid $saffron;
-  }
-}

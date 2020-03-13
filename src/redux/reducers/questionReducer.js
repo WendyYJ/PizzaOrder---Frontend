@@ -3,6 +3,7 @@ import { SHOW_ANSWER } from "../actions/questionActions";
 const initialState = {
   isShowing: true
 };
+
 const questionReducer = (state = initialState, action) => {
   switch (action.type) {
     case SHOW_ANSWER:

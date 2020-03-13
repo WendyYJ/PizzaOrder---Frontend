@@ -29,7 +29,8 @@ class ShippingForm extends React.Component {
   render() {
     return (
       <div className="forms_container">
-        <div>
+        <div className="left-forms">
+        <h3 className="shipping-title">Calculate Shipping</h3>
         <form className="shipping_form">
           <select value={this.state.value} onChange={this.handleChange}>
             <option value="UK" className="selectedValue">
@@ -48,19 +49,20 @@ class ShippingForm extends React.Component {
           />
         </form>
 
-        <form>
+        <form noValidate autoComplete="off">
           <input
             type="text"
             placeholder="  Postcode/ZIP"
             onChange={this.changeHandler}
           />
-        </form>
 
-        <button className="updateButton">UPDATE TOTALS</button>
+         <button className="updateButton">UPDATE TOTALS</button>
+        </form>
         </div>
 
-      <div>  
-        <form noValidate autoComplete="off">
+      <div className="right-forms">  
+      <h3 className="promotion-title">Promotion Code</h3>
+        <form className="code-form" noValidate autoComplete="off">
           <input
             type="text"
             placeholder="  Enter your promotional code"
