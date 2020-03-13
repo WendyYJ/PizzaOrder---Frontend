@@ -105,8 +105,7 @@ const Cart = () => (
         </Link>
       </button>
     </div>
-      <ShippingForm />
-    
+    <ShippingForm />
   </div>
 );
 

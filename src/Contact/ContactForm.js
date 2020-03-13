@@ -37,40 +37,28 @@ class ContactForm extends React.Component {
         <div className="messageForm-container">
           <div className="name-input">
             <p className="name">YOUR NAME*</p>
-            <input
-              type="text"
-              name="username"
-              onChange={this.ChangeHandler}
-            />
+            <input type="text" name="username" onChange={this.ChangeHandler} />
           </div>
           <div className="email-input">
             <p className="email">EMAIL*</p>
-            <input
-              type="text"
-              name="email"
-              onChange={this.ChangeHandler}
-            />
+            <input type="text" name="email" onChange={this.ChangeHandler} />
           </div>
         </div>
         <div className="messageForm-containerTwo">
           <div className="subject-input">
             <p className="subject">SUBJECT</p>
-            <input
-              type="text"
-              name="subject"
-              onChange={this.ChangeHandler}
-            />
+            <input type="text" name="subject" onChange={this.ChangeHandler} />
           </div>
-  
+
           <div className="message-form">
             <p>YOUR MESSAGE</p>
             <input type="text" onChange={this.SubmitHandler} />
           </div>
-          </div>
-          <div className="send-btn">
-            <br></br>
-            <button type="submit">SEND MESSAGE</button>
-          </div>
+        </div>
+        <div className="send-btn">
+          <br></br>
+          <button type="submit">SEND MESSAGE</button>
+        </div>
       </div>
     );
   }
