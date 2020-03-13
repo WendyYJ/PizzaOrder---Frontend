@@ -24,7 +24,7 @@ const ShoppingCart = () => (
         <Cart />
       </div>
       <div className="footer-container">
-      <Footer />
+        <Footer />
       </div>
     </Fragment>
     <div />

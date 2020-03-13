@@ -12,23 +12,23 @@ const Ingredient = () => (
   <div className="ingredientcontainer">
     <div className="circlebigcontainer">
       <div className="circlecontainer">
-        <img src={circle1} alt='circle1' />
+        <img src={circle1} alt="circle1" />
       </div>
       <div className="circlecontainer">
-        <img src={circle2} alt='circle2' />
+        <img src={circle2} alt="circle2" />
       </div>
       <div className="circlecontainer">
-        <img src={circle3} alt='circle3' />
+        <img src={circle3} alt="circle3" />
       </div>
       <div className="circlecontainer">
-        <img src={circle4} alt='circle4'/>
+        <img src={circle4} alt="circle4" />
       </div>
       <div className="circlecontainer">
-        <img src={circle5} alt='circle5'/>
+        <img src={circle5} alt="circle5" />
       </div>
 
       <div className="circlecontainer">
-        <img src={circle6} alt='circle6' />
+        <img src={circle6} alt="circle6" />
       </div>
     </div>
   </div>

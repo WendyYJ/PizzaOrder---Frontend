@@ -11,19 +11,19 @@ import Footer from "../PageLayout/Footer/Footer";
 
 const Contact = () => (
   <div className="contact-container">
-      <PizzamenuSidebar />
-      <ShoppingCartSidebar />
-      <LinkHeader headername="Contact Us" />
-      <div className="map-container">
-        <ContactMap />
-      </div>
-      <div className="contactUs-container">
-        <ContactForm />
-        <ContactDetails />
-      </div>
-      <div className="footer-container">
-       <Footer />
-      </div>
+    <PizzamenuSidebar />
+    <ShoppingCartSidebar />
+    <LinkHeader headername="Contact Us" />
+    <div className="map-container">
+      <ContactMap />
+    </div>
+    <div className="contactUs-container">
+      <ContactForm />
+      <ContactDetails />
+    </div>
+    <div className="footer-container">
+      <Footer />
+    </div>
   </div>
 );
 

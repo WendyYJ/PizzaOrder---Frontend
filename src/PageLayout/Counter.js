@@ -12,8 +12,8 @@ class Counter extends Component {
 
   incrementCount = () => {
     this.setState(prevState => {
-      return { 
-        count: prevState.count + 1 
+      return {
+        count: prevState.count + 1
       };
     });
   };
@@ -21,8 +21,8 @@ class Counter extends Component {
   decrementCount = () => {
     if (this.state.count > 0) {
       this.setState(prevState => {
-        return { 
-          count: prevState.count - 1 
+        return {
+          count: prevState.count - 1
         };
       });
     }
@@ -30,10 +30,9 @@ class Counter extends Component {
 
   render() {
     return (
-      
       <div className="counterButton">
-       <h3>${this.props.price*this.state.count}</h3>
-       <p style={{ fontSize: "14px", margin: "2px" }}>QUANTITY</p>
+        <h3>${this.props.price * this.state.count}</h3>
+        <p style={{ fontSize: "14px", margin: "2px" }}>QUANTITY</p>
         <button className="decButton" onClick={this.decrementCount}>
           -
         </button>

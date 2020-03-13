@@ -12,7 +12,7 @@ class ReviewForm extends React.Component {
       review: ""
     };
   }
-  
+
   ChangeHandler = event => {
     const name = event.target.name;
     const val = event.target.value;
@@ -100,17 +100,9 @@ class ReviewForm extends React.Component {
 
           <div className="review-form">
             <p>NAME*</p>
-            <input
-              type="text"
-              name="username"
-              onChange={this.ChangeHandler}
-            />
+            <input type="text" name="username" onChange={this.ChangeHandler} />
             <p>EMAIL*</p>
-            <input
-              type="text"
-              name="email"
-              onChange={this.ChangeHandler}
-            />
+            <input type="text" name="email" onChange={this.ChangeHandler} />
 
             <p>YOUR RATING</p>
             <span className="fiveStar-border">

@@ -20,14 +20,16 @@ const PizzamenuSidebar = ({ children }) => {
 
   let menuSidebar;
   if (sidebarOpen) {
-    menuSidebar = <MenuSidebar close={sidebarCloseHandler} menuSidebar="menuSidebar" />;
+    menuSidebar = (
+      <MenuSidebar close={sidebarCloseHandler} menuSidebar="menuSidebar" />
+    );
   }
 
   return (
     <div className="menu-sidebar">
-        {menuSidebar}
-        <MenuToggle click={openHandler} />
-        <p>{children}</p>
+      {menuSidebar}
+      <MenuToggle click={openHandler} />
+      <p>{children}</p>
     </div>
   );
 };
