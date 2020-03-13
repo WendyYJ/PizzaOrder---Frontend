@@ -6,6 +6,7 @@
   height: 56vh;
   border: 2px solid #D94F2B;
   margin-left: 22%;
+  margin-top: 8vh;
 }
 
 .contact-map{
@@ -117,6 +118,7 @@
 
       span{
         color: $flame;
+        margin-left: 1vw;
       }
     }
   }
@@ -164,4 +166,8 @@
       line-height: 1.5vh;
     }
   }
+}
+
+.footer-container{
+  margin-top: -70vh;
 }

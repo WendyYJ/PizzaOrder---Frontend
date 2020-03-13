@@ -1,5 +1,5 @@
 import React from "react";
-import ".././PageLayout/Style/TopHeader.scss";
+import ".././PageLayout/Style/ShippingForm.scss";
 
 class ShippingForm extends React.Component {
   constructor(props) {
@@ -14,36 +14,33 @@ class ShippingForm extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event) {
+  handleChange = event => {
     this.setState({ value: event.target.value });
   }
 
-  changeHandler = event => {
-    this.setState({ Country: event.target.value });
-  };
-
-  changeHandlerTwo = event => {
-    this.setState({ Postcode: event.target.value });
-  };
-
-  changeHandlerThree = event => {
-    this.setState({ Code: event.target.value });
-  };
+  changeHandler = event =>{
+    this.setState({ 
+      country: event.target.value,
+      postcode: event.target.value,
+      code: event.target.value,
+    });
+  }
 
   render() {
     return (
       <div className="forms_container">
+        <div>
         <form className="shipping_form">
           <select value={this.state.value} onChange={this.handleChange}>
             <option value="UK" className="selectedValue">
-              United Kingdom (UK) <span></span>
+              United Kingdom (UK) 
             </option>
             <option value="AU">Australia</option>
             <option value="US">United States</option>
           </select>
         </form>
 
-        <form className="current_state">
+        <form>
           <input
             type="text"
             placeholder="  State/Country"
@@ -51,25 +48,27 @@ class ShippingForm extends React.Component {
           />
         </form>
 
-        <form className="postcode_zip">
+        <form>
           <input
             type="text"
             placeholder="  Postcode/ZIP"
-            onChange={this.changeHandlerTwo}
+            onChange={this.changeHandler}
           />
         </form>
 
         <button className="updateButton">UPDATE TOTALS</button>
+        </div>
 
-        <form className="promotion_code">
+      <div>  
+        <form noValidate autoComplete="off">
           <input
             type="text"
             placeholder="  Enter your promotional code"
-            onChange={this.changeHandlerThree}
+            onChange={this.changeHandler}
           />
-        </form>
-
         <button className="applyButton">APPLY</button>
+        </form>
+        </div>
       </div>
     );
   }

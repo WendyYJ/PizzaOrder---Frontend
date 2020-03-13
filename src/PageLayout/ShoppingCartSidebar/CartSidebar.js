@@ -1,21 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
+import "./CartSidebar.scss";
+import { SHOPPINGCART_URL, CHECKOUT_URL } from "../../routes/URLMap";
 import { Link } from "react-router-dom";
-import { MYACCOUNT_URL, CHECKOUT_URL } from "../routes/URLMap";
-import "./Style/TopHeader.scss";
-import "../ShoppingCart/ShoppingCart.scss";
-import ShippingForm from "./ShippingForm";
 
-const Cart = () => (
-  <div className="cart-container">
-    <div className="cart">
-      <ul>
-        <div className="ordered1">
+const CartSidebar = props => {
+  const [sidebarClass, setSidebarClass] = useState(props.sidebar);
+
+  const closeHandler = event => {
+    event.preventDefault();
+    setSidebarClass("sidebar close");
+    setTimeout(() => {
+      props.close();
+    }, 1000);
+  };
+
+  return (
+    <div className={sidebarClass}>
+      <div id="close" onClick={closeHandler} />
+
+      <div className="cart-total">
+        <ul className="cart">
+         <h2 className="cart-title">Cart Totals</h2>
+         <div className="ordered-list">
           <div>
-            <span className="dot">
+            <span className="ordered-pizza">
               <p>x</p>
             </span>
           </div>
-          <div className="text">
+          <div className="cart-text">
             <h4>Moorish Lamb</h4>
             <p>SIZE: Large</p>
             <div className="horizonbar-Four" />
@@ -23,95 +35,77 @@ const Cart = () => (
             <div className="total_price">
               <p className="price">$ 19.00</p>
               <p>
-                <span> 1 </span>
+                <span> 1 x </span>
               </p>
               <p className="totalprice">$19.00</p>
             </div>
           </div>
         </div>
 
-        <div className="ordered1">
+        <div className="ordered-list2">
           <div>
-            <span className="dot">
+            <span className="ordered-pizza">
               <p>x</p>
             </span>
           </div>
-          <div className="text">
+          <div className="cart-text">
             <h4>Vegetarian Supreme</h4>
             <p>SIZE: Jumbo</p>
 
             <div className="total_price">
               <p className="price">$ 34.00</p>
               <p>
-                <span> 1 </span>
+                <span> 1 x </span>
               </p>
               <p className="totalprice">$34.00</p>
             </div>
           </div>
         </div>
 
-        <div className="ordered1">
+        <div className="ordered-list3">
           <div>
-            <span className="dot">
+            <span className="ordered-pizza">
               <p>x</p>
             </span>
           </div>
-          <div className="text">
+          <div className="cart-text">
             <h4>Spiced Pumpkin</h4>
             <p>SIZE: Small</p>
 
             <div className="total_price">
               <p className="price">$ 26.00</p>
               <p>
-                <span> 1 </span>
+                <span> 1 x </span>
               </p>
               <p className="totalprice">$26.00</p>
             </div>
           </div>
         </div>
       </ul>
-    </div>
+     </div>
 
-    <div className="total">
-      <h2>Cart Totals</h2>
-      <p>
-        CART SUBTOTAL
-        <span>$79.00</span>
-      </p>
-      <p>
-        SHIPPING AND HANDLING
-        <span>Free Shipping</span>
-      </p>{" "}
-      <br />
-      <h3>
-        Order Total
-        <span>$79.00</span>
-      </h3>
-      <button className="viewCart-btn">
+     <div className="order-total">
+      <h2 className="order-title">Order Totals <span>$79.00</span></h2>
+      <button className="viewCart-button">
         <Link
           style={{ color: "#FDBC2C", textDecoration: "none" }}
-          to={MYACCOUNT_URL}
+          to={SHOPPINGCART_URL}
         >
-          UPDATE CART
+          VIEW SHOPPING CART
         </Link>
       </button>
       <br />
-      <button className="checkout-btn">
+      <button className="checkout-button">
         <Link
           style={{ color: "black", textDecoration: "none" }}
           to={CHECKOUT_URL}
         >
-          PROCEED TO CHECKOUT
+          CHECKOUT
         </Link>
       </button>
     </div>
-
-    <div className="shipping_method">
-      <h3 className="shipping">Calculate Shipping</h3>
-      <ShippingForm />
-      <h3 className="promotion">Promotion Code</h3>
-    </div>
   </div>
-);
+  );
+};
 
-export default Cart;
+export default CartSidebar;

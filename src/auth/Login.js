@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import './Style.scss';
 import PizzamenuSidebar from "../PageLayout/PizzamenuSidebar/PizzamenuSidebar";
-import { NavLink } from "react-router-dom";
-import { Button, Form, Input, Message, Segment } from 'semantic-ui-react';
-import { login as loginFunction } from '../api/auth';
+import { NavLink, Link } from "react-router-dom";
+import { Button, Input, Form, Message } from 'semantic-ui-react';
+import { login } from '../api/auth';
 import { setToken } from '../utils/auth';
-// import CircularProgress from '@material-ui/core/CircularProgress';
+import { Grid } from '@material-ui/core';
+import ShoppingCartSidebar from "../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar";
+import FacebookIcon from '@material-ui/icons/Facebook';
 import {
-  LOGIN_URL,
   MYACCOUNT_URL,
+  SHOPPINGCART_URL,
 } from "../routes/URLMap";
+
 
 class Login extends Component {
     constructor(props) {
@@ -17,26 +20,42 @@ class Login extends Component {
 
         this.state = {
             email: '',
-            error: null,
-            isLoading: false,
             password: '',
+            password_confirmed: '',
+            isLoading: false,
+            password_invalid: false,
+            error: null,
         };
     }
 
     handleChange = event => {
-        const key = event.target.name;
-        const value = event.target.value;
-        this.setState({ [key]: value } );
-    }
+        const { key, value } = event.target;
+      
+        this.setState({
+            [key] : value 
+          }, () => {
+            if (key == 'password')
+              this.checkPassword();
+      }
+    );
+   }
 
-    login = () => {
+    updateUserInput = () => {
+        const userInput = {
+            username: this.state.username,
+            email: this.state.email,
+            password: this.state.password
+        };
+    
+   
       this.setState({ error: null, isLoading: true }, () => {
-          loginFunction(this.state.email, this.state.password)
-              .then(jwtToken => {
+          login(userInput)
+              .then(res => {
                   this.setState({ isLoading: false }, () => {
-                      setToken(jwtToken);
+                      const { token } = res.data.data;
+                      setToken( token );
                       const locationState = this.props.location.state;
-                      const redirectTo = (locationState && locationState.from) || LOGIN_URL;
+                      const redirectTo = (locationState && locationState.from) || SHOPPINGCART_URL;
                       this.props.history.replace(redirectTo);
                   });
               })
@@ -44,58 +63,73 @@ class Login extends Component {
       });
   }
 
+  // check password validation
+  checkPassword() {
+    if(this.state.password != this.state.password_confirmed) {
+       this.setState({ password_invalid: true });
+       Message('Your password is invalid');
+   }
+   else {
+       this.setState({ password_invalid: false });
+   }
+}
+  
     render() {
-      // const { isLoading } = this.state;
-      
+  
         return (
           <div className="login-container">
             <PizzamenuSidebar />
-                <Form
-                    className="login-form" size="large"
+            <ShoppingCartSidebar />
+                <Form className="  login-form" 
                     error={!!this.state.error}
                     loading={this.state.isLoading}
                 >
-                <h2>Login Form</h2>
+                <p className="login-title">LOG IN WITH EMAIL</p>
+                <Link className="get-password">Forgot password ?</Link>
                 
-                <Segment stacked>
-                    <Form.Field>
-                          <Input className="login-input"
-                                icon='user'
-                                iconPosition='left'
-                                name="email"
-                                onChange={this.handleChange}
-                                placeholder='E-mail address'
-                                value={this.state.email}
-                            />
+                  <Form.Field>
+                        <Input className="register-input"
+                            name="email"
+                            type="email"
+                            onChange={this.handleChange}
+                            placeholder='  E-mail address'
+                            value={this.state.email}
+                        />
                         </Form.Field>
                         <Form.Field>
                             <Input
-                                icon='lock'
-                                iconPosition='left'
-                                name="password"
-                                onChange={this.handleChange}
-                                placeholder='Password'
-                                type="password"
-                                value={this.state.password}
+                              name="password"
+                              type="password"
+                              onChange={this.handleChange}
+                              placeholder='  Password'
+                              value={this.state.password}
                             />
                         </Form.Field>
-                       {!!this.state.error && (
-                            <Message className="alart-message"
-                                error
-                                content="Please check your email and password"
-                            />
-                       )}
-                        <Button className="login-button"
-                            size="large"
-                            fluid
-                            primary
-                            onClick={this.login}
+                        
+                    {!!this.state.error && (
+                        <Message className="alart-message"
+                                content="Please check your email and password !"
+                        />
+                    )}
+                        <Button className="login-button" 
+                            onClick={this.updateUserInput} 
                         >
-                            Login
+                          Login
                         </Button>
-                       <NavLink className="register" to={MYACCOUNT_URL}><p>Not registered yet?</p></NavLink>
-                    </Segment>
-                </Form>
+                       <NavLink className="register-link" to={MYACCOUNT_URL}><p>Not registered yet?</p></NavLink>
+                   </Form>
+                <Grid
+                    container
+                    direction="row"
+                    justify="center"
+                    alignItems="center"
+                    >
+                <div className="socialLogin-container">
+                    <Link><FacebookIcon style={{ fontSize: 70, color: "royalblue" }} id="facebook"/></Link>
+                    <Link id="google"></Link>
+                    <Link id="paypal"></Link>
+                </div>
+               </Grid>
             </div>
         );
     }

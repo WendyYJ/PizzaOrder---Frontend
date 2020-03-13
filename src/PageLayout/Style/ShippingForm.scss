@@ -1,0 +1,21 @@
+.forms_container{
+  display: flex;
+  flex-direction: row;
+
+  .shipping_form{
+    width: 20vw;
+  }
+
+  form{
+    position: relative;
+    left: -55vw;
+    top: 50vh;
+    line-height: 7vh;
+
+    input{
+      width: 20vw;
+      height: 4vh;
+      border: 1px solid white;
+    }
+  }
+}

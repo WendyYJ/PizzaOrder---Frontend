@@ -7,7 +7,6 @@ class FourthHeader extends Component {
     return (
       <div className="forth-header">
         <h1> {this.props.headername}</h1>
-
         <div className="link-containerThree">
           Home
           <ArrowForwardIosIcon style={{ fontSize: 14 }} className="arrowicon" />

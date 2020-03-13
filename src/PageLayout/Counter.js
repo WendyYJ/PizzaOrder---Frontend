@@ -12,14 +12,18 @@ class Counter extends Component {
 
   incrementCount = () => {
     this.setState(prevState => {
-      return { count: prevState.count + 1 };
+      return { 
+        count: prevState.count + 1 
+      };
     });
   };
 
   decrementCount = () => {
     if (this.state.count > 0) {
       this.setState(prevState => {
-        return { count: prevState.count - 1 };
+        return { 
+          count: prevState.count - 1 
+        };
       });
     }
   };
