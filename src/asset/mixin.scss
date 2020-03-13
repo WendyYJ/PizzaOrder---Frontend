@@ -1,19 +1,14 @@
 @import'./theme.scss';
 
-
-
 @mixin chalk-heading{
     font-family: $chalk;
     font-size: 4vw;
 }
 
-
-
 @mixin heading{
     font-family: $heading;
     font-size: $sub-heading-size;
 }
-
 
 @mixin button{
     font-variant: small-caps;
@@ -21,8 +16,7 @@
     padding-left:15px;
     padding-right: 15px;
     border: 2px solid $saffron;
-    font-weight: bold;
-   
+    font-weight: bold; 
 }
 
 @mixin button-filled {
@@ -35,6 +29,5 @@
 
 @mixin padding-center {
     padding-left: 15%;
-    padding-right: 15%;
-    
+    padding-right: 15%; 
 }

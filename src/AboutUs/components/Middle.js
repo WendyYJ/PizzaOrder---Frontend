@@ -1,7 +1,7 @@
 import React from "react";
 import "../Style/Information.scss";
-import ArrowBackIcon from "@material-ui/icons/ArrowBack";
-import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+//import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+//import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import squares from "../../asset/img/squares.png";
 import leftarrow from "../../asset/img/leftarrow.png";
 import rightarrow from "../../asset/img/rightarrow.png";
