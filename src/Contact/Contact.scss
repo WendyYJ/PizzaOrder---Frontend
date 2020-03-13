@@ -1,6 +1,7 @@
 @import '../asset/theme.scss';
 @import '../asset/mixin.scss';
 
+
 .map-container{
   width: 53vw;
   height: 56vh;
@@ -31,19 +32,21 @@
     font-size: 16px;
     font-family: $body;
     color: white;
+    margin-left: 0vw;
   }
 
   .messageForm-container{
     display: flex;
     flex-direction: row;
-
+    
     .name{
      margin-top: 1vh;
+     margin-left: 0vw;
     }
 
     .email{
       margin-top: 1vh;
-     
+      margin-left: 0vw;
     }
 
     .email-input{
@@ -56,6 +59,10 @@
       background-color: transparent;
       border: 1px solid white;
   }
+}
+
+.subject{
+  margin-left: 0vw;
 }
 
 .messageForm-containerTwo{
@@ -72,6 +79,11 @@
 
   .message-form{
     margin-top: 2vh;
+
+    p{
+      margin-left: 0vw;
+    }
+
   }
  }
 
@@ -95,7 +107,7 @@
     top: -88vh;
     left: 60vw;
     width: 25vw;
-    height: 85vh;
+    height: 40vh;
     background-color: rgba(0, 0, 0, 0.205);
     @include heading();
     
@@ -115,6 +127,7 @@
       color: white;
       font-size: 12px;
       line-height: 1.5vh;
+      margin-left: 0vw;
 
       span{
         color: $flame;
@@ -146,6 +159,7 @@
       color: white;
       font-size: 12px;
       line-height: 1.5vh;
+      margin-left: 0vw;
     }
   }
 
@@ -164,10 +178,13 @@
       color: white;
       font-size: 12px;
       line-height: 1.5vh;
+      margin-left: 0vw;
     }
   }
 }
 
-.footer-container{
-  margin-top: -70vh;
+.contact-container{
+  .footer-container{
+    margin-top: -75vh;
+  }
 }
