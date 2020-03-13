@@ -33,7 +33,6 @@ const CartSidebar = props => {
             <div className="horizonbar-Four" />
 
             <div className="total_price">
-              <p className="price">$ 19.00</p>
               <p>
                 <span> 1 x </span>
               </p>
@@ -53,7 +52,6 @@ const CartSidebar = props => {
             <p>SIZE: Jumbo</p>
 
             <div className="total_price">
-              <p className="price">$ 34.00</p>
               <p>
                 <span> 1 x </span>
               </p>
@@ -73,7 +71,6 @@ const CartSidebar = props => {
             <p>SIZE: Small</p>
 
             <div className="total_price">
-              <p className="price">$ 26.00</p>
               <p>
                 <span> 1 x </span>
               </p>

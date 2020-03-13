@@ -5,7 +5,7 @@ class ShippingForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: "United Kingdom (UK)",
+      Value: "United Kingdom (UK)",
       Country: "",
       Postcode: "",
       Code: ""
@@ -15,16 +15,10 @@ class ShippingForm extends React.Component {
   }
 
   handleChange = event => {
-    this.setState({ value: event.target.value });
-  }
-
-  changeHandler = event =>{
-    this.setState({ 
-      country: event.target.value,
-      postcode: event.target.value,
-      code: event.target.value,
-    });
-  }
+    const key = event.target.name;
+    const value = event.target.value;
+    this.setState({ [key]: value });
+  };
 
   render() {
     return (
@@ -32,8 +26,8 @@ class ShippingForm extends React.Component {
         <div className="left-forms">
         <h3 className="shipping-title">Calculate Shipping</h3>
         <form className="shipping_form">
-          <select value={this.state.value} onChange={this.handleChange}>
-            <option value="UK" className="selectedValue">
+          <select value={this.state.value} onChange={this.changeHandler}>
+            <option value="UK">
               United Kingdom (UK) 
             </option>
             <option value="AU">Australia</option>
@@ -45,7 +39,8 @@ class ShippingForm extends React.Component {
           <input
             type="text"
             placeholder="  State/Country"
-            onChange={this.changeHandler}
+            value={this.state.Country}
+            onChange={this.handleChange}
           />
         </form>
 
@@ -53,7 +48,8 @@ class ShippingForm extends React.Component {
           <input
             type="text"
             placeholder="  Postcode/ZIP"
-            onChange={this.changeHandler}
+            value={this.state.Postcode}
+            onChange={this.handleChange}
           />
 
          <button className="updateButton">UPDATE TOTALS</button>
@@ -66,7 +62,8 @@ class ShippingForm extends React.Component {
           <input
             type="text"
             placeholder="  Enter your promotional code"
-            onChange={this.changeHandler}
+            value={this.state.Code}
+            onChange={this.handleChange}
           />
         <button className="applyButton">APPLY</button>
         </form>

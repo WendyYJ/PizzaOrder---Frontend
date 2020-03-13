@@ -8,18 +8,18 @@ class ReviewForm extends React.Component {
     super(props);
     this.state = {
       username: "",
-      email: null,
+      email: "",
       review: ""
     };
   }
-  
-  ChangeHandler = event => {
-    const name = event.target.name;
-    const val = event.target.value;
-    this.setState({ [name]: val });
+
+  handleChange = event => {
+    const key = event.target.name;
+    const value = event.target.value;
+    this.setState({ [key]: value });
   };
 
-  SubmitHandler = event => {
+  handleSubmit = event => {
     event.preventDefault();
     alert("You are submitting " + this.state.review);
   };
@@ -103,13 +103,15 @@ class ReviewForm extends React.Component {
             <input
               type="text"
               name="username"
-              onChange={this.ChangeHandler}
+              value={this.state.username}
+              onChange={this.handleChange}
             />
             <p>EMAIL*</p>
             <input
               type="text"
               name="email"
-              onChange={this.ChangeHandler}
+              value={this.state.email}
+              onChange={this.handleChange}
             />
 
             <p>YOUR RATING</p>
@@ -145,7 +147,11 @@ class ReviewForm extends React.Component {
 
           <div className="submit-form">
             <p>YOUR REVIEW</p>
-            <input type="text" onChange={this.SubmitHandler} />
+            <input 
+                 type="text" 
+                 value={this.state.review}
+                 onChange={this.handleSubmit}    
+				    />
           </div>
           <div className="submit-button">
             <br></br>

@@ -91,8 +91,8 @@
 
       p{
         position: relative;
-        right: 1vw;
-        top: 22%;
+        right: 10vw;
+        top: 17%;
       }
     }
 
@@ -102,7 +102,7 @@
       h4{
         position: relative;
         top: -3vw;
-        left: 5vw;
+        left: 4vw;
         color: $saffron;
         width: 100%;
     }
@@ -113,30 +113,21 @@
       font-family: $body;
       position: relative;
       top: -5vw;
-      left: 6vw;
-    }
-
-    .price{
-      color: white;
-      font-size: 10px;
-      font-family: $body;
-      position: relative;
-      top: -6vw;
-      left: 6vw;
+      left: -4vw;
     }
 
     span{
       color: $flame;
       position: relative;
-      top: -2vw;
+      top: -1vw;
       left: 0vw;
     }
 
     .totalprice{
       color: white;
       position: relative;
-      top: -9.3vw;
-      left: 8vw;
+      top: -8.5vw;
+      left: -2vw;
     }
   }
   }
@@ -159,7 +150,7 @@
 
   p{
     position: relative;
-    right: 1vw;
+    right: 10vw;
     top: 22%;
   }
 }
@@ -169,11 +160,10 @@
 
   h4{
     position: relative;
-    top: -4vw;
-    left: 5vw;
+    top: -3vw;
+    left: 4vw;
     color: $saffron;
     width: 100%;
-    line-height: 4vh;
 }
 
 p{
@@ -181,31 +171,22 @@ p{
   font-size: 10px;
   font-family: $body;
   position: relative;
-  top: -6vw;
-  left: 6vw;
-}
-
-.price{
-  color: white;
-  font-size: 10px;
-  font-family: $body;
-  position: relative;
-  top: -7vw;
-  left: 6vw;
+  top: -5vw;
+  left: -4vw;
 }
 
 span{
   color: $flame;
   position: relative;
-  top: -2vw;
+  top: -1vw;
   left: 0vw;
 }
 
 .totalprice{
   color: white;
   position: relative;
-  top: -10.4vw;
-  left: 8vw;
+  top: -8.5vw;
+  left: -2vw;
 }
 }
 
@@ -225,7 +206,7 @@ span{
 
 p{
   position: relative;
-  right: 1vw;
+  right: 10vw;
   top: 22%;
 }
 }
@@ -233,46 +214,36 @@ p{
 .cart-text{
 width: 100%;
 
-h4{
-  position: relative;
-  top: -6vw;
-  left: 5vw;
-  color: $saffron;
-  width: 100%;
-  line-height: 4vh;
-}
+    h4{
+      position: relative;
+      top: -3vw;
+      left: 4vw;
+      color: $saffron;
+      width: 100%;
+    }
 
-p{
-color: white;
-font-size: 10px;
-font-family: $body;
-position: relative;
-top: -6vw;
-left: 6vw;
-}
+    p{
+    color: white;
+    font-size: 10px;
+    font-family: $body;
+    position: relative;
+    top: -5vw;
+    left: -4vw;
+    }
 
-.price{
-color: white;
-font-size: 10px;
-font-family: $body;
-position: relative;
-top: -7vw;
-left: 6vw;
-}
+    span{
+    color: $flame;
+    position: relative;
+    top: -1vw;
+    left: 0vw;
+    }
 
-span{
-color: $flame;
-position: relative;
-top: -2vw;
-left: 0vw;
-}
-
-.totalprice{
-color: white;
-position: relative;
-top: -10.4vw;
-left: 8vw;
-}
+    .totalprice{
+    color: white;
+    position: relative;
+    top: -8.5vw;
+    left: -2vw;
+    }
 }
 
 .order-total{
@@ -282,7 +253,7 @@ left: 8vw;
     font-family: $heading;
     font-size: 16px;
     position: relative;
-    top: 24vh;
+    top: 34vh;
     left: 91vw;
 
     span{
@@ -300,7 +271,7 @@ left: 8vw;
   border: 1px solid $saffron;
   font-size: 12px;
   position: relative;
-  top: 24vh;
+  top: 34vh;
   left: 91vw;
   width: 15vw;
   height: 5vh;
@@ -312,7 +283,7 @@ left: 8vw;
   border: 1px solid black;
   font-size: 12px;
   position: relative;
-  top: 25vh;
+  top: 35vh;
   left: 91vw;
   width: 15vw;
   height: 5vh;
