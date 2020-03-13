@@ -90,7 +90,7 @@ const Cart = () => (
       <button className="viewCart-btn">
         <Link
           style={{ color: "#FDBC2C", textDecoration: "none" }}
-          to={MYACCOUNT_URL}
+          to={ MYACCOUNT_URL }
         >
           UPDATE CART
         </Link>
@@ -99,7 +99,7 @@ const Cart = () => (
       <button className="checkout-btn">
         <Link
           style={{ color: "black", textDecoration: "none" }}
-          to={CHECKOUT_URL}
+          to={ CHECKOUT_URL }
         >
           PROCEED TO CHECKOUT
         </Link>
