@@ -5,7 +5,10 @@ import Footer from '../PageLayout/Footer/Footer';
 
 const PizzaBuilder = () => (
     <div>
-        <Accordion/>
+        <Accordion title='what is your travel preferance?' content=' Xixixi I am some content!'/>
+        <Accordion title='what is your travel preferance?' content=' Xixixi I am some content!'/>
+        <Accordion title='what is your travel preferance?' content=' Xixixi I am some content!'/>
+        
         <Footer/>
     </div>
   
