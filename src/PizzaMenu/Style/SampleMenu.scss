@@ -22,9 +22,14 @@
     position: relative;
     left: 70px;
 
+      p{
+        margin-left: 0vw;
+      }
+
       h2{
         font-size: 30px;
       }
+
       h3{
         font-size: 26px;
         color: $flame;
@@ -38,13 +43,11 @@
         position: relative;
         left: -7px;
         color: white;
-    
         opacity: 1;
         height: 3vw;
         width: 9vw;
        
-        
-        
+      
         .decButton{
           font-size: 1.3em;
           color: white;
@@ -83,7 +86,7 @@
 .addButton{
   position: relative;
   left: 13vw;
-  top: -6.3vh;
+  top: 7.4vh;
   padding: 1vw 4vw;
   background-color: $saffron;
   color: black;

@@ -17,23 +17,25 @@
       font-size: 16px;
       font-family: $body;
       color: $saffron;
+      margin-left: 2vw;
     }
 
     span{
       font-size: 14px;
       font-family: $body;
       color: $flame;
+      margin-left: 2vw;
     }
 
     p{
       font-size: 12px;
       font-family: $body;
       color: white;
+      margin-left: 2vw;
     }
   
     .five-starRate{
-      position: relative;
-      left: 30vw;
+      margin-left: 28vw;
     }
   }
   
@@ -48,7 +50,7 @@
       color: $saffron;
       position: relative;
       top: 0vh;
-      left: 11vw;  
+      left: 10vw;  
       width: 100%;
    }
   
@@ -59,7 +61,11 @@
    .review-form{
     position: relative;
     top: 1vh;
-    left: 25%;
+    left: 23%;
+
+    p{
+      margin-left: 0vw;
+    }
   
     input{
       padding: 7px 20px;
@@ -72,7 +78,12 @@
   .submit-form{
     position: relative;
     top: 2vh;
-    left: 25%;
+    left: 23%;
+
+    p{
+      margin-left: 0vw;
+    }
+
     input{
       padding: 40px 20px;
       color: white;
@@ -84,7 +95,7 @@
   .submit-button{
     position: relative;
     top: 0vh;
-    left: 25%;
+    left: 23%;
     input{
       padding: 6px 22px;
       background-color: $saffron;

@@ -60,7 +60,7 @@ class Question extends React.Component {
               </p>
             ) : null}
           </div>
-          
+
           <div>
             {this.props.isShowing ? (
               <img src={minus} onClick={this.props.showAnswer} alt="+button" />

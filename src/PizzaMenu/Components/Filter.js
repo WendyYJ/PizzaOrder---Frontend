@@ -21,7 +21,10 @@ class Filter extends React.Component {
 
     this.state = {
       pizzas: [],
-      meats: [{ id:'beef',isChecked: false },{ id:'pork',isChecked: false }],
+      meats: [
+        { id: "beef", isChecked: false },
+        { id: "pork", isChecked: false }
+      ],
       sauces: [{ isChecked: false }],
       veggies: [{ isChecked: false }],
       cheeses: [{ isChecked: false }],
@@ -30,7 +33,7 @@ class Filter extends React.Component {
       isFiltering: false,
       pagination: {},
       filter: [],
-      filteredPizza:[]
+      filteredPizza: []
     };
   }
 
@@ -58,60 +61,44 @@ class Filter extends React.Component {
   };
 
   filterPizza = () => {
-    console.log(this.state.meats[1].isChecked)
-    const meatlist = this.state.meats
-    const veggielist = this.state.veggies
-    const saucelist = this.state.sauces
-    const cheeselist = this.state.cheeses
-    const filterlist = []
-    for(var i = 0; i < meatlist.length; i++){
-     
-      if(meatlist[i].isChecked == true){
-     
-        filterlist.push(meatlist[i].id)
-
+    console.log(this.state.meats[1].isChecked);
+    const meatlist = this.state.meats;
+    const veggielist = this.state.veggies;
+    const saucelist = this.state.sauces;
+    const cheeselist = this.state.cheeses;
+    const filterlist = [];
+    for (var i = 0; i < meatlist.length; i++) {
+      if (meatlist[i].isChecked == true) {
+        filterlist.push(meatlist[i].id);
       }
-
     }
-    for(var i = 0; i < saucelist.length; i++){
-     
-      if(saucelist[i].isChecked == true){
-     
-        filterlist.push(saucelist[i].id)
-
+    for (var i = 0; i < saucelist.length; i++) {
+      if (saucelist[i].isChecked == true) {
+        filterlist.push(saucelist[i].id);
       }
-
     }
-    for(var i = 0; i < veggielist.length; i++){
-     
-      if(veggielist[i].isChecked == true){
-     
-        filterlist.push(veggielist[i].id)
-
+    for (var i = 0; i < veggielist.length; i++) {
+      if (veggielist[i].isChecked == true) {
+        filterlist.push(veggielist[i].id);
       }
-
     }
-    for(var i = 0; i < cheeselist.length; i++){
-     
-      if(cheeselist[i].isChecked == true){
-     
-        filterlist.push(cheeselist[i].id)
-
+    for (var i = 0; i < cheeselist.length; i++) {
+      if (cheeselist[i].isChecked == true) {
+        filterlist.push(cheeselist[i].id);
       }
-
     }
     const filterstring = filterlist.toString();
-    console.log(filterstring)
-    const url= `http://pizzadeploy-env.dn37p3zqw3.ap-southeast-2.elasticbeanstalk.com/pizza/filter?ingr=${filterstring}`
-    console.log(url)
+    console.log(filterstring);
+    const url = `http://pizzadeploy-env.dn37p3zqw3.ap-southeast-2.elasticbeanstalk.com/pizza/filter?ingr=${filterstring}`;
+    console.log(url);
     this.setState({ isLoading: true, isFiltering: true, pizzas: [] }, () => {
-      return get(url).then(res => res.data.data)
-        .then(pizzas=> {
+      return get(url)
+        .then(res => res.data.data)
+        .then(pizzas => {
           this.setState({
             pizzas,
             isLoading: false,
-            isFiltering: true,
-   
+            isFiltering: true
           });
         })
         .catch(error => {
@@ -130,7 +117,7 @@ class Filter extends React.Component {
   //         this.setState({
   //           pizzas: pizzaData.pizzas,
   //           isLoading: false,
-   
+
   //         });
   //       })
   //       .catch(error => {
@@ -139,38 +126,35 @@ class Filter extends React.Component {
   //   });
   // }
 
-
-
-  handleOnChange = (event,category) => {
-	  const id = event.target.id
-    console.log(id)
-    const boo1= event.target.checked
-    if(boo1){
-      category.isChecked=true
-    }else{
-      category.isChecked=false
+  handleOnChange = (event, category) => {
+    const id = event.target.id;
+    console.log(id);
+    const boo1 = event.target.checked;
+    if (boo1) {
+      category.isChecked = true;
+    } else {
+      category.isChecked = false;
     }
-    
-    console.log(category.isChecked)
-  
-  }
 
-
+    console.log(category.isChecked);
+  };
 
   loadMeats = () => {
     this.setState({ isLoading: true, meats: [] }, () => {
       fetchMeats()
-        .then(meats=>{
-         const mappedMeats = meats.map(meat=>({
-           id:meat._id,
-           meatName: meat.IngredientName,
-           isChecked:false
+        .then(meats => {
+          const mappedMeats = meats.map(meat => ({
+            id: meat._id,
+            meatName: meat.IngredientName,
+            isChecked: false
           }));
-           
-           this.setState({ 
-			  meats:mappedMeats,
-			  isLoading: false });
-        }).catch(error => {
+
+          this.setState({
+            meats: mappedMeats,
+            isLoading: false
+          });
+        })
+        .catch(error => {
           this.setState({ error, isLoading: false });
         });
     });
@@ -180,14 +164,13 @@ class Filter extends React.Component {
     this.setState({ isLoading: true, sauces: [] }, () => {
       fetchSauces()
         .then(sauces => {
-
-          const mappedSauces = sauces.map(sauce=>({
-            id:sauce._id,
+          const mappedSauces = sauces.map(sauce => ({
+            id: sauce._id,
             sauceName: sauce.IngredientName,
-            isChecked:false
-           }));
-          
-          this.setState({ sauces:mappedSauces, isLoading: false });
+            isChecked: false
+          }));
+
+          this.setState({ sauces: mappedSauces, isLoading: false });
         })
         .catch(error => {
           this.setState({ error, isLoading: false });
@@ -199,15 +182,13 @@ class Filter extends React.Component {
     this.setState({ isLoading: true, veggies: [] }, () => {
       fetchVeggies()
         .then(veggies => {
-
-
-          const mappedVeggies = veggies.map(veggie=>({
-            id:veggie._id,
+          const mappedVeggies = veggies.map(veggie => ({
+            id: veggie._id,
             veggieName: veggie.IngredientName,
-            isChecked:false
-           }));
+            isChecked: false
+          }));
 
-          this.setState({ veggies:mappedVeggies, isLoading: false });
+          this.setState({ veggies: mappedVeggies, isLoading: false });
         })
         .catch(error => {
           this.setState({ error, isLoading: false });
@@ -219,13 +200,11 @@ class Filter extends React.Component {
     this.setState({ isLoading: true, cheeses: [] }, () => {
       fetchCheeses()
         .then(cheeses => {
-
-
-          const mappedCheeses = cheeses.map(cheese=>({
-            id:cheese._id,
+          const mappedCheeses = cheeses.map(cheese => ({
+            id: cheese._id,
             cheeseName: cheese.IngredientName,
-            isChecked:false
-           }));
+            isChecked: false
+          }));
 
           this.setState({ cheeses: mappedCheeses, isLoading: false });
         })
@@ -238,7 +217,6 @@ class Filter extends React.Component {
   handlePageChange = (_, { activePage }) => {
     this.loadPizzas(activePage);
   };
-
 
   render() {
     return (
@@ -257,11 +235,11 @@ class Filter extends React.Component {
               <h1>MEATS</h1>
               {this.state.meats.map(ingredients => (
                 <IngredientCard
-				id = {ingredients.id}
-				isChecked = {ingredients.isChecked}
-				ingredientName = {ingredients.meatName}
-				key = {ingredients.id}
-				onChange = {event => this.handleOnChange(event,ingredients)}
+                  id={ingredients.id}
+                  isChecked={ingredients.isChecked}
+                  ingredientName={ingredients.meatName}
+                  key={ingredients.id}
+                  onChange={event => this.handleOnChange(event, ingredients)}
                 />
               ))}
             </div>
@@ -270,37 +248,37 @@ class Filter extends React.Component {
               <h1>SAUCES</h1>
               {this.state.sauces.map(ingredients => (
                 <IngredientCard
-				id={ingredients.id}
-				isChecked={ingredients.isChecked}
-				ingredientName={ingredients.sauceName}
-				key={ingredients._id}
-        onChange = {event => this.handleOnChange(event,ingredients)}
+                  id={ingredients.id}
+                  isChecked={ingredients.isChecked}
+                  ingredientName={ingredients.sauceName}
+                  key={ingredients._id}
+                  onChange={event => this.handleOnChange(event, ingredients)}
                 />
-              ))} 
+              ))}
             </div>
 
             <div className="checkboxlists">
               <h1>CHEESES</h1>
               {this.state.cheeses.map(ingredients => (
                 <IngredientCard
-				id={ingredients.id}
-				isChecked={ingredients.isChecked}
-				ingredientName={ingredients.cheeseName}
-				key={ingredients._id}
-        onChange = {event => this.handleOnChange(event,ingredients)}
+                  id={ingredients.id}
+                  isChecked={ingredients.isChecked}
+                  ingredientName={ingredients.cheeseName}
+                  key={ingredients._id}
+                  onChange={event => this.handleOnChange(event, ingredients)}
                 />
               ))}
             </div>
 
             <div className="checkboxlists">
               <h1>VEGGIES</h1>
-			  {this.state.veggies.map(ingredients => (
+              {this.state.veggies.map(ingredients => (
                 <IngredientCard
-				id={ingredients.id}
-				isChecked={ingredients.isChecked}
-				ingredientName={ingredients.veggieName}
-				key={ingredients._id}
-        onChange = {event => this.handleOnChange(event,ingredients)}
+                  id={ingredients.id}
+                  isChecked={ingredients.isChecked}
+                  ingredientName={ingredients.veggieName}
+                  key={ingredients._id}
+                  onChange={event => this.handleOnChange(event, ingredients)}
                 />
               ))}
             </div>
@@ -314,8 +292,7 @@ class Filter extends React.Component {
         </section>
         {/* <ErrorMessage error={this.state.error} /> */}
         <Segment basic loading={this.state.isLoading}>
-
-{/* 
+          {/* 
         {this.props.isFiltering ? (
 
           <div className="pizzacontainer">
@@ -331,8 +308,8 @@ class Filter extends React.Component {
             ))}
           </div>
         ):( */}
-           <div className="pizzacontainer">
-          {this.state.pizzas.map(pizza => (
+          <div className="pizzacontainer">
+            {this.state.pizzas.map(pizza => (
               <PizzaCard
                 pizzaDescription={pizza.Description}
                 pizzaImage={pizza.pizzaImage}
@@ -342,8 +319,8 @@ class Filter extends React.Component {
                 to={`${PIZZAMENU_URL}/${pizza._id}`}
               />
             ))}
-          </div>s
-
+          </div>
+          s
         </Segment>
         {this.state.pagination && this.state.pagination.page && (
           <Pagination

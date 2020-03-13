@@ -13,7 +13,7 @@ const SampleMenu = props => (
     </div>
     <div className="sample-info">
       <div className="sample_text">
-        <h2> {props.pizzaname}</h2>
+        <h2>{props.pizzaname}</h2>
         <div className="five-star">
           <StarIcon style={{ color: "#D94F2B", fontSize: "20px" }} />
           <StarIcon style={{ color: "#D94F2B", fontSize: "20px" }} />
@@ -23,11 +23,9 @@ const SampleMenu = props => (
           <p style={{ fontSize: "14px" }}>{props.description}</p>
           <p style={{ fontSize: "14px" }}>AVAILABLE SIZES</p>
           <img src={availableSizes} alt="available-size" id="available-size" />
-    
+
           <div className="clickCount">
-            
-            <Counter 
-            price = {props.price} />
+            <Counter price={props.price} />
           </div>
           <button className="addButton">ADD TO CART</button>
         </div>

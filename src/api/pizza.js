@@ -42,4 +42,3 @@ export const fetchCheeses = () => {
   const url = `${API_INGREDIENT_URL}/CHEESES`;
   return get(url).then(res => res.data.data);
 };
-

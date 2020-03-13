@@ -17,12 +17,14 @@ class ReviewForm extends React.Component {
     const key = event.target.name;
     const value = event.target.value;
     this.setState({ [key]: value });
-  };
+  }
+
 
   handleSubmit = event => {
     event.preventDefault();
     alert("You are submitting " + this.state.review);
   };
+
 
   render() {
     return (
@@ -149,6 +151,7 @@ class ReviewForm extends React.Component {
             <p>YOUR REVIEW</p>
             <input 
                  type="text" 
+                 name="text"
                  value={this.state.review}
                  onChange={this.handleSubmit}    
 				    />
