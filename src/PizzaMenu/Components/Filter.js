@@ -10,6 +10,8 @@ import { fetchVeggies } from "../../api/pizza";
 import { fetchCheeses } from "../../api/pizza";
 import { PIZZAMENU_URL } from "../../routes/URLMap";
 import { Button, Container, Pagination, Segment } from "semantic-ui-react";
+import { get } from "../../api/axios";
+
 import ErrorMessage from "../../asset/errorMessage";
 class Filter extends React.Component {
   constructor(props) {
@@ -25,8 +27,10 @@ class Filter extends React.Component {
       cheeses: [{ isChecked: false }],
       error: null,
       isLoading: false,
+      isFiltering: false,
       pagination: {},
-      filter: []
+      filter: [],
+      filteredPizza:[]
     };
   }
 
@@ -96,9 +100,44 @@ class Filter extends React.Component {
       }
 
     }
-    console.log(filterlist)
-  
+    const filterstring = filterlist.toString();
+    console.log(filterstring)
+    const url= `http://pizzadeploy-env.dn37p3zqw3.ap-southeast-2.elasticbeanstalk.com/pizza/filter?ingr=${filterstring}`
+    console.log(url)
+    this.setState({ isLoading: true, isFiltering: true, pizzas: [] }, () => {
+      return get(url).then(res => res.data.data)
+        .then(pizzas=> {
+          this.setState({
+            pizzas,
+            isLoading: false,
+            isFiltering: true,
+   
+          });
+        })
+        .catch(error => {
+          this.setState({ error, isLoading: false });
+        });
+    });
   };
+
+  // fetchFilteredPizza = (url) =>{
+  //   return get(url).then(res => res.data.data);
+  // }
+  // loadFilteredPizza = (url) =>{
+  //   this.setState({ isLoading: true, pizzas: [] }, () => {
+  //     fetchPizza(url)
+  //       .then(pizzaData => {
+  //         this.setState({
+  //           pizzas: pizzaData.pizzas,
+  //           isLoading: false,
+   
+  //         });
+  //       })
+  //       .catch(error => {
+  //         this.setState({ error, isLoading: false });
+  //       });
+  //   });
+  // }
 
 
 
@@ -115,6 +154,8 @@ class Filter extends React.Component {
     console.log(category.isChecked)
   
   }
+
+
 
   loadMeats = () => {
     this.setState({ isLoading: true, meats: [] }, () => {
@@ -273,8 +314,12 @@ class Filter extends React.Component {
         </section>
         {/* <ErrorMessage error={this.state.error} /> */}
         <Segment basic loading={this.state.isLoading}>
+
+{/* 
+        {this.props.isFiltering ? (
+
           <div className="pizzacontainer">
-            {this.state.pizzas.map(pizza => (
+          {this.state.filteredPizza.map(pizza => (
               <PizzaCard
                 pizzaDescription={pizza.Description}
                 pizzaImage={pizza.pizzaImage}
@@ -285,6 +330,20 @@ class Filter extends React.Component {
               />
             ))}
           </div>
+        ):( */}
+           <div className="pizzacontainer">
+          {this.state.pizzas.map(pizza => (
+              <PizzaCard
+                pizzaDescription={pizza.Description}
+                pizzaImage={pizza.pizzaImage}
+                pizzaName={pizza.PizzaName}
+                pizzaPrice={pizza.UnitPrice}
+                key={pizza._id}
+                to={`${PIZZAMENU_URL}/${pizza._id}`}
+              />
+            ))}
+          </div>s
+
         </Segment>
         {this.state.pagination && this.state.pagination.page && (
           <Pagination

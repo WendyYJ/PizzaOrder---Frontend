@@ -23,10 +23,11 @@ const SampleMenu = props => (
           <p style={{ fontSize: "14px" }}>{props.description}</p>
           <p style={{ fontSize: "14px" }}>AVAILABLE SIZES</p>
           <img src={availableSizes} alt="available-size" id="available-size" />
-          <h3>${props.price}</h3>
+    
           <div className="clickCount">
-            <p style={{ fontSize: "14px", margin: "2px" }}>QUANTITY</p>
-            <Counter />
+            
+            <Counter 
+            price = {props.price} />
           </div>
           <button className="addButton">ADD TO CART</button>
         </div>

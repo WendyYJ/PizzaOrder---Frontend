@@ -6,7 +6,8 @@ class Counter extends Component {
     super(props);
 
     this.state = {
-      count: 0
+
+      count: 1
     };
   }
 
@@ -30,7 +31,10 @@ class Counter extends Component {
 
   render() {
     return (
+      
       <div className="counterButton">
+       <h3>${this.props.price*this.state.count}</h3>
+       <p style={{ fontSize: "14px", margin: "2px" }}>QUANTITY</p>
         <button className="decButton" onClick={this.decrementCount}>
           -
         </button>
