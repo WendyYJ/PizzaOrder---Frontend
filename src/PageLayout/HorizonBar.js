@@ -6,8 +6,8 @@ import "./Style/Horizonbar.scss";
 
 const HorizonBar = () => (
   <div className="horizonbar">
-    <ArrowForwardIcon style={{ fontSize: 14 }} className="arrowicon2" />
-    <ArrowBackIcon style={{ fontSize: 14 }} className="arrowicon2" />
+      <ArrowForwardIcon style={{ fontSize: 14 }} className="arrowicon2" />
+      <ArrowBackIcon style={{ fontSize: 14 }} className="arrowicon2" />
     <p>
       <ChevronLeftIcon style={{ fontSize: 14 }} className="arrowicon3" />
       <span>BACK TO MENU</span>

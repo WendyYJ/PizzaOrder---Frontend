@@ -15,10 +15,10 @@ class ShippingForm extends React.Component {
   }
 
   handleChange = event => {
-    this.setState({ 
-      value: event.target.value
-     });
-  };
+    const key = event.target.name;
+    const value = event.target.value;
+    this.setState({ [key]: value });
+  }
 
   render() {
     return (

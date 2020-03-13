@@ -28,7 +28,7 @@ class BillingForm extends React.Component {
     const key = event.target.name;
     const value = event.target.value;
     this.setState({ [key]: value });
-  };
+  }
 
   render() {
     return (
