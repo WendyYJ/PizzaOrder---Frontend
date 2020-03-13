@@ -9,6 +9,7 @@ import PizzamenuSidebar from "../PageLayout/PizzamenuSidebar/PizzamenuSidebar";
 import Footer from "../PageLayout/Footer/Footer";
 import ShoppingCartSidebar from "../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar";
 
+
 const Homepage = () => (
   <div className="homepage">
       <ShoppingCartSidebar />

@@ -7,7 +7,7 @@ import ShippingForm from "./ShippingForm";
 
 const Cart = () => (
   <div className="cart-container">
-    <div className="cart">
+    <div className="shoppingCart">
       <ul>
         <div className="ordered1">
           <div>
