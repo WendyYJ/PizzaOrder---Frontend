@@ -25,20 +25,21 @@ export const fetchPizzaById = pizzaId => {
 
 export const fetchMeats = () => {
   const url = `${API_INGREDIENT_URL}/MEATS`;
-  return get(url).then(res => res.data.data.ingredients);
+  return get(url).then(res => res.data.data);
 };
 
 export const fetchSauces = () => {
   const url = `${API_INGREDIENT_URL}/SAUCES`;
-  return get(url).then(res => res.data.data.ingredients);
+  return get(url).then(res => res.data.data);
 };
 
 export const fetchVeggies = () => {
   const url = `${API_INGREDIENT_URL}/VEGGIGS`;
-  return get(url).then(res => res.data.data.ingredients);
+  return get(url).then(res => res.data.data);
 };
 
 export const fetchCheeses = () => {
   const url = `${API_INGREDIENT_URL}/CHEESES`;
-  return get(url).then(res => res.data.data.ingredients);
+  return get(url).then(res => res.data.data);
 };
+
