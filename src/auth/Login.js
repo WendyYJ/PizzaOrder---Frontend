@@ -33,7 +33,8 @@ class Login extends Component {
         [key]: value
       },
       () => {
-        if (key == "password") this.checkPassword();
+        if (key == "password")
+         this.checkPassword();
       }
     );
   };
