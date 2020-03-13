@@ -10,7 +10,17 @@ const Checkout = () => (
     <PizzamenuSidebar />
     <ShoppingCartSidebar />
     <LinkHeader headername="Checkout" />
+    <div className="left-container">
+      <div className="horizonbar-left">
+        <p>Returning customer? <span>Click here to login</span></p>
+      </div>
+    </div>
 
+    <div className="right-container">
+      <div className="horizonbar-right">
+        <p>Have a coupon? <span>Click here to enter your code</span></p>
+      </div>
+    </div>
   </div>
 );
 

@@ -1,2 +1,44 @@
 @import '../asset/theme.scss';
 
+
+.horizonbar-left{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5%;
+  border-bottom: 2px solid $flame;
+  width: 50%;
+  position: relative;
+  margin-left: 8%;
+  
+  p{
+    font-size: 14px;
+    font-family: $body;
+    color: white;
+    margin-left: -29vw;
+
+    span{
+      color: $flame;
+    }
+  }
+}
+
+.horizonbar-right{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: -9vh;
+  border-bottom: 2px solid $flame;
+  width: 30%;
+  position: relative;
+  margin-left: 60%;
+
+  p{
+    font-size: 14px;
+    font-family: $body;
+    color: white;
+    margin-left: -6vw;
+
+    span{
+      color: $flame;
+    }
+ }
+}
