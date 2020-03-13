@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { MYACCOUNT_URL, CHECKOUT_URL } from "../routes/URLMap";
 import "./Style/TopHeader.scss";
 import "../ShoppingCart/ShoppingCart.scss";
+import { Link } from "react-router-dom";
+import { MYACCOUNT_URL, CHECKOUT_URL } from "../routes/URLMap";
 import ShippingForm from "./ShippingForm";
 
 const Cart = () => (
