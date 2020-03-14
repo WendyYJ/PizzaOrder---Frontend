@@ -34,7 +34,7 @@
       display: flex;
       flex-direction: column;
 
-      .dot {
+      .dot1 {
         height: 6vw;
         width: 6vw;
         background-color: $flame;
@@ -43,7 +43,7 @@
         position: relative;
         left: -11vw;
 
-        p{
+        .mark1{
           position: relative;
           left: -3vw;
           top: 22%;
@@ -66,7 +66,7 @@
   
         } 
 
-        h4{
+        .order-title{
             position: relative;
             top: -6vw;
             left: -4vw;
@@ -74,7 +74,7 @@
             width: 100%;
         }
 
-        p{
+        .size{
           color: white;
           font-size: 10px;
           font-family: $body;
@@ -87,14 +87,12 @@
           color: $flame;
         }
     
-        .total_price{
+        .total_price1{
           display: flex;
           flex-direction: row;
-          position: relative;
-          top: -12vh;
           width: 100%;
 
-          span{
+          .qty1{
             padding: 5px 11px;
             text-align: center;
             color: white;
@@ -102,13 +100,14 @@
             border: 1px solid white;
             background-color: transparent;
             position: relative;
-            left: 20vw;
-            top: 2vh;
+            left: 16vw;
+            top: -24vh;
             width: 100%;
         }
           
-          .price{
+          .price1{
             position: relative;
+            top: -27vh;
             left: 10vw;
             font-family: $body;
             font-size: 18px;
@@ -116,9 +115,10 @@
             width: 100%;
           }
 
-          .totalprice{
+          .totalprice1{
             position: relative;
             left: 23vw;
+            top: -26.6vh;
             font-family: $body;
             font-size: 18px;
             color: $flame;

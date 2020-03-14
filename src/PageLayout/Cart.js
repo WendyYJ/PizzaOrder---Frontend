@@ -11,61 +11,61 @@ const Cart = () => (
       <ul>
         <div className="ordered1">
           <div>
-            <span className="dot">
-              <p>x</p>
+            <span className="dot1">
+              <p className="mark1">x</p>
             </span>
           </div>
           <div className="text">
-            <h4>Moorish Lamb</h4>
-            <p>SIZE: Large</p>
+            <h4 className="order-title">Moorish Lamb</h4>
+            <p className="size">SIZE: Large</p>
             <div className="horizonbar-Four" />
 
-            <div className="total_price">
-              <p className="price">$ 19.00</p>
+            <div className="total_price1">
+              <p className="price1">$ 19.00</p>
               <p>
-                <span> 1 </span>
+                <span className="qty1"> 1 </span>
               </p>
-              <p className="totalprice">$19.00</p>
+              <p className="totalprice1">$19.00</p>
             </div>
           </div>
         </div>
 
         <div className="ordered1">
           <div>
-            <span className="dot">
-              <p>x</p>
+            <span className="dot1">
+              <p className="mark1">x</p>
             </span>
           </div>
           <div className="text">
-            <h4>Vegetarian Supreme</h4>
-            <p>SIZE: Jumbo</p>
+            <h4 className="order-title">Vegetarian Supreme</h4>
+            <p className="size">SIZE: Jumbo</p>
 
-            <div className="total_price">
-              <p className="price">$ 34.00</p>
+            <div className="total_price1">
+              <p className="price1">$ 34.00</p>
               <p>
-                <span> 1 </span>
+                <span className="qty1"> 1 </span>
               </p>
-              <p className="totalprice">$34.00</p>
+              <p className="totalprice1">$34.00</p>
             </div>
           </div>
         </div>
 
         <div className="ordered1">
           <div>
-            <span className="dot">
-              <p>x</p>
+            <span className="dot1">
+              <p className="mark1">x</p>
             </span>
           </div>
           <div className="text">
-            <h4>Spiced Pumpkin</h4>
-            <p>SIZE: Small</p>
+            <h4 className="order-title">Spiced Pumpkin</h4>
+            <p className="size">SIZE: Small</p>
 
-            <div className="total_price">
-              <p className="price">$ 26.00</p>
+            <div className="total_price1">
+              <p className="price1">$ 26.00</p>
               <p>
-                <span> 1 </span>
+                <span className="qty1"> 1 </span>
               </p>
-              <p className="totalprice">$26.00</p>
+              <p className="totalprice1">$26.00</p>
             </div>
           </div>
         </div>
