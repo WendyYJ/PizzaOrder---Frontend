@@ -24,17 +24,17 @@ const CartSidebar = props => {
           <div className="ordered-list">
             <div>
               <span className="ordered-pizza">
-                <p>x</p>
+                <p className="mark">x</p>
               </span>
             </div>
             <div className="cart-text">
               <h4>Moorish Lamb</h4>
-              <p>SIZE: Large</p>
+              <p className="size">SIZE: Large</p>
               <div className="horizonbar-Four" />
 
               <div className="total_price">
                 <p>
-                  <span> 1 x </span>
+                  <span className="qty"> 1 x </span>
                 </p>
                 <p className="totalprice">$19.00</p>
               </div>
@@ -44,16 +44,16 @@ const CartSidebar = props => {
           <div className="ordered-list2">
             <div>
               <span className="ordered-pizza">
-                <p>x</p>
+                <p className="mark">x</p>
               </span>
             </div>
             <div className="cart-text">
               <h4>Vegetarian Supreme</h4>
-              <p>SIZE: Jumbo</p>
+              <p className="size">SIZE: Jumbo</p>
 
               <div className="total_price">
                 <p>
-                  <span> 1 x </span>
+                  <span  className="qty"> 1 x </span>
                 </p>
                 <p className="totalprice">$34.00</p>
               </div>
@@ -63,16 +63,16 @@ const CartSidebar = props => {
           <div className="ordered-list3">
             <div>
               <span className="ordered-pizza">
-                <p>x</p>
+                <p className="mark">x</p>
               </span>
             </div>
             <div className="cart-text">
               <h4>Spiced Pumpkin</h4>
-              <p>SIZE: Small</p>
+              <p className="size">SIZE: Small</p>
 
               <div className="total_price">
                 <p>
-                  <span> 1 x </span>
+                  <span  className="qty"> 1 x </span>
                 </p>
                 <p className="totalprice">$26.00</p>
               </div>

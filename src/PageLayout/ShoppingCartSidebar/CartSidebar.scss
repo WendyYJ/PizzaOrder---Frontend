@@ -89,9 +89,9 @@
         right: 17vw;
       }
 
-      p{
+      .mark{
         position: relative;
-        right: 10vw;
+        right: 2vw;
         top: 17%;
       }
     }
@@ -107,28 +107,28 @@
         width: 100%;
     }
 
-    p{
+    .size{
       color: white;
       font-size: 10px;
       font-family: $body;
       position: relative;
       top: -5vw;
-      left: -4vw;
+      left: 4vw;
       width: 100%;
     }
 
-    span{
+    .qty{
       color: $flame;
       position: relative;
-      top: -1vw;
-      left: 0vw;
+      top: -6.2vw;
+      left: 3vw;
     }
 
     .totalprice{
       color: white;
       position: relative;
       top: -8.5vw;
-      left: -2vw;
+      left: 4vw;
     }
   }
   }
@@ -149,10 +149,10 @@
     right: 17vw;
   }
 
-  p{
+  .mark{
     position: relative;
-    right: 10vw;
-    top: 22%;
+    right: 2vw;
+    top: 17%;
   }
 }
 
@@ -167,50 +167,50 @@
     width: 100%;
 }
 
-p{
-  color: white;
-  font-size: 10px;
-  font-family: $body;
-  position: relative;
-  top: -5vw;
-  left: -4vw;
-  width: 100%;
-}
+  .size{
+    color: white;
+    font-size: 10px;
+    font-family: $body;
+    position: relative;
+    top: -5vw;
+    left: 4vw;
+    width: 100%;
+  }
 
-span{
-  color: $flame;
-  position: relative;
-  top: -1vw;
-  left: 0vw;
-}
+  .qty{
+    color: $flame;
+    position: relative;
+    top: -6.2vw;
+    left: 3vw;
+  }
 
-.totalprice{
-  color: white;
-  position: relative;
-  top: -8.5vw;
-  left: -2vw;
-}
-}
+  .totalprice{
+    color: white;
+    position: relative;
+    top: -8.5vw;
+    left: 4vw;
+  }
+  }
 
-.ordered-list3{
-  position: relative;
-  top: -34vh;
+  .ordered-list3{
+    position: relative;
+    top: -34vh;
 
-.ordered-pizza{
-  height: 4vw;
-  width: 4vw;
-  background-color: $flame;
-  border-radius: 50%;
-  display: inline-block;
-  position: fixed;
-  right: 17vw;
-}
+  .ordered-pizza{
+    height: 4vw;
+    width: 4vw;
+    background-color: $flame;
+    border-radius: 50%;
+    display: inline-block;
+    position: fixed;
+    right: 17vw;
+  }
 
-p{
-  position: relative;
-  right: 10vw;
-  top: 22%;
-}
+  .mark{
+    position: relative;
+    right: 2vw;
+    top: 17%;
+  }
 }
 
 .cart-text{
@@ -224,28 +224,28 @@ width: 100%;
       width: 100%;
     }
 
-    p{
-    color: white;
-    font-size: 10px;
-    font-family: $body;
-    position: relative;
-    top: -5vw;
-    left: -4vw;
-    width: 100%;
+    .size{
+      color: white;
+      font-size: 10px;
+      font-family: $body;
+      position: relative;
+      top: -5vw;
+      left: 4vw;
+      width: 100%;
     }
 
-    span{
-    color: $flame;
-    position: relative;
-    top: -1vw;
-    left: 0vw;
+    .qty{
+      color: $flame;
+      position: relative;
+      top: -6.2vw;
+      left: 3vw;
     }
 
     .totalprice{
-    color: white;
-    position: relative;
-    top: -8.5vw;
-    left: -2vw;
+      color: white;
+      position: relative;
+      top: -8.5vw;
+      left: 4vw;
     }
 }
 
@@ -256,7 +256,7 @@ width: 100%;
     font-family: $heading;
     font-size: 16px;
     position: relative;
-    top: 34vh;
+    top: 30vh;
     left: 91vw;
 
     span{
@@ -274,7 +274,7 @@ width: 100%;
   border: 1px solid $saffron;
   font-size: 12px;
   position: relative;
-  top: 34vh;
+  top: 30vh;
   left: 91vw;
   width: 15vw;
   height: 5vh;
@@ -286,7 +286,7 @@ width: 100%;
   border: 1px solid black;
   font-size: 12px;
   position: relative;
-  top: 35vh;
+  top: 31vh;
   left: 91vw;
   width: 15vw;
   height: 5vh;
