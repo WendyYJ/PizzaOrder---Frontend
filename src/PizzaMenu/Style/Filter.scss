@@ -136,3 +136,43 @@ Image{
 .pizza-card{
     width:30%;
 }
+
+.pizzanamecontainer{
+    height:2.5em;
+
+}
+
+.pizzadescriptioncontainer{
+    height: 5em;
+}
+
+@media only screen and (max-width: 1000px) {
+    .pizzanamecontainer{
+        height:4em;
+    
+    }
+    
+    .pizzadescriptioncontainer{
+        height: 9em;
+    }
+  }
+
+
+  @media only screen and (max-width: 500px) {
+    .pizzanamecontainer{
+        height:4em;
+    
+    }
+    
+    .pizzadescriptioncontainer{
+        height: 14em;
+    }
+  }
+
+
+// ingedient card
+
+
+.ingredientcardcontainer{
+    display: flex;
+}

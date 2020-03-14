@@ -11,10 +11,18 @@ const PizzaCard = props => (
     </div>
 
     <div className="contentcontainer">
-      <h2>{props.pizzaName}</h2>
 
+    <div className="pizzanamecontainer">
+
+      <h2>{props.pizzaName}</h2>
+      </div>
+
+      <div className="pizzadescriptioncontainer">
       <p>{props.pizzaDescription}</p>
+      </div>
+      <div className="pizzapricecontainer">
       <h3> ${props.pizzaPrice}</h3>
+      </div>
     </div>
   </Card>
 );
