@@ -16,12 +16,15 @@ import {
 const MenuSidebar = props => {
   const [sidebarClass, setSidebarClass] = useState(props.sidebar);
 
+  
   const closeHandler = event => {
     event.preventDefault();
     setSidebarClass("sidebar close");
+    /*
     setTimeout(() => {
       props.close();
     }, 1000);
+    */
   };
 
   return (

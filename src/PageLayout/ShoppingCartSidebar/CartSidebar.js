@@ -9,9 +9,11 @@ const CartSidebar = props => {
   const closeHandler = event => {
     event.preventDefault();
     setSidebarClass("sidebar close");
+    /*
     setTimeout(() => {
       props.close();
     }, 1000);
+    */
   };
 
   return (
