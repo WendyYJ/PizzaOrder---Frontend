@@ -28,7 +28,7 @@ const CartSidebar = props => {
               </span>
             </div>
             <div className="cart-text">
-              <h4>Moorish Lamb</h4>
+              <h4 className="product-name">Moorish Lamb</h4>
               <p className="size">SIZE: Large</p>
               <div className="horizonbar-Four" />
 
@@ -48,7 +48,7 @@ const CartSidebar = props => {
               </span>
             </div>
             <div className="cart-text">
-              <h4>Vegetarian Supreme</h4>
+              <h4 className="product-name">Vegetarian Supreme</h4>
               <p className="size">SIZE: Jumbo</p>
 
               <div className="total_price">
@@ -67,7 +67,7 @@ const CartSidebar = props => {
               </span>
             </div>
             <div className="cart-text">
-              <h4>Spiced Pumpkin</h4>
+              <h4 className="product-name">Spiced Pumpkin</h4>
               <p className="size">SIZE: Small</p>
 
               <div className="total_price">
