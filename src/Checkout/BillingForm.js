@@ -8,17 +8,17 @@ class BillingForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      Value: "United Kingdom (UK)",
-      FirstName: "",
-      LastName: "",
-      CompanyName: "",
-      StreetAddress: "",
-      Apartment: "",
-      City: "",
-      Country: "",
-      Postcode: "",
-      Email: "",
-      Phone: ""
+      value: "United Kingdom (UK)",
+      firstName: "",
+      lastName: "",
+      companyName: "",
+      streetAddress: "",
+      apartment: "",
+      city: "",
+      country: "",
+      postcode: "",
+      email: "",
+      phone: ""
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -46,54 +46,60 @@ class BillingForm extends React.Component {
         <p>FIRST NAME *</p>
       <form className="first-name">
           <input
-              type="text"
+              type="firstName"
+              name="firstName"
               placeholder="  First Name"
-              value={this.state.FirstName}
+              value={this.state.firstName}
               onChange={this.handleChange}
             />
       </form>
        <p className="right"></p>
       <form className="last-name">
           <input
-              type="text"
+              type="lastName"
+              name="lastName"
               placeholder="  Last Name"
-              value={this.state.LastName}
+              value={this.state.lastName}
               onChange={this.handleChange}
             />
       </form>
        <p>COMPANY NAME *</p>
       <form className="company-name">
           <input
-              type="text"
+              type="companyName"
+              name="companyName"
               placeholder="  Company Name"
-              value={this.state.CompanyName}
+              value={this.state.companyName}
               onChange={this.handleChange}
             />
       </form>
        <p>ADDRESS *</p>
       <form className="address">
           <input
-              type="text"
+              type="streetAddress"
+              name="streetAddress"
               placeholder="  Street address"
-              value={this.state.StreetAddress}
+              value={this.state.streetAddress}
               onChange={this.handleChange}
             />
       </form>
 
       <form className="address2">
           <input
-              type="text"
+              type="apartment"
+              name="apartment"
               placeholder="  Apartment, suite, unit etc. (optional)"
-              value={this.state.Apartment}
+              value={this.state.apartment}
               onChange={this.handleChange}
             />
       </form>
       <p>TOWN/ CITY *</p>
       <form className="city">
           <input
-              type="text"
+              type="city"
+              name="city"
               placeholder="  Town/ City"
-              value={this.state.City}
+              value={this.state.city}
               onChange={this.handleChange}
             />
       </form>
@@ -101,40 +107,43 @@ class BillingForm extends React.Component {
       <p>STATE/ COUNTRY*</p>
       <form className="country">
           <input
-              type="text"
+              type="country"
+              name="country"
               placeholder="  State/ Country"
-              value={this.state.Country}
+              value={this.state.country}
               onChange={this.handleChange}
             />
       </form>
 
       <form className="postcode">
           <input
-              type="text"
+              type="postcode"
+              name="postcode"
               placeholder="  Postcode/ Zip"
-              value={this.state.Postcode}
+              value={this.state.postcode}
               onChange={this.handleChange}
             />
       </form>
 
       <form className="email">
           <input
-              type="text"
+              type="email"
+              name="email"
               placeholder="  Email Address"
-              value={this.state.Email}
+              value={this.state.email}
               onChange={this.handleChange}
             />
       </form>
 
       <form className="phone">
           <input
-              type="text"
+              type="phone"
+              name="phone"
               placeholder="  Phone"
-              value={this.state.Phone}
+              value={this.state.phone}
               onChange={this.handleChange}
             />
       </form>
-
       </div>
     );
   }

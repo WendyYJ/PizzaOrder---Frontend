@@ -5,10 +5,10 @@ class ShippingForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      Value: "United Kingdom (UK)",
-      Country: "",
-      Postcode: "",
-      Code: ""
+      value: "United Kingdom (UK)",
+      country: "",
+      postcode: "",
+      code: ""
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -37,18 +37,20 @@ class ShippingForm extends React.Component {
 
           <form>
             <input
-              type="text"
+              type="country"
+              name="country"
               placeholder="  State/Country"
-              value={this.state.Country}
+              value={this.state.country}
               onChange={this.handleChange}
             />
           </form><br></br>
 
           <form noValidate autoComplete="off">
             <input
-              type="text"
+              type="postcode"
+              name="postcode"
               placeholder="  Postcode/ZIP"
-              value={this.state.Postcode}
+              value={this.state.postcode}
               onChange={this.handleChange}
             />
 
@@ -60,9 +62,10 @@ class ShippingForm extends React.Component {
       <h3 className="promotion-title">Promotion Code</h3>
         <form className="code-form" noValidate autoComplete="off">
           <input
-            type="text"
+            type="code"
+            name="code"
             placeholder="  Enter your promotional code"
-            value={this.state.Code}
+            value={this.state.code}
             onChange={this.handleChange}
           />
         <button className="applyButton">APPLY</button>

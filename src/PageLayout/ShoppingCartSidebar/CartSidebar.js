@@ -9,9 +9,11 @@ const CartSidebar = props => {
   const closeHandler = event => {
     event.preventDefault();
     setSidebarClass("sidebar close");
+    /*
     setTimeout(() => {
       props.close();
     }, 1000);
+    */
   };
 
   return (
@@ -29,7 +31,6 @@ const CartSidebar = props => {
             </div>
             <div className="cart-text">
               <h4 className="product-name">Moorish Lamb</h4>
-              <p className="size">SIZE: Large</p>
               <div className="horizonbar-Four" />
 
               <div className="total_price">
@@ -49,7 +50,6 @@ const CartSidebar = props => {
             </div>
             <div className="cart-text">
               <h4 className="product-name">Vegetarian Supreme</h4>
-              <p className="size">SIZE: Jumbo</p>
 
               <div className="total_price">
                 <p>
@@ -68,7 +68,6 @@ const CartSidebar = props => {
             </div>
             <div className="cart-text">
               <h4 className="product-name">Spiced Pumpkin</h4>
-              <p className="size">SIZE: Small</p>
 
               <div className="total_price">
                 <p>

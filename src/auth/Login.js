@@ -5,7 +5,6 @@ import { NavLink, Link } from "react-router-dom";
 import { Button, Input, Form, Message } from "semantic-ui-react";
 import { login } from "../api/auth";
 import { setToken } from "../utils/auth";
-import { Grid } from "@material-ui/core";
 import ShoppingCartSidebar from "../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import { SHOPPINGCART_URL, MYACCOUNT_URL } from "../routes/URLMap";
@@ -17,7 +16,6 @@ class Login extends Component {
     this.state = {
       email: "",
       password: "",
-      password_confirmed: "",
       isLoading: false,
       password_invalid: false,
       error: null
@@ -27,17 +25,9 @@ class Login extends Component {
    handleChange = event => {
     const key = event.target.name;
     const value = event.target.value;
+    this.setState({ [key]: value });
+   };
 
-    this.setState(
-      {
-        [key]: value
-      },
-      () => {
-        if (key == "password")
-         this.checkPassword();
-      }
-    );
-  };
 
   updateUserInput = () => {
     const userInput = {
@@ -62,15 +52,6 @@ class Login extends Component {
     });
   };
 
-  // check password validation
-  checkPassword() {
-    if (this.state.password != this.state.password_confirmed) {
-      this.setState({ password_invalid: true });
-      Message("Your password is invalid");
-    } else {
-      this.setState({ password_invalid: false });
-    }
-  }
 
   render() {
     return (
@@ -118,7 +99,6 @@ class Login extends Component {
             <p>Not registered yet?</p>
           </NavLink>
         </Form>
-        <Grid container direction="row" justify="center" alignItems="center">
           <div className="socialLogin-container">
             <Link>
               <FacebookIcon
@@ -129,7 +109,6 @@ class Login extends Component {
             <Link id="google"></Link>
             <Link id="paypal"></Link>
           </div>
-        </Grid>
       </div>
     );
   }

@@ -1,23 +1,20 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import MenuSidebar from "./MenuSidebar";
 import MenuToggle from "./MenuToggle";
-import Header from "../Header/Header";
 
-const PizzamenuSidebar = ({ children }) => {
+
+  const PizzamenuSidebar = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const openHandler = () => {
-    if (!sidebarOpen) {
-      setSidebarOpen(true);
-    } else {
-      setSidebarOpen(false);
-    }
+    setSidebarOpen(sidebarOpen => !sidebarOpen)
   };
 
   const sidebarCloseHandler = () => {
     setSidebarOpen(false);
   };
 
+  
   let menuSidebar;
   if (sidebarOpen) {
     menuSidebar = (
@@ -25,8 +22,10 @@ const PizzamenuSidebar = ({ children }) => {
     );
   }
 
+
   return (
     <div className="menu-sidebar">
+      {sidebarOpen && <MenuSidebar close={sidebarCloseHandler} menuSidebar="menuSidebar" />}
       {menuSidebar}
       <MenuToggle click={openHandler} />
       <p>{children}</p>

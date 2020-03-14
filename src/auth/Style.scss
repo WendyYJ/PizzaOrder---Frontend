@@ -1,6 +1,6 @@
 @import '../asset/theme.scss';
 
-
+// login
 .login-form {
   margin-top: 5rem;
   margin-left: 21rem;
@@ -94,9 +94,16 @@
   justify-content: space-evenly;
 }
 
+
+// my account
+.myAccount-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: -2.5vh;
+
 .register-form {
   margin-top: 5rem;
-  margin-left: -5rem;
+  margin-left: 10rem;
   padding: 10vw 10vw;
   padding-left: 7vw;
   padding-right: 14vw;
@@ -169,8 +176,8 @@
 
 .select-type{
   position: relative;
-  left: -22vw;
-  top: 3vh;
+  left: 47.5vw;
+  top: -40vh;
   font-weight: $body;
   color: white;
   font-size: 30px;
@@ -178,7 +185,7 @@
 
 .socialRegister-container{
   margin-top: -27.5rem;
-  margin-left: 23rem;
+  margin-left: 40rem;
   padding: 6vw 10vw;
   padding-left: 8vw;
   padding-right: 14vw;
@@ -208,7 +215,7 @@
     top: -10vh;
     margin-left: 2vw;
 
-    Button{
+    .social-link{
       width: 18vw;
       height: 6vh;
       margin-top: 3vh;
@@ -242,3 +249,4 @@
     }
     } 
   }
+}

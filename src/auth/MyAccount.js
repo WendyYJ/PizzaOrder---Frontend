@@ -6,7 +6,6 @@ import { Button, Form, Input, Message } from "semantic-ui-react";
 import { register } from "../api/auth";
 import { setToken } from "../utils/auth";
 import SocialRegister from "./SocialRegister";
-import { Grid } from "@material-ui/core";
 import ShoppingCartSidebar from "../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar";
 import { LOGIN_URL, MYACCOUNT_URL } from "../routes/URLMap";
 
@@ -68,7 +67,6 @@ class MyAccount extends Component {
   checkPassword() {
     if (this.state.password != this.state.password_confirmation) {
       this.setState({ password_invalid: true });
-      Message("Your password is invalid");
     } else {
       this.setState({ password_invalid: false });
     }
@@ -77,16 +75,10 @@ class MyAccount extends Component {
   render() {
     return (
       <div className="myAccount-container">
+         {this.state.password_invalid && <Message>Your password is invalid</Message>}
         <PizzamenuSidebar />
         <ShoppingCartSidebar />
-        <Grid
-          container
-          direction="row"
-          justify="center"
-          alignItems="center"
-          spacing={3}
-        >
-          <Grid item xs={6}>
+        <div className="form-container">
             <Form
               className="register-form"
               error={!!this.state.error}
@@ -149,15 +141,13 @@ class MyAccount extends Component {
                 <p>Already registered ?</p>
               </NavLink>
             </Form>
-          </Grid>
-
+           </div>
           <span>
             <p className="select-type">OR</p>
           </span>
-          <Grid item xs={6}>
+          <div className="social-container">
             <SocialRegister />
-          </Grid>
-        </Grid>
+          </div>
       </div>
     );
   }
