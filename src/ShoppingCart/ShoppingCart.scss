@@ -19,7 +19,7 @@
   .shoppingCart{
     position: relative;
     top: 2vw;
-    margin-left: 0vw;
+    margin-left: 10vw;
     font-family: $body;
 
     ul{
@@ -41,11 +41,11 @@
         border-radius: 50%;
         display: inline-block;
         position: relative;
-        left: -3vw;
+        left: -11vw;
 
         p{
           position: relative;
-          left: -10vw;
+          left: -3vw;
           top: 22%;
         }
       }
@@ -69,7 +69,7 @@
         h4{
             position: relative;
             top: -6vw;
-            left: 6vw;
+            left: -4vw;
             color: $saffron;
             width: 100%;
         }
@@ -80,7 +80,7 @@
           font-family: $body;
           position: relative;
           top: -7.5vw;
-          left: -2.5vw;
+          left: -3.5vw;
         }
     
         span{
@@ -102,14 +102,14 @@
             border: 1px solid white;
             background-color: transparent;
             position: relative;
-            left: 12vw;
+            left: 20vw;
             top: 2vh;
             width: 100%;
         }
           
           .price{
             position: relative;
-            left: 12vw;
+            left: 10vw;
             font-family: $body;
             font-size: 18px;
             color: $flame;
@@ -118,7 +118,7 @@
 
           .totalprice{
             position: relative;
-            left: 8vw;
+            left: 23vw;
             font-family: $body;
             font-size: 18px;
             color: $flame;
@@ -133,7 +133,7 @@
   .total{
     position: relative;
     top: -10vh;
-    left: 12vw;
+    left: 26vw;
     font-family: $body;
     padding: 25px 22px;
     background-color: rgba(0, 0, 0, 0.205);
@@ -162,7 +162,7 @@
     p{
       position: relative;
       top: -3vh;
-      left: -8vw;
+      left: 0vw;
       width: 100%;
     }
 
