@@ -1,7 +1,9 @@
 import React, { useState, useRef } from "react";
 import Chevron from "./Chevron";
 
+
 import "./Accordion.scss";
+
 
 function Accordion(props) {
   const [setActive, setActiveState] = useState("");
@@ -9,7 +11,7 @@ function Accordion(props) {
   const [setRotate, setRotateState] = useState("accordion__icon");
 
   const content = useRef(null);
-
+ 
   function toggleAccordion() {
     setActiveState(setActive === "" ? "active" : "");
     setHeightState(
@@ -23,8 +25,9 @@ function Accordion(props) {
   return (
     <div className="accordion__section">
       <button className={`accordion ${setActive}`} onClick={toggleAccordion}>
-        <p className="accordion__title">{props.title}</p>
-        <Chevron className={`${setRotate}`} width={10} fill={"#777"} />
+      
+        <p className="accordion__title"><span className='accordion__li'>{props.id}. </span>{props.title}</p>
+        <Chevron className={`${setRotate}`} width={15} fill={"#FFFFFF"} />
       </button>
       <div
         ref={content}

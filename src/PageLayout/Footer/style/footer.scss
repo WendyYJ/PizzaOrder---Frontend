@@ -71,6 +71,7 @@
        
         &__break{
             @include chalk-heading;
+            font-size: $sub-heading-size;
             text-align: center;
             color:$flame;
         }

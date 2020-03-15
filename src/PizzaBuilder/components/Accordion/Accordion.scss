@@ -1,0 +1,58 @@
+@import '../../../asset/theme.scss';
+@import '../../../asset/mixin.scss';
+
+.accordion:hover,
+.active {
+  background-color: $smokegrey;
+}
+
+.rotate {
+    transform: rotate(90deg);
+  }
+
+.accordion{
+background-color: $smokegrey;
+color: $white;
+cursor: pointer;
+padding: 18px;
+display: flex;
+align-items: center;
+border: none;
+outline: none;
+transition: background-color 0.6s ease;
+border-bottom: 1px $black solid;
+
+&__section{
+    display: flex;
+  flex-direction: column;
+}
+
+&__title{
+    @include heading;
+    color:$saffron;
+  
+  text-align: left;
+}
+
+&__li{
+  @include chalk-heading;
+  color:$flame;
+}
+
+&__icon{
+margin-left: auto;
+transition: transform 0.6s ease;
+}
+&__content{
+    color: $white;
+  overflow: auto;
+  transition: max-height 0.6s ease;
+}
+&__text{
+    font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 18px;
+}
+
+}
