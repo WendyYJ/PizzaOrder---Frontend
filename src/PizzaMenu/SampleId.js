@@ -12,46 +12,54 @@ import { fetchPizzaById } from "../api/pizza";
 import PizzamenuSidebar from "../PageLayout/PizzamenuSidebar/PizzamenuSidebar";
 import ShoppingCartSidebar from "../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar";
 import Footer from "../PageLayout/Footer/Footer";
+import {connect} from  'react-redux';
+import {loadPizza as loadPizzaAction} from '../redux/actions/pizzaActions';
 
 class SampleId extends React.Component {
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
 
-    this.state = {
-      pizza: {},
-      error: null,
-      isLoading: false
-    };
-  }
+  //   this.state = {
+  //     pizza: {},
+  //     error: null,
+  //     isLoading: false
+  //   };
+  // }
 
-  componentDidMount() {
+  
+  async componentDidMount(){
     const pizzaId = this.props.match.params.SampleId;
-    this.loadPizza(pizzaId);
+    this.props.loadPizza(pizzaId);
+  
+  
   }
 
-  loadPizza = pizzaId =>
-    this.setState({ isLoading: true }, () => {
-      fetchPizzaById(pizzaId)
-        .then(pizza => this.setState({ pizza, isLoading: false }))
-        .catch(error => this.setState({ error }));
-    });
+  // loadPizza = pizzaId =>
+  //   this.setState({ isLoading: true }, () => {
+  //     fetchPizzaById(pizzaId)
+  //       .then(pizza => this.setState({ pizza, isLoading: false }))
+  //       .catch(error => this.setState({ error }));
+  //   });
 
+   
   render() {
     return (
       <div className="MenuMain-container">
+       
         <PizzamenuSidebar />
         <ShoppingCartSidebar />
 
         <ThirdHeader
           headername={"Pizza Menu"}
-          headername2={this.state.pizza.PizzaName}
+          headername2={this.props.PizzaName}
         />
 
         <HorizonBar className="horizonbar" />
         <SampleMenu
-          pizzaname={this.state.pizza.PizzaName}
-          description={this.state.pizza.Description}
-          price={this.state.pizza.UnitPrice}
+          pizzaname={this.props.PizzaName}
+          description={this.props.PizzaDesc}
+          price={this.props.PizzaPrice}
+        
         />
 
         <div className="horizonbar-Two">
@@ -72,4 +80,18 @@ class SampleId extends React.Component {
 
 
 
-export default SampleId;
+const mapDispatchToProps= dispatch => ({
+  loadPizza:id => dispatch(loadPizzaAction(id)),
+});
+
+const mapStateToProps = state => {
+  return{
+    
+      errorMessage:state.pizza.errorMessage,
+      isLoading:state.pizza.isLoading,
+
+  };
+};
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(SampleId);
