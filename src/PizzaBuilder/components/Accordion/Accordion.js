@@ -36,8 +36,8 @@ function Accordion(props) {
       >
         <div
           className="accordion__text"
-          dangerouslySetInnerHTML={{ __html: props.content }}
-        />
+        > {props.content}
+          </div>
       </div>
     </div>
   );
