@@ -1,19 +1,7 @@
-<<<<<<< HEAD
-import React, { Component } from 'react';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import '../Style/LinkHeader.scss';
-
-||||||| 3e92a9f
-import React, { Component } from "react";
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import "../Style/LinkHeader.scss";
-
-=======
 import React, { Component } from "react";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import "../Style/LinkHeader.scss";
 import {connect} from  'react-redux';
->>>>>>> 688506bfb4454bae7802f8091bca244dcd6b6ea7
 class ThirdHeader extends Component {
   render() {
     return (
