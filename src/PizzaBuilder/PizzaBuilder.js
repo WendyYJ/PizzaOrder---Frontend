@@ -12,7 +12,7 @@ class PizzaBuilder extends React.Component{
     
         {id: 3, title: 'Add Cheese', content:'haha let\'s see!'},
 
-        {id: 4, title: 'Choose Your Toppings', content:'haha let\'s see!'},
+        {id: 4, title: 'Choose Your Toppings', content:'This is another one'},
         
       ]
     
