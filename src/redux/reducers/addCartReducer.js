@@ -1,4 +1,4 @@
-import {ADD_CART} from "../actions/addCartActions"
+import { ADD_CART } from "../actions/addCartActions"
 
 
 const initialState={
