@@ -1,49 +1,52 @@
 import React, { Component } from "react";
 import ".././PizzaMenu/Style/SampleMenu.scss";
+import {countUp} from '../redux/actions/counterAction'
+import {countDown} from '../redux/actions/counterAction'
+import {connect} from  'react-redux';
 
-class Counter extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      count: 1
-    };
-  }
-
-  incrementCount = () => {
-    this.setState(prevState => {
-      return {
-        count: prevState.count + 1
-      };
-    });
-  };
-
-  decrementCount = () => {
-    if (this.state.count > 0) {
-      this.setState(prevState => {
-        return {
-          count: prevState.count - 1
-        };
-      });
-    }
-  };
+function Counter (props) {
 
   
-  render() {
+
+    
     return (
       <div className="counterButton">
-        <h3>${this.props.price * this.state.count}</h3>
+        <h3>${props.pizzaPrice * props.count}</h3>
         <p style={{ fontSize: "14px", margin: "2px" }}>QUANTITY</p>
-        <button className="decButton" onClick={this.decrementCount}>
+        <button className="decButton" onClick={props.countDown}>
           -
         </button>
-        <span className="count">{this.state.count}</span>
-        <button className="incButton" onClick={this.incrementCount}>
+        <span className="count">{props.count}</span>
+        <button className="incButton" onClick={props.countUp}>
           +
         </button>
+
+        
       </div>
     );
   }
-}
 
-export default Counter;
+
+const mapStateToProps=state=>{
+  return{
+      pizzaPrice:state.pizza.pizzaPrice,
+      count: state.counter.count,
+
+  };
+};
+
+
+
+
+const mapDispatchToProps= dispatch =>{
+  return{
+      countUp: ()=>dispatch(countUp()),
+      countDown: ()=>dispatch(countDown()),
+      
+
+  };
+};
+
+export default connect(mapStateToProps,mapDispatchToProps)(Counter);
+
+
