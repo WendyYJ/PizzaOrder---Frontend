@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+import { ADD_CART } from "../actions/addCartActions"
+=======
 import { ADD_CART } from '../actions/addCartActions';
+>>>>>>> 1677abfaf908a018f97a555251e06b322285aaee
 
 
 const initialState = {
