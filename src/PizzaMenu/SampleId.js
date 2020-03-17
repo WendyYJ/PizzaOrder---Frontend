@@ -16,15 +16,6 @@ import {connect} from  'react-redux';
 import {loadPizza as loadPizzaAction} from '../redux/actions/pizzaActions';
 
 class SampleId extends React.Component {
-  // constructor(props) {
-  //   super(props);
-
-  //   this.state = {
-  //     pizza: {},
-  //     error: null,
-  //     isLoading: false
-  //   };
-  // }
 
   
   async componentDidMount(){
@@ -34,31 +25,22 @@ class SampleId extends React.Component {
   
   }
 
-  // loadPizza = pizzaId =>
-  //   this.setState({ isLoading: true }, () => {
-  //     fetchPizzaById(pizzaId)
-  //       .then(pizza => this.setState({ pizza, isLoading: false }))
-  //       .catch(error => this.setState({ error }));
-  //   });
 
    
   render() {
     return (
       <div className="MenuMain-container">
        
-        <PizzamenuSidebar />
-        <ShoppingCartSidebar />
+      
 
         <ThirdHeader
           headername={"Pizza Menu"}
-          headername2={this.props.PizzaName}
+        
         />
 
         <HorizonBar className="horizonbar" />
         <SampleMenu
-          pizzaname={this.props.PizzaName}
-          description={this.props.PizzaDesc}
-          price={this.props.PizzaPrice}
+       
         
         />
 

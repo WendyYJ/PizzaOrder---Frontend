@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import util from '../../utils/util';
 import Thumb from './Thumb';
+import { connect } from 'react-redux';
 
 class CartProduct extends Component { 
     constructor(props) {
@@ -58,4 +59,15 @@ class CartProduct extends Component {
       }
     }
     
-    export default CartProduct;
+    const mapStateToProps = state => {
+      return{
+  
+          pizza:state.pizza.pizza,
+          selectedPizzas: state.pizza.selectedPizzas,
+    
+        
+    
+      };
+    };
+  export default connect(mapStateToProps)(CartProduct);
+  

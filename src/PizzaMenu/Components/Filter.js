@@ -107,24 +107,7 @@ class Filter extends React.Component {
     });
   };
 
-  // fetchFilteredPizza = (url) =>{
-  //   return get(url).then(res => res.data.data);
-  // }
-  // loadFilteredPizza = (url) =>{
-  //   this.setState({ isLoading: true, pizzas: [] }, () => {
-  //     fetchPizza(url)
-  //       .then(pizzaData => {
-  //         this.setState({
-  //           pizzas: pizzaData.pizzas,
-  //           isLoading: false,
-
-  //         });
-  //       })
-  //       .catch(error => {
-  //         this.setState({ error, isLoading: false });
-  //       });
-  //   });
-  // }
+ 
 
   handleOnChange = (event, category) => {
     const id = event.target.id;
@@ -312,7 +295,7 @@ class Filter extends React.Component {
             {this.state.pizzas.map(pizza => (
               <PizzaCard
                 pizzaDescription={pizza.Description}
-                pizzaImage={pizza.pizzaImage}
+                pizzaImage={pizza.PizzaImage}
                 pizzaName={pizza.PizzaName}
                 pizzaPrice={pizza.UnitPrice}
                 key={pizza._id}

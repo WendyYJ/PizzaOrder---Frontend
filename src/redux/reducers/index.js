@@ -5,7 +5,7 @@ import pizzaReducer from "./pizzaReducer";
 
 const reducers = combineReducers({
   question: questionReducer,
-  counter:counterReducer,
+
   pizza: pizzaReducer
 });
 

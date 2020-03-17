@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ".././PizzaMenu/Style/SampleMenu.scss";
-import {countUp} from '../redux/actions/counterAction'
-import {countDown} from '../redux/actions/counterAction'
+import {countUp} from '../redux/actions/pizzaActions'
+import {countDown} from '../redux/actions/pizzaActions'
 import {connect} from  'react-redux';
 
 function Counter (props) {
@@ -27,10 +27,10 @@ function Counter (props) {
   }
 
 
-const mapStateToProps=state=>{
+const mapStateToProps= state => {
   return{
       pizzaPrice:state.pizza.pizzaPrice,
-      count: state.counter.count,
+      count: state.pizza.count,
 
   };
 };
@@ -40,8 +40,8 @@ const mapStateToProps=state=>{
 
 const mapDispatchToProps= dispatch =>{
   return{
-      countUp: ()=>dispatch(countUp()),
-      countDown: ()=>dispatch(countDown()),
+      countUp: () => dispatch(countUp()),
+      countDown: () => dispatch(countDown()),
       
 
   };

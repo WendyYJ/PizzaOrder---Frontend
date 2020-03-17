@@ -121,6 +121,8 @@ input[type="checkbox"]{
     width:80px;
     text-align: center;
     margin:auto;
+    border-radius: 50%;
+
 }
 .pizza-card{text-align: center;
 }
@@ -129,7 +131,8 @@ input[type="checkbox"]{
 
 Image{
     width:20px;
-    height:20px
+    height:20px;
+  
 }
 
 .pizza-card{

@@ -6,37 +6,53 @@ import availableSizes from "../../asset/icon/available_sizes.png";
 import Counter from "../../PageLayout/Counter";
 import PeriPeri from "../../asset/img/PeriPeri.png";
 import {connect} from  'react-redux';
+import {addCart as addCartAction} from '../../redux/actions/pizzaActions';
 
-const SampleMenu = (props) => (
+class SampleMenu extends React.Component {
+
+
+  handleClick = () => {
+    const list = [];
+
+
+
+
+  }
+
+
+  render() {
+    return (
   <div className="sample_menu">
     <div className="pizza-sample">
-      <img className="dot2" src={PeriPeri} alt="pizza" />
+      <img className="dot2" src={this.props.pizzaImage} alt="pizza" />
     </div>
     <div className="sample-info">
       <div className="sample_text">
-        <h2>{props.pizzaName}</h2>
+        <h2>{this.props.pizzaName}</h2>
         <div className="five-star">
           <StarIcon style={{ color: "#D94F2B", fontSize: "20px" }} />
           <StarIcon style={{ color: "#D94F2B", fontSize: "20px" }} />
           <StarIcon style={{ color: "#D94F2B", fontSize: "20px" }} />
           <StarIcon style={{ coloyr: "#D94F2B", fontSize: "20px" }} />
           <StarBorderIcon style={{ color: "#D94F2B", fontSize: "20px" }} />
-          <p style={{ fontSize: "14px" }}>{props.pizzaDesc}</p>
+          <p style={{ fontSize: "14px" }}>{this.props.pizzaDesc}</p>
           <p style={{ fontSize: "14px" }}>AVAILABLE SIZES</p>
           <img src={availableSizes} alt="available-size" id="available-size" />
 
           <div className="clickCount">
-            <Counter price = {props.price}
-             Name = {props.PizzaName}
-             handleClick = {props.handleClick}/>
+            <Counter />
           </div>
-          <button className="addButton">ADD TO CART</button>
+          <button onClick={() => this.props.addCart()}
+          className="addButton">ADD TO CART</button>
         </div>
       </div>
     </div>
   </div>
 );
 
+    }
+
+  }
 const mapStateToProps = state => {
   return{
       pizzaName:state.pizza.pizzaName,
@@ -44,10 +60,18 @@ const mapStateToProps = state => {
       pizzaDesc:state.pizza.pizzaDesc,
       errorMessage:state.pizza.errorMessage,
       isLoading:state.pizza.isLoading,
+      pizza:state.pizza.pizza,
+      pizzaImage: state.pizza.pizzaImage,
+      selectedPizza: state.pizza.selectedPizza,
+    
 
   };
 };
 
+const mapDispatchToProps= dispatch => ({
+  addCart: () => dispatch (addCartAction())
 
+  
+});
 
-export default connect(mapStateToProps)(SampleMenu);
+export default connect(mapStateToProps,mapDispatchToProps)(SampleMenu);

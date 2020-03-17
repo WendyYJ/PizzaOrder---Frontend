@@ -7,7 +7,7 @@ import '../Style/Filter.scss';
 const PizzaCard = (props) => (
   <Card as={Link} to={props.to} className="cardcontainer">
     <div className="circlecontainer">
-      <img src={orangeCircle} />
+      <img src={props.pizzaImage} />
     </div>
 
     <div className="contentcontainer">
