@@ -1,14 +1,15 @@
 import React from "react";
 import Accordion from "./components/Accordion/Accordion";
+import Sauces from "./components/AccordionContents/Sauces/Sauces";
 import Footer from '../PageLayout/Footer/Footer';
 import './PizzaBuilder.scss';
 
 class PizzaBuilder extends React.Component{
 
     contentList = [
-        {id: 1, title: 'Choose Your Crust\'s Size', content:'haha let\'s see!'},
+        {id: 1, title: 'Choose Your Crust\'s Size', content:"Crusts goes here!"},
     
-        {id: 2, title: 'Select Your Source', content:'haha let\'s see!'},
+        {id: 2, title: 'Select Your Sauce', content: <Sauces/>},
     
         {id: 3, title: 'Add Cheese', content:'haha let\'s see!'},
 
