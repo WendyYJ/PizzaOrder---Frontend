@@ -1,7 +1,7 @@
-import React, { Fragment, useState } from "react";
-import CartSidebar from "./CartSidebar";
-import CartToggle from "./CartToggle";
-import Header from "../Header/Header";
+import React, { Fragment, useState } from 'react';
+import CartSidebar from './CartSidebar';
+import CartToggle from './CartToggle';
+import Header from '../Header/Header';
 
 const ShoppingCartSidebar = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -25,12 +25,12 @@ const ShoppingCartSidebar = ({ children }) => {
 
   return (
     <div className="cart-sidebar">
-      <Fragment>
+      <>
         <Header />
         {sidebar}
         <CartToggle click={openHandler} />
         <p>{children}</p>
-      </Fragment>
+      </>
     </div>
   );
 };

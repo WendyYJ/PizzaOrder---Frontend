@@ -1,8 +1,8 @@
-import { combineReducers } from "redux";
-import questionReducer from "./questionReducer";
+import { combineReducers } from 'redux';
+import questionReducer from './questionReducer';
 
 const reducers = combineReducers({
-  question: questionReducer
+  question: questionReducer,
 });
 
 export default reducers;

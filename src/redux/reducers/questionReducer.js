@@ -1,7 +1,7 @@
-import { SHOW_ANSWER } from "../actions/questionActions";
+import { SHOW_ANSWER } from '../actions/questionActions';
 
 const initialState = {
-  isShowing: true
+  isShowing: true,
 };
 
 const questionReducer = (state = initialState, action) => {
@@ -9,7 +9,7 @@ const questionReducer = (state = initialState, action) => {
     case SHOW_ANSWER:
       return {
         ...state,
-        isShowing: state.isShowing !== true
+        isShowing: state.isShowing !== true,
       };
 
     default:

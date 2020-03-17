@@ -1,9 +1,9 @@
-import React from "react";
-import "../Style/Information.scss";
-import { connect } from "react-redux";
-import plus from "../../asset/img/plus.png";
-import minus from "../../asset/img/minus.png";
-import { showAnswer } from "../../redux/actions/questionActions";
+import React from 'react';
+import '../Style/Information.scss';
+import { connect } from 'react-redux';
+import plus from '../../asset/img/plus.png';
+import minus from '../../asset/img/minus.png';
+import { showAnswer } from '../../redux/actions/questionActions';
 
 class Question extends React.Component {
   constructor(props) {
@@ -97,12 +97,12 @@ class Question extends React.Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  showAnswer: () => dispatch(showAnswer())
+const mapDispatchToProps = (dispatch) => ({
+  showAnswer: () => dispatch(showAnswer()),
 });
 
-const mapStateToProps = state => ({
-  isShowing: state.question.isShowing
+const mapStateToProps = (state) => ({
+  isShowing: state.question.isShowing,
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Question);

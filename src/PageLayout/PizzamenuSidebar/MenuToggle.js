@@ -1,12 +1,12 @@
-import React, { Fragment } from "react";
-import "./MenuSidebar.scss";
+import React, { Fragment } from 'react';
+import './MenuSidebar.scss';
 
-const MenuToggle = props => (
-  <Fragment>
+const MenuToggle = (props) => (
+  <>
     <button id="menu-toggle" onClick={props.click}>
       &#8801;
     </button>
-  </Fragment>
+  </>
 );
 
 export default MenuToggle;

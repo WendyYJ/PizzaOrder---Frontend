@@ -1,18 +1,14 @@
-import React from "react";
-import "./homepage.scss";
-import Information from "../AboutUs/components/Infomation";
-import profile from "../asset/img/proni.png";
-import phone from "../asset/icon/iphone-6s-logo.png";
-import Ingredient from "../PageLayout/Footer/Ingredient";
-import Carousel from "./Carousel/Carousel";
-import PizzamenuSidebar from "../PageLayout/PizzamenuSidebar/PizzamenuSidebar";
-import Footer from "../PageLayout/Footer/Footer";
-import ShoppingCartSidebar from "../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar";
+import React from 'react';
+import './homepage.scss';
+import Information from '../AboutUs/components/Infomation';
+import profile from '../asset/img/proni.png';
+import phone from '../asset/icon/iphone-6s-logo.png';
+import Ingredient from '../PageLayout/Footer/Ingredient';
+import Carousel from './Carousel/Carousel';
+import Footer from '../PageLayout/Footer/Footer';
 
 const Homepage = () => (
   <div className="homepage">
-    <ShoppingCartSidebar />
-    <PizzamenuSidebar />
 
     <main className="homepage__welcome">
       <h1 className="homepage__welcome-heading">Get it while it's hot!</h1>
@@ -41,19 +37,23 @@ const Homepage = () => (
         <ul>
           <li className="homepage__pizza-builder__process">
             <span className="homepage__pizza-builder__process-number">1.</span>
-            &emsp; Choose Your Crust{" "}
+            &emsp; Choose Your Crust
+            {' '}
           </li>
           <li className="homepage__pizza-builder__process">
             <span className="homepage__pizza-builder__process-number">2.</span>
-            &emsp;Select Your Sauce{" "}
+            &emsp;Select Your Sauce
+            {' '}
           </li>
           <li className="homepage__pizza-builder__process">
             <span className="homepage__pizza-builder__process-number">3.</span>
-            &emsp;Add Cheese{" "}
+            &emsp;Add Cheese
+            {' '}
           </li>
           <li className="homepage__pizza-builder__process">
             <span className="homepage__pizza-builder__process-number">4.</span>
-            &emsp;Choose Your Toppings{" "}
+            &emsp;Choose Your Toppings
+            {' '}
           </li>
         </ul>
       </div>
@@ -200,7 +200,8 @@ const Homepage = () => (
           />
           <p className="homepage__news-content-time">Feburary 8, 2019</p>
           <h3 className="homepage__news-content-heading">
-            Brussels Sprouts, Pepper and Bacon Hot Pizza is HERE!{" "}
+            Brussels Sprouts, Pepper and Bacon Hot Pizza is HERE!
+            {' '}
           </h3>
           <p className="homepage__news-content-span">
             elementum integer enim. Sed eget velit aliquet. Scelerisque varius

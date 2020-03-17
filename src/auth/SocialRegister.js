@@ -1,6 +1,6 @@
-import React from "react";
-import "./Style.scss";
-import { Button } from "react-bootstrap";
+import React from 'react';
+import './Style.scss';
+import { Button } from 'react-bootstrap';
 // import { Link } from "react-router-dom";
 
 function SocialRegister() {

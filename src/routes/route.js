@@ -1,15 +1,17 @@
-import React from "react";
-import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
-import Homepage from "../Homepage/Homepage";
-import PizzaMenu from "../PizzaMenu/PizzaMenu";
-import SampleId from "../PizzaMenu/SampleId";
-import PizzaBuilder from "../PizzaBuilder/PizzaBuilder";
-import ShoppingCart from "../ShoppingCart/ShoppingCart";
-import AboutUs from "../AboutUs/AboutUs";
-import Contact from "../Contact/Contact";
-import Checkout from "../Checkout/Checkout";
-import Login from "../auth/Login";
-import MyAccount from "../auth/MyAccount";
+import React from 'react';
+import {
+  BrowserRouter, Redirect, Route, Switch,
+} from 'react-router-dom';
+import Homepage from '../Homepage/Homepage';
+import PizzaMenu from '../PizzaMenu/PizzaMenu';
+import SampleId from '../PizzaMenu/SampleId';
+import PizzaBuilder from '../PizzaBuilder';
+import ShoppingCart from '../ShoppingCart/ShoppingCart';
+import AboutUs from '../AboutUs/AboutUs';
+import Contact from '../Contact/Contact';
+import Checkout from '../Checkout/Checkout';
+import Login from '../auth/Login';
+import MyAccount from '../auth/MyAccount';
 
 import {
   HOME_URL,
@@ -20,11 +22,10 @@ import {
   CONTACT_URL,
   CHECKOUT_URL,
   LOGIN_URL,
-  MYACCOUNT_URL
-} from "./URLMap";
+  MYACCOUNT_URL,
+} from './URLMap';
 
 const Routes = () => (
-  <BrowserRouter>
     <Switch>
       <Redirect exact from="/" to={HOME_URL} />
       <Route exact path={HOME_URL} component={Homepage} />
@@ -38,7 +39,6 @@ const Routes = () => (
       <Route exact path={LOGIN_URL} component={Login} />
       <Route exact path={MYACCOUNT_URL} component={MyAccount} />
     </Switch>
-  </BrowserRouter>
 );
 
 export default Routes;

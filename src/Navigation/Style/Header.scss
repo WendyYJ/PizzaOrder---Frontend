@@ -1,0 +1,20 @@
+@import '../../asset/theme.scss';
+@import '../../asset/mixin.scss';
+
+.page__header {
+    top:0;
+    left:0;
+    position: fixed;
+    width: 100%;
+    height:50px;
+    z-index:1;
+    background-color: rgba(31, 30, 30, 0.952);
+    &-title   {
+        color: $flame;
+        font-family: $logo;
+        text-align: center;
+        margin-top: 8px;   
+        font-size: 20px;
+        font-weight: bold;
+    }
+}

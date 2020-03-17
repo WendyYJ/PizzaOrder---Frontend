@@ -1,13 +1,13 @@
-import React from "react";
-import Slider from "react-slick";
-import "./Carousel.scss";
-import periperi from "../../asset/img/PeriPeri.png";
-import proni from "../../asset/img/proni.png";
-import Carni from "../../asset/img/olive.jpg";
-import mush from "../../asset/img/Shiitake.jpg";
-import vegan from "../../asset/img/valentinos.jpg";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import React from 'react';
+import Slider from 'react-slick';
+import './Carousel.scss';
+import periperi from '../../asset/img/PeriPeri.png';
+import proni from '../../asset/img/proni.png';
+import Carni from '../../asset/img/olive.jpg';
+import mush from '../../asset/img/Shiitake.jpg';
+import vegan from '../../asset/img/valentinos.jpg';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 class Carousel extends React.Component {
   render() {
@@ -16,7 +16,7 @@ class Carousel extends React.Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplaySpeed: 2000
+      autoplaySpeed: 2000,
     };
     return (
       <Slider {...settings}>

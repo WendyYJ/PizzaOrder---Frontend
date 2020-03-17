@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
-    "@material-ui/core": "^4.9.3",
+    "@material-ui/core": "^4.9.5",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/styles": "^4.9.0",
     "@testing-library/jest-dom": "^4.2.4",
@@ -18,6 +18,7 @@
     "google-maps-react": "^2.0.2",
     "helmet": "^3.21.2",
     "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
     "material-ui": "^0.20.2",
     "query-string": "^6.11.1",
     "react": "^16.12.0",
@@ -44,6 +45,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint .",
+    "lint:fix": "eslint --fix --ext .js,.jsx .",
     "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|md|vue)\""
   },
   "eslintConfig": {
@@ -73,5 +75,16 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^1.7.0"
+  },
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ]
   }
 }

@@ -1,20 +1,20 @@
-import React, { useState } from "react";
-import MenuSidebar from "./MenuSidebar";
-import MenuToggle from "./MenuToggle";
+import React, { useState } from 'react';
+import MenuSidebar from './MenuSidebar';
+import MenuToggle from './MenuToggle';
 
 
-  const PizzamenuSidebar = ({ children }) => {
+const PizzamenuSidebar = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const openHandler = () => {
-    setSidebarOpen(sidebarOpen => !sidebarOpen)
+    setSidebarOpen((sidebarOpen) => !sidebarOpen);
   };
 
   const sidebarCloseHandler = () => {
     setSidebarOpen(false);
   };
 
-  
+
   let menuSidebar;
   if (sidebarOpen) {
     menuSidebar = (
