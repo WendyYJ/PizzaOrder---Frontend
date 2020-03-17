@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import "./Style.scss";
-import PizzamenuSidebar from "../PageLayout/PizzamenuSidebar/PizzamenuSidebar";
 import { NavLink } from "react-router-dom";
 import { Button, Form, Input, Message } from "semantic-ui-react";
 import { register } from "../api/auth";
 import { setToken } from "../utils/auth";
 import SocialRegister from "./SocialRegister";
-import ShoppingCartSidebar from "../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar";
 import { LOGIN_URL, MYACCOUNT_URL } from "../routes/URLMap";
 
 class MyAccount extends Component {
@@ -76,8 +74,6 @@ class MyAccount extends Component {
     return (
       <div className="myAccount-container">
          {this.state.password_invalid && <Message>Your password is invalid</Message>}
-        <PizzamenuSidebar />
-        <ShoppingCartSidebar />
         <div className="form-container">
             <Form
               className="register-form"

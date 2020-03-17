@@ -1,14 +1,15 @@
-import React from "react";
-import TextField from "@material-ui/core/TextField";
-import ArrowForwardSharpIcon from "@material-ui/icons/ArrowForwardSharp";
-import "./style/footer.scss";
+import React from 'react';
+import TextField from '@material-ui/core/TextField';
+import ArrowForwardSharpIcon from '@material-ui/icons/ArrowForwardSharp';
+import './style/footer.scss';
 
 const Footer = () => (
   <div className="footer">
     <div className="footer__insta">
       <p className="footer__insta__start">
         follow us on instagram
-        <ArrowForwardSharpIcon className="footer__insta__arrow" />{" "}
+        <ArrowForwardSharpIcon className="footer__insta__arrow" />
+        {' '}
         <span className="footer__insta__span">#margherita pizza</span>
       </p>
     </div>

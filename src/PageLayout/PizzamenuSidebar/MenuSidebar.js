@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import "./MenuSidebar.scss";
-import { NavLink } from "react-router-dom";
-import SearchIcon from "@material-ui/icons/Search";
+import React, { useState } from 'react';
+import './MenuSidebar.scss';
+import { NavLink } from 'react-router-dom';
+import SearchIcon from '@material-ui/icons/Search';
 import {
   HOME_URL,
   PIZZAMENU_URL,
@@ -10,16 +10,16 @@ import {
   CONTACT_URL,
   LOGIN_URL,
   MYACCOUNT_URL,
-  CHECKOUT_URL
-} from "../../routes/URLMap";
+  CHECKOUT_URL,
+} from '../../routes/URLMap';
 
-const MenuSidebar = props => {
+const MenuSidebar = (props) => {
   const [sidebarClass, setSidebarClass] = useState(props.sidebar);
 
-  
-  const closeHandler = event => {
+
+  const closeHandler = (event) => {
     event.preventDefault();
-    setSidebarClass("sidebar close");
+    setSidebarClass('sidebar close');
     /*
     setTimeout(() => {
       props.close();

@@ -80,7 +80,6 @@ input[type="checkbox"]{
     margin-bottom: 1em;
   }
 
-
   .pizzacontainer{
       width:60%;
       height: 60%;
@@ -98,16 +97,16 @@ input[type="checkbox"]{
     text-decoration: none;
 }
 
-.contentcontainer h2{
+.pizzaName {
     font-size: 1.2em;
     color:$saffron;
 }
 
-.contentcontainer p{
+.pizzaDescription {
   color: $white;
 }
 
-.contentcontainer h3{
+.price{
   color: $flame;  
   font-size: 1.2em;
 }

@@ -1,9 +1,9 @@
-import React from "react";
-import "./Style/TopHeader.scss";
-import "../ShoppingCart/ShoppingCart.scss";
-import { Link } from "react-router-dom";
-import { MYACCOUNT_URL, CHECKOUT_URL } from "../routes/URLMap";
-import ShippingForm from "./ShippingForm";
+import React from 'react';
+import './Style/TopHeader.scss';
+import '../ShoppingCart/ShoppingCart.scss';
+import { Link } from 'react-router-dom';
+import { MYACCOUNT_URL, CHECKOUT_URL } from '../routes/URLMap';
+import ShippingForm from './ShippingForm';
 
 const Cart = () => (
   <div className="cart-container">
@@ -81,7 +81,8 @@ const Cart = () => (
       <p>
         SHIPPING AND HANDLING
         <span>Free Shipping</span>
-      </p>{" "}
+      </p>
+      {' '}
       <br />
       <h3>
         Order Total
@@ -89,8 +90,8 @@ const Cart = () => (
       </h3>
       <button className="viewCart-btn">
         <Link
-          style={{ color: "#FDBC2C", textDecoration: "none" }}
-          to={ MYACCOUNT_URL }
+          style={{ color: '#FDBC2C', textDecoration: 'none' }}
+          to={MYACCOUNT_URL}
         >
           UPDATE CART
         </Link>
@@ -98,8 +99,8 @@ const Cart = () => (
       <br />
       <button className="checkout-btn">
         <Link
-          style={{ color: "black", textDecoration: "none" }}
-          to={ CHECKOUT_URL }
+          style={{ color: 'black', textDecoration: 'none' }}
+          to={CHECKOUT_URL}
         >
           PROCEED TO CHECKOUT
         </Link>

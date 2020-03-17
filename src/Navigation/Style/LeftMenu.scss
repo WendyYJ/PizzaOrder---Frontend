@@ -1,0 +1,140 @@
+@import '../../asset/theme.scss';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+.float__menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #1b1a20;
+    box-sizing: border-box;
+    transition: right 0.3s;
+    z-index:3;
+  
+    &--open {
+      left: 0;
+    }
+  
+    &__close-btn {
+      width: 50px;
+      height: 50px;
+      color: #ececec;
+      background-color: #1b1a20;
+      text-align: center;
+      line-height: 50px;
+      position: absolute;
+      top: 0;
+      right: -50px;
+      cursor: pointer;
+    }
+
+    &-item {
+        display:flex;
+        flex-direction: column;
+        margin-top:25%; 
+        margin-left:15%;
+
+        &-link {
+            color:white;
+            text-decoration: none;
+            margin-top:15%;
+            font-family: $body;
+            font-size:12px;
+        }
+    }
+    
+}
+
+.float__menu-item .ui.search .prompt {
+ border-radius: 0;
+ background: #1b1a20;
+ height:30px;
+ color:white;
+}
+
+.float__menu-item .ui.input>input {
+  border:1px solid grey; 
+}
+
+
+.float__menu .ui.Search {
+  color:#1b1a20;
+
+}
+
+.float__menu .ui .icon {
+  color:whitesmoke;
+}
+.float__menu-item input[type=text] {
+  background: #1b1a20;
+  border:1px solid grey; 
+  height:30px;
+  width:90%;
+  color:white;
+}
+
+.nav-item--active {
+    color:$saffron;
+    font-weight: bold;;
+}
+
+.toggle {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    display: inline-block;
+    margin-top:13px;
+    margin-left: 10px;
+    background-repeat: no-repeat;
+    background-image: url('../../asset/icon/bars-solid.svg');
+    background-position: center;
+    background-size: contain;
+    background-color: whitesmoke;
+    z-index:3;
+    cursor: pointer;  
+    
+    &-background {
+      position: fixed;
+      background-color: #000;
+      top:0;
+      left:0;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      z-index:2;
+
+      &-close{
+        position: absolute;
+        top: 0;
+        right: -50px;
+        background-color: #000;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+      }
+    }
+
+    &-close {
+        position: relative;
+        top: 1px;
+        left:2px;
+        cursor: pointer;
+    }
+}
+
+.customHr {
+  width: 90%;
+  line-height: 2px;
+  border-radius: 4px;
+  background-color:rgb(58, 56, 56);
+  margin-top: 36px;
+}
+
+.fa-search {
+  color:grey;
+  position: absolute;
+  left:80%;
+  top:9.5%;
+  cursor: pointer;
+}

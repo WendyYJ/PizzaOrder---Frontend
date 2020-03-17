@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import "./Style.scss";
-import PizzamenuSidebar from "../PageLayout/PizzamenuSidebar/PizzamenuSidebar";
 import { NavLink, Link } from "react-router-dom";
 import { Button, Input, Form, Message } from "semantic-ui-react";
 import { login } from "../api/auth";
 import { setToken } from "../utils/auth";
-import ShoppingCartSidebar from "../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import { SHOPPINGCART_URL, MYACCOUNT_URL } from "../routes/URLMap";
 import google from "../asset/icon/google_icon.png";
@@ -58,8 +56,6 @@ class Login extends Component {
   render() {
     return (
       <div className="login-container">
-        <PizzamenuSidebar />
-        <ShoppingCartSidebar />
         <Form
           className="  login-form"
           error={!!this.state.error}
@@ -101,20 +97,7 @@ class Login extends Component {
             <p>Not registered yet?</p>
           </NavLink>
         </Form>
-          <div className="socialLogin-container">
-            <Link>
-              <FacebookIcon
-                style={{ fontSize: 70, color: "royalblue" }}
-                id="facebook"
-              />
-            </Link>
-            <Link>
-               <img src={google} alt="google-icon" id="google" />
-            </Link>
-            <Link>
-               <img src={paypal} alt="paypal-icon" id="paypal" />
-            </Link>
-          </div>
+          
       </div>
     );
   }

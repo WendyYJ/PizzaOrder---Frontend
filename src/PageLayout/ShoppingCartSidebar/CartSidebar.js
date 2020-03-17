@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import "./CartSidebar.scss";
-import { SHOPPINGCART_URL, CHECKOUT_URL } from "../../routes/URLMap";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import './CartSidebar.scss';
+import { Link } from 'react-router-dom';
+import { SHOPPINGCART_URL, CHECKOUT_URL } from '../../routes/URLMap';
 
-const CartSidebar = props => {
+const CartSidebar = (props) => {
   const [sidebarClass, setSidebarClass] = useState(props.sidebar);
 
-  const closeHandler = event => {
+  const closeHandler = (event) => {
     event.preventDefault();
-    setSidebarClass("sidebar close");
+    setSidebarClass('sidebar close');
     /*
     setTimeout(() => {
       props.close();
@@ -53,7 +53,7 @@ const CartSidebar = props => {
 
               <div className="total_price">
                 <p>
-                  <span  className="qty"> 1 x </span>
+                  <span className="qty"> 1 x </span>
                 </p>
                 <p className="totalprice">$34.00</p>
               </div>
@@ -71,7 +71,7 @@ const CartSidebar = props => {
 
               <div className="total_price">
                 <p>
-                  <span  className="qty"> 1 x </span>
+                  <span className="qty"> 1 x </span>
                 </p>
                 <p className="totalprice">$26.00</p>
               </div>
@@ -82,11 +82,13 @@ const CartSidebar = props => {
 
       <div className="order-total">
         <h2 className="order-title">
-          Order Totals <span>$79.00</span>
+          Order Totals
+          {' '}
+          <span>$79.00</span>
         </h2>
         <button className="viewCart-button">
           <Link
-            style={{ color: "#FDBC2C", textDecoration: "none" }}
+            style={{ color: '#FDBC2C', textDecoration: 'none' }}
             to={SHOPPINGCART_URL}
           >
             VIEW SHOPPING CART
@@ -95,7 +97,7 @@ const CartSidebar = props => {
         <br />
         <button className="checkout-button">
           <Link
-            style={{ color: "black", textDecoration: "none" }}
+            style={{ color: 'black', textDecoration: 'none' }}
             to={CHECKOUT_URL}
           >
             CHECKOUT

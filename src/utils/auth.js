@@ -1,5 +1,6 @@
-import jwt from "jsonwebtoken";
-const JWT_TOKEN_NAME = "jwtToken-pizza-order";
+import jwt from 'jsonwebtoken';
+
+const JWT_TOKEN_NAME = 'jwtToken-pizza-order';
 
 
 export const isLoggedIn = () => {
@@ -14,7 +15,7 @@ export const isLoggedIn = () => {
   return !isExpired;
 };
 
-export const setToken = token => {
+export const setToken = (token) => {
   localStorage.setItem(JWT_TOKEN_NAME, token);
 };
 

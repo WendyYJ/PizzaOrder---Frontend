@@ -1,9 +1,9 @@
-import React from "react";
-import "../Style/RelatedProduct.scss";
-import Salami from "../../asset/img/Salami.jpg";
-import Shiitake from "../../asset/img/Shiitake.jpg";
-import proni from "../../asset/img/proni.png";
-import Vege from "../../asset/img/Vege.jpg";
+import React from 'react';
+import '../Style/RelatedProduct.scss';
+import Salami from '../../asset/img/Salami.jpg';
+import Shiitake from '../../asset/img/Shiitake.jpg';
+import proni from '../../asset/img/proni.png';
+import Vege from '../../asset/img/Vege.jpg';
 
 const RelatedProduct = () => (
   <div className="relatedProduct-container">
