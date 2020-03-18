@@ -33,7 +33,6 @@ const ingredientReducer = (state = initialState, action) => {
         return {
           ...state,
           VEGGIGS: action.data,
-          isLoading: !state.isLoading,
         }
       }
     case FETCH_INGREDIENT:

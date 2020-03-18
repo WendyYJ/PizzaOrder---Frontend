@@ -22,6 +22,8 @@ class PizzaBuilder extends React.Component{
         {id: 4, title: 'Choose Your Toppings', content:<Footer/>},    
     ]
     render(){
+      //console.log(this.props.isLoading);
+      //console.log(this.props);
         return(
             <div>
                 <div className='builder__title'>

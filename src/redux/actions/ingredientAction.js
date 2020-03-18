@@ -25,6 +25,7 @@ export const loadIngredient = (category) => dispatch => {
     category.map(c => {
         fetchIngredients(c)
         .then(data => {
+            console.log(count);
             count ++;
             dispatch(fetchIngredientSuccess(data,c));
             if (count === 4) {
