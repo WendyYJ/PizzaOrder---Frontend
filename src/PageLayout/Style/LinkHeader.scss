@@ -14,10 +14,9 @@
     text-align: center;
     background-color: rgb(37, 35, 35);
     opacity: 0.9;
-    padding-top: 3.5em;
-    padding-bottom: 5.5em;
-    position: relative;
-    top: 15%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
 }
 
 .link-container{
@@ -98,17 +97,23 @@
 
 }
 
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 600px) {
     .link-container{
         display: flex;
         font-size: 1.2em;
         align-items: center;
         padding:0.8em;
         margin: auto;
-        width:30%;
+        width:60%;
         justify-content: center;
         color: $saffron;
         border:2px solid $saffron;
+    }
+    .secondary-header{
+  
+        padding-top: 12%;
+        padding-bottom: 12%;
+      
     }
   }
 
@@ -124,4 +129,15 @@
     color: $saffron;
     border:2px solid $saffron;
  }
+ .link-container{
+    display: flex;
+    font-size: 1.2em;
+    align-items: center;
+    padding:0.8em;
+    margin: auto;
+    width:40%;
+    justify-content: center;
+    color: $saffron;
+    border:2px solid $saffron;
+}
 }
