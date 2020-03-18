@@ -2,7 +2,8 @@
 
 @mixin chalk-heading{
     font-family: $chalk;
-    font-size: 4vw;
+    font-size: $heading-size;  
+
 }
 
 @mixin heading{
