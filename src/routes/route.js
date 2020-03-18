@@ -5,7 +5,7 @@ import {
 import Homepage from '../Homepage/Homepage';
 import PizzaMenu from '../PizzaMenu/PizzaMenu';
 import SampleId from '../PizzaMenu/SampleId';
-import PizzaBuilder from '../PizzaBuilder';
+import PizzaBuilder from '../PizzaBuilder/PizzaBuilder';
 import ShoppingCart from '../ShoppingCart/ShoppingCart';
 import AboutUs from '../AboutUs/AboutUs';
 import Contact from '../Contact/Contact';

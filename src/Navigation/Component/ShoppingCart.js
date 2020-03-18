@@ -10,36 +10,6 @@ class ShoppingCart extends Component {
         this.state = {
             isOpen:false,
             isLoading:false, 
-            // cartProducts : 
-            // // this.props.selectedPizzas,
-
-            //     [
-            //     { 
-            //     id:"12345",
-            //     pizzaName:"Prawn Pizza",
-            //     image:"https://www.dominos.com.au/ManagedAssets/AU/product/P355/AU_P355_en_hero_3177.png?v-560733922",
-            //     price:22,
-            //     size:"Large",
-            //     quantity:1,
-            //     currencyFormat:'$',
-            //     },
-            //     {id:"12346",
-            //     pizzaName:"Beef Pizza",
-            //     image:"https://www.dominos.com.au/ManagedAssets/AU/product/P322/AU_P322_en_hero_3177.png?v693830719",
-            //     price:25,
-            //     size:"Jumbo",
-            //     quantity:1,
-            //     currencyFormat:'$',
-            //     },
-            //     {id:"12347",
-            //     pizzaName:"Chicken Pizza",
-            //     image:"https://www.dominos.com.au/ManagedAssets/AU/product/P223/AU_P223_en_hero_4055.jpg?v-233754517",
-            //     price:18,
-            //     size:"Small",
-            //     quantity:2,
-            //     currencyFormat:'$',
-            //     }
-            // ],
         }
     }
     openFloatCart = () => {
@@ -52,14 +22,11 @@ class ShoppingCart extends Component {
 
     removeProduct = product => {
         const index = this.props.selectedPizzas.findIndex(p => p.id === product.id);
-        console.log(index);
             if (index >= 0) {
                 this.setState( this.props.selectedPizzas.splice(index, 1));
-                //updateCart(cartProducts);
             }
     };   
 
-    // quantity, price is just for showing function. This is stored in redux.
     proceedCheckout = (quantity,price) => {
         if(quantity == 0) {
             alert('Add some product in the bag');
@@ -68,13 +35,10 @@ class ShoppingCart extends Component {
         }
     }
 
-    render() {
-       
+    render() { 
         let classes = ['float-cart'];
         let totalQuantity = 0;
         let totalPrice = 0;
-        console.log(this.state.cartProducts)
-    
         const products = this.props.selectedPizzas.map(p => {
             totalQuantity = totalQuantity + p.quantity;
             totalPrice = totalPrice + p.quantity * p.price;
@@ -82,7 +46,6 @@ class ShoppingCart extends Component {
                 <CartProduct product={p} key={p.id} removeProduct = {this.removeProduct}/>
             );
         });
-
         if (!!this.state.isOpen) {
           classes.push('float-cart--open');
         }
@@ -91,19 +54,19 @@ class ShoppingCart extends Component {
                     {this.state.isOpen && (
                     <div className = "" onClick={() => this.closeFloatCart()}>
                     <span className="bag bag-close">
-                        <span className="bag__quantity">{totalQuantity}
+                        <span className="bag__quantity">
+                            { totalQuantity }
                         </span>
                     </span>
                 </div>
                 )}
-
                 {!this.state.isOpen && (
-                <span
-                    onClick={() => this.openFloatCart()}
-                    className="bag bag--float-cart-closed"
-                >
-                    <span className="bag__quantity">{totalQuantity}</span>
-                </span>
+                    <span
+                        onClick={() => this.openFloatCart()}
+                        className="bag bag--float-cart-closed"
+                    >
+                        <span className="bag__quantity">{totalQuantity}</span>
+                    </span>
                 )}
 
                 <div className="float-cart__content">
@@ -112,23 +75,21 @@ class ShoppingCart extends Component {
                     </div>
 
                     <div className="float-cart__shelf-container">
-                        {products}
+                        { products }
                         {!products.length && (
-                        <p className="shelf-empty">
-                            Add some products in the bag <br />
-                            :)
-                        </p>
-                        )}
-                        
+                            <p className="shelf-empty">
+                                Add some products in the bag <br />
+                                :)
+                            </p>
+                        )}       
                         <div className = "float-cart__total">
                             <span>OrderTotal:</span>
-                            <span>${util.formatPrice(
-                                    totalPrice
+                            <span>${ util.formatPrice(
+                                      totalPrice
                                     )}
                             </span>         
                         </div> 
-                    </div>
-                     
+                    </div>           
                     <div className="float-cart__footer">  
                         <div className="cart-btn">
                             View ShoppingCart
@@ -139,18 +100,15 @@ class ShoppingCart extends Component {
                     </div>          
             </div>
         </div>
-    );
+        );
     }   
 }
 
 const mapStateToProps = state => {
     return{
-
         pizza:state.pizza.pizza,
-        selectedPizzas: state.pizza.selectedPizzas,
-  
-      
-  
+        selectedPizzas: state.pizza.selectedPizzas,  
     };
   };
+
 export default connect(mapStateToProps)(ShoppingCart);
