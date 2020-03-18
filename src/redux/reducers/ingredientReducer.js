@@ -6,6 +6,7 @@ const initialState = {
   CHEESES:[],
   VEGGIGS:[],
   isLoading:false,
+  errorMessage:'',
 };
 
 const ingredientReducer = (state = initialState, action) => {

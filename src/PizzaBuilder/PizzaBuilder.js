@@ -49,6 +49,7 @@ const mapStateToProps = (state) => ({
   SAUCES: state.ingredient.SAUCES,
   VEGGIGS: state.ingredient.VEGGIGS,
   isLoading: state.ingredient.isLoading,
+  errorMessage:state.ingredient.errorMessage,
 });
 
 const mapDispatchToProps = dispatch => ({
