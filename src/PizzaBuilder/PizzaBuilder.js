@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { loadIngredient as loadIngredientAction } from '../redux/actions/ingredientAction';
 import Accordion from "./components/Accordion/Accordion";
-import Sauces from "./components/AccordionContents/Sauces/Sauces";
+import AccordionContent from "./components/AccordionContents/AccordionContent";
 import Crust from "./components/AccordionContents/Crust/Crust";
 import Footer from '../PageLayout/Footer/Footer';
 import './PizzaBuilder.scss';
@@ -18,7 +18,7 @@ class PizzaBuilder extends React.Component{
   }
     contentList = [
         {id: 1, title: 'Choose Your Crust\'s Size', content:<Crust/>},
-        {id: 2, title: 'Select Your Sauce', content: <Sauces/>},
+        {id: 2, title: 'Select Your Sauce', content: <AccordionContent/>},
         {id: 3, title: 'Add Cheese', content:'haha let\'s see!'},
         {id: 4, title: 'Choose Your Toppings', content:<Footer/>},    
     ]
