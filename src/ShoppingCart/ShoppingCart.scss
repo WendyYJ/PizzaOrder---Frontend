@@ -1,230 +1,95 @@
 @import '.././asset/theme.scss';
 
-.shoppingCart1{
-  position: relative;
-  width: 100%;
-  left: 18%;
-}
-
-.cart-container{
-    position: relative;
-    top: 0vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    
-
-  .shoppingCart{
-    position: relative;
-    top: 2vw;
-    margin-left: 10vw;
-    font-family: $body;
-
-    ul{
-      list-style: none;
-      position: relative; 
-      margin-left: -3vw;
-    }
-
-    .ordered1{
-      height: 18vh;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-
-      .dot1 {
-        height: 6vw;
-        width: 6vw;
-        background-color: $flame;
-        border-radius: 50%;
-        display: inline-block;
-        position: relative;
-        left: -11vw;
-
-        .mark1{
-          position: relative;
-          left: -3vw;
-          top: 22%;
-        }
-      }
-
-      .text{
-        width: 100%;
-
-        h2{
-          color: $saffron;
-          position: relative;
-          top: 2vh;
-          left: -30vw;
-        }
-      
-        h3{
-          color: $flame;
-          width: 100%;
-  
-        } 
-
-        .order-title{
-            position: relative;
-            top: -6vw;
-            left: -4vw;
-            color: $saffron;
-            width: 100%;
-        }
-
-        .size{
-          color: white;
-          font-size: 10px;
-          font-family: $body;
-          position: relative;
-          top: -7.5vw;
-          left: -3.5vw;
-        }
-    
-        span{
-          color: $flame;
-        }
-    
-        .total_price1{
-          display: flex;
-          flex-direction: row;
-          width: 100%;
-
-          .qty1{
-            padding: 5px 11px;
-            text-align: center;
-            color: white;
-            font-size: 18px;
-            border: 1px solid white;
-            background-color: transparent;
-            position: relative;
-            left: 16vw;
-            top: -24vh;
-            width: 100%;
-        }
-          
-          .price1{
-            position: relative;
-            top: -27vh;
-            left: 10vw;
-            font-family: $body;
-            font-size: 18px;
-            color: $flame;
-            width: 100%;
-          }
-
-          .totalprice1{
-            position: relative;
-            left: 23vw;
-            top: -26.6vh;
-            font-family: $body;
-            font-size: 18px;
-            color: $flame;
-            width: 100%;
-          }
-        }
-    }
-  }
-}
-
-
-  .total{
-    position: relative;
-    top: -10vh;
-    left: 26vw;
-    font-family: $body;
-    padding: 25px 22px;
-    background-color: rgba(0, 0, 0, 0.205);
-    display: flex;
-    flex-direction: column;
-
-    h2{
-      color: $saffron;
-      position: relative;
-      top: -4vh;
-      left: 0vw;
-    }
-
-    h3{
-      color: $flame;
-      position: relative;
-      top: -3vh;
-      left: 0vw;
-
-      span{
-        color: $flame;
-        margin-left: 3vw;
-      }
-    }
-
-    p{
-      position: relative;
-      top: -3vh;
-      left: 0vw;
-      width: 100%;
-    }
-
-    span{
-      color: white;
-      text-align: right;
-      margin-left: 1vw;
-    }
-
-
-    .viewCart-btn{
-      border: solid 1px $saffron;
-      background-color: black;
-      font-size: 9px;
-      padding: 7px 10px 7px 2px;
-      width: 200px;
-      margin-bottom: 7px;
-      position: relative;
-      top: -3vh;
-      left: 0vw;
-    }
-    
-    
-    .checkout-btn{
-      border: solid 1px $saffron;
-      background-color: $saffron;
-      font-size: 9px;
-      padding: 7px 10px 7px 2px;
-      width: 200px;
-      position: relative;
-      top: -5.5vh;
-      left: 0vw;
-    }
-  }
-}
-
-
-.horizonbar-Three{
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 1vh;
-  border-bottom: 2px solid $flame;
-  width: 55%;
-  position: relative;
-  margin-left: -7vw;
-  
-
-  p{
-    font-size: 14px;
-    font-family: $body;
-    color: white;  
-    margin-left: 5vw;
-  }
-
-  .price{
-    margin-left: 8vw;
-  }
-}
-
-.shoppingCart-container{
-    .footer-container{
-      margin-top: 60vh;
-    }
-}
+.shopping__form {
  
+  &-title {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 2px solid $flame;
+    width:48%;
+    position: relative;
+    left:9%;
+  }
+  &-product {
+    width:15%;
+    left:20%;
+    margin-right:-2%;
+  }
+  &-price {
+    margin-left:-2%;
+  }
+}
+  .cart-item {
+    display: flex;
+    justify-content:space-around;
+    width:50%;
+    margin-bottom: 4%;
+    margin-top:2%;
+    margin-left:4%;
+    position: relative;
+   
+    &::after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      border-radius: 4px;
+      background-color: rgb(58, 56, 56);
+      position: absolute;
+      left:10%;
+      bottom:-20%;
+    }
+
+    &__thumb {
+      margin-right: 10px;
+      img {
+        width: 60px;
+        border-radius: 50%;
+        height: 60px;
+      }
+    }
+    &__del::before {
+      font-family: $body;
+      font-size: 10px;
+      font-weight: bold;
+      top: 42%;
+      left: 10%;
+      position: absolute;
+      background-size: auto 100%;
+      content:'X';
+      color:white;
+      z-index: 2;
+      cursor: pointer;
+      &:hover {
+        background-position-x: 17px;
+      }
+    }
+    &--mouseover {
+      background: #0c0b10;
+
+      .cart-item__product, .cart-item__quantity, .cart-item__price, .cart-item__total {
+        text-decoration: line-through;
+        opacity: 0.6;
+      }
+    }
+    &__product {
+      display: flex;
+      margin-left:10%;
+    }
+    &__quantity {
+      color:white;
+      margin-top: 1.5%;
+      font-size:15px;   
+    }
+    &__quantityInput {
+      width:50%;
+      text-align: center;
+    }
+    &__price,&__total {
+      color:#D94F2B;
+      font-weight: bold;
+      font-family: "Fredericka the Great", sans-serif;
+      font-size: 15px;
+      margin-top: 2%;    
+    }
+}
+

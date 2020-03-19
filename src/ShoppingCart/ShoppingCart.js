@@ -1,35 +1,53 @@
-import React, { Fragment } from 'react';
-import './ShoppingCart.scss';
+/* eslint-disable react/prefer-stateless-function */
+import React from 'react';
+import { connect } from 'react-redux';
+import Title from  './Component/Title';
 import FourthHeader from '../PageLayout/Header/FourthHeader';
-import Cart from '../PageLayout/Cart';
-import PizzamenuSidebar from '../PageLayout/PizzamenuSidebar/PizzamenuSidebar';
-import ShoppingCartSidebar from '../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar';
+import CartForm from './Component/CartForm';
 import Footer from '../PageLayout/Footer/Footer';
+import './ShoppingCart.scss';
 
+class ShoppingCart extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-const ShoppingCart = () => (
-  <div className="shoppingCart-container">
-    <>
-      <ShoppingCartSidebar />
-      <PizzamenuSidebar />
-      <FourthHeader headername="Shopping Cart" style={{ width: '100%' }} />
-      <div className="shoppingCart1">
-        <div className="horizonbar-Three">
-          <p>PRODUCT</p>
-          <span className="price">
-            <p>PRICE</p>
-          </span>
-          <p>QTY</p>
-          <p>TOTAL</p>
-        </div>
-        <Cart />
-      </div>
-      <div className="footer-container">
-        <Footer />
-      </div>
-    </>
-    <div />
-  </div>
-);
+  removeProduct = product => {
+    const index = this.props.selectedPizzas.findIndex(p => p.id === product.id);
+        if (index >= 0) {
+            this.setState( this.props.selectedPizzas.splice(index, 1));
+        }
+  
+  }; 
 
-export default ShoppingCart;
+  render() {
+    let totalQuantity = 0;
+    const products = this.props.selectedPizzas.map(p => {
+      totalQuantity = totalQuantity + p.quantity;
+      return (
+              <CartForm product={p} key={p.id} removeProduct = {this.removeProduct} itemPrice = {p.quantity * p.price} />
+            );
+      });
+    return(
+        <React.Fragment>
+          <FourthHeader headername="Shopping Cart" />
+          <div className="shopping__form">
+            <Title />
+            {products}
+          </div>
+          <div className="footer-container">
+            <Footer />
+          </div>
+        </React.Fragment>
+    );
+  }
+}
+ 
+const mapStateToProps = state => {
+  return{
+    pizza:state.pizza.pizza,
+    selectedPizzas: state.pizza.selectedPizzas,
+  };
+};
+
+export default connect(mapStateToProps,null)(ShoppingCart);

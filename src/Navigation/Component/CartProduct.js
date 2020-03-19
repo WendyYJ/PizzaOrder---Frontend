@@ -61,11 +61,9 @@ class CartProduct extends Component {
     
     const mapStateToProps = state => {
       return{
-  
+
           pizza:state.pizza.pizza,
-          selectedPizzas: state.pizza.selectedPizzas,
-    
-        
+          selectedPizzas: state.pizza.selectedPizzas,    
     
       };
     };
