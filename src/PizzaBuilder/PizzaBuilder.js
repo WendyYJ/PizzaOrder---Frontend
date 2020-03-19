@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { loadIngredient as loadIngredientAction } from '../redux/actions/ingredientAction';
 import Accordion from "./components/Accordion/Accordion";
 import Sauces from "./components/AccordionContents/Sauces/Sauces";
+import Crust from "./components/AccordionContents/Crust/Crust";
 import Footer from '../PageLayout/Footer/Footer';
 import './PizzaBuilder.scss';
 
@@ -16,7 +17,7 @@ class PizzaBuilder extends React.Component{
     this.props.loadIngredient(type);       
   }
     contentList = [
-        {id: 1, title: 'Choose Your Crust\'s Size', content:"Crusts goes here!"},
+        {id: 1, title: 'Choose Your Crust\'s Size', content:<Crust/>},
         {id: 2, title: 'Select Your Sauce', content: <Sauces/>},
         {id: 3, title: 'Add Cheese', content:'haha let\'s see!'},
         {id: 4, title: 'Choose Your Toppings', content:<Footer/>},    
