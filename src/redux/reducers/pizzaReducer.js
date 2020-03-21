@@ -1,4 +1,5 @@
-import {FETCH_PIZZA_SUCCESS, FETCH_PIZZA, FETCH_PIZZA_FAILURE, COUNT_UP, COUNT_DOWN, ADD_CART} from '../actions/pizzaActions';
+import {FETCH_PIZZA_SUCCESS, FETCH_PIZZA, FETCH_PIZZA_FAILURE, COUNT_UP, COUNT_DOWN, ADD_CART,UPDATE_CART, updateCart} from '../actions/pizzaActions';
+
 
 const initialState={
     count: 1,
@@ -48,37 +49,34 @@ const pizzaReducer = (state=initialState,action) => {
         case COUNT_UP:
             return {
                 ...state,
-                count: state.count+1
-                    
-              
+                count: state.count+1         
             };
     
         case COUNT_DOWN:
             return {
                 ...state,
-                count: state.count>1? state.count-1: state.count
-                        
-                  
+                count: state.count>1? state.count-1: state.count             
             };
 
         case ADD_CART:
-      
             return {
                 ...state,
                 pizza: {
                     pizzaName : state.pizzaName,
                     quantity: state.count,
                     image: state.pizzaImage,
-                    price: state.pizzaPrice,                 
-                },
-
-             
+                    price: state.pizzaPrice,               
+                },  
                 selectedPizzas: [...state.selectedPizzas, {pizzaName: state.pizzaName,quantity: state.count
-                ,price:state.pizzaPrice,image: state.pizzaImage, currencyFormat:'$',}]
-
-            
+                ,price:state.pizzaPrice,image: state.pizzaImage, currencyFormat:'$'}] 
             };
-            
+
+            case UPDATE_CART:
+                const index = state.selectedPizzas.findIndex(product => product.id === action.id) 
+                state.selectedPizzas[index].quantity = action.quantity;
+                state.selectedPizzas[index].itemPrice = state.selectedPizzas[index].price * action.quantity;
+                return state;
+                
             default:
                 return state;
     }
