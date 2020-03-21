@@ -10,7 +10,7 @@ const PizzaCard = (props) => (
       <img src={props.pizzaImage} />
     </div>
 
-    <div className="contentcontainer">
+
 
       <div className="pizzanamecontainer">
 
@@ -22,12 +22,12 @@ const PizzaCard = (props) => (
       </div>
       <div className="pizzapricecontainer">
         <h3 className = "price">
-          {' '}
+         
           $
           {props.pizzaPrice}
         </h3>
       </div>
-    </div>
+
   </Card>
 );
 

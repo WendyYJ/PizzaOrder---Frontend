@@ -10,14 +10,9 @@ const initialState={
     selectedPizzas:[],
     isLoading:false,
     errorMessage:'',
-    selectedPizzas2:[],
-    pizza: {
-        quantity: 1,
-        pizzaName:'',
-        image:'',
-        price:0,
-        currencyFormat:'$',
-    }
+
+ 
+  
 }
 
 
@@ -59,28 +54,45 @@ const pizzaReducer = (state=initialState,action) => {
             };
 
         case ADD_CART:
-            return {
-                ...state,
-                pizza: {
-                    pizzaName : state.pizzaName,
-                    quantity: state.count,
-                    image: state.pizzaImage,
-                    price: state.pizzaPrice,               
-                },  
-                selectedPizzas: [...state.selectedPizzas, {pizzaName: state.pizzaName,quantity: state.count
-                ,price:state.pizzaPrice,image: state.pizzaImage, currencyFormat:'$'}] 
-            };
+            // check if there is same pizza in the array
+        
+            const samePizza=state.selectedPizzas.find(i => {
+                              return i.pizzaName==state.pizzaName
+                         })
+                
 
-            case UPDATE_CART:
-                const index = state.selectedPizzas.findIndex(product => product.id === action.id) 
-                state.selectedPizzas[index].quantity = action.quantity;
-                state.selectedPizzas[index].itemPrice = state.selectedPizzas[index].price * action.quantity;
+          
+             const pizzaIndex = state.selectedPizzas.findIndex( pizza => pizza.pizzaName == state.pizzaName);
+
+            if (samePizza==undefined){
+                return {
+                    ...state,
+                     selectedPizzas: [...state.selectedPizzas, {pizzaName: state.pizzaName,quantity: state.count
+                     ,price:state.pizzaPrice,image: state.pizzaImage, currencyFormat:'$'}],
+
+                };
+
+            }else{
+                
+              
+                state.selectedPizzas[pizzaIndex].quantity += state.count;
                 return state;
                 
-            default:
-                return state;
+             }
+
+
+
+        case UPDATE_CART:
+            const index = state.selectedPizzas.findIndex(product => product.id === action.id) 
+            state.selectedPizzas[index].quantity = action.quantity;
+            state.selectedPizzas[index].itemPrice = state.selectedPizzas[index].price * action.quantity;
+            return state;
+                
+        default:
+            return state;
     }
 
 }
 
 export default pizzaReducer;
+

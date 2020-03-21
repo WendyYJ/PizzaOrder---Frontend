@@ -96,7 +96,12 @@ input[type="checkbox"]{
     margin-bottom: 1em;
     text-decoration: none;
 }
-
+.pizza-page{
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    padding-bottom: 1em;
+}
 .pizzaName {
     font-size: 1.2em;
     color:$saffron;
@@ -147,10 +152,14 @@ Image{
 .pizzadescriptioncontainer{
     height: 5em;
 }
-
+@media only screen and (max-width: 1500px) {
+ 
+    
+  
+  }
 @media only screen and (max-width: 1000px) {
     .pizzanamecontainer{
-        height:4em;
+        height:3em;
     
     }
     
@@ -161,14 +170,48 @@ Image{
 
 
   @media only screen and (max-width: 700px) {
+      .cardcontainer{
+          display: flex;
+          width: 100%;
+          margin:auto;
+          height: 100%;
+          margin-bottom: 2%;
+
+      }
+      .circlecontainer{
+          margin: auto;
+          height: 100%;
+          width:20%;
+
+      }
+    
+      .pizzapricecontainer{
+        margin: auto;
+        width:10%;
+        height: 100%;
+      }
+      .pizzadescriptioncontainer{
+        margin: auto;
+        height: 100%;
+        width:50%;
+        margin-right: 2%;
+      }
+      
     .pizzanamecontainer{
-        height:4em;
+        margin: auto;
+        height: 100%;
+        margin-left: 2%;
+        margin-right: 2%;
+        width:20%;
     
     }
-    
-    .pizzadescriptioncontainer{
-        height: 14em;
+    .pizzaName {
+        font-size: 0.9em;
+     
     }
+    // .pizzadescriptioncontainer{
+    //     height: 9em;
+//  }
     .pizzacontainer{
         width:90%;
     }
@@ -183,8 +226,10 @@ Image{
     }
     .headercontainer{
         width:95%;
+        padding-top:2em;
 
     }
+
   }
 
 

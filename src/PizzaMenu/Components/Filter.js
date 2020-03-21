@@ -11,12 +11,17 @@ import { fetchCheeses } from "../../api/pizza";
 import { PIZZAMENU_URL } from "../../routes/URLMap";
 import { Button, Container, Pagination, Segment } from "semantic-ui-react";
 import { get } from "../../api/axios";
+import { showFilter } from '../../redux/actions/filterActions';
+import { connect } from 'react-redux';
+import { makeStyles } from "@material-ui/core/styles";
 
 import ErrorMessage from "../../asset/errorMessage";
 class Filter extends React.Component {
   constructor(props) {
-    const mockImage =
-      "https://sdtimes.com/wp-content/uploads/2018/03/jW4dnFtA_400x400.jpg";
+    
+
+
+  
     super(props);
 
     this.state = {
@@ -36,6 +41,8 @@ class Filter extends React.Component {
       filteredPizza: []
     };
   }
+
+  
 
   componentDidMount() {
     this.loadPizzas();
@@ -204,14 +211,16 @@ class Filter extends React.Component {
   render() {
     return (
       <section className="maincontainer">
-        <div className="headercontainer">
+        <div className="headercontainer" >
           <div className="iconcontainer">
-            <MenuIcon fontSize="small" className="icon" />
+            <MenuIcon fontSize="small" className="icon" onClick={this.props.showFilter}/>
           </div>
           <div>
-            <h4>FILTER</h4>
+            <h4 onClick={this.props.showFilter}>FILTER</h4>
           </div>
         </div>
+
+        {this.props.showfilter ? (
         <section className="filtercontainer">
           <div className="checkboxcontainer">
             <div className="checkboxlists">
@@ -273,24 +282,10 @@ class Filter extends React.Component {
             </button>
           </div>
         </section>
-        {/* <ErrorMessage error={this.state.error} /> */}
+        ):null}
+   
         <Segment basic loading={this.state.isLoading}>
-          {/* 
-        {this.props.isFiltering ? (
-
-          <div className="pizzacontainer">
-          {this.state.filteredPizza.map(pizza => (
-              <PizzaCard
-                pizzaDescription={pizza.Description}
-                pizzaImage={pizza.pizzaImage}
-                pizzaName={pizza.PizzaName}
-                pizzaPrice={pizza.UnitPrice}
-                key={pizza._id}
-                to={`${PIZZAMENU_URL}/${pizza._id}`}
-              />
-            ))}
-          </div>
-        ):( */}
+      
           <div className="pizzacontainer">
             {this.state.pizzas.map(pizza => (
               <PizzaCard
@@ -303,10 +298,10 @@ class Filter extends React.Component {
               />
             ))}
           </div>
-          s
+          
         </Segment>
         {this.state.pagination && this.state.pagination.page && (
-          <Pagination
+          <Pagination  className="pizza-page" variant="outlined"
             activePage={this.state.pagination.page}
             totalPages={this.state.pagination.pages}
             onPageChange={this.handlePageChange}
@@ -317,4 +312,12 @@ class Filter extends React.Component {
   }
 }
 
-export default Filter;
+const mapDispatchToProps = (dispatch) => ({
+  showFilter: () => dispatch(showFilter()),
+});
+
+const mapStateToProps = (state) => ({
+  showfilter: state.filter.showfilter,
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Filter);
