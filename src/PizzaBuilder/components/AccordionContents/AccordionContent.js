@@ -1,5 +1,6 @@
 import React from 'react';
-
+import axios from 'axios';
+import ContentCard from './ContentCard';
 
 class AccordionContent extends React.Component{
     state=
@@ -18,7 +19,20 @@ class AccordionContent extends React.Component{
     render(){
         return(
             <section className='content__flex'>
-           
+            {
+                this.state.cards.map( card => (
+                <ContentCard
+                key={card.id}
+                name={card.IngredientName}
+                image={card.Image}
+                price={card.UnitPrice}
+                description={card.Description}
+            />
+
+            ))
+            
+            }
+                
             </section>
             
         );

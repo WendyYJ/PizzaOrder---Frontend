@@ -8,16 +8,16 @@ import "./Accordion.scss";
 
 function Accordion(props) {
   console.log(props);
-  console.log(this);
+  
   const [setActive, setActiveState] = useState( "" );
   const [setHeight, setHeightState] = useState( "0px" );
   const [setRotate, setRotateState] = useState( "accordion__icon" );
   const [cards, setCards] = useState( [] );
 
   const content = useRef(null);
-  // setCards(
-  //   cards = this.props.content
-  // )
+  setCards(
+    cards = this.props.content
+  )
  
   function toggleAccordion() {
     setActiveState(setActive === "" ? "active" : "");
