@@ -52,7 +52,7 @@ class ShoppingCart extends Component {
 
     removeProduct = product => {
         const index = this.props.selectedPizzas.findIndex(p => p.id === product.id);
-        console.log(index);
+ 
             if (index >= 0) {
                 this.setState( this.props.selectedPizzas.splice(index, 1));
                 //updateCart(cartProducts);
@@ -73,7 +73,7 @@ class ShoppingCart extends Component {
         let classes = ['float-cart'];
         let totalQuantity = 0;
         let totalPrice = 0;
-        console.log(this.state.cartProducts)
+
     
         const products = this.props.selectedPizzas.map(p => {
             totalQuantity = totalQuantity + p.quantity;
@@ -147,9 +147,10 @@ const mapStateToProps = state => {
     return{
 
         pizza:state.pizza.pizza,
+        pizzaName: state.pizza.pizzaName,
         selectedPizzas: state.pizza.selectedPizzas,
   
-      
+  
   
     };
   };

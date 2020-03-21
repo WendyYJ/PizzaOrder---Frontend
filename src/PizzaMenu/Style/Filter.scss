@@ -96,7 +96,11 @@ input[type="checkbox"]{
     margin-bottom: 1em;
     text-decoration: none;
 }
-
+.pizza-page{
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
 .pizzaName {
     font-size: 1.2em;
     color:$saffron;
@@ -167,7 +171,7 @@ Image{
     }
     
     .pizzadescriptioncontainer{
-        height: 14em;
+        height: 10em;
     }
     .pizzacontainer{
         width:90%;

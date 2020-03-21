@@ -9,7 +9,8 @@ const initialState={
     selectedPizzas:[],
     isLoading:false,
     errorMessage:'',
-    selectedPizzas2:[],
+
+    pizzaNameCopy:'',
     pizza: {
         quantity: 1,
         pizzaName:'',
@@ -62,23 +63,53 @@ const pizzaReducer = (state=initialState,action) => {
             };
 
         case ADD_CART:
+
+        // check if there is same pizza in the array
+        const samePizza=state.selectedPizzas.find(i => {
+              return i.pizzaName=state.pizzaName
+         })
+
+         // find the index of the same pizza
+         const isSamePizza = pizza => pizza.pizzaName = state.pizzaName;
+         const pizzaIndex = state.selectedPizzas.findIndex(isSamePizza);
+
+      
+        console.log(pizzaIndex)
+        console.log(samePizza)
+        console.log(state.selectedPizzas)
+
+         //if no same pizza in the array
+        if (samePizza==undefined){
       
             return {
+                
                 ...state,
-                pizza: {
-                    pizzaName : state.pizzaName,
-                    quantity: state.count,
-                    image: state.pizzaImage,
-                    price: state.pizzaPrice,                 
-                },
+                selectedPizzas: [...state.selectedPizzas, {pizzaName: state.pizzaName,quantity: state.count
+                              ,price:state.pizzaPrice,image: state.pizzaImage, currencyFormat:'$',}]
+ 
+            } 
+            } else{
+                // find the index of the same pizza and change the quantity..
+
+
+
+                // return {
+                
+                //     ...state,
+                //     selectedPizzas: [...state.selectedPizzas, {pizzaName: state.pizzaName,quantity: state.count
+                //         ,price:state.pizzaPrice,image: state.pizzaImage, currencyFormat:'$',}]
+                // } 
 
              
-                selectedPizzas: [...state.selectedPizzas, {pizzaName: state.pizzaName,quantity: state.count
-                ,price:state.pizzaPrice,image: state.pizzaImage, currencyFormat:'$',}]
+        }
 
-            
-            };
-            
+             
+ 
+        
+
+    
+  
+     
             default:
                 return state;
     }
@@ -86,3 +117,13 @@ const pizzaReducer = (state=initialState,action) => {
 }
 
 export default pizzaReducer;
+
+ // selectedPizzas: state.selectedPizzas.forEach(i => {
+                //     if (!state.pizzaName == i.pizzaName){
+                //          return [...state.selectedPizzas, {pizzaName: state.pizzaName,quantity: state.count
+                //        ,price:state.pizzaPrice,image: state.pizzaImage, currencyFormat:'$',}]
+
+                //     } else {
+                //         return i.quantity += state.quantity
+                //     }
+                // })

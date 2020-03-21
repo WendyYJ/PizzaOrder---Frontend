@@ -12,7 +12,7 @@ class Question extends React.Component {
   }
 
   render() {
-    console.log(this.props.isShowing);
+
     return (
       <div className="questioncontainer">
         <h1>Frequently Asked Question</h1>
