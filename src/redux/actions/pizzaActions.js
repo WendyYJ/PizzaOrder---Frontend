@@ -5,6 +5,7 @@ export const FETCH_PIZZA_FAILURE ='FETCH_PIZZA_FAILURE';
 export const COUNT_UP ='COUNT_UP';
 export const COUNT_DOWN ='COUNT_DOWN';
 export const ADD_CART='ADD_CART';
+export const UPDATE_CART = 'UPDATE_CART';
 
 export const countUp= () => ({
    
@@ -27,7 +28,6 @@ export const fetchPizza = () => ({
 
 });
 
-
 export const fetchPizzaSuccess= data => ({
    
         type:FETCH_PIZZA_SUCCESS,
@@ -41,6 +41,20 @@ export const fetchPizzaFaliure = errorMessage => ({
         errorMessage,
     
     });
+
+export const addCart = () => ({
+   
+        type: ADD_CART,
+    
+    
+});
+
+
+export const updateCart = (id,quantity) => ({
+    type:UPDATE_CART,
+    id,
+    quantity,
+});
 
 export const loadPizza= id => dispatch => {
         dispatch(fetchPizza());
@@ -64,10 +78,5 @@ export const loadPizza= id => dispatch => {
     
     };
 
-    export const addCart = () => ({
    
-        type: ADD_CART,
-    
-    
-    });
 

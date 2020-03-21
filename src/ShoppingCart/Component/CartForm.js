@@ -7,7 +7,8 @@ class CartProduct extends Component {
     constructor(props) {
         super(props);
         this.state ={
-            isMouseOver: false
+            isMouseOver: false,
+            quantity:this.props.product.quantity,
         }
     }
     handleMouseOver = () => {
@@ -18,60 +19,68 @@ class CartProduct extends Component {
         this.setState({ isMouseOver: false });
     };
 
+    handleQuantity = (e) => {
+        const newQuantity = e.target.value;
+        if(e.target.value >= 0) {
+            this.setState({quantity:newQuantity});    
+        } 
+        this.props.addQuantity(this.props.product,newQuantity);  
+    };
+
     render() {
       const { product, removeProduct } = this.props;
       const classes = ['cart-item'];
-    
       if (!!this.state.isMouseOver) {
           classes.push('cart-item--mouseover');
       }
       return (
-
-          <div className={classes.join(' ')}>
-            <div className = "cart-item__product">
-                <div
-                    className="cart-item__del"
-                    onMouseOver={() => this.handleMouseOver()}
-                    onMouseOut={() => this.handleMouseOut()}
-                    onClick={() => removeProduct(product)}
-                />
-                <Thumb
-                    classes="cart-item__thumb"
-                    src = {product.image}
-                    alt = {product.pizzaName}
-                />
-                <div>
-                    <p className="title">{product.pizzaName}</p>
-                    <p className="desc">
-                        <span>SIZE: </span>{`${product.size}`} <br />
-                    </p>
-               </div>
-            </div>    
-          
-                <div className="cart-item__price">  
+    
+            <div className={classes.join(' ')}>
+                <div className = "cart-item__product">
+                    <div
+                        className="cart-item__del"
+                        onMouseOver={() => this.handleMouseOver()}
+                        onMouseOut={() => this.handleMouseOut()}
+                        onClick={() => removeProduct(product)}
+                    />
+                    <Thumb
+                        classes="cart-item__thumb"
+                        src = {product.image}
+                        alt = {product.pizzaName}
+                    />
+                    <div>
+                        <p className="title">{product.pizzaName}</p>
+                        <p className="desc">
+                            <span>SIZE: </span>{`${product.size}`} 
+                        </p>
+                </div>
+                </div>    
+            
+                    <div className="cart-item__price">  
+                        {`${product.currencyFormat}${util.formatPrice(
+                            product.price
+                        )}`} 
+                </div>         
+                    <div className = "cart-item__quantity"> 
+                        <input type = "number" value = {this.state.quantity} name = "quantity" size = "2" className = "cart-item__quantityInput" onChange = {(e) => this.handleQuantity(e)} />
+                    </div>  
+                    <div className = "cart-item__total">
                     {`${product.currencyFormat}${util.formatPrice(
-                        product.price
+                            product.price * product.quantity
                     )}`} 
-               </div>         
-                <div className = "cart-item__quantity"> 
-                    <input value = {product.quantity} name = "quantity" size = "2" className = "cart-item__quantityInput" />
-                </div>  
-                <div className = "cart-item__total">
-                {`${product.currencyFormat}${util.formatPrice(
-                        product.price * product.quantity
-                )}`} 
-                </div>       
-            </div>
+                    </div>       
+                </div>           
         );
       }
     }
     
-    const mapStateToProps = state => {
+   const mapStateToProps = state => {
       return{
           pizza:state.pizza.pizza,
           selectedPizzas: state.pizza.selectedPizzas,  
       };
     };
+    
   export default connect(mapStateToProps)(CartProduct);
   
 

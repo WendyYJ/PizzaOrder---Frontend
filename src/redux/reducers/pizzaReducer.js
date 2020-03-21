@@ -1,4 +1,4 @@
-import {FETCH_PIZZA_SUCCESS, FETCH_PIZZA, FETCH_PIZZA_FAILURE, COUNT_UP, COUNT_DOWN, ADD_CART} from '../actions/pizzaActions';
+import {FETCH_PIZZA_SUCCESS, FETCH_PIZZA, FETCH_PIZZA_FAILURE, COUNT_UP, COUNT_DOWN, ADD_CART,UPDATE_CART, updateCart} from '../actions/pizzaActions';
 
 const initialState={
     count: 1,
@@ -105,7 +105,12 @@ const pizzaReducer = (state=initialState,action) => {
 
             
             };
-            
+
+            case UPDATE_CART:
+                const index = state.selectedPizzas.findIndex(product => product.id === action.id)
+                state.selectedPizzas[index].quantity = action.quantity;
+                return state;
+                
             default:
                 return state;
     }
