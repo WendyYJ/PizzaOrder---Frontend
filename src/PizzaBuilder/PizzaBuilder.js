@@ -18,6 +18,8 @@ class PizzaBuilder extends React.Component{
     this.props.loadIngredient(type);       
   }
 
+  
+
     contentList = [
         {id: 1, title: 'Choose Your Crust\'s Size', content: <Crust/>},
         {id: 2, title: 'Select Your Sauce', content: <AccordionContent cards={this.props.SAUCES} />},
@@ -27,11 +29,12 @@ class PizzaBuilder extends React.Component{
     render(){
       console.log(this.props.isLoading);
       console.log(this.props);
+      console.log(this.props.SAUCES);
         return(
             <>
               {
                 this.props.isLoading
-                ? <div> do nothing</div>
+                ? <div>  </div>
                 :
                 <div>
                   <div className='builder__title'>

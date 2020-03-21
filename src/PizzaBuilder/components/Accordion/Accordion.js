@@ -1,16 +1,23 @@
 import React, { useState, useRef } from "react";
 import Chevron from "./Chevron";
+import ContentCard from '../AccordionContents/ContentCard';
 
 
 import "./Accordion.scss";
 
 
 function Accordion(props) {
-  const [setActive, setActiveState] = useState("");
-  const [setHeight, setHeightState] = useState("0px");
-  const [setRotate, setRotateState] = useState("accordion__icon");
+  console.log(props);
+  console.log(this);
+  const [setActive, setActiveState] = useState( "" );
+  const [setHeight, setHeightState] = useState( "0px" );
+  const [setRotate, setRotateState] = useState( "accordion__icon" );
+  const [cards, setCards] = useState( [] );
 
   const content = useRef(null);
+  // setCards(
+  //   cards = this.props.content
+  // )
  
   function toggleAccordion() {
     setActiveState(setActive === "" ? "active" : "");
@@ -20,6 +27,7 @@ function Accordion(props) {
     setRotateState(
       setActive === "active" ? "accordion__icon" : "accordion__icon rotate"
     );
+    
   }
 
   return (
@@ -39,8 +47,21 @@ function Accordion(props) {
         className="accordion__content"
       >
         <div
-          className="accordion__text"
-        > {props.content}
+          className="accordion__text content__flex"
+        > 
+        {
+          cards.map( card => (
+          <ContentCard
+          key={card.id}
+          name={card.IngredientName}
+          image={card.Image}
+          price={card.UnitPrice}
+          description={card.Description}
+      />
+
+      ))
+      
+      }
           </div>
       </div>
     </div>
