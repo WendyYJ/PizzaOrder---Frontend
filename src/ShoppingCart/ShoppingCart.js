@@ -26,8 +26,7 @@ class ShoppingCart extends React.Component {
   addQuantity = (product,number) => {
     if(number != "") {
       this.state.changedProduct.push({product:product,quantity:Number(number)});
-   }
-   
+    }  
   }
 
   changePizzas = () =>{
@@ -45,7 +44,7 @@ class ShoppingCart extends React.Component {
   render() {
     let totalPrice =0;
     const products = this.props.selectedPizzas.map(p => {
-      totalPrice = totalPrice + p.itemPrice;
+      totalPrice = totalPrice + p.price * p.quantity;
       return (
               <CartForm product={p} key={p.id} addQuantity = {this.addQuantity} removeProduct = {this.removeProduct} />
             );
@@ -55,9 +54,10 @@ class ShoppingCart extends React.Component {
           <FourthHeader headername="Shopping Cart" />
           <div className = "shopping__container">
             <div className="shopping__form">
-              {products.length 
-                && <Title /> }
-              {products}
+              { !!products.length 
+                && <Title /> 
+              }
+              { products }
               {!products.length && (
                   <p className="shopping__form-empty">
                             Add some products in the bag <br />
@@ -80,7 +80,7 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps= dispatch => ({
-  updateCart: (id,quantity) => dispatch (updateCartAction(id,quantity)) 
+    updateCart: (id,quantity) => dispatch (updateCartAction(id,quantity)) 
 });
 
 export default connect(mapStateToProps,mapDispatchToProps)(ShoppingCart);

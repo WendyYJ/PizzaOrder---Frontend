@@ -58,21 +58,20 @@ class CartProduct extends Component {
                         </p>
                 </div>
                 </div>    
-            
-                    <div className="cart-item__price">  
+                <div className="cart-item__price">  
                         {`${product.currencyFormat}${util.formatPrice(
                             product.price
                         )}`} 
                 </div>         
-                    <div className = "cart-item__quantity"> 
-                        <input type = "number" min = "0" value = {this.state.quantity} name = "quantity" size = "2" className = "cart-item__quantityInput" onChange = {(e) => this.handleQuantity(e)} />
-                    </div>  
-                    <div className = "cart-item__total">
+                <div className = "cart-item__quantity"> 
+                    <input type = "number" min = "0" value = {this.state.quantity} name = "quantity" size = "2" className = "cart-item__quantityInput" onChange = {(e) => this.handleQuantity(e)} />
+                </div>  
+                <div className = "cart-item__total">
                     {`${product.currencyFormat}${util.formatPrice(
                             product.price * this.state.quantity
                     )}`} 
-                    </div>       
-                </div>           
+                </div>       
+            </div>           
         );
       }
     }

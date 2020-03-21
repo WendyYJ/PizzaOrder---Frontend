@@ -29,14 +29,6 @@ class ShoppingCart extends Component {
             }
     };   
 
-    proceedCheckout = (quantity,price) => {
-        if(quantity == 0) {
-            alert('Add some product in the bag');
-        } else {
-            alert("total price is: " + price);// could use semantic ui message box to lead to checkout page
-        }
-    }
-
     render() {
        
         let classes = ['float-cart'];

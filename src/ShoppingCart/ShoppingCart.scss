@@ -114,7 +114,7 @@
     &__price,&__total {
       color:#D94F2B;
       font-weight: bold;
-      font-family: "Fredericka the Great", sans-serif;
+      font-family: $chalk;
       font-size: 15px;
       margin-top: 2%;  
     }
@@ -126,6 +126,7 @@
 }
 .cart-subtotal {
   width:20%;
+  height:260px;
   background-color: #0c0b10;
   padding-right: 20px;
   &__title {
@@ -143,19 +144,30 @@
     font-size: 20px;
   } 
 }
-@media screen and (max-width: 768px) {
-  .float-cart {
-    &__viewbtn,&__buybtn {
-      width:60%;
-      font-size: 12px;
-    }
-    &__buybtn {
-      margin-bottom: 10px;
-    }
+@media screen and (max-width: 952px) { 
+  .shopping__container {
+    flex-direction: column;
+    width:60%;
   }
+  .cart-subtotal {
+    width:70%;
+    margin-left:40%;
+    margin-top:5%;
+  }
+  .shopping__form { 
+    margin-left:10%;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .shopping__form {
     &-title {
       font-size: 14px;
+    }
+    &-empty{
+      width:80%；
+      color：white;
+      font-size: 13px;
     }
   }
   .shopping__container {
@@ -164,7 +176,10 @@
   }
   .cart-subtotal {
     width:60%;
+    height:200px;
     margin-left: 50%;
+    padding-top: 10px;
+    padding-bottom: 20px;
     &__sum {
       font-size: 14px;
     }

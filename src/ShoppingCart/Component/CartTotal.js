@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import util from '../../utils/util';
 import { Link } from 'react-router-dom';
 
-
 class CartTotal extends React.Component {
     constructor(props) {
         super(props);    
