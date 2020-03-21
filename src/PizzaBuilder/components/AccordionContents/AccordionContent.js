@@ -1,32 +1,31 @@
 import React from 'react';
-import axios from 'axios';
 import ContentCard from './ContentCard';
 
 class AccordionContent extends React.Component{
     state=
     {
-        contents: []
+        cards: []
     }
     
     componentDidMount(){
-        axios.get('http://pizzadeploy-env.dn37p3zqw3.ap-southeast-2.elasticbeanstalk.com/ingredient/SAUCES')
-            .then(response => {
-                const contents = response.data.data;
-                this.setState({contents});
-            })
+        
+        const { cards } =  this.props.cards;
+        this.setState({cards});
+        console.log(cards);
+           
     } 
 
     render(){
         return(
             <section className='content__flex'>
             {
-                this.state.contents.map( content => (
+                this.state.cards.map( card => (
                 <ContentCard
-                key={content.id}
-                name={content.IngredientName}
-                image={content.Image}
-                price={content.UnitPrice}
-                description={content.Description}
+                key={card.id}
+                name={card.IngredientName}
+                image={card.Image}
+                price={card.UnitPrice}
+                description={card.Description}
             />
 
             ))

@@ -5,7 +5,7 @@ const initialState = {
   SAUCES:[],
   CHEESES:[],
   VEGGIGS:[],
-  isLoading:false,
+  isLoading:true,
   errorMessage:'',
 };
 

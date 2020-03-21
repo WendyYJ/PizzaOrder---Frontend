@@ -10,7 +10,6 @@ const ContentCard = (props) => {
             <h3 className='content__name'>{props.name}</h3>
             <p className='content__description'>{props.description}</p>
             <p className='content__price'>$ {props.price}</p>
-               
         </div>
     )
 
