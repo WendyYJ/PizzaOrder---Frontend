@@ -26,15 +26,26 @@ class ShoppingCart extends React.Component {
   addQuantity = (product,number) => {
     if(number != "") {
       this.state.changedProduct.push({product:product,quantity:Number(number)});
-    }
+   }
+   
+  }
+
+  changePizzas = () =>{
+    this.state.changedProduct.map(
+        p => {
+            if(p.quantity == 0) {
+              this.removeProduct(p.product);
+            } else {
+              this.props.updateCart(p.product.id,p.quantity);  
+            }                 
+    });  
+    this.setState({changedProduct:[]})
   }
 
   render() {
-    let totalQuantity = 0;
     let totalPrice =0;
     const products = this.props.selectedPizzas.map(p => {
-      totalQuantity = totalQuantity + p.quantity;
-      totalPrice = totalPrice + p.price * p.quantity;
+      totalPrice = totalPrice + p.itemPrice;
       return (
               <CartForm product={p} key={p.id} addQuantity = {this.addQuantity} removeProduct = {this.removeProduct} />
             );
@@ -54,7 +65,7 @@ class ShoppingCart extends React.Component {
                   </p>
               )}
             </div>
-            <CartTotal products = {this.state.changedProduct} totalPrice = {totalPrice} />
+            <CartTotal products = {this.state.changedProduct} totalPrice = {totalPrice} changePizzas = {this.changePizzas} />
           </div>
           <Footer /> 
         </React.Fragment>
@@ -64,7 +75,6 @@ class ShoppingCart extends React.Component {
  
 const mapStateToProps = state => {
   return{
-    pizza:state.pizza.pizza,
     selectedPizzas: state.pizza.selectedPizzas,
   };
 };

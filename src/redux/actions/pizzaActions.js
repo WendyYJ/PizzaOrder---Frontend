@@ -76,7 +76,7 @@ export const loadPizza= id => dispatch => {
     
         });
     
-    };
+};
 
    
 

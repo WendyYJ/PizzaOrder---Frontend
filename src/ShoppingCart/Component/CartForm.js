@@ -21,6 +21,9 @@ class CartProduct extends Component {
 
     handleQuantity = (e) => {
         const newQuantity = e.target.value;
+        if(e.target.value ===0 ) {
+
+        }
         if(e.target.value >= 0) {
             this.setState({quantity:newQuantity});    
         } 
@@ -62,11 +65,11 @@ class CartProduct extends Component {
                         )}`} 
                 </div>         
                     <div className = "cart-item__quantity"> 
-                        <input type = "number" value = {this.state.quantity} name = "quantity" size = "2" className = "cart-item__quantityInput" onChange = {(e) => this.handleQuantity(e)} />
+                        <input type = "number" min = "0" value = {this.state.quantity} name = "quantity" size = "2" className = "cart-item__quantityInput" onChange = {(e) => this.handleQuantity(e)} />
                     </div>  
                     <div className = "cart-item__total">
                     {`${product.currencyFormat}${util.formatPrice(
-                            product.price * product.quantity
+                            product.price * this.state.quantity
                     )}`} 
                     </div>       
                 </div>           
@@ -76,11 +79,10 @@ class CartProduct extends Component {
     
    const mapStateToProps = state => {
       return{
-          pizza:state.pizza.pizza,
           selectedPizzas: state.pizza.selectedPizzas,  
       };
     };
-    
+
   export default connect(mapStateToProps)(CartProduct);
   
 

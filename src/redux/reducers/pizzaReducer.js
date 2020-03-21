@@ -1,5 +1,6 @@
 import {FETCH_PIZZA_SUCCESS, FETCH_PIZZA, FETCH_PIZZA_FAILURE, COUNT_UP, COUNT_DOWN, ADD_CART,UPDATE_CART, updateCart} from '../actions/pizzaActions';
 
+
 const initialState={
     count: 1,
     pizzaName:'',
@@ -96,19 +97,18 @@ const pizzaReducer = (state=initialState,action) => {
                     pizzaName : state.pizzaName,
                     quantity: state.count,
                     image: state.pizzaImage,
-                    price: state.pizzaPrice,                 
-                },
-
-             
+                    price: state.pizzaPrice,
+                    itemPrice:state.quantity*state.price                 
+                },  
                 selectedPizzas: [...state.selectedPizzas, {pizzaName: state.pizzaName,quantity: state.count
-                ,price:state.pizzaPrice,image: state.pizzaImage, currencyFormat:'$',}]
-
-            
+                ,price:state.pizzaPrice,image: state.pizzaImage, currencyFormat:'$',itemPrice:state.price*state.quantity}]
+     
             };
 
             case UPDATE_CART:
-                const index = state.selectedPizzas.findIndex(product => product.id === action.id)
+                const index = state.selectedPizzas.findIndex(product => product.id === action.id) 
                 state.selectedPizzas[index].quantity = action.quantity;
+                state.selectedPizzas[index].itemPrice = state.selectedPizzas[index].price * action.quantity;
                 return state;
                 
             default:

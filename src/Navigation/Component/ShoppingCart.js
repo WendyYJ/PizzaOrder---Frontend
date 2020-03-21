@@ -29,7 +29,6 @@ class ShoppingCart extends Component {
             }
     };   
 
-    // quantity, price is just for showing function. This is stored in redux.
     proceedCheckout = (quantity,price) => {
         if(quantity == 0) {
             alert('Add some product in the bag');
@@ -47,7 +46,7 @@ class ShoppingCart extends Component {
             totalQuantity = totalQuantity + p.quantity;
             totalPrice = totalPrice + p.quantity * p.price;
             return (
-                <CartProduct product={p} key={p.id} removeProduct = {this.removeProduct}/>
+                <CartProduct product={p} quantity = {p.quantity} key={p.id} removeProduct = {this.removeProduct}/>
             );
         });
 
@@ -115,8 +114,8 @@ class ShoppingCart extends Component {
 
 const mapStateToProps = state => {
     return{
-        pizza: state.pizza.pizza,
         selectedPizzas: state.pizza.selectedPizzas,
     };
   };
-export default connect(mapStateToProps)(ShoppingCart);
+  
+export default connect(mapStateToProps,null)(ShoppingCart);
