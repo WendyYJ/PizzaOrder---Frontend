@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter, Redirect, Route, Switch,
-} from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import Homepage from '../Homepage/Homepage';
 import PizzaMenu from '../PizzaMenu/PizzaMenu';
 import SampleId from '../PizzaMenu/SampleId';

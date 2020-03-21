@@ -2,6 +2,8 @@ import React, { Component} from 'react';
 import { connect } from 'react-redux';
 import CartProduct from './CartProduct';
 import util from '../../utils/util';
+import { Link } from 'react-router-dom';
+import { SHOPPINGCART_URL } from '../../routes/URLMap'
 import '../Style/ShoppingCart.scss';
 
 class ShoppingCart extends Component {
@@ -10,36 +12,6 @@ class ShoppingCart extends Component {
         this.state = {
             isOpen:false,
             isLoading:false, 
-            // cartProducts : 
-            // // this.props.selectedPizzas,
-
-            //     [
-            //     { 
-            //     id:"12345",
-            //     pizzaName:"Prawn Pizza",
-            //     image:"https://www.dominos.com.au/ManagedAssets/AU/product/P355/AU_P355_en_hero_3177.png?v-560733922",
-            //     price:22,
-            //     size:"Large",
-            //     quantity:1,
-            //     currencyFormat:'$',
-            //     },
-            //     {id:"12346",
-            //     pizzaName:"Beef Pizza",
-            //     image:"https://www.dominos.com.au/ManagedAssets/AU/product/P322/AU_P322_en_hero_3177.png?v693830719",
-            //     price:25,
-            //     size:"Jumbo",
-            //     quantity:1,
-            //     currencyFormat:'$',
-            //     },
-            //     {id:"12347",
-            //     pizzaName:"Chicken Pizza",
-            //     image:"https://www.dominos.com.au/ManagedAssets/AU/product/P223/AU_P223_en_hero_4055.jpg?v-233754517",
-            //     price:18,
-            //     size:"Small",
-            //     quantity:2,
-            //     currencyFormat:'$',
-            //     }
-            // ],
         }
     }
     openFloatCart = () => {
@@ -52,34 +24,21 @@ class ShoppingCart extends Component {
 
     removeProduct = product => {
         const index = this.props.selectedPizzas.findIndex(p => p.id === product.id);
- 
             if (index >= 0) {
                 this.setState( this.props.selectedPizzas.splice(index, 1));
-                //updateCart(cartProducts);
             }
     };   
-
-    // quantity, price is just for showing function. This is stored in redux.
-    proceedCheckout = (quantity,price) => {
-        if(quantity == 0) {
-            alert('Add some product in the bag');
-        } else {
-            alert("total price is: " + price);// could use semantic ui message box to lead to checkout page
-        }
-    }
 
     render() {
        
         let classes = ['float-cart'];
         let totalQuantity = 0;
         let totalPrice = 0;
-
-    
         const products = this.props.selectedPizzas.map(p => {
             totalQuantity = totalQuantity + p.quantity;
             totalPrice = totalPrice + p.quantity * p.price;
             return (
-                <CartProduct product={p} key={p.id} removeProduct = {this.removeProduct}/>
+                <CartProduct product={p} quantity = {p.quantity} key={p.id} removeProduct = {this.removeProduct}/>
             );
         });
 
@@ -118,26 +77,28 @@ class ShoppingCart extends Component {
                             Add some products in the bag <br />
                             :)
                         </p>
-                        )}
-                        
-                        <div className = "float-cart__total">
-                            <span>OrderTotal:</span>
-                            <span>${util.formatPrice(
-                                    totalPrice
-                                    )}
-                            </span>         
-                        </div> 
-                    </div>
-                     
-                    <div className="float-cart__footer">  
-                        <div className="cart-btn">
-                            View ShoppingCart
-                        </div>
-                        <div className="buy-btn" onClick={() => this.proceedCheckout(totalQuantity,totalPrice)}>
-                            Checkout
-                        </div>
-                    </div>          
-            </div>
+                        )} 
+                    </div>         
+                </div>
+
+            <div className="float-cart__footer">                    
+                <div className = "float-cart__total">
+                    <span>OrderTotal:</span>
+                        <span>
+                            ${util.formatPrice(
+                                totalPrice
+                            )}
+                        </span>         
+                </div>
+                <div className = "float-cart__btn">
+                    <Link to = {SHOPPINGCART_URL} className="float-cart__viewbtn">
+                        View ShoppingCart  
+                    </Link>
+                    <Link to = {SHOPPINGCART_URL} className="float-cart__buybtn">
+                        Checkout  
+                    </Link>
+                </div>
+            </div> 
         </div>
     );
     }   
@@ -145,13 +106,8 @@ class ShoppingCart extends Component {
 
 const mapStateToProps = state => {
     return{
-
-        pizza:state.pizza.pizza,
-        pizzaName: state.pizza.pizzaName,
         selectedPizzas: state.pizza.selectedPizzas,
-  
-  
-  
     };
   };
-export default connect(mapStateToProps)(ShoppingCart);
+  
+export default connect(mapStateToProps,null)(ShoppingCart);

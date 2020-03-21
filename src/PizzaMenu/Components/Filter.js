@@ -21,8 +21,7 @@ class Filter extends React.Component {
     
 
 
-    const mockImage =
-      "https://sdtimes.com/wp-content/uploads/2018/03/jW4dnFtA_400x400.jpg";
+  
     super(props);
 
     this.state = {
@@ -284,24 +283,9 @@ class Filter extends React.Component {
           </div>
         </section>
         ):null}
-        {/* <ErrorMessage error={this.state.error} /> */}
+   
         <Segment basic loading={this.state.isLoading}>
-          {/* 
-        {this.props.isFiltering ? (
-
-          <div className="pizzacontainer">
-          {this.state.filteredPizza.map(pizza => (
-              <PizzaCard
-                pizzaDescription={pizza.Description}
-                pizzaImage={pizza.pizzaImage}
-                pizzaName={pizza.PizzaName}
-                pizzaPrice={pizza.UnitPrice}
-                key={pizza._id}
-                to={`${PIZZAMENU_URL}/${pizza._id}`}
-              />
-            ))}
-          </div>
-        ):( */}
+      
           <div className="pizzacontainer">
             {this.state.pizzas.map(pizza => (
               <PizzaCard
@@ -317,7 +301,7 @@ class Filter extends React.Component {
           
         </Segment>
         {this.state.pagination && this.state.pagination.page && (
-          <Pagination className="pizza-page" variant="outlined"
+          <Pagination  className="pizza-page" variant="outlined"
             activePage={this.state.pagination.page}
             totalPages={this.state.pagination.pages}
             onPageChange={this.handlePageChange}
