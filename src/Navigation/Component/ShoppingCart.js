@@ -38,7 +38,7 @@ class ShoppingCart extends Component {
             totalQuantity = totalQuantity + p.quantity;
             totalPrice = totalPrice + p.quantity * p.price;
             return (
-                <CartProduct product={p} quantity = {p.quantity} key={p.id} removeProduct = {this.removeProduct}/>
+                <CartProduct product={p} quantity = {p.quantity} key={p.id} size={p.size} removeProduct = {this.removeProduct}/>
             );
         });
 
@@ -107,6 +107,7 @@ class ShoppingCart extends Component {
 const mapStateToProps = state => {
     return{
         selectedPizzas: state.pizza.selectedPizzas,
+        pizzaSize: state.pizza.pizzaSize,
     };
   };
   

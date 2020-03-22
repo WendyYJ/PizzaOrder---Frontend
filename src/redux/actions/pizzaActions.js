@@ -7,6 +7,11 @@ export const COUNT_DOWN ='COUNT_DOWN';
 export const ADD_CART='ADD_CART';
 export const UPDATE_CART = 'UPDATE_CART';
 export const UPDATE_COUNT = 'UPDATE_COUNT';
+export const HANDLE_CLICK1 = 'HANDLE_CLICK1';
+export const HANDLE_CLICK2 = 'HANDLE_CLICK2';
+export const HANDLE_CLICK3 = 'HANDLE_CLICK3';
+export const HANDLE_CLICK4 = 'HANDLE_CLICK4';
+export const HANDLE_CLICK5 = 'HANDLE_CLICK5';
 
 export const countUp= () => ({
    
@@ -85,6 +90,28 @@ export const updateCount= () => ({
 
 
 });
+
+export const handleClick1= () => ({
+    type: HANDLE_CLICK1,
+})
+
+export const handleClick2= () => ({
+    type: HANDLE_CLICK2,
+})
+
+export const handleClick3= () => ({
+    type: HANDLE_CLICK3,
+})
+
+export const handleClick4= () => ({
+    type: HANDLE_CLICK4,
+})
+
+export const handleClick5= () => ({
+    type: HANDLE_CLICK5,
+})
+
+
 
    
 
