@@ -6,11 +6,11 @@ export const COUNT_UP ='COUNT_UP';
 export const COUNT_DOWN ='COUNT_DOWN';
 export const ADD_CART='ADD_CART';
 export const UPDATE_CART = 'UPDATE_CART';
+export const DELETE_CART = 'DELETE_CART';
 
 export const countUp= () => ({
    
-        type:COUNT_UP,
-
+    type:COUNT_UP,
 
 });
 
@@ -56,16 +56,23 @@ export const updateCart = (id,quantity) => ({
     quantity,
 });
 
+export const deleteCart = (id) => ({
+    type:DELETE_CART,
+    id,
+})
+
 export const loadPizza= id => dispatch => {
         dispatch(fetchPizza());
         fetchPizzaById(id).then(data => {
             const pizzaName = data.PizzaName;
+            const id = data.id;
             const pizzaPrice = data.UnitPrice;
             const pizzaDesc = data.Description;
             const pizzaImage = data.PizzaImage
        
             dispatch(fetchPizzaSuccess({
                 pizzaName,
+                id,
                 pizzaPrice,
                 pizzaDesc,
                 pizzaImage,

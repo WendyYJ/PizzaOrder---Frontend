@@ -1,13 +1,11 @@
 import queryString from 'query-string';
 import { get } from './axios';
 
-const mockImage = 'https://sdtimes.com/wp-content/uploads/2018/03/jW4dnFtA_400x400.jpg';
 const API_PIZZA_URL = '/pizza';
 const API_INGREDIENT_URL = '/ingredient';
 export const fetchPizza = (page = 1, pageSize = 10) => {
   const stringified = queryString.stringify({
     pageSize,
-
     page,
   });
 

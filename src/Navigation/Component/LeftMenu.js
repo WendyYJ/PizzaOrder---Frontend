@@ -54,15 +54,15 @@ class LeftMenu extends Component {
                         <div className = "float__menu-item">
                             <input type="text" placeholder="Search.." />
                             <i className="fa fa-search"></i>
-                            <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {HOME_URL}>HOME</NavLink>
-                            <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {PIZZAMENU_URL}>PIZZA MENU</NavLink>
-                            <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {PIZZABUILDER_URL}>PIZZA BUILDER</NavLink>
-                            <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {ABOUTUS_URL}>ABOUT US</NavLink>
-                            <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {CONTACT_URL}>CONTACT</NavLink>  
+                            <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {HOME_URL} onClick= {() => this.closeFloatMenu()}>HOME</NavLink>
+                            <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {PIZZAMENU_URL} onClick= {() => this.closeFloatMenu()}>PIZZA MENU</NavLink>
+                            <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {PIZZABUILDER_URL} onClick= {() => this.closeFloatMenu()}>PIZZA BUILDER</NavLink>
+                            <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {ABOUTUS_URL} onClick= {() => this.closeFloatMenu()}>ABOUT US</NavLink>
+                            <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {CONTACT_URL} onClick= {() => this.closeFloatMenu()}>CONTACT</NavLink>  
                             <div className ="customHr">.</div> 
-                            <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {LOGIN_URL}>LOGIN</NavLink> 
-                            <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {MYACCOUNT_URL}>MY ACCOUNT</NavLink> 
-                            <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {CHECKOUT_URL}>CHECKOUT</NavLink> 
+                            <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {LOGIN_URL} onClick= {() => this.closeFloatMenu()}>LOGIN</NavLink> 
+                            <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {MYACCOUNT_URL} onClick= {() => this.closeFloatMenu()}>MY ACCOUNT</NavLink> 
+                            <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {CHECKOUT_URL} onClick= {() => this.closeFloatMenu()}>CHECKOUT</NavLink> 
                         </div>                
                 )
             }       

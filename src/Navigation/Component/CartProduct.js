@@ -46,7 +46,7 @@ class CartProduct extends Component {
               </p>
               <div className="shelf-item__price">
                 <p>
-                  <span className = "price"> {this.props.quantity} x </span>
+                  <span className = "price"> {product.quantity} x </span>
                   {`${product.currencyFormat}${util.formatPrice(
                       product.price
                   )}`}
@@ -59,7 +59,7 @@ class CartProduct extends Component {
       }
     }
     
-    const mapStateToProps = state => {
+  const mapStateToProps = state => {
       return{
           pizza:state.pizza.pizza,
           selectedPizzas: state.pizza.selectedPizzas,    

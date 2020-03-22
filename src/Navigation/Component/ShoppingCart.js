@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import CartProduct from './CartProduct';
 import util from '../../utils/util';
 import { Link } from 'react-router-dom';
-import { SHOPPINGCART_URL } from '../../routes/URLMap'
+import { SHOPPINGCART_URL } from '../../routes/URLMap';
+import {deleteCart as deleteCartAction} from '../../redux/actions/pizzaActions';
 import '../Style/ShoppingCart.scss';
 
 class ShoppingCart extends Component {
@@ -23,10 +24,7 @@ class ShoppingCart extends Component {
     };
 
     removeProduct = product => {
-        const index = this.props.selectedPizzas.findIndex(p => p.id === product.id);
-            if (index >= 0) {
-                this.setState( this.props.selectedPizzas.splice(index, 1));
-            }
+        this.props.deleteCart(product.id);
     };   
 
     render() {
@@ -38,7 +36,7 @@ class ShoppingCart extends Component {
             totalQuantity = totalQuantity + p.quantity;
             totalPrice = totalPrice + p.quantity * p.price;
             return (
-                <CartProduct product={p} quantity = {p.quantity} key={p.id} removeProduct = {this.removeProduct}/>
+                <CartProduct product={p} key={p.id} removeProduct = {this.removeProduct}/>
             );
         });
 
@@ -108,6 +106,10 @@ const mapStateToProps = state => {
     return{
         selectedPizzas: state.pizza.selectedPizzas,
     };
-  };
+};
   
-export default connect(mapStateToProps,null)(ShoppingCart);
+const mapDispatchToProps= dispatch => ({
+    deleteCart: (id) => dispatch(deleteCartAction(id)),
+});
+
+export default connect(mapStateToProps,mapDispatchToProps)(ShoppingCart);
