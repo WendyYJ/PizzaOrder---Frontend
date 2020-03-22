@@ -15,7 +15,6 @@ import { showFilter } from '../../redux/actions/filterActions';
 import { connect } from 'react-redux';
 import { makeStyles } from "@material-ui/core/styles";
 
-import ErrorMessage from "../../asset/errorMessage";
 class Filter extends React.Component {
   constructor(props) {
     
@@ -37,8 +36,7 @@ class Filter extends React.Component {
       isLoading: false,
       isFiltering: false,
       pagination: {},
-      filter: [],
-      filteredPizza: []
+   
     };
   }
 
@@ -95,9 +93,11 @@ class Filter extends React.Component {
       }
     }
     const filterstring = filterlist.toString();
-    console.log(filterstring);
+    console.log(filterlist);
     const url = `http://pizzadeploy-env.dn37p3zqw3.ap-southeast-2.elasticbeanstalk.com/pizza/filter?ingr=${filterstring}`;
+    const url2 ='http://pizzadeploy-env.dn37p3zqw3.ap-southeast-2.elasticbeanstalk.com/pizza'
     console.log(url);
+  if(filterlist.length>0){
     this.setState({ isLoading: true, isFiltering: true, pizzas: [] }, () => {
       return get(url)
         .then(res => res.data.data)
@@ -112,6 +112,24 @@ class Filter extends React.Component {
           this.setState({ error, isLoading: false });
         });
     });
+  }else{
+    this.setState({ isLoading: true, isFiltering: true, pizzas: [] }, () => {
+      return get(url2)
+        .then(res => res.data.data)
+        .then(pizzas => {
+          this.setState({
+            pizzas,
+            isLoading: false,
+            isFiltering: true
+          });
+        })
+        .catch(error => {
+          this.setState({ error, isLoading: false });
+        });
+    });
+
+  }
+   
   };
 
  

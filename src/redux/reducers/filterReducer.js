@@ -1,7 +1,7 @@
 import { SHOW_FILTER } from '../actions/filterActions';
 
 const initialState = {
-  showfilter: true,
+  showfilter: false,
 };
 
 const filterReducer = (state = initialState, action) => {

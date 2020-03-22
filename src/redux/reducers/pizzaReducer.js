@@ -1,4 +1,4 @@
-import {FETCH_PIZZA_SUCCESS, FETCH_PIZZA, FETCH_PIZZA_FAILURE, COUNT_UP, COUNT_DOWN, ADD_CART,UPDATE_CART, updateCart} from '../actions/pizzaActions';
+import {FETCH_PIZZA_SUCCESS, FETCH_PIZZA, FETCH_PIZZA_FAILURE, COUNT_UP, COUNT_DOWN, ADD_CART,UPDATE_CART,UPDATE_COUNT} from '../actions/pizzaActions';
 
 
 const initialState={
@@ -54,29 +54,41 @@ const pizzaReducer = (state=initialState,action) => {
             };
 
         case ADD_CART:
-            // check if there is same pizza in the array
-        
-            const samePizza=state.selectedPizzas.find(i => {
-                              return i.pizzaName==state.pizzaName
+
+
+            const selectedPizzasCopy = [];
+
+         
+
+            const samePizza=state.selectedPizzas.find(pizza => {
+                              return pizza.key==state.pizzaName
                          })
                 
 
           
-             const pizzaIndex = state.selectedPizzas.findIndex( pizza => pizza.pizzaName == state.pizzaName);
+             const pizzaIndex = state.selectedPizzas.findIndex( pizza => pizza.key == state.pizzaName);
 
             if (samePizza==undefined){
                 return {
                     ...state,
-                     selectedPizzas: [...state.selectedPizzas, {pizzaName: state.pizzaName,quantity: state.count
+                     selectedPizzas: [...state.selectedPizzas, {key: state.pizzaName,quantity: state.count
                      ,price:state.pizzaPrice,image: state.pizzaImage, currencyFormat:'$'}],
 
                 };
 
             }else{
-                
+
+                state.selectedPizzas.map(pizza => {
+                    selectedPizzasCopy.push(pizza)
+                    
+                })
+                selectedPizzasCopy[pizzaIndex].quantity+=state.count
               
-                state.selectedPizzas[pizzaIndex].quantity += state.count;
-                return state;
+                return {
+                    ...state,
+
+                    selectedPizzas:selectedPizzasCopy
+                }
                 
              }
 
@@ -87,6 +99,12 @@ const pizzaReducer = (state=initialState,action) => {
             state.selectedPizzas[index].quantity = action.quantity;
             state.selectedPizzas[index].itemPrice = state.selectedPizzas[index].price * action.quantity;
             return state;
+
+        case UPDATE_COUNT:
+            return {
+                ...state,
+                count: state.count=1           
+            };
                 
         default:
             return state;

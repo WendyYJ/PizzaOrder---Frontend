@@ -49,10 +49,10 @@ class CartProduct extends Component {
                     <Thumb
                         classes="cart-item__thumb"
                         src = {product.image}
-                        alt = {product.pizzaName}
+                        alt = {product.key}
                     />
                     <div>
-                        <p className="title">{product.pizzaName}</p>
+                        <p className="title">{product.key}</p>
                         <p className="desc">
                             <span>SIZE: </span>{`${product.size}`} 
                         </p>

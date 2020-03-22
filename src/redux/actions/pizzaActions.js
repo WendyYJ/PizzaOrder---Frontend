@@ -6,6 +6,7 @@ export const COUNT_UP ='COUNT_UP';
 export const COUNT_DOWN ='COUNT_DOWN';
 export const ADD_CART='ADD_CART';
 export const UPDATE_CART = 'UPDATE_CART';
+export const UPDATE_COUNT = 'UPDATE_COUNT';
 
 export const countUp= () => ({
    
@@ -77,6 +78,13 @@ export const loadPizza= id => dispatch => {
         });
     
 };
+
+export const updateCount= () => ({
+   
+    type:UPDATE_COUNT,
+
+
+});
 
    
 
