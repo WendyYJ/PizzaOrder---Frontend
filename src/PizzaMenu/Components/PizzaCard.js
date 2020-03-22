@@ -8,10 +8,8 @@ import { connect } from 'react-redux';
 
 
 
-const PizzaCard =(props)=> (
-
-
-  <Card  onClick={this.props.updateCount} as={Link} to={props.to} className="cardcontainer">
+const PizzaCard = (props) => (
+  <Card onClick={props.updateCount} as={Link} to={props.to} className="cardcontainer">
     <div className="circlecontainer">
       <img src={props.pizzaImage} />
     </div>
@@ -35,9 +33,7 @@ const PizzaCard =(props)=> (
       </div>
 
   </Card>
-
-    
-)
+);
 
 
 
