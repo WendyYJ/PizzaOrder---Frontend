@@ -37,8 +37,7 @@ class Filter extends React.Component {
       isLoading: false,
       isFiltering: false,
       pagination: {},
-      filter: [],
-      filteredPizza: []
+   
     };
   }
 

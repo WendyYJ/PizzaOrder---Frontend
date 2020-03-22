@@ -3,9 +3,13 @@ import { Card, Image } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import orangeCircle from '../../asset/img/orangecircle.png';
 import '../Style/Filter.scss';
+import { updateCount } from '../../redux/actions/pizzaActions';
+import { connect } from 'react-redux';
 
-const PizzaCard = (props) => (
-  <Card as={Link} to={props.to} className="cardcontainer">
+function PizzaCard(props) {
+
+    return (
+  <Card  onClick={this.props.updateCount} as={Link} to={props.to} className="cardcontainer">
     <div className="circlecontainer">
       <img src={props.pizzaImage} />
     </div>
@@ -29,6 +33,21 @@ const PizzaCard = (props) => (
       </div>
 
   </Card>
-);
 
-export default PizzaCard;
+    )
+  }
+
+
+
+
+const mapDispatchToProps = (dispatch) => ({
+  updateCount: () => dispatch(updateCount()),
+
+});
+const mapStateToProps = (state) => ({
+  count: state.pizza.count,
+});
+
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(PizzaCard);
