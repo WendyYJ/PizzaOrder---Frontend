@@ -6,9 +6,11 @@ import '../Style/Filter.scss';
 import { updateCount } from '../../redux/actions/pizzaActions';
 import { connect } from 'react-redux';
 
-function PizzaCard(props) {
 
-    return (
+
+const PizzaCard =(props)=> (
+
+
   <Card  onClick={this.props.updateCount} as={Link} to={props.to} className="cardcontainer">
     <div className="circlecontainer">
       <img src={props.pizzaImage} />
@@ -34,8 +36,8 @@ function PizzaCard(props) {
 
   </Card>
 
-    )
-  }
+    
+)
 
 
 
