@@ -56,6 +56,7 @@ const pizzaReducer = (state=initialState,action) => {
         case ADD_CART:
             // check if there is same pizza in the array
         
+
             const samePizza=state.selectedPizzas.find(i => {
                               return i.pizzaName==state.pizzaName
                          })

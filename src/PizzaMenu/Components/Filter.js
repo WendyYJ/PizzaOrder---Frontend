@@ -95,9 +95,10 @@ class Filter extends React.Component {
       }
     }
     const filterstring = filterlist.toString();
-    console.log(filterstring);
+    console.log(filterlist);
     const url = `http://pizzadeploy-env.dn37p3zqw3.ap-southeast-2.elasticbeanstalk.com/pizza/filter?ingr=${filterstring}`;
     console.log(url);
+  
     this.setState({ isLoading: true, isFiltering: true, pizzas: [] }, () => {
       return get(url)
         .then(res => res.data.data)
@@ -112,6 +113,7 @@ class Filter extends React.Component {
           this.setState({ error, isLoading: false });
         });
     });
+   
   };
 
  
