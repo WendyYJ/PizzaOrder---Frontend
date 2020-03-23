@@ -6,6 +6,7 @@ import AccordionContent from "./components/AccordionContents/AccordionContent";
 import Crust from "./components/AccordionContents/Crust/Crust";
 import Footer from '../PageLayout/Footer/Footer';
 import './PizzaBuilder.scss';
+import Size from '../PizzaMenu/Components/Size';
 
 class PizzaBuilder extends React.Component{
   constructor(props) {
@@ -20,7 +21,7 @@ class PizzaBuilder extends React.Component{
   
 
     contentList = [
-        {id: 1, title: 'Choose Your Crust\'s Size', content: <Crust/>},
+        {id: 1, title: 'Choose Your Crust\'s Size', content: <Size/>},
         {id: 2, title: 'Select Your Sauce', content: <AccordionContent content='SAUCES'/> } ,
         {id: 3, title: 'Add Cheese', content: <AccordionContent content='CHEESES' />},
         {id: 4, title: 'Choose Your Toppings', content: <AccordionContent content='TOPPINGS'/> },    
