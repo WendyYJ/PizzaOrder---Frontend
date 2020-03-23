@@ -11,6 +11,12 @@ $std-weight:3px;
 
 }
 
+.card-selected{
+    @include chalk-heading;
+    color: $saffron;
+}
+
+
 .content{
     margin:$std-unit;
     padding:$std-unit * 0.5;
@@ -18,7 +24,6 @@ $std-weight:3px;
     border: $std-weight solid $flame;
     border-radius: 5%;
     
-
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -26,7 +31,6 @@ $std-weight:3px;
     justify-content: center;
 
     
-
     &__flex{
         @include padding-center;
         display:flex;
@@ -44,7 +48,6 @@ $std-weight:3px;
     }
     &__name{
         @include heading;
-        margin: 0;
         color: $saffron;
     }
     &__description{
