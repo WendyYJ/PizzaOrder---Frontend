@@ -55,7 +55,7 @@ class LeftMenu extends Component {
                             <input type="text" placeholder="Search.." />
                             <i className="fa fa-search"></i>
                             <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {HOME_URL}>HOME</NavLink>
-                            <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {PIZZAMENU_URL}>PIZZAMENU</NavLink>
+                            <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {PIZZAMENU_URL}>PIZZA MENU</NavLink>
                             <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {PIZZABUILDER_URL}>PIZZA BUILDER</NavLink>
                             <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {ABOUTUS_URL}>ABOUT US</NavLink>
                             <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {CONTACT_URL}>CONTACT</NavLink>  

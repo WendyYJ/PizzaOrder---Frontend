@@ -7,6 +7,13 @@ export const FETCH_PIZZA_FAILURE ='FETCH_PIZZA_FAILURE';
 export const COUNT_UP ='COUNT_UP';
 export const COUNT_DOWN ='COUNT_DOWN';
 export const ADD_CART='ADD_CART';
+export const UPDATE_CART = 'UPDATE_CART';
+export const UPDATE_COUNT = 'UPDATE_COUNT';
+export const HANDLE_CLICK1 = 'HANDLE_CLICK1';
+export const HANDLE_CLICK2 = 'HANDLE_CLICK2';
+export const HANDLE_CLICK3 = 'HANDLE_CLICK3';
+export const HANDLE_CLICK4 = 'HANDLE_CLICK4';
+export const HANDLE_CLICK5 = 'HANDLE_CLICK5';
 
 export const countUp = () => ({
     type:COUNT_UP,
@@ -21,15 +28,32 @@ export const fetchPizza = () => ({
    type:FETCH_PIZZA,
 });
 
-export const fetchPizzaSuccess = data => ({
-   type:FETCH_PIZZA_SUCCESS,
-   data,
+export const fetchPizzaSuccess= data => ({
+   
+        type:FETCH_PIZZA_SUCCESS,
+        data,
+
+
 });
 
 export const fetchPizzaFaliure = errorMessage => ({
     type:FETCH_PIZZA_FAILURE,
     errorMessage,
     
+});
+
+export const addCart = () => ({
+   
+        type: ADD_CART,
+    
+    
+});
+
+
+export const updateCart = (id,quantity) => ({
+    type:UPDATE_CART,
+    id,
+    quantity,
 });
 
 export const loadPizza= id => dispatch => {
@@ -53,7 +77,34 @@ export const loadPizza= id => dispatch => {
     
 };
 
-export const addCart = () => ({
-   type: ADD_CART,
+export const updateCount= () => ({
+   
+    type:UPDATE_COUNT,
+
+
 });
+
+export const handleClick1= () => ({
+    type: HANDLE_CLICK1,
+})
+
+export const handleClick2= () => ({
+    type: HANDLE_CLICK2,
+})
+
+export const handleClick3= () => ({
+    type: HANDLE_CLICK3,
+})
+
+export const handleClick4= () => ({
+    type: HANDLE_CLICK4,
+})
+
+export const handleClick5= () => ({
+    type: HANDLE_CLICK5,
+})
+
+
+
+   
 

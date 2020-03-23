@@ -5,13 +5,16 @@ import Question from './components/Question';
 import LinkHeader from '../PageLayout/Header/LinkHeader';
 import Ingredient from '../PageLayout/Footer/Ingredient';
 import Footer from '../PageLayout/Footer/Footer';
+import Carousel from '../Homepage/Carousel/Carousel'
 
 const AboutUs = () => (
   <div className="about-container">
     <>
       <LinkHeader headername="About Us" />
       <Information />
-      <Middle />
+      <div id="carousel">
+      <Carousel />
+    </div>
       <Question />
       <Ingredient />
       <Footer />

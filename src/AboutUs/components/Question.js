@@ -12,7 +12,7 @@ class Question extends React.Component {
   }
 
   render() {
-    console.log(this.props.isShowing);
+
     return (
       <div className="questioncontainer">
         <h1>Frequently Asked Question</h1>
@@ -47,15 +47,15 @@ class Question extends React.Component {
                 We like to say deliveries take approximately 45 mins during
                 weekdays and approximately 1 hours on weekends. We do our best
                 to get your delicious pizza
-                <br />
+           
                 out to you as soon as possible(we know you're craving it) but we
                 like to give ourselves a little extra time in case our drivers
                 encounter unforeseen
-                <br />
+      
                 circumstances, which may include traffic and bad weather. The
                 most important thing to us is making sure our drivers arrive
                 safely and that your pizza
-                <br />
+          
                 arrives hot!
               </p>
             ) : null}
@@ -75,7 +75,7 @@ class Question extends React.Component {
             <h3>
               The website came up with an error message when it was processing
               my payment, and I am not sure
-              <br />
+            
               if my order whent through or not?
             </h3>
           </div>

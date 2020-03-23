@@ -2,6 +2,8 @@ import React, { Component} from 'react';
 import { connect } from 'react-redux';
 import CartProduct from './CartProduct';
 import util from '../../utils/util';
+import { Link } from 'react-router-dom';
+import { SHOPPINGCART_URL } from '../../routes/URLMap'
 import '../Style/ShoppingCart.scss';
 
 class ShoppingCart extends Component {
@@ -27,15 +29,8 @@ class ShoppingCart extends Component {
             }
     };   
 
-    proceedCheckout = (quantity,price) => {
-        if(quantity == 0) {
-            alert('Add some product in the bag');
-        } else {
-            alert("total price is: " + price);// could use semantic ui message box to lead to checkout page
-        }
-    }
-
-    render() { 
+    render() {
+       
         let classes = ['float-cart'];
         let totalQuantity = 0;
         let totalPrice = 0;
@@ -43,7 +38,7 @@ class ShoppingCart extends Component {
             totalQuantity = totalQuantity + p.quantity;
             totalPrice = totalPrice + p.quantity * p.price;
             return (
-                <CartProduct product={p} key={p.id} removeProduct = {this.removeProduct}/>
+                <CartProduct product={p} quantity = {p.quantity} key={p.id} size={p.size} removeProduct = {this.removeProduct}/>
             );
         });
         if (!!this.state.isOpen) {
@@ -77,28 +72,32 @@ class ShoppingCart extends Component {
                     <div className="float-cart__shelf-container">
                         { products }
                         {!products.length && (
-                            <p className="shelf-empty">
-                                Add some products in the bag <br />
-                                :)
-                            </p>
-                        )}       
-                        <div className = "float-cart__total">
-                            <span>OrderTotal:</span>
-                            <span>${ util.formatPrice(
-                                      totalPrice
-                                    )}
-                            </span>         
-                        </div> 
-                    </div>           
-                    <div className="float-cart__footer">  
-                        <div className="cart-btn">
-                            View ShoppingCart
-                        </div>
-                        <div className="buy-btn" onClick={() => this.proceedCheckout(totalQuantity,totalPrice)}>
-                            Checkout
-                        </div>
-                    </div>          
-            </div>
+                        <p className="shelf-empty">
+                            Add some products in the bag <br />
+                            :)
+                        </p>
+                        )} 
+                    </div>         
+                </div>
+
+            <div className="float-cart__footer">                    
+                <div className = "float-cart__total">
+                    <span>OrderTotal:</span>
+                        <span>
+                            ${util.formatPrice(
+                                totalPrice
+                            )}
+                        </span>         
+                </div>
+                <div className = "float-cart__btn">
+                    <Link to = {SHOPPINGCART_URL} className="float-cart__viewbtn">
+                        View ShoppingCart  
+                    </Link>
+                    <Link to = {SHOPPINGCART_URL} className="float-cart__buybtn">
+                        Checkout  
+                    </Link>
+                </div>
+            </div> 
         </div>
         );
     }   
@@ -106,9 +105,9 @@ class ShoppingCart extends Component {
 
 const mapStateToProps = state => {
     return{
-        pizza:state.pizza.pizza,
-        selectedPizzas: state.pizza.selectedPizzas,  
+        selectedPizzas: state.pizza.selectedPizzas,
+        pizzaSize: state.pizza.pizzaSize,
     };
   };
-
-export default connect(mapStateToProps)(ShoppingCart);
+  
+export default connect(mapStateToProps,null)(ShoppingCart);

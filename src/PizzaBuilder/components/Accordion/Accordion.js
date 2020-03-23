@@ -15,9 +15,9 @@ function Accordion(props) {
   const [cards, setCards] = useState( [] );
 
   const content = useRef(null);
-  setCards(
-    cards = this.props.content
-  )
+  // setCards(
+  //   cards = this.props.content
+  // )
  
   function toggleAccordion() {
     setActiveState(setActive === "" ? "active" : "");

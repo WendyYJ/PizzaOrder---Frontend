@@ -37,16 +37,16 @@ class CartProduct extends Component {
             <Thumb
               classes="shelf-item__thumb"
               src = {product.image}
-              alt = {product.pizzaName}
+              alt = {product.key}
             />    
             <div className="shelf-item__details">
-              <p className="title">{product.pizzaName}</p>
+              <p className="title">{product.key}</p>
               <p className="desc">
                 <span>SIZE: </span>{`${product.size}`} <br />
               </p>
               <div className="shelf-item__price">
                 <p>
-                  <span className = "price"> {product.quantity} x </span>
+                  <span className = "price"> {this.props.quantity} x </span>
                   {`${product.currencyFormat}${util.formatPrice(
                       product.price
                   )}`}
@@ -61,12 +61,8 @@ class CartProduct extends Component {
     
     const mapStateToProps = state => {
       return{
-  
           pizza:state.pizza.pizza,
-          selectedPizzas: state.pizza.selectedPizzas,
-    
-        
-    
+          selectedPizzas: state.pizza.selectedPizzas,    
       };
     };
   export default connect(mapStateToProps)(CartProduct);

@@ -6,6 +6,7 @@ class LinkHeader extends Component {
   render() {
     return (
       <div className="secondary-header">
+        <div className="secondary-header_content">
         <h1>
           {' '}
           {this.props.headername}
@@ -15,6 +16,7 @@ class LinkHeader extends Component {
           Home
           <ArrowForwardIosIcon style={{ fontSize: 14 }} className="arrowicon" />
           {this.props.headername}
+        </div>
         </div>
       </div>
     );

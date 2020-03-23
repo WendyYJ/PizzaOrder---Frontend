@@ -3,43 +3,43 @@
 $standard-crust-size:0.3vh;
 $standard-layout:3vh;
 
-.crust{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    &-size{
-        border: 2px $white solid;
-        margin: $standard-layout;
-        border-radius: 50%;
-    }
-}
+// .crust{
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: flex-start;
+//     align-items: flex-end;
+//     flex-wrap: wrap;
+//     &-size{
+//         border: 2px $white solid;
+//         margin: $standard-layout;
+//         border-radius: 50%;
+//     }
+// }
 
-.crust9{
-    padding:9*$standard-crust-size;
-}
+// .crust9{
+//     padding:9*$standard-crust-size;
+// }
 
-.crust12{
-    padding:12*$standard-crust-size;
-}
+// .crust12{
+//     padding:12*$standard-crust-size;
+// }
 
-.crust14{
-    padding:14*$standard-crust-size;
-}
+// .crust14{
+//     padding:14*$standard-crust-size;
+// }
 
-.crust16{
-    padding:16*$standard-crust-size;
-}
+// .crust16{
+//     padding:16*$standard-crust-size;
+// }
 
-.crust18{
-    padding:18*$standard-crust-size;
-}
+// .crust18{
+//     padding:18*$standard-crust-size;
+// }
 
-.crust-selected{
-    color:$flame;
-    border: 2px $flame solid;
-}
+// .crust-selected{
+//     color:$flame;
+//     border: 2px $flame solid;
+// }
 
 
 
