@@ -1,18 +1,17 @@
 import React from 'react';
-import axios from 'axios';
 import ContentCard from './ContentCard';
 
 class AccordionContent extends React.Component{
-    state=
-    {
-        cards: []
-    }
+    // state=
+    // {
+    //     cards: []
+    // }
     
     componentDidMount(){
         
-        const { cards } =  this.props.cards;
-        this.setState({cards});
-        console.log(cards);
+        // const { cards } =  this.props.cards;
+        // this.setState({cards});
+        // console.log(cards);
            
     } 
 

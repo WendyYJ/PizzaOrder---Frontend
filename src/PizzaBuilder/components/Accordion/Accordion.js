@@ -1,23 +1,19 @@
 import React, { useState, useRef } from "react";
 import Chevron from "./Chevron";
-import ContentCard from '../AccordionContents/ContentCard';
-
+import { connect } from 'react-redux';
 
 import "./Accordion.scss";
 
 
 function Accordion(props) {
-  console.log(props);
+  console.log(props.CHEESES);
   
   const [setActive, setActiveState] = useState( "" );
   const [setHeight, setHeightState] = useState( "0px" );
   const [setRotate, setRotateState] = useState( "accordion__icon" );
-  const [cards, setCards] = useState( [] );
 
   const content = useRef(null);
-  // setCards(
-  //   cards = this.props.content
-  // )
+  
  
   function toggleAccordion() {
     setActiveState(setActive === "" ? "active" : "");
@@ -47,27 +43,26 @@ function Accordion(props) {
         className="accordion__content"
       >
         <div
-          className="accordion__text content__flex"
-        > 
-        {
-          cards.map( card => (
-          <ContentCard
-          key={card.id}
-          name={card.IngredientName}
-          image={card.Image}
-          price={card.UnitPrice}
-          description={card.Description}
-      />
-
-      ))
-      
-      }
+          className="accordion__text" > 
+          {props.content}
           </div>
       </div>
     </div>
   );
 }
 
-export default Accordion;
 
+
+
+const mapStateToProps = (state) => ({
+  MEATS: state.ingredient.MEATS,
+  CHEESES: state.ingredient.CHEESES,
+  SAUCES: state.ingredient.SAUCES,
+  VEGGIGS: state.ingredient.VEGGIGS,
+  isLoading: state.ingredient.isLoading,
+  errorMessage:state.ingredient.errorMessage,
+});
+
+
+export default connect(mapStateToProps)(Accordion);
 

@@ -6,7 +6,6 @@ import AccordionContent from "./components/AccordionContents/AccordionContent";
 import Crust from "./components/AccordionContents/Crust/Crust";
 import Footer from '../PageLayout/Footer/Footer';
 import './PizzaBuilder.scss';
-import { CircularProgress } from 'material-ui';
 
 class PizzaBuilder extends React.Component{
   constructor(props) {
@@ -22,14 +21,14 @@ class PizzaBuilder extends React.Component{
 
     contentList = [
         {id: 1, title: 'Choose Your Crust\'s Size', content: <Crust/>},
-        {id: 2, title: 'Select Your Sauce', content: this.props.SAUCES} ,
-        {id: 3, title: 'Add Cheese', content: this.props.SAUCES },
-        {id: 4, title: 'Choose Your Toppings', content: this.props.SAUCES },    
+        {id: 2, title: 'Select Your Sauce', content: 'SAUCES' } ,
+        {id: 3, title: 'Add Cheese', content: 'CHEESES' },
+        {id: 4, title: 'Choose Your Toppings', content: ['MEATS', 'VEGGIGS'] },    
     ]
     render(){
-      console.log(this.props.isLoading);
-      console.log(this.props);
-      console.log(this.props.SAUCES);
+      // console.log(this.props.isLoading);
+       
+      // console.log(this.props.SAUCES);
         return(
             <>
               {
