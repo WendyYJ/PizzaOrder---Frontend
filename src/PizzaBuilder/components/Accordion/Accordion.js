@@ -6,7 +6,6 @@ import "./Accordion.scss";
 
 
 function Accordion(props) {
-  console.log(props.CHEESES);
   
   const [setActive, setActiveState] = useState( "" );
   const [setHeight, setHeightState] = useState( "0px" );
@@ -51,18 +50,5 @@ function Accordion(props) {
   );
 }
 
-
-
-
-const mapStateToProps = (state) => ({
-  MEATS: state.ingredient.MEATS,
-  CHEESES: state.ingredient.CHEESES,
-  SAUCES: state.ingredient.SAUCES,
-  VEGGIGS: state.ingredient.VEGGIGS,
-  isLoading: state.ingredient.isLoading,
-  errorMessage:state.ingredient.errorMessage,
-});
-
-
-export default connect(mapStateToProps)(Accordion);
+export default Accordion;
 

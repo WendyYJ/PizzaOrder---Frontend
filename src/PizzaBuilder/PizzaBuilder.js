@@ -21,13 +21,12 @@ class PizzaBuilder extends React.Component{
 
     contentList = [
         {id: 1, title: 'Choose Your Crust\'s Size', content: <Crust/>},
-        {id: 2, title: 'Select Your Sauce', content: 'SAUCES' } ,
-        {id: 3, title: 'Add Cheese', content: 'CHEESES' },
-        {id: 4, title: 'Choose Your Toppings', content: ['MEATS', 'VEGGIGS'] },    
+        {id: 2, title: 'Select Your Sauce', content: <AccordionContent content='SAUCES'/> } ,
+        {id: 3, title: 'Add Cheese', content: <AccordionContent content='CHEESES' />},
+        {id: 4, title: 'Choose Your Toppings', content: <AccordionContent content='TOPPINGS'/> },    
     ]
     render(){
       // console.log(this.props.isLoading);
-       
       // console.log(this.props.SAUCES);
         return(
             <>
