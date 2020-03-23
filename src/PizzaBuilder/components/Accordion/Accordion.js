@@ -10,7 +10,6 @@ function Accordion(props) {
   const [setActive, setActiveState] = useState( "" );
   const [setHeight, setHeightState] = useState( "0px" );
   const [setRotate, setRotateState] = useState( "accordion__icon" );
-
   const content = useRef(null);
   
  
@@ -30,7 +29,7 @@ function Accordion(props) {
       <button className={`accordion ${setActive}`} onClick={toggleAccordion}>
       
         <p className="accordion__title">
-          <span className='accordion__li'> {props.id}. 
+          <span className='accordion__li'> {props.id}.&nbsp;
           </span> 
           {props.title}
         </p>
