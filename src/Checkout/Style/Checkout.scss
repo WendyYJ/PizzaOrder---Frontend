@@ -1,0 +1,52 @@
+@import '../../asset/theme.scss';
+
+.checkout {
+  &__container {
+    display: flex;
+    margin-left: 10%;
+  }
+  &__form {
+    width:90%;
+    margin-bottom: 5%;
+  }
+  &__total {
+    width:28%;
+    margin-right:10%;
+  }
+  &__title {
+    color:$saffron;
+  }
+
+  &__comment {
+    position: relative;
+    span {
+      color:$flame;
+      font-weight: bold;
+    }
+    ::after {
+      content:'';
+      height:2px;
+      background-color: $flame;
+      position: absolute;
+      bottom:-10px;
+      width:63%;
+      left:0;
+    }
+  }
+  &__coupon {
+    position: relative;
+    span {
+      color:$flame;
+      font-weight: bold;
+    }
+    ::after {
+      content:'';
+      height:2px;
+      background-color: $flame;
+      position: absolute;
+      bottom:-10px;
+      width:100%;
+      left:0;
+    }
+  }
+}
