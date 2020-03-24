@@ -1,6 +1,6 @@
 @import '../../../asset/mixin.scss';
 
-$std-unit: 2vh;
+$std-unit: 1.5vh;
 $std-weight:3px;
 
 
@@ -15,7 +15,7 @@ $std-weight:3px;
 }
 
 .selected-tick{
-    @include chalk-heading;
+    @include heading;
     color: $saffron;
 }
 
@@ -34,33 +34,34 @@ $std-weight:3px;
 
     
     &__flex{
-        @include padding-center;
         display:flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: stretch; 
+        padding-left:$std-unit*5 ;
     }
 
     &__img{
-        width: 25vh;
-        height:25vh;
+        width: $std-unit*10;
+        height: $std-unit*10;
         border-radius: 30%;
         object-fit: cover;
     }
     &__name{
         @include heading;
         color: $saffron;
+        margin:0;
     }
     &__description{
         line-height: normal;
         font-family: $body;
-        font-size: $body-size*0.8;
+        font-size: medium;
         
     }
     &__price{
         @include chalk-heading;
         margin: 0;
         color: $flame;
-       font-size: $sub-heading-size;
+        font-size: $sub-heading-size;
     }
 }

@@ -3,8 +3,6 @@ import './Crust.scss';
 import OneCrust from './OneCrust/OneCrust';
 
 
-
-
 function Crust() {
   const crusts = [ 
     { size:9,

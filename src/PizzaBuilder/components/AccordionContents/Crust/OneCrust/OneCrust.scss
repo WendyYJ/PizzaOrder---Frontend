@@ -7,7 +7,6 @@ $std-weight: 2px;
     color: $flame;
 }
 
-
 .crusts-size-seleted{
     border-radius: 50%;
     border: $std-weight solid $flame;
@@ -29,17 +28,16 @@ $std-weight: 2px;
 }
 
 .crusts-size{
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    margin: $std-unit*4;
+    margin: $std-unit * 2;
+    padding-left: $std-unit;
 
     &-number, &-title{
         font-family: $body;
-        font-size: $body-size;
+        font-size: large;
     }
 
 }

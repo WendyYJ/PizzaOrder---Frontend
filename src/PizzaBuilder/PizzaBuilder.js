@@ -40,7 +40,10 @@ class PizzaBuilder extends React.Component{
                       <h1 className='builder__title__heading'>
                           Pizza Builder
                       </h1>
+                      <p className='builder__title__span'>Home > Pizza Builder</p>
                   </div>
+                  <main className='builder'>
+
                   <div>
                     {this.contentList.map( (contentItem) =>
                       <Accordion 
@@ -50,6 +53,32 @@ class PizzaBuilder extends React.Component{
                       />
                     )}
                   </div>
+
+                  <div className='builder__checkout'>
+                    <h2>
+                      Your Order
+                    </h2>
+                    <div className='builder__checkout__col' >
+                      <p>Products</p>
+                      <p>Total</p>
+                    </div>
+                    <div>
+                      <p>Beef Pizza</p>
+                      <p>$8.90</p>
+                    </div>
+                    <div>
+                      <p>Pizza Size: Medium 12</p>
+                    </div>
+                    <div>
+                      <p>
+                        Order Total:
+                      </p>
+                      <p>$20.43</p>
+                      <p>add to cart</p>
+                      <p>add and create another pizza</p>
+                    </div>
+                  </div>
+                  </main>
                 </div>
               } 
                 
