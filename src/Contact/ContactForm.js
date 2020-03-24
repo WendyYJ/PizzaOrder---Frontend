@@ -12,16 +12,19 @@ class ContactForm extends React.Component {
     };
   }
 
-  ChangeHandler = event => {
+  handleChange = event => {
     let name = event.target.name;
     let val = event.target.value;
     this.setState({ [name]: val });
   };
 
-  SubmitHandler = event => {
-    event.preventDefault();
-    alert("You are submitting " + this.state.message);
+  /*
+  handleSubmit = event => {
+    //event.preventDefault();
+    let message = event.target.message;
+    this.state.message;
   };
+  */
 
   render() {
     return (
@@ -37,29 +40,45 @@ class ContactForm extends React.Component {
         <div className="messageForm-container">
           <div className="name-input">
             <p className="name">YOUR NAME*</p>
-            <input type="text" name="username" onChange={this.ChangeHandler} />
+            <input type="text" 
+                   name="username" 
+                   onChange={this.handleChange} 
+                   />
           </div>
+
           <div className="email-input">
             <p className="email">EMAIL*</p>
-            <input type="text" name="email" onChange={this.ChangeHandler} />
+            <input type="text" 
+                   name="email" 
+                   onChange={this.handleChange} 
+                   />
           </div>
-        </div>
+        
         <div className="messageForm-containerTwo">
           <div className="subject-input">
             <p className="subject">SUBJECT</p>
-            <input type="text" name="subject" onChange={this.ChangeHandler} />
+            <input type="text" 
+                   name="subject" 
+                   onChange={this.handleChange} 
+                   />
           </div>
 
           <div className="message-form">
-            <p>YOUR MESSAGE</p>
-            <input type="text" onChange={this.SubmitHandler} />
+            <p className="message">YOUR MESSAGE</p>
+            <input type="text" 
+                   name="message" 
+                   onChange={this.handleChange} 
+                   />
           </div>
-        </div>
+        
         <div className="send-btn">
-          <br></br>
+        <form noValidate autoComplete="off">
           <button type="submit">SEND MESSAGE</button>
-        </div>
+        </form>
       </div>
+      </div>
+     </div>
+    </div>
     );
   }
 }

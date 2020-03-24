@@ -13,8 +13,11 @@ const Contact = () => (
     <div className="map-container">
       <ContactMap />
     </div>
+
     <div className="contactUs-container">
       <ContactForm />
+    </div>
+    <div className="contactDetail-container">
       <ContactDetails />
     </div>
 
