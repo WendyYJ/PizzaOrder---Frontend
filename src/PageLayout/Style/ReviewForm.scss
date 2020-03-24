@@ -99,10 +99,11 @@
   
 
     input{
-      padding: 0.5vw 2.6vw 1.5vw 3vw;
+      padding: 0.5vw 3vw 1.5vw 3vw;
       background-color: $saffron;
       border: 1px solid $saffron;
-      font-size: 0.8rem;
+      font-size: 1rem;
+      font-family: $body;
       color: black;
       width: 100%;
     }
