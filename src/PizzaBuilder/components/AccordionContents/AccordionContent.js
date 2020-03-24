@@ -13,6 +13,10 @@ class AccordionContent extends React.Component{
         cards: []
     }
     
+    handleClick = () =>{
+        
+
+    }
     componentDidMount(){
         // axios.get('http://pizzadeploy-env.dn37p3zqw3.ap-southeast-2.elasticbeanstalk.com/ingredient/SAUCES')
         //     .then(response => {
@@ -49,7 +53,7 @@ class AccordionContent extends React.Component{
                 
                 this.state.cards.map( card => (
 
-                <ContentCard
+                <ContentCard handleClick={this.handleClick}
                 key={card.id}
                 name={card.IngredientName}
                 image={card.Image}

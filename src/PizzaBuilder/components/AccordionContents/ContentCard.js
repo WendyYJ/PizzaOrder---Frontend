@@ -1,32 +1,43 @@
 import React, { useState } from 'react';
 import './ContentCard.scss';
 
-const ContentCard = props =>{
-   const [setSelected, setSelectedState] = useState('');
+
+class ContentCard extends React.Component{
+    constructor(props){
+        super(props);
+    }
+
+    state=
+    {
+        totalPrice:0,
+        setSelected:'', 
+   
+    }
+  
 
     
-    function toggleSelection(){
-        setSelectedState(
-            setSelected === '' ? 'card-selected' : ''
-        )
+  toggleSelection= () => {
+        this.setState({setSelected:this.state.setSelected===''?'card-selected':'',
+                       totalPrice:this.state.totalPrice+=this.props.price})
+        console.log(this.state.totalPrice)
     }
-        
+        render(){
 
     return(
-            <div className={`content`} id={`${setSelected}`} onClick={toggleSelection} >
-                <img className='content__img' src ={props.image} alt={props.name}/>
-                <h3 className='content__name'>{props.name}</h3>
+            <div className={`content`} id={`${this.state.setSelected}`} onClick={this.toggleSelection}  >
+                <img className='content__img' src ={this.props.image} alt={this.props.name}/>
+                <h3 className='content__name'>{this.props.name}</h3>
                 <p className='content__description'>  
                    {
-                       setSelected === '' ?
-                            props.description
+                       this.state.setSelected === '' ?
+                            this.props.description
                    : <div className='selected-tick'> &#x2714; </div>
                    }  
                 </p>
-                <p className='content__price'>${props.price}</p>
+                <p className='content__price'>${this.props.price}</p>
             </div>
         )
     
-   
+                }  
 }
 export default ContentCard;
