@@ -1,9 +1,9 @@
 
-@import './theme';
+@import '../../asset/mixin.scss';
 .maincontainer{
     height:100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.205);
+    background-color:$smokegrey;
    
 }
 
@@ -32,6 +32,7 @@
     padding-left: 3em;
     padding-bottom: 2em;
 }
+
 .topcontainer{
     display: flex;
     margin: auto;
@@ -60,12 +61,12 @@
 }
 h1{
     font-size: 1.5em;
-    color:#FDBC2C;
+    color:$saffron
     
 }
 p{
-    color:white;
-    font-family: 'Josefin Sans';
+    color:$white;
+    font-family: $body;
     font-size: 0.65em;
     line-height: 1.9em;
 }
@@ -232,7 +233,7 @@ margin-right: 4em;
 
 }
 .questioncontainer{
-background: #2c2727;
+background: $smokegrey;
 text-align: center;
 width:100%;
 padding-top:3em;
