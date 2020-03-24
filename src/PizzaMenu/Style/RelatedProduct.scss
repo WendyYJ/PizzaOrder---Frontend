@@ -24,6 +24,16 @@
   margin-left: 8%;
   margin-bottom: 10%;
   display: flex;
+
+  .related-title{
+    font-family: $heading;
+    font-size: 1.5rem;
+    color: $saffron;
+    margin-top: -200%;
+    margin-left: 300%;
+    width: 100%;
+    text-align: center;
+  }
  
   
   .pizza-container{
@@ -54,19 +64,11 @@
       font-size:1.2rem;
       color: $flame;
       width: 100%;
+      margin-top: 25%;
       } 
   }
 }
 
-.related-title{
-  font-family: $heading;
-  font-size: 1.5rem;
-  color: $saffron;
-  margin-top: -170%;
-  margin-left: 250%;
-  width: 100%;
-  text-align: center;
-}
 
 .Catalog-container{
   background-color: rgb(37, 35, 35);
