@@ -21,28 +21,18 @@ class SampleId extends React.Component {
   async componentDidMount(){
     const pizzaId = this.props.match.params.SampleId;
     this.props.loadPizza(pizzaId);
-  
-  
   }
-
 
    
   render() {
     return (
       <div className="MenuMain-container">
        
-      
-
         <ThirdHeader
-          headername={"Pizza Menu"}
-        
-        />
+          headername={"Pizza Menu"}/>
 
         <HorizonBar className="horizonbar" />
-        <SampleMenu
-       
-        
-        />
+        <SampleMenu/>
 
         <div className="horizonbar-Two">
           <p>DESCRIPTION</p>
