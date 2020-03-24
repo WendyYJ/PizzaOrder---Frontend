@@ -8,11 +8,12 @@
   height: 56vh;
   border: 2px solid #D94F2B;
   margin-left: 22%;
-  margin-top: 8vh;
+  margin-top: 8%;
 }
 
 .contact-map{
-  margin-bottom: 0vw;
+  margin-bottom: -1%;
+  margin-left: -1%;
 }
 
 .contact-form{
@@ -107,7 +108,7 @@
     margin-left: 60%;
     margin-top: -40%;
     width: 25%;
-    height: 85%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.205);
     @include heading();
     
