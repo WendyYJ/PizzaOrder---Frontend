@@ -1,20 +1,26 @@
 import React, { useState } from 'react';
+import './OneCrust.scss';
 
 const OneCrust = (props) => {
-    const [ selected, setSelectedState ] = useState('') ;
+    const [ selected, setSelectedState ] = useState('border') ;
+    const [ allowSelection, setAllowSelection ] = useState(true);
+
     function handleSelection(){
-        setSelectedState(
-            selected === '' ? "size-seleted" : ""
-        )
-    }
+       
+            setSelectedState(
+                selected === 'border' ? "seleted" : "border"
+            )
+          
+        } 
+        
     return(
-        <div>
-        <div className={`crust-size ${selected}`} onClick={handleSelection}>
-            <p className='crust-size-num'>
-                {props.size}″
-            </p>
-        </div>
-        <p className='crust-size-title'> 
+        <div className={`crusts-size`} onClick={handleSelection}>
+        <div id={`crust-size-${props.size}`} className={`crusts-size-${selected}`}>
+                <p className='crusts-size-number'>
+                    {props.size}″
+                </p>
+            </div>
+        <p className='crusts-size-title'> 
             {props.title}
         </p>
         </div>
