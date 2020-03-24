@@ -7,7 +7,7 @@ import Vege from '../../asset/img/Vege.jpg';
 
 const RelatedProduct = () => (
   <div className="relatedProduct-container">
-    <div className="title-container">
+     <div className="title-container">
      <h2 className="related-title">Related Products</h2>
     </div>
 

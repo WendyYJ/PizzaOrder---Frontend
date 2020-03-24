@@ -1,25 +1,18 @@
 @import '../../asset/theme.scss';
 @import '../../asset/mixin.scss';
 
-/*
-.MenuMain-container{
-  position: relative;
-  width: 100%;S
-}
-*/
 
-/*
 .relatedProduct-outer{
-  margin-top: 100%;
   width: 100%;
-}
-*/
-.related-title{
-  font-family: $heading;
-  font-size: 1.5rem;
-  color: $saffron;
-  width: 200%;
-  text-align: center;
+
+
+  .related-title{
+    font-family: $heading;
+    font-size: 1.5rem;
+    color: $saffron;
+    text-align: center;
+    
+  }
 }
 
 .relatedProduct-container{
@@ -67,10 +60,6 @@
 }
 
 
-.Catalog-container{
-  background-color: rgb(37, 35, 35);
-  opacity: 0.9;
-}
 
 .pizzaName-container{
   height: 2.5rem;

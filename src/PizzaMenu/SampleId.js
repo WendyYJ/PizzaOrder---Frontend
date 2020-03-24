@@ -1,5 +1,5 @@
 import React from "react";
-import ".././PageLayout/Style/TopHeader.scss";
+//import ".././PageLayout/Style/TopHeader.scss";
 import ".././PageLayout/Style/Horizonbar.scss";
 import "../PizzaMenu/Style/RelatedProduct.scss";
 import "../PizzaMenu/Style/SampleMenu.scss";
@@ -28,8 +28,7 @@ class SampleId extends React.Component {
     return (
       <div className="MenuMain-container">
        
-        <ThirdHeader
-          headername={"Pizza Menu"}/>
+        <ThirdHeader headername={"Pizza Menu"}/>
 
         <HorizonBar className="horizonbar" />
         <SampleMenu/>
@@ -44,6 +43,7 @@ class SampleId extends React.Component {
           <ReviewForm />
         </div>
         <div className="relatedProduct-outer">
+       
           <RelatedProduct />
         </div>
         <div>

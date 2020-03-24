@@ -1,36 +1,24 @@
 @import '../../asset/theme.scss';
 
 .horizonbar{
-  position: relative;
-  top: 10px;
+  margin: auto;
 
+  /*
   .arrowicon2{
-    margin-left: 0.6em;
-    margin-right: 0.6em;
     color: $flame;
     padding: 8px 8px;
     border: 1px solid; 
     float: right;
-    position: relative;
-    right: 22%;
+    margin-left: 2%;
     top: 2vh;
   }
-  
-  p{
-    position: relative;
-    top: 4.7vh;
-    margin-left: 23vw;
+  */
+  .arrow-link{
+    text-decoration: none;
     color: white;
-    font-size: 10px;
-    font-family: $body;
-    
-
-    .arrowicon3{
-      position: relative;
-      left: -2vw;
-      top: 0.5vh;
-    }
+    margin-left: 20%;
   }
+  
 
   .horizon{
     margin-top: 3vw;

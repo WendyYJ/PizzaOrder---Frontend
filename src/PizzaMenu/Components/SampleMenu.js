@@ -14,12 +14,7 @@ class SampleMenu extends React.Component {
 
   handleClick = () => {
     const list = [];
-
-
-
-
   }
-
 
   render() {
     return (
