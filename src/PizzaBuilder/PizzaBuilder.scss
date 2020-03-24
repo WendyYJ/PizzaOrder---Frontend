@@ -1,5 +1,8 @@
 @import '../asset/mixin.scss';
 
+$std-margin: 5vh;
+$std-unit:1vh;
+
 .builder{
     display: flex;
     flex-direction: row;
@@ -27,9 +30,12 @@
     
     &__checkout{
         background-color: $black;
-        
-        &__col{
+        margin-left: $std-margin;
+        padding:$std-unit;
+        width: 20vw;
+        &__row{
             display: flex;
+            flex-direction: row;
             justify-content: space-between;
         }
     }
