@@ -1,4 +1,6 @@
-import {FETCH_PIZZA_SUCCESS, FETCH_PIZZA, FETCH_PIZZA_FAILURE, COUNT_UP, COUNT_DOWN, ADD_CART,UPDATE_CART,UPDATE_COUNT} from '../actions/pizzaActions';
+import {FETCH_PIZZA_SUCCESS, FETCH_PIZZA, FETCH_PIZZA_FAILURE, COUNT_UP, 
+    COUNT_DOWN, ADD_CART,UPDATE_CART,UPDATE_COUNT,HANDLE_CLICK1,
+    HANDLE_CLICK2, HANDLE_CLICK3, HANDLE_CLICK4, HANDLE_CLICK5,} from '../actions/pizzaActions';
 
 
 const initialState={
@@ -10,8 +12,16 @@ const initialState={
     selectedPizzas:[],
     isLoading:false,
     errorMessage:'',
+    isClick1: true,
+    isClick2: false,
+    isClick3: false,
+    isClick4: false,
+    isClick5: false,
+    pizzaPriceSize:0,
+    sizeChose: false,
+    pizzaSize: 'small'
+    
 
- 
   
 }
 
@@ -58,10 +68,8 @@ const pizzaReducer = (state=initialState,action) => {
 
             const selectedPizzasCopy = [];
 
-         
-
             const samePizza=state.selectedPizzas.find(pizza => {
-                              return pizza.key==state.pizzaName
+                              return pizza.key==state.pizzaName&&pizza.size==state.pizzaSize
                          })
                 
 
@@ -72,7 +80,7 @@ const pizzaReducer = (state=initialState,action) => {
                 return {
                     ...state,
                      selectedPizzas: [...state.selectedPizzas, {key: state.pizzaName,quantity: state.count
-                     ,price:state.pizzaPrice,image: state.pizzaImage, currencyFormat:'$'}],
+                     ,price:state.pizzaPriceSize,image: state.pizzaImage, currencyFormat:'$',size:state.pizzaSize}],
 
                 };
 
@@ -103,8 +111,81 @@ const pizzaReducer = (state=initialState,action) => {
         case UPDATE_COUNT:
             return {
                 ...state,
-                count: state.count=1           
+                count: state.count=1,
+                isClick1: state.isClick1=true,
+                isClick2: state.isClick2=false,
+                isClick3: state.isClick3=false,
+                isClick4: state.isClick4=false,
+                isClick5: state.isClick5=false,
+                pizzaSize:state.pizzaSize='Small',
+
+           
+  
+                sizeChose: state.sizeChose=false,
+                         
             };
+        case HANDLE_CLICK1:
+                return {
+                    ...state,
+                    sizeChose: state.sizeChose =true,
+                    pizzaPriceSize: state.pizzaPrice,
+                    isClick1: state.isShowing = true,
+                    isClick2: state.isShowing = false,
+                    isClick3: state.isShowing = false,
+                    isClick4: state.isShowing = false,
+                    isClick5: state.isShowing = false,
+                    pizzaSize:state.pizzaSize='Small',
+                  };
+
+        case HANDLE_CLICK2:
+                return {
+                    ...state,
+                    sizeChose: state.sizeChose =true,
+                    pizzaPriceSize: state.pizzaPrice+=1,
+                    isClick1: state.isShowing = false,
+                    isClick2: state.isShowing = true,
+                    isClick3: state.isShowing = false,
+                    isClick4: state.isShowing = false,
+                    isClick5: state.isShowing = false,
+                    pizzaSize:state.pizzaSize='Medium',
+                  };          
+        case HANDLE_CLICK3:
+                return {
+                    ...state,
+                    sizeChose: state.sizeChose =true,
+                    pizzaPriceSize: state.pizzaPrice+=2,
+                    isClick1: state.isShowing = false,
+                    isClick2: state.isShowing = false,
+                    isClick3: state.isShowing = true,
+                    isClick4: state.isShowing = false,
+                    isClick5: state.isShowing = false,
+                    pizzaSize:state.pizzaSize='Large',
+                  };    
+        case HANDLE_CLICK4:
+                return {
+                    ...state,
+                    sizeChose: state.sizeChose =true,
+                    pizzaPriceSize: state.pizzaPrice+=3,
+                    isClick1: state.isShowing = false,
+                    isClick2: state.isShowing = false,
+                    isClick3: state.isShowing = false,
+                    isClick4: state.isShowing = true,
+                    isClick5: state.isShowing = false,
+                    pizzaSize:state.pizzaSize='Jumbo',
+                          };  
+                          
+        case HANDLE_CLICK5:
+                return {
+                    ...state,
+                    sizeChose: state.sizeChose =true,
+                    pizzaPriceSize: state.pizzaPrice+=4,
+                    isClick1: state.isShowing = false,
+                    isClick2: state.isShowing = false,
+                    isClick3: state.isShowing = false,
+                    isClick4: state.isShowing = false,
+                    isClick5: state.isShowing = true,
+                    pizzaSize:state.pizzaSize='Party Size',
+                    };  
                 
         default:
             return state;

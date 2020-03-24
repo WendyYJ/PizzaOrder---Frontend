@@ -4,6 +4,7 @@ import StarIcon from "@material-ui/icons/Star";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 import availableSizes from "../../asset/icon/available_sizes.png";
 import Counter from "../../PageLayout/Counter";
+import Size from "../Components/Size"
 import PeriPeri from "../../asset/img/PeriPeri.png";
 import {connect} from  'react-redux';
 import {addCart as addCartAction} from '../../redux/actions/pizzaActions';
@@ -37,7 +38,7 @@ class SampleMenu extends React.Component {
           <StarBorderIcon style={{ color: "#D94F2B", fontSize: "20px" }} />
           <p style={{ fontSize: "14px" }}>{this.props.pizzaDesc}</p>
           <p style={{ fontSize: "14px" }}>AVAILABLE SIZES</p>
-          <img src={availableSizes} alt="available-size" id="available-size" />
+          <Size />
 
           <div className="clickCount">
             <Counter />
