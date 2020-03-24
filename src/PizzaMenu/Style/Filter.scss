@@ -98,10 +98,12 @@ input[type="checkbox"]{
 }
 .pizza-page{
     font-size: 2em;
-    color: white;
+    color: $flame;
     text-align: center;
     padding-bottom: 1em;
+    margin-top: 3%;
 }
+
 .pizzaName {
     font-size: 1.2em;
     color:$saffron;
@@ -240,4 +242,28 @@ Image{
 
 .ingredientcardcontainer{
     display: flex;
+}
+
+
+a[type="lastItem"]{
+    display: none;
+}
+
+
+a[type="firstItem"]{
+    display: none;
+}
+
+a[type="prevItem"]{
+    margin-left: 3%;
+    
+}
+
+a[type="nextItem"]{
+    margin-left: 3%;
+}
+
+a[type="pageItem"]{
+    margin-left: 3%;
+    margin-left: 3%;
 }
