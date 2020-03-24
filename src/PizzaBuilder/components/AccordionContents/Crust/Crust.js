@@ -1,33 +1,45 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Crust.scss';
+import OneCrust from './OneCrust/OneCrust';
 
 
 
-function Size() {
+
+function Crust() {
+  const crusts = [ 
+    { size:9,
+      title:'Small'
+    },
+    { size:12,
+      title:'Medium'
+    },
+    { size:14,
+      title:'Large'
+    },
+    { size:16,
+      title:'Jumbo'
+    },
+    { size:18,
+      title:'Party Size'
+    }
+   ];
 
 
      return(
     
-        <div className='crust'>
-          <div className={`crust-size crust9 crust-selected`}>
-            9″
-          </div>
-          <div className={`crust-size crust12` }>
-            12″
-          </div>
-          <div  className={`crust-size crust14` }>
-            14″
-          </div>
-          <div className={`crust-size crust16` } >
-            16″
-          </div>
-          <div className={`crust-size crust18` }>
-            18″
-          </div>
+        <div className='crusts-container'>
+         { crusts.map(eachSize =>
+           <OneCrust 
+            size={eachSize.size}
+            title={eachSize.title}
+           />
+         ) 
+          }
+         
         </div>
     )
 
 }
 
 
-export default Size;
+export default Crust;

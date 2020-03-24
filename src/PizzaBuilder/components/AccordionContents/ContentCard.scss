@@ -1,6 +1,6 @@
 @import '../../../asset/mixin.scss';
 
-$std-unit:2vh;
+$std-unit: 2vh;
 $std-weight:3px;
 
 
@@ -8,20 +8,21 @@ $std-weight:3px;
     cursor: pointer;
     border: $std-weight dashed $saffron;
     border-radius: 5%;
-
 }
 
-.card-selected{
+#card-selected{
+    border: $std-weight*2 solid $flame;
+}
+
+.selected-tick{
     @include chalk-heading;
     color: $saffron;
 }
-
 
 .content{
     margin:$std-unit;
     padding:$std-unit * 0.5;
     width: $std-unit * 20;
-    border: $std-weight solid $flame;
     border-radius: 5%;
     
     display: flex;
@@ -29,6 +30,7 @@ $std-weight:3px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: $std-weight solid transparent;
 
     
     &__flex{

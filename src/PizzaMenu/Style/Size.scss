@@ -1,5 +1,6 @@
 
 @import '../../asset/theme.scss';
+@import '../../asset/mixin.scss';
 
 $standard-crust-size:0.2vh;
 $standard-layout:1vh;
@@ -9,6 +10,7 @@ $standard-layout:1vh;
     flex-direction: row;
     justify-content:flex-start;
     align-items: flex-end;
+    @include padding-center;
 }
 
 .crust9{

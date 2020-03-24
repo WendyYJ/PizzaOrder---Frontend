@@ -21,7 +21,7 @@ class PizzaBuilder extends React.Component{
   
 
     contentList = [
-        {id: 1, title: 'Choose Your Crust\'s Size', content: <Size/>},
+        {id: 1, title: 'Choose Your Crust\'s Size', content: <Crust/>},
         {id: 2, title: 'Select Your Sauce', content: <AccordionContent content='SAUCES'/> } ,
         {id: 3, title: 'Add Cheese', content: <AccordionContent content='CHEESES' />},
         {id: 4, title: 'Choose Your Toppings', content: <AccordionContent content='TOPPINGS'/> },    
@@ -33,7 +33,7 @@ class PizzaBuilder extends React.Component{
             <>
               {
                 this.props.isLoading
-                ? <div>  </div>
+                ? <div> </div>
                 :
                 <div>
                   <div className='builder__title'>
@@ -51,7 +51,7 @@ class PizzaBuilder extends React.Component{
                     )}
                   </div>
                 </div>
-    } 
+              } 
                 
         <Footer/>
       
