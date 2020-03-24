@@ -92,30 +92,37 @@
 // my account
 .myAccount-container{
   display: flex;
-  flex-direction: column;
-  margin-top: -2.5vh;
+  flex-direction: row;
+  width: 100%;
+  margin-left: 6%;
+  margin-top: 5%;
+
+  .select-type{
+    margin-left: 350%;
+    margin-top: 500%;
+    font-weight: $body;
+    color: white;
+    font-size: 30px;
+  }
 
 .register-form {
-  margin-top: 5rem;
-  margin-left: 10rem;
-  padding: 10vw 10vw;
-  padding-left: 7vw;
-  padding-right: 14vw;
-  width: 12vw;
-  height: 27vh;
+  margin-top: 10%;
+  margin-left: 10%;
+  padding: 5vw 10vw;
+  width: 50%;
   line-height: 3em;
   background-color: rgb(44, 43, 43);
   opacity: 0.8;
   border: 2px solid $flame;
   border-radius: 3px;
-  display: flex;
-  flex-direction: column;
-
+  
+/*
   #facebook{
     position: relative;
     left: 20vw;
     top: 5vh;
   }
+  
   
   #google{
     width: 5vw;
@@ -125,6 +132,7 @@
     width: 5vw;
     margin-left: -20vw;
   }
+  */
 
   .register-title{
     color:$saffron;
@@ -132,106 +140,89 @@
     font-size: 20px;
     text-align: left;
     width: 100%;
-    position: relative;
-    top: -20vh;
-    margin-left: 0vw;
+    margin-top: -20%;
+    margin-left: -20%;
   }
 
   Input{
-    width: 18vw;
-    height: 5vh;
+    width: 100%;
+    padding: 1vw 3vw 1vw 3vw;
     border: 1px solid $saffron;
     border-radius: 3px;
-    position: relative;
-    top: -17vh;
+    margin-top: 2%;
+    margin-left: -20%;
   }
 
   .register-button{
-    width: 9vw;
-    height: 5vh;
+    width: 100%;
+    padding: 1vw 3vw 1vw 3vw; 
     background-color: $saffron;
     border: 1px solid $saffron;
     border-radius: 3px;
-    position: relative;
-    top: -12vh;
+    margin-top: 10%;
+    margin-left: -20%;
     font-family: $body;
-    position: relative;
-    top: -17vh;
+    font-size: 14px;
   }
 
   .login-link{
-    position: relative;
     font-family: $body;
     font-size: 22px;
-    top: -23vh;
-    left: 10vw;
-    text-decoration: none;
     width: 100%;
+    text-decoration: none;
+    margin-left: 150%;
+    margin-top: -20%;
   }
 
   .alart-message{
     background-color: rgb(44, 43, 43);
-    position: relative;
-    top: -16vh;
+    margin-top: 5%;
+    margin-left: -20%;
     font-family: $body;
     font-size: 22px;
-    width: 18vw;
-    height: 8vh;
+    width: 100%;
     border: 1px solid $flame;
     border-radius: 3px;
     opacity: 0.5;
   }
-
 }
-
-.select-type{
-  position: relative;
-  left: 47.5vw;
-  top: -40vh;
-  font-weight: $body;
-  color: white;
-  font-size: 30px;
 }
 
 .socialRegister-container{
-  margin-top: -27.5rem;
-  margin-left: 40rem;
-  padding: 6vw 10vw;
-  padding-left: 8vw;
-  padding-right: 14vw;
-  width: 12vw;
-  height: 27vh;
+  margin-top: 10%;
+  margin-left: 20%;
+  padding: 5vw 10vw;
+  width: 20%;
   line-height: 3em;
   background-color: rgb(44, 43, 43);
   opacity: 0.8;
   border: 2px solid $flame;
   border-radius: 3px;
+  
 
   .socialRegister-title{
     font-family: $body;
     font-size: 20px;
     color: white;
-    position: relative;
-    top: -10vh;
-    margin-left: 0vw;
+    margin-top: -2%;
+    margin-left: -20%;
     width: 100%;
   }
 
   .socialRegister-link{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    position: relative;
-    top: -10vh;
-    margin-left: 2vw;
 
     .social-link{
-      width: 18vw;
-      height: 6vh;
-      margin-top: 3vh;
-      margin-left: -2vw;
+      width: 100%;
+      padding: 1vw 10vw 1vw 10vw;
+      margin-top: -2%;
+      margin-left: -20%;
       border-radius: 20px;
       font-family: $body;
+      text-align: center;
+
+      span{
+        margin-right: 10%;
+      }
     }
      
     #facebook{
@@ -258,6 +249,5 @@
       box-shadow: 10px 10px 9px -10px rgba(110,106,110,1);
     }
     } 
-  }
 }
 
