@@ -216,14 +216,20 @@
     .social-link{
       width: 100%;
       padding: 1vw 10vw 1vw 6.5vw;
-      margin-top: -2%;
+      margin-top: 2.4%;
       margin-left: -20%;
       border-radius: 20px;
-      font-family: $body;
-      text-align: center;
+      
 
       span{
         margin-right: 10%;
+      }
+
+      .link{
+        font-family: $body;
+        text-align: center;
+        text-decoration: none;
+        color: black;
       }
     }
      
