@@ -28,6 +28,10 @@ $std-px-unit:0.2px;
     text-align: center;
 }
 
+.button-cart:hover{
+    cursor: pointer;
+}
+
 .builder{
     display: flex;
     flex-direction: row;
