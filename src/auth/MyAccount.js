@@ -81,6 +81,9 @@ class MyAccount extends Component {
               loading={this.state.isLoading}
             >
               <p className="register-title">CREATE AN ACCOUNT</p>
+              <NavLink className="login-link" to={ LOGIN_URL }>
+                <p>Already registered ?</p>
+              </NavLink>
 
               <Form.Field>
                 <Input
@@ -133,9 +136,7 @@ class MyAccount extends Component {
               >
                 Register
               </Button>
-              <NavLink className="login-link" to={ LOGIN_URL }>
-                <p>Already registered ?</p>
-              </NavLink>
+              
             </Form>
            </div>
           <span>
