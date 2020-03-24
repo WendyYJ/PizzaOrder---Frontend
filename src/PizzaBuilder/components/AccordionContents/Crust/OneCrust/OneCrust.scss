@@ -3,6 +3,11 @@
 $std-unit: 1vh;
 $std-weight: 2px;
 
+.flame{
+    color: $flame;
+}
+
+
 .crusts-size-seleted{
     border-radius: 50%;
     border: $std-weight solid $flame;
@@ -32,18 +37,9 @@ $std-weight: 2px;
 
     margin: $std-unit*4;
 
-    &-number{
+    &-number, &-title{
         font-family: $body;
         font-size: $body-size;
-        color:$saffron;
-
-    }
-
-
-    &-title{
-        font-family: $body;
-        font-size: $body-size;
-        color:$flame;
     }
 
 }
