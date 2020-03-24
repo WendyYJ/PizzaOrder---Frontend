@@ -56,7 +56,7 @@ class Login extends Component {
   render() {
     return (
       <div className="login-container">
-        <Form
+         <Form
           className="  login-form"
           error={!!this.state.error}
           loading={this.state.isLoading}
@@ -79,7 +79,7 @@ class Login extends Component {
               name="password"
               type="password"
               onChange={this.handleChange}
-              placeholder="  Password"
+              placeholder="Password"
               value={this.state.password}
             />
           </Form.Field>

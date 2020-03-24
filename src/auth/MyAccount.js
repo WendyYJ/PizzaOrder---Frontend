@@ -127,20 +127,21 @@ class MyAccount extends Component {
                   content="Please check your password !"
                 />
               )}
-              <Button
-                className="register-button"
-                onClick={this.updateUserInput}
-              >
-                Register
-              </Button>
+              <div> 
+                  <Button
+                  className="register-button"
+                  onClick={this.updateUserInput}
+                >
+                  Register
+                </Button>
+              </div>
               <NavLink className="login-link" to={ LOGIN_URL }>
                 <p>Already registered ?</p>
               </NavLink>
             </Form>
            </div>
-          <span>
+        
             <p className="select-type">OR</p>
-          </span>
           <div className="social-container">
             <SocialRegister />
           </div>
