@@ -38,24 +38,7 @@ $std-px-unit:0.2px;
     justify-content: flex-start;
     align-items: flex-start;
 
-    &__title{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 40vh;
-        &__heading{
-            @include chalk-heading;
-            color:$white;
-        }
-        &__span{
-            font-size: medium;
-            @include button;
-            font-weight: 100;
-            font-variant: normal;
-        }
     
-    }
     
     &__checkout{
         background-color: $black;
