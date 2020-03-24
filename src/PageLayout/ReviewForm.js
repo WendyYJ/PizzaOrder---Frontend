@@ -20,10 +20,12 @@ class ReviewForm extends React.Component {
   }
 
 
+  /*
   handleSubmit = event => {
     event.preventDefault();
     alert("You are submitting " + this.state.review);
   };
+  */
 
 
   render() {
@@ -151,16 +153,18 @@ class ReviewForm extends React.Component {
             <p>YOUR REVIEW</p>
             <input 
                  type="text" 
-                 name="text"
+                 name="review"
                  value={this.state.review}
-                 onChange={this.handleSubmit}    
+                 onChange={this.handleChange}    
 				    />
           </div>
+           
+          <form noValidate autoComplete="off">
           <div className="submit-button">
-            <br></br>
-            <br></br>
+           
             <input type="submit" />
           </div>
+          </form>
         </div>
       </div>
     );

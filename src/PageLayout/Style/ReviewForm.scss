@@ -93,13 +93,18 @@
   }
   
   .submit-button{
-    position: relative;
-    top: 0vh;
-    left: 23%;
+    margin: auto;
+    margin-left: 23%;
+    margin-top: 5%;
+  
+
     input{
-      padding: 6px 22px;
+      padding: 0.5vw 2.6vw 1.5vw 3vw;
       background-color: $saffron;
       border: 1px solid $saffron;
+      font-size: 0.8rem;
+      color: black;
+      width: 100%;
     }
   }
 }
