@@ -117,8 +117,6 @@ const pizzaReducer = (state=initialState,action) => {
     case DELETE_CART:
         const revisedPizzas = [];
         state.selectedPizzas.map(product => {
-            console.log(product.id);
-            console.log(action.id);
             if(product.id != action.id) {
               revisedPizzas.push(product);
             }

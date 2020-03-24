@@ -10,6 +10,6 @@ export const fetchStates = () => {
 export const fetchCities = state => {
     const url = `${API_STATE_URL}/${state}`;
     return get(url).then((res) => res.data.data);
-}
+};
 
 

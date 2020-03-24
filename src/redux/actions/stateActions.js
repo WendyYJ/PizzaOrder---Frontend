@@ -1,52 +1,51 @@
-import { fetchStates,fetchCities } from '../../api/state';
+import { fetchCities } from '../../api/state';
 
-export const FETCH_STATE_SUCCESS ='FETCH_STATE_SUCCESS';
 export const FETCH_CITY_SUCCESS ='FETCH_CITY_SUCCESS';
 export const FETCH_CITY = 'FETCH_CITY';
-export const FETCH_STATE = 'FETCH_STATE';
+export const FETCH_CITY_FAILURE = 'FETCH_CITY_FAILURE';
+export const FETCH_ALL_SUCCESS = 'FETCH_ALL_SUCCESS';
 
-export const fetchStateSuccess = () => ({
-    type:FETCH_STATE_SUCCESS,
-
-});
-
-export const fetchCitySuccess = state => ({
-    type:FETCH_STATE_SUCCESS,
-    state
+export const fetchCitySuccess = data => ({
+    type: FETCH_CITY_SUCCESS,
+    data,
 })
 
-export const fetchState = () => ({
-    type:FETCH_STATE,
+export const fetchAllSuccess = () => ({
+    type: FETCH_ALL_SUCCESS,
 })
 
 export const fetchCity = () =>({
     type:FETCH_CITY,
 })
 
-export const fetchStateFailure = errorMessage => ({
-    type:FETCH_STATE_FAILURE,
-    errorMessage,
-});
 
 export const fetchCityFailture = errorMessage => ({
     type:FETCH_CITY_FAILURE,
     errorMessage,
 });
 
-export const loadState = () => dispatch => {
-    dispatch(fetchState);
-    fetchStates.then(data => {
-        dispatch(fetchStateSuccess(data));
-    }).catch(error => {
-        dispatch(fetchStateFailure(error.message));
-    });
-}
 
-export const loadCity = state => dispatch => {
+export const loadCity = () => dispatch => {
     dispatch(fetchCity);
-    fetchCities(state).then(data => {
-        dispatch(fetchCitySuccess(data));
-    }).catch(error => {
-        dispatch(fetchCityFailure(error.message));
-    });
+    let count = 0;
+    let states = ["Queensland","New South Wales","South Australia",
+                    "Tasmania","Victoria","Western Australia","Esperance"];
+    let stateCity = {};
+    states.map(state => {
+        let cities = [];
+        count++;
+        fetchCities(state).then(data => {
+            data.map(d => {
+                cities.push(d.City);
+                stateCity[state] = cities;   
+            })   
+        }).catch(error => {
+            dispatch(fetchCityFailture(error.message));
+        });
+        if (count == 7) {
+            dispatch(fetchCitySuccess(stateCity));
+        }   
+    }
+    )
+    
 }

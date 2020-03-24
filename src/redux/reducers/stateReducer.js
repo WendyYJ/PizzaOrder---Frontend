@@ -1,19 +1,45 @@
-import {FETCH_STATE_SUCCESS, FETCH_CITY_SUCCESS, FETCH_STATE,FETCH_CITY} from '../actions/stateActions';
+import {FETCH_CITY_SUCCESS, FETCH_CITY, FETCH_CITY_FAILURE, FETCH_ALL_SUCCESS } from '../actions/stateActions';
 
 const initialState = {
-    States:[],
-    City:[],
-    isLoading:false,
+    city:{},
+    isLoading:true,
     errorMessage:'',
 };
 
 const stateReducer = (state = initialState, action) => {
     switch (action.type) {
-        case FETCH_STATE_SUCCESS:
+  
+        case FETCH_CITY_SUCCESS: {
             return {
                 ...state,
-                States:action.data,
+                city: action.data,
+                isLoading:false,
             }
+        }
+
+        case FETCH_ALL_SUCCESS:{
+            return {
+                ...state,
+                isLoading:false
+            }
+        }
+
+        case FETCH_CITY: {
+            return {
+                ...state,
+                isLoading:!state.isLoading,
+            }
+        }
+
+        case FETCH_CITY_FAILURE : {
+            return{
+                ...state,
+                errorMessage:action.errorMessage,
+                isLoading:false,
+              };
+        }
+        default:
+            return state;
     }
 }
 
