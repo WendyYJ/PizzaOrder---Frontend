@@ -1,73 +1,153 @@
 @import '../../asset/theme.scss';
 @import '../../asset/mixin.scss';
 
-
+/*
 .MenuMain-container{
   position: relative;
+  width: 100%;S
+}
+*/
+
+/*
+.relatedProduct-outer{
+  margin-top: 100%;
   width: 100%;
 }
+*/
 
 .relatedProduct-container{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  width: 70%;
+  height: 100%;
   align-items: center;
   margin: auto;
-  position: relative;
-  margin-top: 12vw;
-  margin-left: -15vw;
-  margin-bottom: 12vh;
-
-  h2{
-    font-family: $heading;
-    font-size: 24px;
-    color: $saffron;
-    position: relative;
-    margin-top: -45vw;
-    left: 49vw;
-    width: 100%;
-    text-align: center;
-    @include heading();
-  }
+  margin-top: 15%;
+  margin-left: 8%;
+  margin-bottom: 10%;
+  display: flex;
+ 
   
-  .pizza{
-    width: 30%;
+  .pizza-container{
+    width: 25%;
     text-align: center;
-    position: relative;
-    margin: 2%;
-    @include heading();
+    margin: auto;
 
-    .related {
+    .relatedImg {
       width:10vw;
       height: 10vw;
       border-radius: 50%;
     } 
 
-    h4{
-      font-size:0.7em;
+    .pizzaName {
+      font-size: 1.2rem;
       color:$saffron;
-      margin-top: 20%;
       width: 100%;
       text-align: center;
      }
       
-    p{
-      font-size:0.6em;
+    .pizzaDescription {
+      font-size:1rem;
       color:$white;
       margin-left: 0vw;
       }
       
-    h3{
-      font-size:0.7em;
+    .pizzaPrice {
+      font-size:1.2rem;
       color: $flame;
       width: 100%;
       } 
   }
 }
 
+.related-title{
+  font-family: $heading;
+  font-size: 1.5rem;
+  color: $saffron;
+  margin-top: -170%;
+  margin-left: 250%;
+  width: 100%;
+  text-align: center;
+}
+
 .Catalog-container{
   background-color: rgb(37, 35, 35);
   opacity: 0.9;
 }
-  
+
+.pizzaName-container{
+  height: 2.5rem;
+}
+
+.pizzaDescription-container{
+  height: 5rem;
+}
+
+@media only screen and (max-width: 1200px){
+    .pizzaName-container{
+      height: 3rem;
+  }
+   .pizzaDescription-container{
+      height: 9rem;
+  }
+}
+
+
+@media only screen and (max-width: 700px){
+  .relatedProduct-container{
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+
+        .title-container{
+          margin: auto;
+          height: 100%;
+          width: 100%;
+        }
+
+        .pizza-container {
+          margin: auto;
+          height: 100%;
+          width: 80%;
+          display: flex;
+      
+          .relatedImg-container {
+            width:15vw;
+            height:15vw;
+            border-radius: 50%;
+            margin-top: 10%;
+          } 
+      
+          .pizzaName-container{
+            font-size: 1.2em;
+            margin: auto;
+            height: 100%;
+            margin-left: 2%;
+            margin-right: 2%;
+            width:20%;
+           }
+            
+          .pizzaDescription-container{
+            margin: auto;
+            height: 100%;
+            width:50%;
+            margin-left: 2%;
+            margin-right: 2%;
+          }
+            
+          .pizzaPrice-container{
+            margin: auto;
+            width:10%;
+            height: 100%;
+            margin-left: 2%;
+            margin-right: 2%;
+          } 
+        }
+
+      /*
+        .relatedProduct-outer{
+           margin-top: 100%;
+        }
+        */
+        
+  }
+}

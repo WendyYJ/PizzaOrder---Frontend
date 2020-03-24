@@ -50,9 +50,15 @@ class SampleId extends React.Component {
           <p>ORDER DELIVERY</p>
           <p className="active">REVIEWS(4)</p>
         </div>
-        <ReviewForm />
-        <RelatedProduct />
-        <Footer />
+        <div>
+          <ReviewForm />
+        </div>
+        <div className="relatedProduct-outer">
+          <RelatedProduct />
+        </div>
+        <div>
+         <Footer />
+        </div>
       </div>
     );
   }
