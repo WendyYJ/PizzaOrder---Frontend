@@ -9,11 +9,11 @@ import SampleMenu from "./Components/SampleMenu";
 import ReviewForm from "../PageLayout/ReviewForm";
 import RelatedProduct from "./Components/RelatedProduct";
 import { fetchPizzaById } from "../api/pizza";
-import PizzamenuSidebar from "../PageLayout/PizzamenuSidebar/PizzamenuSidebar";
-import ShoppingCartSidebar from "../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar";
+//import PizzamenuSidebar from "../PageLayout/PizzamenuSidebar/PizzamenuSidebar";
+//import ShoppingCartSidebar from "../PageLayout/ShoppingCartSidebar/ShoppingCartSidebar";
 import Footer from "../PageLayout/Footer/Footer";
-import {connect} from  'react-redux';
-import {loadPizza as loadPizzaAction} from '../redux/actions/pizzaActions';
+import { connect } from  'react-redux';
+import { loadPizza as loadPizzaAction } from '../redux/actions/pizzaActions';
 
 class SampleId extends React.Component {
 
