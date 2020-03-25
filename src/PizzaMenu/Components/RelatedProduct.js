@@ -9,8 +9,11 @@ const RelatedProduct = () => (
   <div className="relatedProduct-container">
      <div className="title-container">
      <h2 className="related-title">Related Products</h2>
+     <br></br>
     </div>
 
+
+<div className="out-container">
     <div className="pizza-container">
       <div className="relatedImg-container">
        <img className="relatedImg" src={Salami} alt="pizza" />
@@ -119,6 +122,8 @@ const RelatedProduct = () => (
       <div className="pizzaPrice-container">
        <h3 className="pizzaPrice">$21.00</h3>
       </div>
+    </div>
+
     </div>
   </div>
 );
