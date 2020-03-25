@@ -33,7 +33,7 @@
 
 .outer{
   display: flex;
-  flex-direction: row;
+  
 }
 
 .contact-form{
@@ -133,29 +133,32 @@
     width: 25%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.205);
-    @include heading();
+  
    
     
   .GetInTouch{
     text-align: left;
     margin-left: 2vw;
+    
 
     h2{
       font-family: $heading;
       color: $saffron;
       font-size: 1.5rem;
+      
     }
 
     p{
       font-family: $body;
       color: white;
-      font-size: 1rem;
+      font-size: 1.1rem;
       line-height: 1.5vh;
       margin-left: 0vw;
-
+    
       span{
         color: $flame;
         margin-left: 1vw;
+       
       }
     }
   }
@@ -163,11 +166,13 @@
   .StoreAddress{
     text-align: left;
     margin-left: 2vw;
+   
 
     h2{
       font-family: $heading;
       color: $saffron;
       font-size: 1.5rem;
+      
     }
 
     h3{
@@ -176,6 +181,7 @@
       font-size: 1.1rem;
       line-height: 1.5vh;
       width: 100%;
+     
     }
 
     p{
@@ -184,17 +190,20 @@
       font-size: 1rem;
       line-height: 1.5vh;
       margin-left: 0vw;
+      
     }
   }
 
   .WorkingHours{
     text-align: left;
     margin-left: 2vw;
+    
 
     h2{
       font-family: $heading;
       color: $saffron;
       font-size: 1.5rem;
+     
     }
 
     p{
@@ -203,6 +212,7 @@
       font-size: 1rem;
       line-height: 1.5vh;
       margin-left: 0vw;
+      
     }
   }
 }
@@ -224,18 +234,27 @@
   }
 
   .contactUs-container{
-    width: 100%;
+    width: 50%;
     height: 100%;
     margin: auto;
+
+    .messageForm-containerTwo{
+      margin-left: -53%;
+    }
   }
 
   .contactDetail-container{
-    width: 100%;
+    width: 50%;
     height: 100%;
     margin: auto;
+    margin-top: 20%;
+    margin-left: 0%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+  }
+
+  .contactDetails-container{
+    width: 100%;
   }
 
 }
