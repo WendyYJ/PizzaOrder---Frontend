@@ -65,3 +65,22 @@ $std-weight:3px;
         font-size: $sub-heading-size;
     }
 }
+
+@media screen and (max-width: $for-phone){
+
+    .selected-tick{
+        @include heading-size-down;
+    }
+
+    .content{
+        &__name{
+            @include heading-size-down;
+        }
+        &__price{
+            @include chalk-heading-size-down;
+        }
+
+    }
+
+
+}

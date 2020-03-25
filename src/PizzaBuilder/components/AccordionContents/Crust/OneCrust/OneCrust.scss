@@ -78,5 +78,50 @@ $std-weight: 2px;
 
 }
 
+@media screen and (max-width: $for-phone){
+
+.crusts-size{
+    &-number, &-title{
+        font-family: $body;
+        font-size: medium;
+    }
+}
+    
+#crust-size-9{
+    @extend .size-model;
+    width: 4.5 * $std-unit;
+    height: 4.5 * $std-unit;
+
+}
+
+#crust-size-12{
+    @extend .size-model;
+    width: 6 * $std-unit;
+    height: 6 * $std-unit;
+
+}
+
+#crust-size-14{
+    @extend .size-model;
+    width: 7 * $std-unit;
+    height: 7 * $std-unit;
+
+}
+
+#crust-size-16{
+    @extend .size-model;
+    width: 8 * $std-unit;
+    height: 8 * $std-unit;
+
+}
+
+#crust-size-18{
+    @extend .size-model;
+    width: 9 * $std-unit;
+    height: 9 * $std-unit;
+
+}
+}
+
 
 

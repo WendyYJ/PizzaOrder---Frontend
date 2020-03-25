@@ -5,6 +5,7 @@ $standard-layout:3vh;
 
 .crusts-container{
     padding-left: $standard-layout;
+    flex-wrap: wrap;
     display: flex;
     flex-direction: row;
     align-items: flex-end;

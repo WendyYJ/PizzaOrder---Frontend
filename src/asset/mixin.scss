@@ -3,12 +3,35 @@
 @mixin chalk-heading{
     font-family: $chalk;
     font-size: $heading-size;  
-
 }
 
 @mixin heading{
     font-family: $heading;
     font-size: $sub-heading-size;
+}
+
+@mixin chalk-heading-size-down{
+    font-family: $chalk;
+}
+
+@mixin chalk-heading{
+    font-family: $chalk;
+    font-size: $heading-size;  
+}
+
+@mixin heading{
+    font-family: $heading;
+    font-size: $sub-heading-size;
+}
+
+@mixin chalk-heading-size-down{
+    font-family: $chalk;
+    font-size: xx-large; 
+}
+
+@mixin heading-size-down{
+    font-family:$heading;
+    font-size: large;
 }
 
 @mixin button{
@@ -32,3 +55,4 @@
     padding-left: 15%;
     padding-right: 15%; 
 }
+
