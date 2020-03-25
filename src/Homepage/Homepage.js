@@ -8,6 +8,7 @@ import Carousel from './components/Carousel';
 import Footer from '../PageLayout/Footer/Footer';
 import { Link } from 'react-router-dom';
 import { PIZZABUILDER_URL } from '../routes/URLMap';
+
 const Homepage = () => (
   <div className="homepage">
 
@@ -76,72 +77,85 @@ const Homepage = () => (
         customers happy! And we love making people happy.
       </p>
       <div className="homepage__comment__details">
-        <div className="homepage__comment__details-container">
+        
+          <div className="homepage__comment__details-container">
+          <div className="homepage__comment__details-wrapper">
+            <div>
+              <img
+                className="homepage__comment__details-profile"
+                src={profile}
+                alt="profile"
+              />
+            </div>
+            <h3 className="homepage__comment__details-dish">
+              Floretieno Retitora
+            </h3>
+            <p className="homepage__comment__details-rating">
+              &#9733; &#9733; &#9734; &#9734; &#9734;
+            </p>
+        </div>
           <div>
-            <img
-              className="homepage__comment__details-profile"
-              src={profile}
-              alt="profile"
-            />
+            <p className="homepage__comment__details-bubble">
+              " We are serving pizza, your pizza is the fave of our family. Pick
+              us as the pizza winner!
+            </p>
+            <p className="homepage__comment__details-name">Jenice Black</p>
+            <p className="homepage__comment__details-origin">
+              www.tripAdvisor.com
+            </p>
           </div>
-          <h3 className="homepage__comment__details-dish">
-            Floretieno Richotta
-          </h3>
-          <p className="homepage__comment__details-rating">
-            &#9733; &#9733; &#9734; &#9734; &#9734;
-          </p>
-          <p className="homepage__comment__details-bubble">
-            " We are serving pizza, your pizza is the fave of our family. Pick
-            us as the pizza winner!
-          </p>
-          <p className="homepage__comment__details-name">Jenice Black</p>
-          <p className="homepage__comment__details-origin">
-            www.tripAdvisor.com
-          </p>
         </div>
 
         <div className="homepage__comment__details-container">
           <div>
-            <img
-              className="homepage__comment__details-profile"
-              src={profile}
-              alt="profile"
-            />
+            <div>
+              <img
+                className="homepage__comment__details-profile"
+                src={profile}
+                alt="profile"
+              />
+            </div>
+            <h3 className="homepage__comment__details-dish">Garlic Chicken</h3>
+            <p className="homepage__comment__details-rating">
+              &#9733; &#9733; &#9733; &#9734; &#9734;
+            </p>
           </div>
-          <h3 className="homepage__comment__details-dish">Garlic Chicken</h3>
-          <p className="homepage__comment__details-rating">
-            &#9733; &#9733; &#9733; &#9734; &#9734;
-          </p>
-          <p className="homepage__comment__details-bubble">
-            " We are serving pizza, your pizza is the fave of our family. Pick
-            us as the pizza winner!
-          </p>
-          <p className="homepage__comment__details-name">Daneirl Black</p>
-          <p className="homepage__comment__details-origin">
-            www.pizzatempo.com
-          </p>
+          <div>
+            <p className="homepage__comment__details-bubble">
+              " We are serving pizza, your pizza is the fave of our family. Pick
+              us as the pizza winner!
+            </p>
+            <p className="homepage__comment__details-name">Daneirl Black</p>
+            <p className="homepage__comment__details-origin">
+              www.pizzatempo.com
+            </p>
+          </div>
         </div>
 
         <div className="homepage__comment__details-container">
           <div>
-            <img
-              className="homepage__comment__details-profile"
-              src={profile}
-              alt="profile"
-            />
+            <div>
+              <img
+                className="homepage__comment__details-profile"
+                src={profile}
+                alt="profile"
+              />
+            </div>
+            <h3 className="homepage__comment__details-dish">
+              Kimchi BBQ Chicken
+            </h3>
+            <p className="homepage__comment__details-rating">
+              &#9733; &#9733; &#9733; &#9733; &#9733;
+            </p>
           </div>
-          <h3 className="homepage__comment__details-dish">
-            Kimchi BBQ Chicken
-          </h3>
-          <p className="homepage__comment__details-rating">
-            &#9733; &#9733; &#9733; &#9733; &#9733;
-          </p>
-          <p className="homepage__comment__details-bubble">
-            " We are serving pizza, your pizza is the fave of our family. Pick
-            us as the pizza winner!
-          </p>
-          <p className="homepage__comment__details-name">Merty white</p>
-          <p className="homepage__comment__details-origin">www.pizzaroo.com</p>
+          <div>
+            <p className="homepage__comment__details-bubble">
+              " We are serving pizza, your pizza is the fave of our family. Pick
+              us as the pizza winner!
+            </p>
+            <p className="homepage__comment__details-name">Merty white</p>
+            <p className="homepage__comment__details-origin">www.pizzaroo.com</p>
+          </div>
         </div>
       </div>
     </div>
@@ -189,7 +203,7 @@ const Homepage = () => (
         <div className="homepage__news-content">
           <img
             className="homepage__news-content-picture"
-            src="https://cdn0.woolworths.media/content/recipes/wk23-dinner-made-easy-aussie-pizza.jpg"
+            src={profile}
             alt="profile"
           />
           <p className="homepage__news-content-time">January 22, 2019</p>
@@ -206,7 +220,7 @@ const Homepage = () => (
         <div className="homepage__news-content">
           <img
             className="homepage__news-content-picture"
-            src="https://cdn0.woolworths.media/content/recipes/wk23-dinner-made-easy-aussie-pizza.jpg"
+            src={profile}
             alt="profile"
           />
           <p className="homepage__news-content-time">Feburary 8, 2019</p>
@@ -224,7 +238,7 @@ const Homepage = () => (
         <div className="homepage__news-content">
           <img
             className="homepage__news-content-picture"
-            src="https://cdn0.woolworths.media/content/recipes/wk23-dinner-made-easy-aussie-pizza.jpg"
+            src={profile}
             alt="profile"
           />
           <p className="homepage__news-content-time">December 18, 2019</p>

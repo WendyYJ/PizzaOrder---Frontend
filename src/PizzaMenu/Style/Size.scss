@@ -10,7 +10,6 @@ $standard-layout:1vh;
     flex-direction: row;
     justify-content:flex-start;
     align-items: flex-end;
-    flex-wrap: wrap;
     @include padding-center;
 }
 
@@ -140,4 +139,11 @@ margin:$standard-layout;
 .crust181-text{
     text-align: center;
     color: $flame;
+}
+
+@media screen and (max-width: $for-phone){
+    .crust{
+        flex-wrap: wrap;
+    }
+
 }

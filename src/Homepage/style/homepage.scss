@@ -1,5 +1,7 @@
 @import '../../asset/mixin.scss';
 
+
+
 $std-width:1vw;
 $std-height:1vh;
 
@@ -104,9 +106,8 @@ $std-height:1vh;
         }
 
         &__process{
-            font-weight: 900 ;
             color:$saffron;
-            font-size: $sub-heading-size*1.5;
+            font-size: $sub-heading-size;
             font-family: $heading;
             border-bottom: 1px solid grey;
             padding: 1 * $std-width;
@@ -311,7 +312,7 @@ $std-height:1vh;
 
         }
     }
-
-    
-
 }
+
+@include homepage-responsive;
+

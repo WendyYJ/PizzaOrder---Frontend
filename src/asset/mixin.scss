@@ -12,21 +12,7 @@
 
 @mixin chalk-heading-size-down{
     font-family: $chalk;
-}
-
-@mixin chalk-heading{
-    font-family: $chalk;
-    font-size: $heading-size;  
-}
-
-@mixin heading{
-    font-family: $heading;
-    font-size: $sub-heading-size;
-}
-
-@mixin chalk-heading-size-down{
-    font-family: $chalk;
-    font-size: xx-large; 
+    font-size: $heading-size-down; 
 }
 
 @mixin heading-size-down{
@@ -54,5 +40,228 @@
 @mixin padding-center {
     padding-left: 15%;
     padding-right: 15%; 
+}
+
+@mixin homepage-responsive{
+    @media screen and (max-width:$for-phone){
+        .homepage{
+            &__welcome{
+                &-heading{
+                    @include chalk-heading-size-down;
+                }
+                &-span{
+                    @include heading-size-down;
+                }
+                &-button{
+                    font-size: $button-size-down;
+                }
+            }
+            &__menu{
+                flex-direction: column;
+                
+                &-heading{
+                    @include heading-size-down();
+                    font-size: $heading-size-down;
+                }
+                &-price{
+                    font-size:$sub-heading-size-down;
+                }
+                &-button{
+                    font-size: $button-size-down;
+                    @include button-filled();
+                    width: 20vw;
+                }
+                &-more{
+                    font-size:$body-size-down;
+                }
+        
+                &-right{
+                    display: flex;
+                    align-items: center;
+                    img{
+                        padding-bottom: 2vh;
+                        border-radius: 5%;
+                        height: 30vh;
+                    }
+          
+                }
+                
+            }
+            
+            &__pizza-builder{
+                padding:0;
+                &__heading{
+                    @include heading-size-down();
+                    font-size: $heading-size-down;
+                    &-span{
+                        font-size: $body-size-down;
+                    }
+                }
+                &__process{
+                    font-size: $sub-heading-size-down;
+                    &-number{
+                        font-size:$heading-size-down;
+                    }
+                }
+                &-button{
+                    font-size: $body-size-down;
+                }
+            }
+
+            &__comment{
+                padding:0;
+                margin-bottom: 3vh;
+                &-heading{
+                    @include heading-size-down();
+                    font-size: $heading-size-down;
+                    &-span{
+                        font-size: $body-size-down;
+                    }
+                }
+                &__details{
+                    padding:0;
+                    display: flex;
+                    flex-direction: column;
+                    
+                    &-container{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    &-rating{
+                        font-size: small;
+                    }
+                    &-wrapper{
+                        margin-right: 2vw;
+                    }
+                   
+                    &-bubble{
+                        font-size: $smaller-body-size-down;
+                        width: 60vw;
+                        position: relative;
+                        background: $flame;
+                    }
+        
+                    &-bubble:after{
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        width: 0;
+                        height: 0;
+                        border: 1vw solid transparent;
+                        border-bottom-color: $flame;
+                        border-top: 0;
+                        margin-left: -1vw;
+                        margin-top: -1vw;
+                    }
+                    &-name, &-origin{
+                        font-size: $smaller-body-size-down;
+                        margin: 0;
+                    }
+
+
+                }
+
+            }
+
+            &__app{
+                padding-left:5%;
+                padding-right:5%;
+                display: flex;
+                align-items: center;
+
+                img{
+                    width: max-content;
+                }
+                
+                &-content{
+                    
+                   
+                    &-heading{
+                        @include heading-size-down();
+                        color:$saffron;
+                        font-size: $heading-size-down;
+                    }
+                    &-span{
+                        font-size: $smaller-body-size-down;
+                        color: $white;
+                        font-family: $body;
+                    }
+                    &-subheading{
+                        @include heading-size-down();
+                        color:$saffron;
+                        font-size: $sub-heading-size-down;
+                    }
+                    &-listing{
+                        p{
+                        margin-bottom:0;
+                        line-height: normal;
+                        color:$flame;
+                        font-size: $body-size-down;
+                        }
+                    }
+                    &-download{
+                        p{
+                            padding:0;
+                            font-size: $smaller-body-size-down;
+                        }
+                    }
+        
+                }
+        
+            }
+
+            &__news{
+                padding:0;
+                &-heading{
+                    @include heading-size-down();
+                    font-size: $heading-size-down;
+                }
+        
+                &__container{
+                display: flex;
+                flex-direction: column;
+                }
+        
+                &-content{
+                    text-align: left;
+                    margin:1 * $std-width;
+                    display: flex;
+                    flex-direction: column;
+                    &-picture{
+                        width:20 * $std-width;
+                        padding: 1 * $std-width;
+                        border: 2px solid $flame ;
+                        
+                    }
+                    &-time{
+                        color:$flame;
+                        font-size: $body-size;
+                        
+                    }
+                    &-heading{
+                        margin: 0;
+                        @include heading;
+                        color: $saffron;
+                    }
+                    &-span{
+                        font-size: $body-size;
+                        color: $white;
+                        flex:1 0 auto;
+                        
+                    }
+                    &-button{
+                        @include button-filled;
+                        font-size: $body-size;
+                        width:10 * $std-width;
+                        text-align: center;
+                    }
+        
+                }
+            }
+        }
+    }
 }
 
