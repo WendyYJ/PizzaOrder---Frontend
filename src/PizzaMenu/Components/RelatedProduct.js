@@ -7,25 +7,24 @@ import Vege from '../../asset/img/Vege.jpg';
 
 const RelatedProduct = () => (
   <div className="relatedProduct-container">
-    <h2>Related Products</h2>
-    <div className="pizza">
-      <img className="related" src={Salami} alt="pizza" />
-      <h4>Florentine Ricotta</h4>
-      <p>
-        descriptdsasjdankasnd
-        <br />
-        ksandkjasndnkasnd
-        <br />
-        ksandkjasndnkasnd
-        <br />
-        ksandkjasndnkasnd
-      </p>
-      <h3>$18.00</h3>
+     <div className="title-container">
+     <h2 className="related-title">Related Products</h2>
+     <br></br>
     </div>
-    <div className="pizza">
-      <img className="related" src={Shiitake} alt="pizza" />
-      <h4>Margherita</h4>
-      <p>
+
+
+<div className="out-container">
+    <div className="pizza-container">
+      <div className="relatedImg-container">
+       <img className="relatedImg" src={Salami} alt="pizza" />
+      </div>
+
+      <div className="pizzaName-container">
+       <h4 className="pizzaName">Florentine Ricotta</h4>
+      </div>
+
+      <div className="pizzaDescription-container">
+       <p className="pizzaDescription">
         descriptdsasjdankasnd
         <br />
         ksandkjasndnkasnd
@@ -34,12 +33,27 @@ const RelatedProduct = () => (
         <br />
         ksandkjasndnkasnd
       </p>
-      <h3>$16.00</h3>
+      </div>
+
+      <div className="pizzaPrice-container">
+       <h3 className="pizzaPrice">$18.00</h3>
+      </div>
+
     </div>
-    <div className="pizza">
-      <img className="related" src={proni} alt="pizza" />
-      <h4>Vege Supreme</h4>
-      <p>
+
+
+    <div className="pizza-container">
+
+      <div className="relatedImg-container">
+       <img className="relatedImg" src={Shiitake} alt="pizza" />
+      </div>
+
+      <div className="pizzaName-container">
+       <h4 className="pizzaName">Margherita</h4>
+      </div>
+
+      <div className="pizzaDescription-container">
+       <p className="pizzaDescription">
         descriptdsasjdankasnd
         <br />
         ksandkjasndnkasnd
@@ -48,12 +62,53 @@ const RelatedProduct = () => (
         <br />
         ksandkjasndnkasnd
       </p>
-      <h3>$22.00</h3>
+      </div>
+
+      <div className="pizzaPrice-container">
+       <h3 className="pizzaPrice">$16.00</h3>
+      </div>
     </div>
-    <div className="pizza">
-      <img className="related" src={Vege} alt="pizza" />
-      <h4>Roast Beetroot</h4>
-      <p>
+
+
+    <div className="pizza-container">
+      <div className="relatedImg-container">
+       <img className="relatedImg" src={proni} alt="pizza" />
+      </div>
+     
+      <div className="pizzaName-container">
+       <h4 className="pizzaName">Vege Supreme</h4>
+      </div>
+
+      <div className="pizzaDescription-container"> 
+        <p className="pizzaDescription">
+          descriptdsasjdankasnd
+          <br />
+          ksandkjasndnkasnd
+          <br />
+          ksandkjasndnkasnd
+          <br />
+          ksandkjasndnkasnd
+        </p>
+      </div>
+     
+     <div className="pizzaPrice-container">
+      <h3 className="pizzaPrice">$22.00</h3>
+    </div>
+
+    </div>
+
+
+    <div className="pizza-container">
+      <div className="relatedImg-container">
+       <img className="relatedImg" src={Vege} alt="pizza" />
+      </div>
+
+      <div className="pizzaName-container">
+       <h4 className="pizzaName"> Roast Beetroot</h4>
+      </div>
+      
+      <div className="pizzaDescription-container">
+       <p className="pizzaDescription">
         descriptdsasjdankasnd
         <br />
         ksandkjasndnkasnd
@@ -62,7 +117,13 @@ const RelatedProduct = () => (
         <br />
         ksandkjasndnkasnd
       </p>
-      <h3>$21.00</h3>
+      </div>
+
+      <div className="pizzaPrice-container">
+       <h3 className="pizzaPrice">$21.00</h3>
+      </div>
+    </div>
+
     </div>
   </div>
 );

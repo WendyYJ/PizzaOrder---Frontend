@@ -41,11 +41,13 @@
             margin-top:15%;
             font-family: $body;
             font-size:12px;
-        }
-    }
-    
+            &:hover {
+              color:$saffron;
+            }
+      }
+   
+  }
 }
-
 .float__menu-item .ui.search .prompt {
  border-radius: 0;
  background: $black;
@@ -138,3 +140,4 @@
   top:9.5%;
   cursor: pointer;
 }
+

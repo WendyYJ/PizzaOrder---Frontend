@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import util from '../../utils/util';
 import { Link } from 'react-router-dom';
+import { CHECKOUT_URL } from '../../routes/URLMap';
 
 class CartTotal extends React.Component {
     constructor(props) {
@@ -17,7 +18,7 @@ class CartTotal extends React.Component {
                     <div className="float-cart__viewbtn" onClick = {() => this.props.changePizzas()}>
                         UPDATE CART  
                     </div>
-                    <Link className="float-cart__buybtn">
+                    <Link className="float-cart__buybtn" to = {CHECKOUT_URL} >
                         PROCEED TO CHECKOUT 
                     </Link>
                 </div>

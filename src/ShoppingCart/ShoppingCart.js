@@ -5,7 +5,7 @@ import FourthHeader from '../PageLayout/Header/FourthHeader';
 import CartForm from './Component/CartForm';
 import CartTotal from './Component/CartTotal';
 import Footer from '../PageLayout/Footer/Footer';
-import {updateCart as updateCartAction} from '../redux/actions/pizzaActions';
+import {updateCart as updateCartAction,deleteCart as deleteCartAction} from '../redux/actions/pizzaActions';
 import './ShoppingCart.scss';
 
 class ShoppingCart extends React.Component {
@@ -17,10 +17,7 @@ class ShoppingCart extends React.Component {
   }
 
   removeProduct = product => {
-    const index = this.props.selectedPizzas.findIndex(p => p.id === product.id);
-        if (index >= 0) {
-            this.setState( this.props.selectedPizzas.splice(index, 1));
-        }
+    this.props.deleteCart(product.id);
   }; 
 
   addQuantity = (product,number) => {
@@ -80,7 +77,8 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps= dispatch => ({
-    updateCart: (id,quantity) => dispatch (updateCartAction(id,quantity)) 
+    updateCart: (id,quantity) => dispatch (updateCartAction(id,quantity)),
+    deleteCart: (id) => dispatch(deleteCartAction(id)),
 });
 
 export default connect(mapStateToProps,mapDispatchToProps)(ShoppingCart);
