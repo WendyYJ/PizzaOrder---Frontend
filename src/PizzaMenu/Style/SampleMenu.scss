@@ -11,31 +11,6 @@
   opacity: 0.9;
   width: 100%;
 }
-  
-.decButton{
-  font-size: 1.3em;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.900);
-  opacity: 1;
-  width: 2vw;
-  height: 2vw;
-
-  display: inline-block;
-  border: 1px solid white;
-  cursor: pointer;
-}
-
-.incButton{
-  font-size: 1.3em;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.900);
-  opacity: 1;
-  width: 2vw;
-  height: 2vw;
-  display: inline-block;
-  border: 1px solid white;
-  cursor: pointer;
-}
 
 .sample_menu{
   display: flex;
@@ -83,7 +58,26 @@
         height: 3vw;
 
        
-    
+      
+        .decButton{
+          font-size: 1.3em;
+          color: white;
+          background-color: rgba(0, 0, 0, 0.900);
+          opacity: 1;
+     
+          display: inline-block;
+          border: 1px solid white;
+        }
+      
+        .incButton{
+          font-size: 1.3em;
+          color: white;
+          background-color: rgba(0, 0, 0, 0.900);
+          opacity: 1;
+          
+          display: inline-block;
+          border: 1px solid white;
+        }
       
         .count{
           font-size: 1.3em;
@@ -102,7 +96,7 @@
   margin: auto;
   margin-left: 30%;
   margin-top: 6.5%;
-  padding: 1vw 2vw;
+  padding: 1vw vw;
   background-color: $saffron;
   color: black;
   font-family: $body;
@@ -141,38 +135,11 @@
   margin-left: 50%;
   margin-top: 13%;
   padding: 2vw 4vw;
-  
   background-color: $saffron;
   color: black;
   font-family: $body;
   border: none;
   font-size: 0.8em;
-  cursor: pointer;
-}
-.decButton{
-  font-size: 1.5em;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.900);
-  opacity: 1;
-  width: 8vw;
-  height: 8vw;
-  margin-right: 2%;
-  display: inline-block;
-  border: 1px solid white;
-  cursor: pointer;
-}
-
-.incButton{
-  font-size: 1.5em;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.900);
-  opacity: 1;
-  width: 8vw;
-  height: 8vw;
-  margin-left: 2%;
-  
-  display: inline-block;
-  border: 1px solid white;
   cursor: pointer;
 }
 
