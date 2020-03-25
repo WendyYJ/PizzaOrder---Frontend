@@ -59,7 +59,7 @@ class LeftMenu extends Component {
                             <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {PIZZABUILDER_URL}>PIZZA BUILDER</NavLink>
                             <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {ABOUTUS_URL}>ABOUT US</NavLink>
                             <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {CONTACT_URL}>CONTACT</NavLink>  
-                            <div className ="customHr">.</div> 
+                            <div className ="customHr"></div> 
                             <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {LOGIN_URL}>LOGIN</NavLink> 
                             <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {MYACCOUNT_URL}>MY ACCOUNT</NavLink> 
                             <NavLink  className = "float__menu-item-link" activeClassName="nav-item--active" to = {CHECKOUT_URL}>CHECKOUT</NavLink> 

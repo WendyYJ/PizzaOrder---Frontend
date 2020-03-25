@@ -1,4 +1,5 @@
 @import '../../../asset/mixin.scss';
+@import '../../../asset/theme.scss';
 
 .footer{
     margin-bottom: 5vh;
@@ -70,6 +71,7 @@
        
         &__break{
             @include chalk-heading;
+            font-size: $sub-heading-size;
             text-align: center;
             color:$flame;
         }
