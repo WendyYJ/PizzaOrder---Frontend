@@ -77,7 +77,7 @@ class PizzaBuilder extends React.Component{
                         Order Total:
                       </p>
                       <p className='total'>
-                        $20.43</p>
+                        $32.70</p>
                     </div>
                     <p className='button-cart'>add to cart</p>
                   </div>

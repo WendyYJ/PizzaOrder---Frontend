@@ -4,6 +4,16 @@ $std-margin: 5vh;
 $std-unit:1vh;
 $std-px-unit:0.2px;
 
+@media only screen and (max-width: 700px){
+    .builder{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+    }
+}
+
 .caps{
     font-variant: small-caps;
     font-weight:bold;
@@ -15,6 +25,7 @@ $std-px-unit:0.2px;
 .end-of-order{
     border-top: $std-px-unit solid $white;
 }
+
 
 .total{
     @include chalk-heading;
@@ -38,8 +49,6 @@ $std-px-unit:0.2px;
     justify-content: flex-start;
     align-items: flex-start;
 
-    
-    
     &__checkout{
         background-color: $black;
         margin-left: $std-margin;
