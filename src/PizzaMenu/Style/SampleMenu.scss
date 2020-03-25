@@ -1,10 +1,46 @@
 @import '../../asset/theme.scss';
 
+
+
+.MenuMain-container{
+  width: 100%;
+}
+
+.Catalog-container{
+  background-color: rgb(37, 35, 35);
+  opacity: 0.9;
+  width: 100%;
+}
+  
+.decButton{
+  font-size: 1.3em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.900);
+  opacity: 1;
+  width: 2vw;
+  height: 2vw;
+
+  display: inline-block;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.incButton{
+  font-size: 1.3em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.900);
+  opacity: 1;
+  width: 2vw;
+  height: 2vw;
+  display: inline-block;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
 .sample_menu{
   display: flex;
   justify-content: center;
-  margin-top: 10vh;
-  margin-left: 12vw;
+  margin: auto;
   width: 70%;
   
     .dot2{
@@ -13,62 +49,41 @@
       background-color: $flame;
       border-radius: 50%;
       display: inline-block;
-      margin-left:  0px;
+      margin: auto;
       margin-top: 15%;
   }
 
   .sample_text{
     color: $saffron;
-    position: relative;
-    left: 70px;
+    margin-left: 10%;
+    margin-top: 10%;
 
       p{
-        margin-left: 0vw;
+        margin: auto;
       }
 
       h2{
-        font-size: 30px;
+        font-size: 2rem;
       }
 
       h3{
-        font-size: 26px;
+        font-size: 1.5rem;
         color: $flame;
       }
 
     .clickCount{
-      position: relative;
-      left: 10px;
+      margin: auto;
+      
 
       .counterButton{
-        position: relative;
-        left: -7px;
+        margin: auto;
+        margin-left: 1%;
         color: white;
         opacity: 1;
         height: 3vw;
-        width: 9vw;
+
        
-      
-        .decButton{
-          font-size: 1.3em;
-          color: white;
-          background-color: rgba(0, 0, 0, 0.900);
-          opacity: 1;
-          width: 3vw;
-          height: 3vw;
-          display: inline-block;
-          border: 1px solid white;
-        }
-      
-        .incButton{
-          font-size: 1.3em;
-          color: white;
-          background-color: rgba(0, 0, 0, 0.900);
-          opacity: 1;
-          width: 3vw;
-          height: 3vw;
-          display: inline-block;
-          border: 1px solid white;
-        }
+    
       
         .count{
           font-size: 1.3em;
@@ -84,10 +99,10 @@
 }
 
 .addButton{
-  position: relative;
-  left: 13vw;
-  top: 6vh;
-  padding: 1vw 4vw;
+  margin: auto;
+  margin-left: 30%;
+  margin-top: 6.5%;
+  padding: 1vw 2vw;
   background-color: $saffron;
   color: black;
   font-family: $body;
@@ -95,6 +110,7 @@
   font-size: 0.8em;
   cursor: pointer;
 }
+
 .addButton:hover {
   background-color: $flame; /* Green */
   color: white;
@@ -103,4 +119,61 @@
 
 #available-size{
   width: 25vw;
+}
+
+@media only screen and (max-width: 700px){
+
+  .sample_menu{
+    display: block;
+    width:100%
+  }
+  .sample_text{margin-left: 0%;
+  margin-right: 0%;}
+.pizza-sample{
+  text-align: center;
+}
+
+.countercontainer{
+  display: flex;
+}
+.addButton{
+  margin: auto;
+  margin-left: 50%;
+  margin-top: 13%;
+  padding: 2vw 4vw;
+  
+  background-color: $saffron;
+  color: black;
+  font-family: $body;
+  border: none;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+.decButton{
+  font-size: 1.5em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.900);
+  opacity: 1;
+  width: 8vw;
+  height: 8vw;
+  margin-right: 2%;
+  display: inline-block;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.incButton{
+  font-size: 1.5em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.900);
+  opacity: 1;
+  width: 8vw;
+  height: 8vw;
+  margin-left: 2%;
+  
+  display: inline-block;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
 }
