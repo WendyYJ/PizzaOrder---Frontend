@@ -22,12 +22,11 @@ class Login extends Component {
     };
   }
 
-   handleChange = event => {
+  handleChange = event => {
     const key = event.target.name;
     const value = event.target.value;
     this.setState({ [key]: value });
-   };
-
+  };
 
   updateUserInput = () => {
     const userInput = {
@@ -52,11 +51,10 @@ class Login extends Component {
     });
   };
 
-
   render() {
     return (
       <div className="login-container">
-         <Form
+        <Form
           className="  login-form"
           error={!!this.state.error}
           loading={this.state.isLoading}
@@ -90,14 +88,13 @@ class Login extends Component {
               content="Please check your email and password !"
             />
           )}
-          <Button className="login-button" onClick={this.updateUserInput} >
+          <Button className="login-button" onClick={this.updateUserInput}>
             Login
           </Button>
-          <NavLink className="register-link" to={ MYACCOUNT_URL }>
+          <NavLink className="register-link" to={MYACCOUNT_URL}>
             <p>Not registered yet?</p>
           </NavLink>
         </Form>
-          
       </div>
     );
   }

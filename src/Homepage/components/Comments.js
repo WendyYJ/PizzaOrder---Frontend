@@ -1,14 +1,5 @@
 import React from 'react';
 
-const Comments = props => {
-    return (<div>
-
-
-             </div>)
-
-    
-
-    
-}
+const Comments = (props) => <div />;
 
 export default Comments;

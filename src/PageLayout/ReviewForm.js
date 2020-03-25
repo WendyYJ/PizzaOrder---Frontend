@@ -17,8 +17,7 @@ class ReviewForm extends React.Component {
     const key = event.target.name;
     const value = event.target.value;
     this.setState({ [key]: value });
-  }
-
+  };
 
   /*
   handleSubmit = event => {
@@ -26,7 +25,6 @@ class ReviewForm extends React.Component {
     alert("You are submitting " + this.state.review);
   };
   */
-
 
   render() {
     return (
@@ -151,19 +149,18 @@ class ReviewForm extends React.Component {
 
           <div className="submit-form">
             <p>YOUR REVIEW</p>
-            <input 
-                 type="text" 
-                 name="review"
-                 value={this.state.review}
-                 onChange={this.handleChange}    
-				    />
+            <input
+              type="text"
+              name="review"
+              value={this.state.review}
+              onChange={this.handleChange}
+            />
           </div>
-           
+
           <form noValidate autoComplete="off">
-          <div className="submit-button">
-           
-            <input type="submit" />
-          </div>
+            <div className="submit-button">
+              <input type="submit" />
+            </div>
           </form>
         </div>
       </div>

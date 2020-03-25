@@ -73,78 +73,80 @@ class MyAccount extends Component {
   render() {
     return (
       <div className="myAccount-container">
-         {this.state.password_invalid && <Message>Your password is invalid</Message>}
+        {this.state.password_invalid && (
+          <Message>Your password is invalid</Message>
+        )}
         <div className="form-container">
-            <Form
-              className="register-form"
-              error={!!this.state.error}
-              loading={this.state.isLoading}
-            >
-              <p className="register-title">CREATE AN ACCOUNT</p>
+          <Form
+            className="register-form"
+            error={!!this.state.error}
+            loading={this.state.isLoading}
+          >
+            <p className="register-title">CREATE AN ACCOUNT</p>
 
-              <Form.Field>
-                <Input
-                  className="register-input"
-                  name="username"
-                  type="username"
-                  onChange={this.handleChange}
-                  placeholder="  Your Name"
-                  value={this.state.username}
-                />
-              </Form.Field>
-              <Form.Field>
-                <Input
-                  className="register-input"
-                  name="email"
-                  type="email"
-                  onChange={this.handleChange}
-                  placeholder="  E-mail address"
-                  value={this.state.email}
-                />
-              </Form.Field>
-              <Form.Field>
-                <Input
-                  name="password"
-                  type="password"
-                  onChange={this.handleChange}
-                  placeholder="  Password"
-                  value={this.state.password}
-                />
-              </Form.Field>
-              <Form.Field>
-                <Input
-                  name="password_confirmation"
-                  type="password"
-                  onChange={this.handleChange}
-                  placeholder="  Password Confirmation"
-                  type="password_confirmation"
-                  value={this.state.password_confirmation}
-                />
-              </Form.Field>
-              {!!this.state.error && (
-                <Message
-                  className="alart-message"
-                  content="Please check your password !"
-                />
-              )}
-              <div> 
-                  <Button
-                  className="register-button"
-                  onClick={this.updateUserInput}
-                >
-                  Register
-                </Button>
-              </div>
-              <NavLink className="login-link" to={ LOGIN_URL }>
-                <p>Already registered ?</p>
-              </NavLink>
-            </Form>
-           </div>
-        
-            <p className="select-type">OR</p>
-          <div className="social-container">
-            <SocialRegister />
-          </div>
+            <Form.Field>
+              <Input
+                className="register-input"
+                name="username"
+                type="username"
+                onChange={this.handleChange}
+                placeholder="  Your Name"
+                value={this.state.username}
+              />
+            </Form.Field>
+            <Form.Field>
+              <Input
+                className="register-input"
+                name="email"
+                type="email"
+                onChange={this.handleChange}
+                placeholder="  E-mail address"
+                value={this.state.email}
+              />
+            </Form.Field>
+            <Form.Field>
+              <Input
+                name="password"
+                type="password"
+                onChange={this.handleChange}
+                placeholder="  Password"
+                value={this.state.password}
+              />
+            </Form.Field>
+            <Form.Field>
+              <Input
+                name="password_confirmation"
+                type="password"
+                onChange={this.handleChange}
+                placeholder="  Password Confirmation"
+                type="password_confirmation"
+                value={this.state.password_confirmation}
+              />
+            </Form.Field>
+            {!!this.state.error && (
+              <Message
+                className="alart-message"
+                content="Please check your password !"
+              />
+            )}
+            <div>
+              <Button
+                className="register-button"
+                onClick={this.updateUserInput}
+              >
+                Register
+              </Button>
+            </div>
+            <NavLink className="login-link" to={LOGIN_URL}>
+              <p>Already registered ?</p>
+            </NavLink>
+          </Form>
+        </div>
+
+        <p className="select-type">OR</p>
+        <div className="social-container">
+          <SocialRegister />
+        </div>
       </div>
     );
   }

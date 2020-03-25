@@ -16,5 +16,3 @@ function IngredientCard(props) {
 }
 
 export default IngredientCard;
-
-

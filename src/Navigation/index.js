@@ -7,8 +7,8 @@ const Navigation = () => (
   <div>
     <LeftMenu />
     <ShoppingCart />
-    <div className = "page__header">
-      <header className = "page__header-title">Margherit</header>
+    <div className="page__header">
+      <header className="page__header-title">Margherit</header>
     </div>
   </div>
 );

@@ -24,19 +24,19 @@ import {
 } from './URLMap';
 
 const Routes = () => (
-    <Switch>
-      <Redirect exact from="/" to={HOME_URL} />
-      <Route exact path={HOME_URL} component={Homepage} />
-      <Route exact path={PIZZAMENU_URL} component={PizzaMenu} />
-      <Route exact path={`${PIZZAMENU_URL}/:SampleId`} component={SampleId} />
-      <Route exact path={PIZZABUILDER_URL} component={PizzaBuilder} />
-      <Route exact path={SHOPPINGCART_URL} component={ShoppingCart} />
-      <Route exact path={ABOUTUS_URL} component={AboutUs} />
-      <Route exact path={CONTACT_URL} component={Contact} />
-      <Route exact path={CHECKOUT_URL} component={Checkout} />
-      <Route exact path={LOGIN_URL} component={Login} />
-      <Route exact path={MYACCOUNT_URL} component={MyAccount} />
-    </Switch>
+  <Switch>
+    <Redirect exact from="/" to={HOME_URL} />
+    <Route exact path={HOME_URL} component={Homepage} />
+    <Route exact path={PIZZAMENU_URL} component={PizzaMenu} />
+    <Route exact path={`${PIZZAMENU_URL}/:SampleId`} component={SampleId} />
+    <Route exact path={PIZZABUILDER_URL} component={PizzaBuilder} />
+    <Route exact path={SHOPPINGCART_URL} component={ShoppingCart} />
+    <Route exact path={ABOUTUS_URL} component={AboutUs} />
+    <Route exact path={CONTACT_URL} component={Contact} />
+    <Route exact path={CHECKOUT_URL} component={Checkout} />
+    <Route exact path={LOGIN_URL} component={Login} />
+    <Route exact path={MYACCOUNT_URL} component={MyAccount} />
+  </Switch>
 );
 
 export default Routes;
