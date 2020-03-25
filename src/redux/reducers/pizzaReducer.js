@@ -93,7 +93,7 @@ const pizzaReducer = (state=initialState,action) => {
             if (samePizza==undefined){
                 return {
                     ...state,
-                     selectedPizzas: [...state.selectedPizzas, {key: state.pizzaName,quantity: state.count
+                     selectedPizzas: [...state.selectedPizzas, {key: state.pizzaName,pizzaName:state.pizzaName,id:state.id,quantity: state.count
                      ,price:state.pizzaPriceSize,image: state.pizzaImage, currencyFormat:'$',size:state.pizzaSize}],
 
                 };
@@ -236,7 +236,7 @@ const pizzaReducer = (state=initialState,action) => {
                 ...state,
                 totalPrice:0,
                 selectedPizzas: [...state.selectedPizzas, {key: 'DIY Pizza',quantity: 1
-                ,price:state.totalPrice,image: state.mokeImage, currencyFormat:'$',size:state.pizzaSize}],
+                ,price:state.totalPrice,image: state.mokeImage, id:state.id,currencyFormat:'$',size:state.pizzaSize}],
             }     
         default:
             return state;
