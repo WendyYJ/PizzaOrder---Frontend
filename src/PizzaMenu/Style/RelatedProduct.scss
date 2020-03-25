@@ -28,7 +28,7 @@
  
  
   .pizza-container{
-    width: 25%;
+ 
     text-align: center;
     margin: auto;
     
@@ -104,11 +104,11 @@
 
         .pizza-container {
           margin: auto;
-          height: 100%;
+   
           width: 80%;
+          display:flex;
           
-          
-      
+        
           .relatedImg-container {
             width: 15vw;
             height: 15vw;
