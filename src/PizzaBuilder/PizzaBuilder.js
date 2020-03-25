@@ -59,16 +59,8 @@ class PizzaBuilder extends React.Component{
                       <p>total</p>
                     </div>
                     <div className='builder__checkout__row'>
-                      <p>Beef Pizza</p>
-                      <p>$8.90</p>
-                    </div>
-                    <div className='builder__checkout__row'>
-                      <p>Chicken Pizza</p>
-                      <p>$10.90</p>
-                    </div>
-                    <div className='builder__checkout__row'>
-                      <p>Cheese Pizza</p>
-                      <p>$12.90</p>
+                      <p>User DIY Pizza</p>
+                      <p>${this.props.totalPrice}</p>
                     </div>
                     <div className='builder__checkout__row end-of-order sub-heading'>
                       <p className='caps'>Pizza Size:</p> 
