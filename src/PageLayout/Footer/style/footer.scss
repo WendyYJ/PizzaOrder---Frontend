@@ -1,7 +1,9 @@
 @import '../../../asset/mixin.scss';
 
+$std-height: 1vh;
+$std-width:1vw;
 .footer{
-    margin-bottom: 5vh;
+
     &__insta{
         @include padding-center;
         font-size: $sub-heading-size;
@@ -12,8 +14,8 @@
         &__arrow{
             border-radius: 50%;
             border:2px solid $white;
-            margin-left: 2vw;
-            margin-right: 2vw;
+            margin-left: 2 * $std-width;
+            margin-right: 2 * $std-height;
         }
         &__start{
             display: flex;
@@ -32,8 +34,8 @@
         text-align: center;
         background-color: $saffron;
         @include padding-center;
-        padding-bottom: 2vh;
-        margin-bottom: 5vh;
+        padding-bottom: 2 * $std-height;
+        margin-bottom: 2 * $std-height;
 
         &__header{
             @include heading;
@@ -42,13 +44,15 @@
 
         &__button{
             border-radius: 5%;
-            margin-top:1vw;
             font-variant: small-caps;
             color: $saffron;
             background-color: $black;
             font-size: $body-size;
             border: 2px $black solid;
-            padding: 1.5vh;
+            &:hover{
+                cursor: pointer;
+            }
+            
         }
     }
 
@@ -59,10 +63,10 @@
         margin:0;
         &-span{
             @include chalk-heading;
-            font-size: $sub-heading-size*1.1;
+            font-size: $sub-heading-size;
             color:$flame;
             text-align: center;
-             margin: 0;
+            margin: 0;
         }
     }
 

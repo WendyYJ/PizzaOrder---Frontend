@@ -1,14 +1,14 @@
-@import '../asset/theme.scss';
-@import '../asset/mixin.scss';
+@import '../../asset/mixin.scss';
+
+$std-width:1vw;
+$std-height:1vh;
 
 .homepage{
     background-color: $smokegrey;
-    margin-bottom: 2vh;
-    width:100vw;
     
     &__welcome{
-        text-align: center;
-    height: 100vh;
+    text-align: center;
+    height: 100 * $std-height;
     color:$saffron;
 
     display:flex;
@@ -57,7 +57,7 @@
 
         &-button{
             text-align: center;
-            width:10vw;
+            width: 10 * $std-width;
             font-size: $button-size;
             @include button-filled();
         }
@@ -72,7 +72,7 @@
             align-items: center;
             img{
                 border-radius: 50%;
-                height: 50vh;
+                height: 50 * $std-height;
             }
   
         }
@@ -85,7 +85,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 1vh;
+        margin-bottom: 1 * $std-height;
 
         &__heading{
             @include heading;
@@ -94,7 +94,6 @@
             
             &-span{
                 font-size: $body-size;
-                padding-bottom: 2em;
             }
         }
         ul{
@@ -107,18 +106,16 @@
             color:$saffron;
             font-size: $sub-heading-size;
             font-family: $heading;
-            padding-top: 1em;
-            padding-bottom: 1em;
             border-bottom: 1px solid grey;
-    
+            padding: 1 * $std-width;
             &-number{
                 @include chalk-heading();
+                font-size: $heading-size;
                 color: $flame;
             }
 
             &-plus{
-                
-               font-size: $body-size;
+                font-size: $body-size;
                 color:$white;
                 font-family: $chalk;
                 border-radius:50% ;
@@ -129,12 +126,11 @@
         }
         &-button{
             @include button-filled;
+            padding:  $std-height;
             font-size: $body-size;
-            width: 20vw;
-            position: relative;
-            top: 7vh;
-            margin-bottom: 10vh;
-            
+            margin-top: 5 * $std-height;
+            margin-bottom: 10 * $std-height;
+            text-decoration: none;
         }
     }
     
@@ -149,7 +145,6 @@
             color:$saffron;
             &-span{
                 font-size: $body-size;
-                padding-bottom: 2em;
             }
         }
         &__details{
@@ -161,11 +156,11 @@
             align-items: center;
 
             &-container{
-                margin:2vw;
+                margin:2 * $std-width;
             }
 
             &-profile{
-                width:10vw;
+                width:10 * $std-width;
                 border-radius:50% ;
             }
             &-dish{
@@ -179,7 +174,7 @@
             &-bubble{
                 @include heading();
                 font-size: $body-size;
-                width: 20vw;
+                width: 20 * $std-width;
                 position: relative;
                 background: $flame;
             }
@@ -191,11 +186,11 @@
                 left: 50%;
                 width: 0;
                 height: 0;
-                border: 1vw solid transparent;
+                border: 1 * $std-width solid transparent;
                 border-bottom-color: $flame;
                 border-top: 0;
-                margin-left: -1vw;
-                margin-top: -1vw;
+                margin-left: -1 * $std-width;
+                margin-top: -1 * $std-width;
 
             }
             &-name{
@@ -213,18 +208,22 @@
         @include padding-center;
         display: flex;
         align-items: center;
+
         &-container{
             display: flex;
             flex-direction: row;
+            
             img{
-                border-radius: 10%;
-                background-color: $flame;
-                width:30vw;  
+                border-radius: 15%;
+                width:30 * $std-width;  
             }
         }
         
         &-content{
-            padding-left:2vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left:2 * $std-width;
             text-align: left;
             &-heading{
                 @include heading;
@@ -248,6 +247,21 @@
                 font-size: $body-size;
                 }
             }
+            &-download{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                p{
+                    font-size: $body-size;
+                    @include button-filled;
+                    margin-right: 2 * $std-width;
+                    padding-left: 1 * $std-width;
+                    padding-right:1 * $std-width; 
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
 
         }
 
@@ -263,18 +277,18 @@
         }
 
         &__container{
-            display: flex;
+        display: flex;
         flex-direction: row;
         }
 
         &-content{
             text-align: left;
-            margin:1vw;
+            margin:1 * $std-width;
             display: flex;
             flex-direction: column;
             &-picture{
-                width:20vw;
-                padding: 1vw;
+                width:20 * $std-width;
+                padding: 1 * $std-width;
                 border: 2px solid $flame ;
                 
             }
@@ -297,7 +311,7 @@
             &-button{
                 @include button-filled;
                 font-size: $body-size;
-                width:10vw;
+                width:10 * $std-width;
                 text-align: center;
             }
 
