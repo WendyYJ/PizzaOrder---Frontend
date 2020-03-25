@@ -11,16 +11,12 @@ import { fetchCheeses } from "../../api/pizza";
 import { PIZZAMENU_URL } from "../../routes/URLMap";
 import { Button, Container, Pagination, Segment } from "semantic-ui-react";
 import { get } from "../../api/axios";
-import { showFilter } from '../../redux/actions/filterActions';
-import { connect } from 'react-redux';
+import { showFilter } from "../../redux/actions/filterActions";
+import { connect } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 
 class Filter extends React.Component {
   constructor(props) {
-    
-
-
-  
     super(props);
 
     this.state = {
@@ -35,12 +31,9 @@ class Filter extends React.Component {
       error: null,
       isLoading: false,
       isFiltering: false,
-      pagination: {},
-   
+      pagination: {}
     };
   }
-
-  
 
   componentDidMount() {
     this.loadPizzas();
@@ -95,44 +88,41 @@ class Filter extends React.Component {
     const filterstring = filterlist.toString();
     console.log(filterlist);
     const url = `http://pizzadeploy-env.dn37p3zqw3.ap-southeast-2.elasticbeanstalk.com/pizza/filter?ingr=${filterstring}`;
-    const url2 ='http://pizzadeploy-env.dn37p3zqw3.ap-southeast-2.elasticbeanstalk.com/pizza'
+    const url2 =
+      "http://pizzadeploy-env.dn37p3zqw3.ap-southeast-2.elasticbeanstalk.com/pizza";
     console.log(url);
-  if(filterlist.length>0){
-    this.setState({ isLoading: true, isFiltering: true, pizzas: [] }, () => {
-      return get(url)
-        .then(res => res.data.data)
-        .then(pizzas => {
-          this.setState({
-            pizzas,
-            isLoading: false,
-            isFiltering: true
+    if (filterlist.length > 0) {
+      this.setState({ isLoading: true, isFiltering: true, pizzas: [] }, () => {
+        return get(url)
+          .then(res => res.data.data)
+          .then(pizzas => {
+            this.setState({
+              pizzas,
+              isLoading: false,
+              isFiltering: true
+            });
+          })
+          .catch(error => {
+            this.setState({ error, isLoading: false });
           });
-        })
-        .catch(error => {
-          this.setState({ error, isLoading: false });
-        });
-    });
-  }else{
-    this.setState({ isLoading: true, isFiltering: true, pizzas: [] }, () => {
-      return get(url2)
-        .then(res => res.data.data)
-        .then(pizzas => {
-          this.setState({
-            pizzas,
-            isLoading: false,
-            isFiltering: true
+      });
+    } else {
+      this.setState({ isLoading: true, isFiltering: true, pizzas: [] }, () => {
+        return get(url2)
+          .then(res => res.data.data)
+          .then(pizzas => {
+            this.setState({
+              pizzas,
+              isLoading: false,
+              isFiltering: true
+            });
+          })
+          .catch(error => {
+            this.setState({ error, isLoading: false });
           });
-        })
-        .catch(error => {
-          this.setState({ error, isLoading: false });
-        });
-    });
-
-  }
-   
+      });
+    }
   };
-
- 
 
   handleOnChange = (event, category) => {
     const id = event.target.id;
@@ -229,9 +219,13 @@ class Filter extends React.Component {
   render() {
     return (
       <section className="maincontainer">
-        <div className="headercontainer" >
+        <div className="headercontainer">
           <div className="iconcontainer">
-            <MenuIcon fontSize="small" className="icon" onClick={this.props.showFilter}/>
+            <MenuIcon
+              fontSize="small"
+              className="icon"
+              onClick={this.props.showFilter}
+            />
           </div>
           <div>
             <h4 onClick={this.props.showFilter}>FILTER</h4>
@@ -239,71 +233,70 @@ class Filter extends React.Component {
         </div>
 
         {this.props.showfilter ? (
-        <section className="filtercontainer">
-          <div className="checkboxcontainer">
-            <div className="checkboxlists">
-              <h1>MEATS</h1>
-              {this.state.meats.map(ingredients => (
-                <IngredientCard
-                  id={ingredients.id}
-                  isChecked={ingredients.isChecked}
-                  ingredientName={ingredients.meatName}
-                  key={ingredients.id}
-                  onChange={event => this.handleOnChange(event, ingredients)}
-                />
-              ))}
+          <section className="filtercontainer">
+            <div className="checkboxcontainer">
+              <div className="checkboxlists">
+                <h1>MEATS</h1>
+                {this.state.meats.map(ingredients => (
+                  <IngredientCard
+                    id={ingredients.id}
+                    isChecked={ingredients.isChecked}
+                    ingredientName={ingredients.meatName}
+                    key={ingredients.id}
+                    onChange={event => this.handleOnChange(event, ingredients)}
+                  />
+                ))}
+              </div>
+
+              <div className="checkboxlists">
+                <h1>SAUCES</h1>
+                {this.state.sauces.map(ingredients => (
+                  <IngredientCard
+                    id={ingredients.id}
+                    isChecked={ingredients.isChecked}
+                    ingredientName={ingredients.sauceName}
+                    key={ingredients._id}
+                    onChange={event => this.handleOnChange(event, ingredients)}
+                  />
+                ))}
+              </div>
+
+              <div className="checkboxlists">
+                <h1>CHEESES</h1>
+                {this.state.cheeses.map(ingredients => (
+                  <IngredientCard
+                    id={ingredients.id}
+                    isChecked={ingredients.isChecked}
+                    ingredientName={ingredients.cheeseName}
+                    key={ingredients._id}
+                    onChange={event => this.handleOnChange(event, ingredients)}
+                  />
+                ))}
+              </div>
+
+              <div className="checkboxlists">
+                <h1>VEGGIES</h1>
+                {this.state.veggies.map(ingredients => (
+                  <IngredientCard
+                    id={ingredients.id}
+                    isChecked={ingredients.isChecked}
+                    ingredientName={ingredients.veggieName}
+                    key={ingredients._id}
+                    onChange={event => this.handleOnChange(event, ingredients)}
+                  />
+                ))}
+              </div>
             </div>
 
-            <div className="checkboxlists">
-              <h1>SAUCES</h1>
-              {this.state.sauces.map(ingredients => (
-                <IngredientCard
-                  id={ingredients.id}
-                  isChecked={ingredients.isChecked}
-                  ingredientName={ingredients.sauceName}
-                  key={ingredients._id}
-                  onChange={event => this.handleOnChange(event, ingredients)}
-                />
-              ))}
+            <div className="btncontainer">
+              <button onClick={() => this.filterPizza()} className="filter-btn">
+                FILTER SELECTED
+              </button>
             </div>
+          </section>
+        ) : null}
 
-            <div className="checkboxlists">
-              <h1>CHEESES</h1>
-              {this.state.cheeses.map(ingredients => (
-                <IngredientCard
-                  id={ingredients.id}
-                  isChecked={ingredients.isChecked}
-                  ingredientName={ingredients.cheeseName}
-                  key={ingredients._id}
-                  onChange={event => this.handleOnChange(event, ingredients)}
-                />
-              ))}
-            </div>
-
-            <div className="checkboxlists">
-              <h1>VEGGIES</h1>
-              {this.state.veggies.map(ingredients => (
-                <IngredientCard
-                  id={ingredients.id}
-                  isChecked={ingredients.isChecked}
-                  ingredientName={ingredients.veggieName}
-                  key={ingredients._id}
-                  onChange={event => this.handleOnChange(event, ingredients)}
-                />
-              ))}
-            </div>
-          </div>
-
-          <div className="btncontainer">
-            <button onClick={() => this.filterPizza()} className="filter-btn">
-              FILTER SELECTED
-            </button>
-          </div>
-        </section>
-        ):null}
-   
         <Segment basic loading={this.state.isLoading}>
-      
           <div className="pizzacontainer">
             {this.state.pizzas.map(pizza => (
               <PizzaCard
@@ -316,10 +309,11 @@ class Filter extends React.Component {
               />
             ))}
           </div>
-          
         </Segment>
         {this.state.pagination && this.state.pagination.page && (
-          <Pagination  className="pizza-page" variant="outlined"
+          <Pagination
+            className="pizza-page"
+            variant="outlined"
             activePage={this.state.pagination.page}
             totalPages={this.state.pagination.pages}
             onPageChange={this.handlePageChange}
@@ -330,12 +324,12 @@ class Filter extends React.Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  showFilter: () => dispatch(showFilter()),
+const mapDispatchToProps = dispatch => ({
+  showFilter: () => dispatch(showFilter())
 });
 
-const mapStateToProps = (state) => ({
-  showfilter: state.filter.showfilter,
+const mapStateToProps = state => ({
+  showfilter: state.filter.showfilter
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Filter);

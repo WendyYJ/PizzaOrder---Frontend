@@ -9,7 +9,7 @@ const filterReducer = (state = initialState, action) => {
     case SHOW_FILTER:
       return {
         ...state,
-        showfilter: state. showfilter !== true,
+        showfilter: state.showfilter !== true,
       };
 
     default:

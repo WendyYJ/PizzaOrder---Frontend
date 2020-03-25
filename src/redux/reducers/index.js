@@ -1,8 +1,8 @@
-import { combineReducers } from "redux";
-import questionReducer from "./questionReducer";
-import filterReducer from "./filterReducer";
-import pizzaReducer from "./pizzaReducer";
-import stateReducer from "./stateReducer";
+import { combineReducers } from 'redux';
+import questionReducer from './questionReducer';
+import filterReducer from './filterReducer';
+import pizzaReducer from './pizzaReducer';
+import stateReducer from './stateReducer';
 import ingredientReducer from './ingredientReducer';
 
 const reducers = combineReducers({
@@ -12,7 +12,6 @@ const reducers = combineReducers({
   ingredient: ingredientReducer,
 
   filter: filterReducer,
-
 });
 
 export default reducers;

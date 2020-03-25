@@ -23,7 +23,7 @@
   line-height: 3em;
   background-color: #2c2b2b;
   opacity: 0.8;
-  border: 2px solid #D94F2B;
+  border: 2px solid #d94f2b;
   border-radius: 3px;
   display: flex;
   flex-direction: column;
@@ -31,7 +31,7 @@
 }
 
 .login-form .login-title {
-  color: #FDBC2C;
+  color: #fdbc2c;
   font-family: "Josefin Sans", sans-serif;
   font-size: 20px;
   text-align: left;
@@ -48,8 +48,8 @@
   margin: 0 auto;
 }
 
-.login-form Input {
-  border: 1px solid #FDBC2C;
+.login-form input {
+  border: 1px solid #fdbc2c;
   border-radius: 3px;
   margin: 0 auto;
 }
@@ -58,8 +58,8 @@
   margin: 1vh auto;
   padding: 1vh 3vw;
   text-align: center;
-  background-color: #FDBC2C;
-  border: 1px solid #FDBC2C;
+  background-color: #fdbc2c;
+  border: 1px solid #fdbc2c;
   border-radius: 3px;
   font-family: "Josefin Sans", sans-serif;
 }
@@ -76,7 +76,7 @@
   top: -16vh;
   font-family: "Josefin Sans", sans-serif;
   font-size: 22px;
-  border: 1px solid #D94F2B;
+  border: 1px solid #d94f2b;
   border-radius: 3px;
   opacity: 0.5;
 }
@@ -113,31 +113,31 @@
   line-height: 3em;
   background-color: #2c2b2b;
   opacity: 0.8;
-  border: 2px solid #D94F2B;
+  border: 2px solid #d94f2b;
   border-radius: 3px;
   display: flex;
   flex-direction: column;
 }
 
 .myAccount-container .register-form .register-title {
-  color: #FDBC2C;
+  color: #fdbc2c;
   font-family: "Josefin Sans", sans-serif;
   font-size: 20px;
   width: 100%;
 }
 
-.myAccount-container .register-form Input {
+.myAccount-container .register-form input {
   padding: 0 3vw;
   margin: 1vh 0;
-  border: 1px solid #FDBC2C;
+  border: 1px solid #fdbc2c;
   border-radius: 3px;
 }
 
 .myAccount-container .register-form .register-button {
   margin-top: 1vh;
   padding: 1vh 3vw;
-  background-color: #FDBC2C;
-  border: 1px solid #FDBC2C;
+  background-color: #fdbc2c;
+  border: 1px solid #fdbc2c;
   border-radius: 3px;
   font-family: "Josefin Sans", sans-serif;
 }
@@ -155,7 +155,7 @@
   font-size: 22px;
   width: 18vw;
   height: 8vh;
-  border: 1px solid #D94F2B;
+  border: 1px solid #d94f2b;
   border-radius: 3px;
   opacity: 0.5;
 }
@@ -185,7 +185,7 @@
   line-height: 3em;
   background-color: #2c2b2b;
   opacity: 0.8;
-  border: 2px solid #D94F2B;
+  border: 2px solid #d94f2b;
   border-radius: 3px;
 }
 
@@ -200,7 +200,10 @@
   margin-bottom: 5vh;
 }
 
-.myAccount-container .socialRegister-container .socialRegister-link .social-link {
+.myAccount-container
+  .socialRegister-container
+  .socialRegister-link
+  .social-link {
   width: 18vw;
   height: 6vh;
   border-radius: 20px;
