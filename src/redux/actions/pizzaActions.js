@@ -1,4 +1,6 @@
-import {fetchPizzaById} from '../../api/pizza'
+import { fetchPizzaById } from '../../api/pizza';
+
+
 export const FETCH_PIZZA ='FETCH_PIZZA';
 export const FETCH_PIZZA_SUCCESS ='FETCH_PIZZA_SUCCESS';
 export const FETCH_PIZZA_FAILURE ='FETCH_PIZZA_FAILURE';
@@ -12,26 +14,21 @@ export const HANDLE_CLICK2 = 'HANDLE_CLICK2';
 export const HANDLE_CLICK3 = 'HANDLE_CLICK3';
 export const HANDLE_CLICK4 = 'HANDLE_CLICK4';
 export const HANDLE_CLICK5 = 'HANDLE_CLICK5';
+export const HANDLE_CLICK = 'HANDLE_CLICK';
+export const ADD_CART_BUILDER = 'ADD_CART_BUILDER';
 
-export const countUp= () => ({
-   
-        type:COUNT_UP,
 
+export const countUp = () => ({
+    type:COUNT_UP,
 
 });
 
-export const countDown= () => ({
-   
-    type:COUNT_DOWN,
-
-
+export const countDown = () => ({
+   type:COUNT_DOWN,
 });
 
 export const fetchPizza = () => ({
-   
-        type:FETCH_PIZZA,
-
-
+   type:FETCH_PIZZA,
 });
 
 export const fetchPizzaSuccess= data => ({
@@ -43,10 +40,10 @@ export const fetchPizzaSuccess= data => ({
 });
 
 export const fetchPizzaFaliure = errorMessage => ({
-        type:FETCH_PIZZA_FAILURE,
-        errorMessage,
+    type:FETCH_PIZZA_FAILURE,
+    errorMessage,
     
-    });
+});
 
 export const addCart = () => ({
    
@@ -63,24 +60,23 @@ export const updateCart = (id,quantity) => ({
 });
 
 export const loadPizza= id => dispatch => {
-        dispatch(fetchPizza());
-        fetchPizzaById(id).then(data => {
-            const pizzaName = data.PizzaName;
-            const pizzaPrice = data.UnitPrice;
-            const pizzaDesc = data.Description;
-            const pizzaImage = data.PizzaImage
+    dispatch(fetchPizza());
+    fetchPizzaById(id).then(data => {
+        const pizzaName = data.PizzaName;
+        const pizzaPrice = data.UnitPrice;
+        const pizzaDesc = data.Description;
+        const pizzaImage = data.PizzaImage
        
-            dispatch(fetchPizzaSuccess({
-                pizzaName,
-                pizzaPrice,
-                pizzaDesc,
-                pizzaImage,
-            }));
-        })
-        .catch(error => {
-            dispatch(fetchPizzaFaliure(error.message));
+    dispatch(fetchPizzaSuccess({
+        pizzaName,
+        pizzaPrice,
+        pizzaDesc,
+        pizzaImage,
+    }));
+    }).catch(error => {
+        dispatch(fetchPizzaFaliure(error.message));
     
-        });
+    });
     
 };
 
@@ -109,6 +105,14 @@ export const handleClick4= () => ({
 
 export const handleClick5= () => ({
     type: HANDLE_CLICK5,
+})
+
+export const handleClick= () => ({
+    type: HANDLE_CLICK,
+})
+
+export const addCartBuilder= () => ({
+    type: ADD_CART_BUILDER,
 })
 
 

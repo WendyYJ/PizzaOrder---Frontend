@@ -17,11 +17,12 @@
   color: white;
   background-color: rgba(0, 0, 0, 0.900);
   opacity: 1;
-  width: 3vw;
-  height: 3vw;
+  width: 2vw;
+  height: 2vw;
 
   display: inline-block;
   border: 1px solid white;
+  cursor: pointer;
 }
 
 .incButton{
@@ -29,12 +30,13 @@
   color: white;
   background-color: rgba(0, 0, 0, 0.900);
   opacity: 1;
-  width: 3vw;
-  height: 3vw;
-  
+  width: 2vw;
+  height: 2vw;
   display: inline-block;
   border: 1px solid white;
+  cursor: pointer;
 }
+
 .sample_menu{
   display: flex;
   justify-content: center;
@@ -157,6 +159,7 @@
   margin-right: 2%;
   display: inline-block;
   border: 1px solid white;
+  cursor: pointer;
 }
 
 .incButton{
@@ -170,6 +173,7 @@
   
   display: inline-block;
   border: 1px solid white;
+  cursor: pointer;
 }
 
 }

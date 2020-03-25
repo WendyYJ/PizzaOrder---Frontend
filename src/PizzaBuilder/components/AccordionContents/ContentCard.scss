@@ -1,0 +1,86 @@
+@import '../../../asset/mixin.scss';
+
+$std-unit: 1.5vh;
+$std-weight:3px;
+
+
+.content:hover{ 
+    cursor: pointer;
+    border: $std-weight dashed $saffron;
+    border-radius: 5%;
+}
+
+#card-selected{
+    border: $std-weight*2 solid $flame;
+}
+
+.selected-tick{
+    @include heading;
+    color: $saffron;
+}
+
+.content{
+    margin:$std-unit;
+    padding:$std-unit * 0.5;
+    width: $std-unit * 20;
+    border-radius: 5%;
+    
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: $std-weight solid transparent;
+
+    
+    &__flex{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: stretch; 
+        padding-left:$std-unit*5 ;
+    }
+
+    &__img{
+        width: $std-unit*10;
+        height: $std-unit*10;
+        border-radius: 30%;
+        object-fit: cover;
+    }
+    &__name{
+        @include heading;
+        color: $saffron;
+        margin:0;
+    }
+    &__description{
+        line-height: normal;
+        font-family: $body;
+        font-size: medium;
+        
+    }
+    &__price{
+        @include chalk-heading;
+        margin: 0;
+        color: $flame;
+        font-size: $sub-heading-size;
+    }
+}
+
+@media screen and (max-width: $for-phone){
+
+    .selected-tick{
+        @include heading-size-down;
+    }
+
+    .content{
+        &__name{
+            @include heading-size-down;
+        }
+        &__price{
+            @include chalk-heading-size-down;
+        }
+
+    }
+
+
+}
