@@ -20,6 +20,7 @@ function Counter (props) {
           -
         </button>
         <span className="count">{props.count}</span>
+        
         <button className="incButton" onClick={props.countUp}>
           +
         </button>

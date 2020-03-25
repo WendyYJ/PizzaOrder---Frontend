@@ -234,6 +234,7 @@ const pizzaReducer = (state=initialState,action) => {
         case ADD_CART_BUILDER:
             return {
                 ...state,
+                totalPrice:0,
                 selectedPizzas: [...state.selectedPizzas, {key: 'DIY Pizza',quantity: 1
                 ,price:state.totalPrice,image: state.mokeImage, currencyFormat:'$',size:state.pizzaSize}],
             }     
