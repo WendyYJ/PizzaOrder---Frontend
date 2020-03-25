@@ -36,6 +36,7 @@ export const fetchPizza = () => ({
 });
 
 export const fetchPizzaSuccess= data => ({
+    
    
         type:FETCH_PIZZA_SUCCESS,
         data,
