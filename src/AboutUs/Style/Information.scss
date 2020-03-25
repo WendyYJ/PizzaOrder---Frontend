@@ -1,9 +1,11 @@
 
 @import '../../asset/mixin.scss';
+
+
 .maincontainer{
     height:100%;
     width: 100%;
-    background-color:$smokegrey;
+    background-color: rgba(0, 0, 0, 0.205);
    
 }
 
@@ -32,7 +34,6 @@
     padding-left: 3em;
     padding-bottom: 2em;
 }
-
 .topcontainer{
     display: flex;
     margin: auto;
@@ -61,12 +62,12 @@
 }
 h1{
     font-size: 1.5em;
-    color:$saffron
+    color:#FDBC2C;
     
 }
 p{
-    color:$white;
-    font-family: $body;
+    color:white;
+    font-family: 'Josefin Sans';
     font-size: 0.65em;
     line-height: 1.9em;
 }
@@ -79,7 +80,7 @@ p{
 }
 
 
-
+@media only screen and (max-width: 800px) {
     .bigcontainer{
         width:100%;
     }
@@ -137,7 +138,7 @@ p{
     .rightcontainer{
         width: 95%;
     }
-  
+  }
 
 
 
@@ -233,7 +234,7 @@ margin-right: 4em;
 
 }
 .questioncontainer{
-background: $smokegrey;
+background: #2c2727;
 text-align: center;
 width:100%;
 padding-top:3em;
