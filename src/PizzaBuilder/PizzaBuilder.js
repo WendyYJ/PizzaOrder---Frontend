@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { loadIngredient as loadIngredientAction } from '../redux/actions/ingredientAction';
 import { addCartBuilder } from '../redux/actions/pizzaActions'
+
+import LinkHeader from '../PageLayout/Header/LinkHeader';
 import Accordion from "./components/Accordion/Accordion";
 import AccordionContent from "./components/AccordionContents/AccordionContent";
 import Crust from "./components/AccordionContents/Crust/Crust";
@@ -34,14 +36,9 @@ class PizzaBuilder extends React.Component{
                 ? <div> </div>
                 :
                 <div>
-                  <div className='builder__title'>
-                      <h1 className='builder__title__heading'>
-                          Pizza Builder
-                      </h1>
-                      <p className='builder__title__span'>Home > Pizza Builder</p>
-                  </div>
+                <LinkHeader headername="Pizza Builder" />
                   <main className='builder'>
-
+                  
                   <div>
                     {this.contentList.map( (contentItem) =>
                       <Accordion 
