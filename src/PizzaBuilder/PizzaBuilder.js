@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { loadIngredient as loadIngredientAction } from '../redux/actions/ingredientAction';
+import { addCartBuilder } from '../redux/actions/pizzaActions'
 
 import LinkHeader from '../PageLayout/Header/LinkHeader';
 import Accordion from "./components/Accordion/Accordion";
@@ -57,16 +58,8 @@ class PizzaBuilder extends React.Component{
                       <p>total</p>
                     </div>
                     <div className='builder__checkout__row'>
-                      <p>Beef Pizza</p>
-                      <p>$8.90</p>
-                    </div>
-                    <div className='builder__checkout__row'>
-                      <p>Chicken Pizza</p>
-                      <p>$10.90</p>
-                    </div>
-                    <div className='builder__checkout__row'>
-                      <p>Cheese Pizza</p>
-                      <p>$12.90</p>
+                      <p>User DIY Pizza</p>
+                      <p>${this.props.totalPrice}</p>
                     </div>
                     <div className='builder__checkout__row end-of-order sub-heading'>
                       <p className='caps'>Pizza Size:</p> 
@@ -77,9 +70,9 @@ class PizzaBuilder extends React.Component{
                         Order Total:
                       </p>
                       <p className='total'>
-                        $32.70</p>
+                        ${this.props.totalPrice}</p>
                     </div>
-                    <p className='button-cart'>add to cart</p>
+                    <p onClick={this.props.addCartBuilder} className='button-cart'>add to cart</p>
                   </div>
                   </main>
                 </div>
@@ -101,10 +94,12 @@ const mapStateToProps = (state) => ({
   VEGGIGS: state.ingredient.VEGGIGS,
   isLoading: state.ingredient.isLoading,
   errorMessage:state.ingredient.errorMessage,
+  totalPrice: state.pizza.totalPrice,
 });
 
 const mapDispatchToProps = dispatch => ({
   loadIngredient: type => dispatch(loadIngredientAction(type)),
+  addCartBuilder: () => dispatch(addCartBuilder()),
 });
 
 

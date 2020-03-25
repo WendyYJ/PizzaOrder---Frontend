@@ -1,6 +1,8 @@
 import {FETCH_PIZZA_SUCCESS, FETCH_PIZZA, FETCH_PIZZA_FAILURE, COUNT_UP, 
     COUNT_DOWN, ADD_CART,UPDATE_CART,UPDATE_COUNT,HANDLE_CLICK1,
-    HANDLE_CLICK2, HANDLE_CLICK3, HANDLE_CLICK4, HANDLE_CLICK5,} from '../actions/pizzaActions';
+    HANDLE_CLICK2, HANDLE_CLICK3, HANDLE_CLICK4, HANDLE_CLICK5,
+    HANDLE_CLICK,ADD_CART_BUILDER} from '../actions/pizzaActions';
+
 
 
 const initialState={
@@ -19,7 +21,9 @@ const initialState={
     isClick5: false,
     pizzaPriceSize:0,
     sizeChose: false,
-    pizzaSize: 'small'
+    pizzaSize: 'small',
+    totalPrice:0,
+    mokeImage:"https://www.dominos.com.au/ManagedAssets/AU/product/P304/AU_P304_en_hero_4055.jpg?v-836867893"
     
 
   
@@ -186,7 +190,19 @@ const pizzaReducer = (state=initialState,action) => {
                     isClick5: state.isShowing = true,
                     pizzaSize:state.pizzaSize='Party Size',
                     };  
-                
+
+        case HANDLE_CLICK:
+                return {
+                    ...state,
+                    totalPrice: state.totalPrice+=5
+                          
+                    };  
+        case ADD_CART_BUILDER:
+            return {
+                ...state,
+                selectedPizzas: [...state.selectedPizzas, {key: 'DIY Pizza',quantity: 1
+                ,price:state.totalPrice,image: state.mokeImage, currencyFormat:'$',size:'small'}],
+            }     
         default:
             return state;
     }
