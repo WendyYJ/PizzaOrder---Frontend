@@ -12,8 +12,8 @@ const AboutUs = () => (
       <LinkHeader headername="About Us" />
       <Information />
       <div id="carousel">
-      <Carousel />
-    </div>
+        <Carousel />
+      </div>
       <Question />
       <Ingredient />
       <Footer />

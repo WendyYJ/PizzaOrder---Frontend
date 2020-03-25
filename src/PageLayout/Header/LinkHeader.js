@@ -7,16 +7,19 @@ class LinkHeader extends Component {
     return (
       <div className="secondary-header">
         <div className="secondary-header_content">
-        <h1>
-          {' '}
-          {this.props.headername}
-        </h1>
+          <h1>
+            {' '}
+            {this.props.headername}
+          </h1>
 
-        <div className="link-container">
-          Home
-          <ArrowForwardIosIcon style={{ fontSize: 14 }} className="arrowicon" />
-          {this.props.headername}
-        </div>
+          <div className="link-container">
+            Home
+            <ArrowForwardIosIcon
+              style={{ fontSize: 14 }}
+              className="arrowicon"
+            />
+            {this.props.headername}
+          </div>
         </div>
       </div>
     );

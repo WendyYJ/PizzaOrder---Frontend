@@ -18,7 +18,7 @@ class ShippingForm extends React.Component {
     const key = event.target.name;
     const value = event.target.value;
     this.setState({ [key]: value });
-  }
+  };
 
   render() {
     return (
@@ -43,7 +43,8 @@ class ShippingForm extends React.Component {
               value={this.state.country}
               onChange={this.handleChange}
             />
-          </form><br></br>
+          </form>
+          <br></br>
 
           <form noValidate autoComplete="off">
             <input
@@ -58,19 +59,19 @@ class ShippingForm extends React.Component {
           </form>
         </div>
 
-      <div className="right-forms">  
-      <h3 className="promotion-title">Promotion Code</h3>
-        <form className="code-form" noValidate autoComplete="off">
-          <input
-            type="code"
-            name="code"
-            placeholder="  Enter your promotional code"
-            value={this.state.code}
-            onChange={this.handleChange}
-          />
-        <button className="applyButton">APPLY</button>
-        </form>
-       </div>
+        <div className="right-forms">
+          <h3 className="promotion-title">Promotion Code</h3>
+          <form className="code-form" noValidate autoComplete="off">
+            <input
+              type="code"
+              name="code"
+              placeholder="  Enter your promotional code"
+              value={this.state.code}
+              onChange={this.handleChange}
+            />
+            <button className="applyButton">APPLY</button>
+          </form>
+        </div>
       </div>
     );
   }

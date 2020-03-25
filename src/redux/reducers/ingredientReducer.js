@@ -1,45 +1,49 @@
-import { FETCH_INGREDIENT_SUCCESS, FETCH_INGREDIENT, FETCH_INGREDIENT_FAILURE, FETCH_ALL_SUCCESS } from '../actions/ingredientAction';
+import {
+  FETCH_INGREDIENT_SUCCESS,
+  FETCH_INGREDIENT,
+  FETCH_INGREDIENT_FAILURE,
+  FETCH_ALL_SUCCESS,
+} from '../actions/ingredientAction';
 
-const initialState = { 
-  MEATS:[],
-  SAUCES:[],
-  CHEESES:[],
-  VEGGIGS:[],
-  isLoading:false,
-  errorMessage:'',
+const initialState = {
+  MEATS: [],
+  SAUCES: [],
+  CHEESES: [],
+  VEGGIGS: [],
+  isLoading: false,
+  errorMessage: '',
 };
 
 const ingredientReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_INGREDIENT_SUCCESS:
-      if( action.category === 'MEATS') {
+      if (action.category === 'MEATS') {
         return {
           ...state,
           MEATS: action.data,
-          isLoading:true,
-        }
+          isLoading: true,
+        };
       }
-      if( action.category === 'SAUCES') {
+      if (action.category === 'SAUCES') {
         return {
           ...state,
           SAUCES: action.data,
-          isLoading:true,
-        }
+          isLoading: true,
+        };
       }
-      if( action.category === 'CHEESES') {
+      if (action.category === 'CHEESES') {
         return {
           ...state,
           CHEESES: action.data,
-          isLoading:true,
-        }
+          isLoading: true,
+        };
       }
-      if( action.category === 'VEGGIGS') {
+      if (action.category === 'VEGGIGS') {
         return {
           ...state,
           VEGGIGS: action.data,
-          isLoading:true,
-        }
-      
+          isLoading: true,
+        };
       }
     case FETCH_INGREDIENT:
       return {
@@ -50,8 +54,8 @@ const ingredientReducer = (state = initialState, action) => {
     case FETCH_ALL_SUCCESS:
       return {
         ...state,
-        isLoading:false,
-      }
+        isLoading: false,
+      };
 
     case FETCH_INGREDIENT_FAILURE:
       return {
@@ -59,7 +63,8 @@ const ingredientReducer = (state = initialState, action) => {
         errorMessage: action.errorMessage,
         isLoading: false,
       };
-    default: return state;
+    default:
+      return state;
   }
 };
 

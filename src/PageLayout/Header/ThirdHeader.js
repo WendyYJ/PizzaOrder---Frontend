@@ -1,7 +1,8 @@
-import React, { Component } from "react";
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import "../Style/LinkHeader.scss";
-import {connect} from  'react-redux';
+import React, { Component } from 'react';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import '../Style/LinkHeader.scss';
+import { connect } from 'react-redux';
+
 class ThirdHeader extends Component {
   render() {
     return (
@@ -11,10 +12,10 @@ class ThirdHeader extends Component {
           {this.props.headername}
         </h1>
         <div className="link-containerTwo">
-           Home
-          <ArrowForwardIosIcon style = {{ fontSize: 14 }} className="arrowicon" />
+          Home
+          <ArrowForwardIosIcon style={{ fontSize: 14 }} className="arrowicon" />
           {this.props.headername}
-          <ArrowForwardIosIcon style = {{ fontSize: 14 }} className="arrowicon" />
+          <ArrowForwardIosIcon style={{ fontSize: 14 }} className="arrowicon" />
           {this.props.pizzaName}
         </div>
       </div>
@@ -22,12 +23,8 @@ class ThirdHeader extends Component {
   }
 }
 
-const mapStateToProps= state => {
-  return{
-       pizzaName:state.pizza.pizzaName,
-
-  };
-};
-
+const mapStateToProps = (state) => ({
+  pizzaName: state.pizza.pizzaName,
+});
 
 export default connect(mapStateToProps)(ThirdHeader);
