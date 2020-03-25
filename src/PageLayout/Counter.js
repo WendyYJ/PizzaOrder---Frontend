@@ -11,8 +11,11 @@ function Counter (props) {
     
     return (
       <div className="counterButton">
-        <h3>${props.pizzaPrice * props.count}</h3>
+          {props.sizeChose?
+        <h3>${props.pizzaPriceSize* props.count}</h3>
+      : <h3>${props.pizzaPrice * props.count}</h3>}
         <p style={{ fontSize: "14px", margin: "2px" }}>QUANTITY</p>
+  
         <button className="decButton" onClick={props.countDown}>
           -
         </button>
@@ -30,7 +33,9 @@ function Counter (props) {
 const mapStateToProps= state => {
   return{
       pizzaPrice:state.pizza.pizzaPrice,
+      pizzaPriceSize:state.pizza.pizzaPriceSize,
       count: state.pizza.count,
+      sizeChose: state.pizza.sizeChose,
 
   };
 };

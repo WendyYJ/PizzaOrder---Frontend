@@ -1,14 +1,24 @@
 @import '../asset/theme.scss';
 
+.login-container {
+  margin-top: 10vh;
+
+}
+
+@media screen and (min-width: 768px) {
+  .login-form {
+    width: 50vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .login-form {
+    width: 100%;
+  }
+}
+
 // login
 .login-form {
-  margin-top: 5rem;
-  margin-left: 21rem;
-  padding: 10vw 13vw;
-  padding-left: 11vw;
-  padding-right: 18.5vw;
-  width: 12vw;
-  height: 25vh;
+  margin: 0 auto;
   line-height: 3em;
   background-color: rgb(44, 43, 43);
   opacity: 0.8;
@@ -16,16 +26,15 @@
   border-radius: 3px;
   display: flex;
   flex-direction: column;
+  text-align: center;
 
   .login-title{
     color:$saffron;
     font-family: $body;
     font-size: 20px;
     text-align: left;
-    width: 100%;
     position: relative;
-    top: -20vh;
-    margin-left: 0vw;
+    margin: 0 auto;
   }
 
 
@@ -33,41 +42,30 @@
     font-family: $body;
     color: white;
     font-size: 14px;
-    text-align: left;
     width: 100%;
     text-decoration: none;
-    position: relative;
-    top: -20vh;
+    margin: 0 auto;
   }
 
   Input{
-    width: 18vw;
-    height: 5vh;
     border: 1px solid $saffron;
     border-radius: 3px;
-    position: relative;
-    top: -20vh;
+    margin: 0 auto;
   }
 
   .login-button{
-    width: 9vw;
-    height: 5vh;
+    margin: 1vh auto;
+    padding: 1vh 3vw;
+    text-align: center;
     background-color: $saffron;
     border: 1px solid $saffron;
     border-radius: 3px;
-    position: relative;
-    top: -18vh;
     font-family: $body;
-    position: relative;
   }
 
   .register-link{
-    position: relative;
     font-family: $body;
     font-size: 22px;
-    top: -24vh;
-    left: 10vw;
-    width: 100%;
     text-decoration: none;
   }
 
@@ -77,8 +75,6 @@
     top: -16vh;
     font-family: $body;
     font-size: 22px;
-    width: 18vw;
-    height: 11vh;
     border: 1px solid $flame;
     border-radius: 3px;
     opacity: 0.5;
@@ -87,8 +83,7 @@
 }
 
 .socialLogin-container{
-  margin-top: -18vh;
-  margin-left: -15vw;
+  margin-top: 10vh;
   z-index: 3;
   display: flex;
   flex-direction: row;
@@ -97,19 +92,26 @@
 
 
 // my account
+
+@media screen and (min-width: 768px) {
+  .register-form {
+    width: 50vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .register-form {
+    width: 100%;
+  }
+}
+
 .myAccount-container{
+  margin-top: 10vh;
   display: flex;
   flex-direction: column;
-  margin-top: -2.5vh;
 
 .register-form {
-  margin-top: 5rem;
-  margin-left: 10rem;
-  padding: 10vw 10vw;
-  padding-left: 7vw;
-  padding-right: 14vw;
-  width: 12vw;
-  height: 27vh;
+  margin: 0 auto;
+  text-align: center;
   line-height: 3em;
   background-color: rgb(44, 43, 43);
   opacity: 0.8;
@@ -117,69 +119,40 @@
   border-radius: 3px;
   display: flex;
   flex-direction: column;
-
-  #facebook{
-    position: relative;
-    left: 20vw;
-    top: 5vh;
-  }
   
-  #google{
-    width: 5vw;
-  }
-  
-  #paypal{
-    width: 5vw;
-    margin-left: -20vw;
-  }
 
   .register-title{
     color:$saffron;
     font-family: $body;
     font-size: 20px;
-    text-align: left;
     width: 100%;
-    position: relative;
-    top: -20vh;
-    margin-left: 0vw;
   }
 
   Input{
-    width: 18vw;
-    height: 5vh;
+    padding: 0 3vw;
+    margin: 1vh 0;
     border: 1px solid $saffron;
     border-radius: 3px;
-    position: relative;
-    top: -17vh;
   }
 
   .register-button{
-    width: 9vw;
-    height: 5vh;
+    margin-top: 1vh;
+    padding: 1vh 3vw;
     background-color: $saffron;
     border: 1px solid $saffron;
     border-radius: 3px;
-    position: relative;
-    top: -12vh;
     font-family: $body;
-    position: relative;
-    top: -17vh;
   }
 
   .login-link{
-    position: relative;
     font-family: $body;
     font-size: 22px;
-    top: -23vh;
-    left: 10vw;
     text-decoration: none;
     width: 100%;
   }
 
   .alart-message{
     background-color: rgb(44, 43, 43);
-    position: relative;
-    top: -16vh;
     font-family: $body;
     font-size: 22px;
     width: 18vw;
@@ -192,22 +165,26 @@
 }
 
 .select-type{
-  position: relative;
-  left: 47.5vw;
-  top: -40vh;
   font-weight: $body;
   color: white;
   font-size: 30px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .socialRegister-container {
+    width: 50vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .socialRegister-container {
+    width: 100%;
+  }
 }
 
 .socialRegister-container{
-  margin-top: -27.5rem;
-  margin-left: 40rem;
-  padding: 6vw 10vw;
-  padding-left: 8vw;
-  padding-right: 14vw;
-  width: 12vw;
-  height: 27vh;
+  margin: 0 auto;
+  text-align: center;
   line-height: 3em;
   background-color: rgb(44, 43, 43);
   opacity: 0.8;
@@ -218,25 +195,19 @@
     font-family: $body;
     font-size: 20px;
     color: white;
-    position: relative;
-    top: -10vh;
-    margin-left: 0vw;
     width: 100%;
   }
 
   .socialRegister-link{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    position: relative;
-    top: -10vh;
-    margin-left: 2vw;
+    //not familar with flex
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-evenly;
+    margin-bottom: 5vh;
 
     .social-link{
       width: 18vw;
       height: 6vh;
-      margin-top: 3vh;
-      margin-left: -2vw;
       border-radius: 20px;
       font-family: $body;
     }

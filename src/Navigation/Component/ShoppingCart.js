@@ -36,10 +36,9 @@ class ShoppingCart extends Component {
             totalQuantity = totalQuantity + p.quantity;
             totalPrice = totalPrice + p.quantity * p.price;
             return (
-                <CartProduct product={p} key={p.id} removeProduct = {this.removeProduct}/>
+                <CartProduct product={p} quantity = {p.quantity} key={p.id} size={p.size} removeProduct = {this.removeProduct}/>
             );
         });
-
         if (!!this.state.isOpen) {
           classes.push('float-cart--open');
         }
@@ -48,19 +47,19 @@ class ShoppingCart extends Component {
                     {this.state.isOpen && (
                     <div className = "" onClick={() => this.closeFloatCart()}>
                     <span className="bag bag-close">
-                        <span className="bag__quantity">{totalQuantity}
+                        <span className="bag__quantity">
+                            { totalQuantity }
                         </span>
                     </span>
                 </div>
                 )}
-
                 {!this.state.isOpen && (
-                <span
-                    onClick={() => this.openFloatCart()}
-                    className="bag bag--float-cart-closed"
-                >
-                    <span className="bag__quantity">{totalQuantity}</span>
-                </span>
+                    <span
+                        onClick={() => this.openFloatCart()}
+                        className="bag bag--float-cart-closed"
+                    >
+                        <span className="bag__quantity">{totalQuantity}</span>
+                    </span>
                 )}
 
                 <div className="float-cart__content">
@@ -69,7 +68,7 @@ class ShoppingCart extends Component {
                     </div>
 
                     <div className="float-cart__shelf-container">
-                        {products}
+                        { products }
                         {!products.length && (
                         <p className="shelf-empty">
                             Add some products in the bag <br />
@@ -98,13 +97,14 @@ class ShoppingCart extends Component {
                 </div>
             </div> 
         </div>
-    );
+        );
     }   
 }
 
 const mapStateToProps = state => {
     return{
         selectedPizzas: state.pizza.selectedPizzas,
+        pizzaSize: state.pizza.pizzaSize,
     };
 };
   

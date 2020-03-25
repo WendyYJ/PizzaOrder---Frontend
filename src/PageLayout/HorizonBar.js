@@ -3,15 +3,16 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import './Style/Horizonbar.scss';
+import { NavLink } from "react-router-dom";
+import { PIZZAMENU_URL } from "../routes/URLMap";
 
 const HorizonBar = () => (
   <div className="horizonbar">
-    <ArrowForwardIcon style={{ fontSize: 14 }} className="arrowicon2" />
-    <ArrowBackIcon style={{ fontSize: 14 }} className="arrowicon2" />
-    <p>
+
+    <NavLink className="arrow-link" to={ PIZZAMENU_URL }>
       <ChevronLeftIcon style={{ fontSize: 14 }} className="arrowicon3" />
       <span>BACK TO MENU</span>
-    </p>
+    </NavLink>
     <div className="horizon" />
   </div>
 );

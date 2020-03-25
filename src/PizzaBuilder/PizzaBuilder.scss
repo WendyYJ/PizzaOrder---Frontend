@@ -1,0 +1,88 @@
+@import '../asset/mixin.scss';
+
+$std-margin: 5vh;
+$std-unit:1vh;
+$std-px-unit:0.2px;
+
+
+.caps{
+    font-variant: small-caps;
+    font-weight:bold;
+}
+
+.sub-heading{
+    border-bottom: $std-px-unit solid $white;
+}
+.end-of-order{
+    border-top: $std-px-unit solid $white;
+}
+
+
+.total{
+    @include chalk-heading;
+    color: $flame;
+    font-size: $sub-heading-size;
+    margin: 0;
+}
+
+.button-cart{
+    @include button;
+    text-align: center;
+}
+
+.button-cart:hover{
+    cursor: pointer;
+}
+
+.builder{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &__checkout{
+        background-color: $black;
+        margin-left: $std-margin;
+        padding:$std-unit;
+        width: 20vw;
+        font-size: $body-size;
+
+        &__title{
+            @include heading;
+            color: $saffron;
+        }
+
+        &__row{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+    }
+}
+
+
+@media screen and (max-width: $for-phone){
+    .builder{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__checkout{
+            width:95vw;
+            padding:0;
+            margin: 0;
+            font-size: large;
+            &__title{
+                @include heading-size-down;
+            }
+        }
+    }
+
+    .total{
+        @include chalk-heading-size-down;
+    }
+}
+    
+
+
+

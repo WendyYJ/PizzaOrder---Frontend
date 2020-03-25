@@ -1,0 +1,145 @@
+
+@import '../../asset/theme.scss';
+@import '../../asset/mixin.scss';
+
+$standard-crust-size:0.2vh;
+$standard-layout:1vh;
+
+.crust2{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: flex-end;
+    flex-wrap:wrap;
+    cursor: pointer;
+
+ 
+}
+
+.crust9{
+border: 2px solid $white;
+border-radius:50%;
+padding:9*$standard-crust-size;
+margin:$standard-layout;
+
+}
+
+
+.crust91{
+    border: 2px solid $flame;
+    border-radius:50%;
+    padding:9*$standard-crust-size;
+    margin:$standard-layout;
+    
+    }
+
+.crust12{
+    border: 2px solid $white;
+    border-radius:50%;
+    padding:12*$standard-crust-size;
+   
+    margin:$standard-layout;
+
+}
+.crust121{
+    border: 2px solid $flame;
+    border-radius:50%;
+    padding:12*$standard-crust-size;
+   
+    margin:$standard-layout;
+
+}
+
+.crust14{
+    border: 2px solid $white;
+    border-radius:50%;
+    padding:14*$standard-crust-size;
+    margin:$standard-layout;
+}
+
+.crust141{
+    border: 2px solid $flame;
+    border-radius:50%;
+    padding:14*$standard-crust-size;
+    margin:$standard-layout;
+}
+
+.crust16{
+    border: 2px solid $white;
+    border-radius:50%;
+    padding:16*$standard-crust-size;
+    margin:$standard-layout;
+}
+
+.crust161{
+    border: 2px solid $flame;
+    border-radius:50%;
+    padding:16*$standard-crust-size;
+    margin:$standard-layout;
+}
+
+.crust18{
+    border: 2px solid $white;
+    border-radius:50%;
+     padding:18*$standard-crust-size;
+    margin:$standard-layout
+}
+.crust181{
+    border: 2px solid $flame;
+    border-radius:50%;
+     padding:18*$standard-crust-size;
+    margin:$standard-layout
+}
+//text
+
+.crust9-text{
+    text-align: center;
+    color: white
+}
+.crust91-text{
+    text-align: center;
+    color: $flame;
+}
+
+
+
+.crust12-text{
+    text-align: center;
+    color: white
+}
+.crust121-text{
+    text-align: center;
+    color: $flame;
+}
+
+
+
+.crust14-text{
+    text-align: center;
+    color: white
+}
+.crust141-text{
+    text-align: center;
+    color: $flame;
+}
+
+
+
+.crust16-text{
+    text-align: center;
+    color: white
+}
+.crust161-text{
+    text-align: center;
+    color: $flame;
+}
+
+
+.crust18-text {
+    text-align: center;
+    color: white
+}
+.crust181-text{
+    text-align: center;
+    color: $flame;
+}

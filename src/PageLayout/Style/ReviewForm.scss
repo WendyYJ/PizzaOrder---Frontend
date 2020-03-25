@@ -93,15 +93,41 @@
   }
   
   .submit-button{
-    position: relative;
-    top: 0vh;
-    left: 23%;
+    margin: auto;
+    margin-left: 23%;
+    margin-top: 5%;
+  
+
     input{
-      padding: 6px 22px;
+      padding: 0.5vw 3vw 1.5vw 3vw;
       background-color: $saffron;
       border: 1px solid $saffron;
+      font-size: 1rem;
+      font-family: $body;
+      color: black;
+      width: 100%;
     }
   }
 }
 }
 
+@media only screen and (max-width: 700px){
+
+  .pizza-review{
+    margin-left: 0%;
+    display: block;
+
+  }
+  .reviewForm-container{
+    border-bottom: 2px solid $flame;
+    padding-bottom: 4%;
+  }
+  .menumain-review{
+    border-bottom: 2px solid $flame;
+    padding-bottom: 2%;
+  }
+ 
+
+
+
+}

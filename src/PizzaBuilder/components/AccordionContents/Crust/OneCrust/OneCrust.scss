@@ -1,0 +1,127 @@
+@import '../../../../../asset/mixin.scss';
+
+$std-unit: 0.7vh;
+$std-weight: 2px;
+
+
+.flame{
+    color: $flame;
+}
+
+.crusts-size-seleted{
+    border-radius: 50%;
+    border: $std-weight solid $flame;
+}
+
+.size-model:hover{
+    cursor: pointer;
+}
+
+.size-model{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.crusts-size-border{
+    border-radius: 50%;
+    border: $std-weight solid $white;
+}
+
+.crusts-size{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: $std-unit * 2;
+    padding-left: $std-unit;
+
+    &-number, &-title{
+        font-family: $body;
+        font-size: large;
+    }
+
+}
+
+#crust-size-9{
+    @extend .size-model;
+    width: 9*$std-unit;
+    height: 9 * $std-unit;
+
+}
+
+#crust-size-12{
+    @extend .size-model;
+    width: 12*$std-unit;
+    height: 12 * $std-unit;
+
+}
+
+#crust-size-14{
+    @extend .size-model;
+    width: 14*$std-unit;
+    height: 14 * $std-unit;
+
+}
+
+#crust-size-16{
+    @extend .size-model;
+    width: 16*$std-unit;
+    height: 16 * $std-unit;
+
+}
+
+#crust-size-18{
+    @extend .size-model;
+    width: 18*$std-unit;
+    height: 18 * $std-unit;
+
+}
+
+@media screen and (max-width: $for-phone){
+
+.crusts-size{
+    &-number, &-title{
+        font-family: $body;
+        font-size: medium;
+    }
+}
+    
+#crust-size-9{
+    @extend .size-model;
+    width: 4.5 * $std-unit;
+    height: 4.5 * $std-unit;
+
+}
+
+#crust-size-12{
+    @extend .size-model;
+    width: 6 * $std-unit;
+    height: 6 * $std-unit;
+
+}
+
+#crust-size-14{
+    @extend .size-model;
+    width: 7 * $std-unit;
+    height: 7 * $std-unit;
+
+}
+
+#crust-size-16{
+    @extend .size-model;
+    width: 8 * $std-unit;
+    height: 8 * $std-unit;
+
+}
+
+#crust-size-18{
+    @extend .size-model;
+    width: 9 * $std-unit;
+    height: 9 * $std-unit;
+
+}
+}
+
+
+

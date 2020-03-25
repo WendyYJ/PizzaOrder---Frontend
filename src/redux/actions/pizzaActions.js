@@ -1,4 +1,6 @@
-import {fetchPizzaById} from '../../api/pizza'
+import { fetchPizzaById } from '../../api/pizza';
+
+
 export const FETCH_PIZZA ='FETCH_PIZZA';
 export const FETCH_PIZZA_SUCCESS ='FETCH_PIZZA_SUCCESS';
 export const FETCH_PIZZA_FAILURE ='FETCH_PIZZA_FAILURE';
@@ -8,24 +10,29 @@ export const ADD_CART='ADD_CART';
 export const UPDATE_CART = 'UPDATE_CART';
 export const DELETE_CART = 'DELETE_CART';
 
-export const countUp= () => ({
+
    
+export const UPDATE_COUNT = 'UPDATE_COUNT';
+export const HANDLE_CLICK1 = 'HANDLE_CLICK1';
+export const HANDLE_CLICK2 = 'HANDLE_CLICK2';
+export const HANDLE_CLICK3 = 'HANDLE_CLICK3';
+export const HANDLE_CLICK4 = 'HANDLE_CLICK4';
+export const HANDLE_CLICK5 = 'HANDLE_CLICK5';
+export const HANDLE_CLICK = 'HANDLE_CLICK';
+export const ADD_CART_BUILDER = 'ADD_CART_BUILDER';
+
+
+export const countUp = () => ({
     type:COUNT_UP,
 
 });
 
-export const countDown= () => ({
-   
-    type:COUNT_DOWN,
-
-
+export const countDown = () => ({
+   type:COUNT_DOWN,
 });
 
 export const fetchPizza = () => ({
-   
-        type:FETCH_PIZZA,
-
-
+   type:FETCH_PIZZA,
 });
 
 export const fetchPizzaSuccess= data => ({
@@ -37,10 +44,10 @@ export const fetchPizzaSuccess= data => ({
 });
 
 export const fetchPizzaFaliure = errorMessage => ({
-        type:FETCH_PIZZA_FAILURE,
-        errorMessage,
+    type:FETCH_PIZZA_FAILURE,
+    errorMessage,
     
-    });
+});
 
 export const addCart = () => ({
    
@@ -81,9 +88,46 @@ export const loadPizza= id => dispatch => {
         .catch(error => {
             dispatch(fetchPizzaFaliure(error.message));
     
-        });
+    });
     
 };
+
+export const updateCount= () => ({
+   
+    type:UPDATE_COUNT,
+
+
+});
+
+export const handleClick1= () => ({
+    type: HANDLE_CLICK1,
+})
+
+export const handleClick2= () => ({
+    type: HANDLE_CLICK2,
+})
+
+export const handleClick3= () => ({
+    type: HANDLE_CLICK3,
+})
+
+export const handleClick4= () => ({
+    type: HANDLE_CLICK4,
+})
+
+export const handleClick5= () => ({
+    type: HANDLE_CLICK5,
+})
+
+export const handleClick= () => ({
+    type: HANDLE_CLICK,
+})
+
+export const addCartBuilder= () => ({
+    type: ADD_CART_BUILDER,
+})
+
+
 
    
 
