@@ -17,7 +17,7 @@
 
 @mixin heading-size-down{
     font-family:$heading;
-    font-size: large;
+    font-size: $sub-heading-size-down;
 }
 
 @mixin button{
@@ -58,7 +58,6 @@
             }
             &__menu{
                 flex-direction: column;
-                
                 &-heading{
                     @include heading-size-down();
                     font-size: $heading-size-down;
@@ -90,6 +89,7 @@
             
             &__pizza-builder{
                 padding:0;
+
                 &__heading{
                     @include heading-size-down();
                     font-size: $heading-size-down;
@@ -104,6 +104,7 @@
                     }
                 }
                 &-button{
+                    margin-bottom: 0;
                     font-size: $body-size-down;
                 }
             }
@@ -169,6 +170,7 @@
             &__app{
                 padding-left:5%;
                 padding-right:5%;
+                margin-bottom: 10vh;
                 display: flex;
                 align-items: center;
 
@@ -223,40 +225,34 @@
                 &__container{
                 display: flex;
                 flex-direction: column;
+                align-items: center;
                 }
         
                 &-content{
-                    text-align: left;
-                    margin:1 * $std-width;
+                    
                     display: flex;
                     flex-direction: column;
+                    
+                    align-items: center;
+                    text-align: center;
+
                     &-picture{
-                        width:20 * $std-width;
-                        padding: 1 * $std-width;
-                        border: 2px solid $flame ;
-                        
+                        width:30vw;
                     }
+                    
                     &-time{
-                        color:$flame;
-                        font-size: $body-size;
-                        
+                        font-size: $body-size-down;
                     }
                     &-heading{
-                        margin: 0;
-                        @include heading;
-                        color: $saffron;
+                        @include heading-size-down();
                     }
                     &-span{
-                        font-size: $body-size;
-                        color: $white;
-                        flex:1 0 auto;
-                        
+                        font-size: $body-size-down;
                     }
                     &-button{
+                        width: auto;
                         @include button-filled;
-                        font-size: $body-size;
-                        width:10 * $std-width;
-                        text-align: center;
+                        font-size: $body-size-down;
                     }
         
                 }

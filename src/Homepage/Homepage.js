@@ -223,16 +223,16 @@ const Homepage = () => (
             src={profile}
             alt="profile"
           />
-          <p className="homepage__news-content-time">Feburary 8, 2019</p>
-          <h3 className="homepage__news-content-heading">
-            Brussels Sprouts, Pepper and Bacon Hot Pizza is HERE!
-            {' '}
-          </h3>
-          <p className="homepage__news-content-span">
-            elementum integer enim. Sed eget velit aliquet. Scelerisque varius
-            morbi enim nunc faucibus a. Neque volutpat ac tincidunt vitae.
-          </p>
-          <p className="homepage__news-content-button">read more</p>
+            <p className="homepage__news-content-time">Feburary 8, 2019</p>
+            <h3 className="homepage__news-content-heading">
+              Brussels Sprouts, Pepper and Bacon Hot Pizza is HERE!
+              {' '}
+            </h3>
+            <p className="homepage__news-content-span">
+              elementum integer enim. Sed eget velit aliquet. Scelerisque varius
+              morbi enim nunc faucibus a. Neque volutpat ac tincidunt vitae.
+            </p>
+            <p className="homepage__news-content-button">read more</p>
         </div>
 
         <div className="homepage__news-content">
