@@ -13,11 +13,14 @@ const Contact = () => (
     <div className="map-container">
       <ContactMap />
     </div>
+  <div className="outer-container">
     <div className="contactUs-container">
       <ContactForm />
+    </div>
+    <div className="contactDetail-container">
       <ContactDetails />
     </div>
-
+  </div>
     <div className="footer-container">
       <Footer />
     </div>
