@@ -31,8 +31,12 @@ $std-height:1vh;
     }
 
     &-button{
+        padding-top: $std-width;
+        padding-bottom: $std-width;
+        text-decoration: none;
         font-size: $button-size;
         @include button();
+        font-family: $body;
     }
     
     }

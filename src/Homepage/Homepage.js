@@ -7,7 +7,7 @@ import Ingredient from '../PageLayout/Footer/Ingredient';
 import Carousel from './components/Carousel';
 import Footer from '../PageLayout/Footer/Footer';
 import { Link } from 'react-router-dom';
-import { PIZZABUILDER_URL } from '../routes/URLMap';
+import { PIZZABUILDER_URL, PIZZAMENU_URL } from '../routes/URLMap';
 
 const Homepage = () => (
   <div className="homepage">
@@ -18,7 +18,7 @@ const Homepage = () => (
         We create custom, personal pizzas with quality ingredients in only five
         minutes.
       </span>
-      <p className="homepage__welcome-button">order online</p>
+      <Link to={PIZZAMENU_URL} className="homepage__welcome-button">order online</Link>
     </main>
 
     <Information />
