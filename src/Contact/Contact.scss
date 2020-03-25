@@ -2,10 +2,11 @@
 @import '../asset/mixin.scss';
 
 
-.contact-container{
+.outer-container{
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  
+  
 
   .contactUs-container{
     
@@ -15,8 +16,6 @@
     
   }
 }
-
-
 
 
 .map-container{
@@ -32,12 +31,16 @@
   margin-left: -1%;
 }
 
+.outer{
+  display: flex;
+  flex-direction: row;
+}
+
 .contact-form{
   text-align: left;
   margin-top: 5%;
   margin-left: 14%;
-  display: flex;
-  flex-direction: column;
+  
   @include heading();
 
   h1{
@@ -81,7 +84,8 @@
 .messageForm-containerTwo{
   display: flex;
   flex-direction: column;
-  margin-left: -38.2%;
+  justify-content: start;
+  margin-left: -46.5%;
   margin-top: 7%;
   
 
@@ -122,17 +126,16 @@
  }
 }
 
+
 .contactDetails-container{
-    display: flex;
-    flex-direction: column;
     margin-left: 60%;
     margin-top: -35%;
     width: 25%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.205);
     @include heading();
+   
     
-
   .GetInTouch{
     text-align: left;
     margin-left: 2vw;
@@ -204,9 +207,7 @@
   }
 }
   .contact-container{
-    display: flex;
-    flex-direction: column;
-
+    
   .footer-container{
     margin-top: 10%;
   }
@@ -214,10 +215,9 @@
 
 
 @media only screen and (max-width: 700px) {
-  .contact-container{
+  .outer-container{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     width: 100%;
     height: 100%;
     margin: auto;
@@ -233,6 +233,9 @@
     width: 100%;
     height: 100%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 
 }

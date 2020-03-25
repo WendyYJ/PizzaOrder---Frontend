@@ -37,6 +37,7 @@ class ContactForm extends React.Component {
           legentis <br></br>
           in its qui facit eorum daritatem.
         </p>
+       <div className="outer">
         <div className="messageForm-container">
           <div className="name-input">
             <p className="name">YOUR NAME*</p>
@@ -75,6 +76,7 @@ class ContactForm extends React.Component {
         <form noValidate autoComplete="off">
           <button type="submit">SEND MESSAGE</button>
         </form>
+      </div>
       </div>
       </div>
      </div>
