@@ -10,19 +10,13 @@ class AccordionContent extends React.Component{
 
     state=
     {
-        cards: []
+        cards: [],
+        totalPrice:0,
     }
     
-    handleClick = () =>{
-        
-
-    }
+  
     componentDidMount(){
-        // axios.get('http://pizzadeploy-env.dn37p3zqw3.ap-southeast-2.elasticbeanstalk.com/ingredient/SAUCES')
-        //     .then(response => {
-        //         const contents = response.data.data;
-        //         this.setState({contents});
-        //    })
+      
 
         switch(this.props.content){
             case 'TOPPINGS':
@@ -53,7 +47,8 @@ class AccordionContent extends React.Component{
                 
                 this.state.cards.map( card => (
 
-                <ContentCard handleClick={this.handleClick}
+                <ContentCard 
+           
                 key={card.id}
                 name={card.IngredientName}
                 image={card.Image}
@@ -78,6 +73,7 @@ const mapStateToProps = (state) => ({
     VEGGIGS: state.ingredient.VEGGIGS,
     isLoading: state.ingredient.isLoading,
     errorMessage:state.ingredient.errorMessage,
+    totalPrice: state.pizza.totalPrice,
   });
 
   export default connect(mapStateToProps)(AccordionContent);

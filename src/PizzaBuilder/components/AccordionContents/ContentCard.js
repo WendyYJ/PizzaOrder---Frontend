@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './ContentCard.scss';
-
+import { handleClick } from '../../../redux/actions/pizzaActions';
+import { connect } from 'react-redux';
 
 class ContentCard extends React.Component{
     constructor(props){
@@ -9,7 +10,7 @@ class ContentCard extends React.Component{
 
     state=
     {
-        totalPrice:0,
+  
         setSelected:'', 
    
     }
@@ -17,14 +18,17 @@ class ContentCard extends React.Component{
 
     
   toggleSelection= () => {
-        this.setState({setSelected:this.state.setSelected===''?'card-selected':'',
-                       totalPrice:this.state.totalPrice+=this.props.price})
-        console.log(this.state.totalPrice)
+        this.setState({setSelected:this.state.setSelected===''?'card-selected':'' })
+  
+    }
+    wapperFunction =()=>{
+        this.toggleSelection();
+        this.props.handleClick();
     }
         render(){
 
     return(
-            <div className={`content`} id={`${this.state.setSelected}`} onClick={this.toggleSelection}  >
+            <div className={`content`} id={`${this.state.setSelected}`} onClick={this.wapperFunction}  >
                 <img className='content__img' src ={this.props.image} alt={this.props.name}/>
                 <h3 className='content__name'>{this.props.name}</h3>
                 <p className='content__description'>  
@@ -40,4 +44,14 @@ class ContentCard extends React.Component{
     
                 }  
 }
-export default ContentCard;
+
+const mapDispatchToProps = (dispatch) => ({
+    handleClick: () => dispatch(handleClick()),
+  });
+  
+  const mapStateToProps = (state) => ({
+    totalPrice: state.pizza.totalPrice,
+  });
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(ContentCard);
+  

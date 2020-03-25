@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { loadIngredient as loadIngredientAction } from '../redux/actions/ingredientAction';
+import { addCartBuilder } from '../redux/actions/pizzaActions'
 import Accordion from "./components/Accordion/Accordion";
 import AccordionContent from "./components/AccordionContents/AccordionContent";
 import Crust from "./components/AccordionContents/Crust/Crust";
@@ -80,9 +81,9 @@ class PizzaBuilder extends React.Component{
                         Order Total:
                       </p>
                       <p className='total'>
-                        $20.43</p>
+                        ${this.props.totalPrice}</p>
                     </div>
-                    <p className='button-cart'>add to cart</p>
+                    <p onClick={this.props.addCartBuilder} className='button-cart'>add to cart</p>
                   </div>
                   </main>
                 </div>
@@ -104,10 +105,12 @@ const mapStateToProps = (state) => ({
   VEGGIGS: state.ingredient.VEGGIGS,
   isLoading: state.ingredient.isLoading,
   errorMessage:state.ingredient.errorMessage,
+  totalPrice: state.pizza.totalPrice,
 });
 
 const mapDispatchToProps = dispatch => ({
   loadIngredient: type => dispatch(loadIngredientAction(type)),
+  addCartBuilder: () => dispatch(addCartBuilder()),
 });
 
 

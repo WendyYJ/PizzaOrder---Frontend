@@ -14,6 +14,9 @@ export const HANDLE_CLICK2 = 'HANDLE_CLICK2';
 export const HANDLE_CLICK3 = 'HANDLE_CLICK3';
 export const HANDLE_CLICK4 = 'HANDLE_CLICK4';
 export const HANDLE_CLICK5 = 'HANDLE_CLICK5';
+export const HANDLE_CLICK = 'HANDLE_CLICK';
+export const ADD_CART_BUILDER = 'ADD_CART_BUILDER';
+
 
 export const countUp = () => ({
     type:COUNT_UP,
@@ -102,6 +105,14 @@ export const handleClick4= () => ({
 
 export const handleClick5= () => ({
     type: HANDLE_CLICK5,
+})
+
+export const handleClick= () => ({
+    type: HANDLE_CLICK,
+})
+
+export const addCartBuilder= () => ({
+    type: ADD_CART_BUILDER,
 })
 
 
