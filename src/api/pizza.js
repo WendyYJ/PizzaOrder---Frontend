@@ -7,7 +7,6 @@ const API_INGREDIENT_URL = '/ingredient';
 export const fetchPizza = (page = 1, pageSize = 10) => {
   const stringified = queryString.stringify({
     pageSize,
-
     page,
   });
 

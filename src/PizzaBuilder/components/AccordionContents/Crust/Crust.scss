@@ -1,0 +1,14 @@
+@import "../../../../asset/mixin.scss";
+
+$standard-crust-size:0.3vh;
+$standard-layout:3vh;
+
+.crusts-container{
+    padding-left: $standard-layout;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+

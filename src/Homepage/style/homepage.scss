@@ -102,9 +102,11 @@ $std-height:1vh;
             text-align: left;
             border-top: 1px solid grey;
         }
+
         &__process{
+            font-weight: 900 ;
             color:$saffron;
-            font-size: $sub-heading-size;
+            font-size: $sub-heading-size*1.5;
             font-family: $heading;
             border-bottom: 1px solid grey;
             padding: 1 * $std-width;
@@ -114,14 +116,6 @@ $std-height:1vh;
                 color: $flame;
             }
 
-            &-plus{
-                font-size: $body-size;
-                color:$white;
-                font-family: $chalk;
-                border-radius:50% ;
-                border: 1px solid $white ;
-                
-            }
             
         }
         &-button{
