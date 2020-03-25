@@ -111,3 +111,23 @@
 }
 }
 
+@media only screen and (max-width: 700px){
+
+  .pizza-review{
+    margin-left: 0%;
+    display: block;
+
+  }
+  .reviewForm-container{
+    border-bottom: 2px solid $flame;
+    padding-bottom: 4%;
+  }
+  .menumain-review{
+    border-bottom: 2px solid $flame;
+    padding-bottom: 2%;
+  }
+ 
+
+
+
+}

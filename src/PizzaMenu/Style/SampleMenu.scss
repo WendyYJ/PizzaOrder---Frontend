@@ -116,3 +116,19 @@
 #available-size{
   width: 25vw;
 }
+
+@media only screen and (max-width: 700px){
+
+  .sample_menu{
+    display: block;
+    width:100%
+  }
+  .sample_text{margin-left: 0%;
+  margin-right: 0%;}
+.pizza-sample{
+  text-align: center;
+}
+
+
+
+}
