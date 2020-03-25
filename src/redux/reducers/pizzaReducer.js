@@ -201,7 +201,7 @@ const pizzaReducer = (state=initialState,action) => {
             return {
                 ...state,
                 selectedPizzas: [...state.selectedPizzas, {key: 'DIY Pizza',quantity: 1
-                ,price:state.totalPrice,image: state.mokeImage, currencyFormat:'$',size:'small'}],
+                ,price:state.totalPrice,image: state.mokeImage, currencyFormat:'$',size:state.pizzaSize}],
             }     
         default:
             return state;

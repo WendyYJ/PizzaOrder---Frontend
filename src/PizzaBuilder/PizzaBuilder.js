@@ -7,6 +7,7 @@ import LinkHeader from '../PageLayout/Header/LinkHeader';
 import Accordion from "./components/Accordion/Accordion";
 import AccordionContent from "./components/AccordionContents/AccordionContent";
 import Crust from "./components/AccordionContents/Crust/Crust";
+import Size from '../PizzaMenu/Components/Size'
 import Footer from '../PageLayout/Footer/Footer';
 import './PizzaBuilder.scss';
 
@@ -21,7 +22,7 @@ class PizzaBuilder extends React.Component{
   }
 
     contentList = [
-        {id: 1, title: 'Choose Your Crust\'s Size', content: <Crust/>},
+        {id: 1, title: 'Choose Your Crust\'s Size', content: <Size/>},
         {id: 2, title: 'Select Your Sauce', content: <AccordionContent content='SAUCES'/> } ,
         {id: 3, title: 'Add Cheese', content: <AccordionContent content='CHEESES' />},
         {id: 4, title: 'Choose Your Toppings', content: <AccordionContent content='TOPPINGS'/> },    
@@ -71,7 +72,7 @@ class PizzaBuilder extends React.Component{
                     </div>
                     <div className='builder__checkout__row end-of-order sub-heading'>
                       <p className='caps'>Pizza Size:</p> 
-                      <p>Medium 12</p>
+                      <p>{this.props.pizzaSize}</p>
                     </div>
                     <div className='builder__checkout__row'>
                       <p className='total'>
@@ -103,6 +104,7 @@ const mapStateToProps = (state) => ({
   isLoading: state.ingredient.isLoading,
   errorMessage:state.ingredient.errorMessage,
   totalPrice: state.pizza.totalPrice,
+  pizzaSize: state.pizza.pizzaSize,
 });
 
 const mapDispatchToProps = dispatch => ({
