@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import CartProduct from './CartProduct';
 import util from '../../utils/util';
 import { Link } from 'react-router-dom';
-import { SHOPPINGCART_URL } from '../../routes/URLMap';
+import { SHOPPINGCART_URL,CHECKOUT_URL } from '../../routes/URLMap';
 import {deleteCart as deleteCartAction} from '../../redux/actions/pizzaActions';
 import '../Style/ShoppingCart.scss';
 
@@ -92,7 +92,7 @@ class ShoppingCart extends Component {
                     <Link to = {SHOPPINGCART_URL} className="float-cart__viewbtn">
                         View ShoppingCart  
                     </Link>
-                    <Link to = {SHOPPINGCART_URL} className="float-cart__buybtn">
+                    <Link to = {CHECKOUT_URL} className="float-cart__buybtn">
                         Checkout  
                     </Link>
                 </div>

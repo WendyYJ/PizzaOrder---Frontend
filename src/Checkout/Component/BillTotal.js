@@ -11,7 +11,6 @@ class CartTotal extends React.Component {
 
    render() {
     let totalPrice = 0;
-
     const products = this.props.selectedPizzas.map(p => {
         totalPrice = totalPrice + p.quantity * p.price;
         return (

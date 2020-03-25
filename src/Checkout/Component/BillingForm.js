@@ -15,20 +15,25 @@ class BillingForm extends React.Component {
 
   componentDidMount() {
     this.props.loadCity();
-    const cities = this.props.cities[this.state.selectedState];
-    this.setState({selectedCities:cities });
+    this.loadCities();
   }
   
+  loadCities = () => {
+    const cities = this.props.cities["Queensland"];
+    this.setState({selectedCities:cities});
+  }
+
   handleStateClick = (e) => {
     const newState = e.target.value;
-    this.setState({selectedState:newState});
-    let cities = [];
-    if(!this.props.isLoading) {
+    this.setState({selectedState:newState},() => {
+      let cities = [];
+      if(!this.props.isLoading) {
         cities = this.props.cities[this.state.selectedState];
         if (!!cities) {
           this.setState({selectedCities: cities});
         }
-    }
+    }});
+    
   }
 
   handleChange = event => {
@@ -38,7 +43,6 @@ class BillingForm extends React.Component {
   }
 
   render() {
-  
     return (
       <form className="form_details">
         <lable className="form_title">Full Name*</lable>
