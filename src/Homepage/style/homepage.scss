@@ -207,6 +207,7 @@ $std-height:1vh;
         &-container{
             display: flex;
             flex-direction: row;
+            align-items: flex-start;
             
             img{
                 border-radius: 15%;

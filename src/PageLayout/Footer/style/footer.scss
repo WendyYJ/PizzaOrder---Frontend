@@ -3,6 +3,7 @@
 
 $std-height: 1vh;
 $std-width:1vw;
+
 .footer{
 
     &__insta{
@@ -101,6 +102,66 @@ $std-width:1vw;
         font-size: $body-size;
     }
     
+}
+
+@media screen and (max-width:$for-phone){
+    .footer{
+
+        &__insta{
+            padding:0;
+            font-size: $sub-heading-size-down;
+        }
+    
+        &__sign-up{
+            padding-left:0;
+            padding-right:0;
+           
+            &__header{
+                @include heading-size-down;
+            }
+    
+            &__button{ 
+                font-size: $smaller-body-size-down;
+            }
+        }
+    
+        &__contact-details{
+            @include chalk-heading-size-down;
+            
+            &-span{
+                @include chalk-heading-size-down;
+                font-size: $sub-heading-size-down;
+            }
+        }
+    
+        &__social-media{
+           
+            &__break{
+                @include chalk-heading-size-down;
+                font-size: $sub-heading-size-down;
+            }
+    
+            &__start{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-family: $body;
+                font-family: $heading-size-down;
+                font-size: $sub-heading-size-down;
+                li{
+                padding-top: 1vh;
+                padding-bottom: 1vh;
+                font-family: $heading;
+                }
+            }
+        }
+        &__disclaimer{
+            font-size: $body-size-down;
+        }
+        
+    }
+
 }
 
 
