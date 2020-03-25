@@ -5,6 +5,28 @@
 .MenuMain-container{
   width: 100%;
 }
+.decButton{
+  font-size: 1.3em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.900);
+  opacity: 1;
+  height: 3vw;
+  width:3vw;
+
+  display: inline-block;
+  border: 1px solid white;
+}
+
+.incButton{
+  font-size: 1.3em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.900);
+  opacity: 1;
+  height: 3vw;
+  width:3vw;
+  display: inline-block;
+  border: 1px solid white;
+}
 
 .Catalog-container{
   background-color: rgb(37, 35, 35);
@@ -55,30 +77,11 @@
         margin-left: 1%;
         color: white;
         opacity: 1;
-        height: 3vw;
+  
 
        
       
-        .decButton{
-          font-size: 1.3em;
-          color: white;
-          background-color: rgba(0, 0, 0, 0.900);
-          opacity: 1;
-     
-          display: inline-block;
-          border: 1px solid white;
-        }
-      
-        .incButton{
-          font-size: 1.3em;
-          color: white;
-          background-color: rgba(0, 0, 0, 0.900);
-          opacity: 1;
-          
-          display: inline-block;
-          border: 1px solid white;
-        }
-      
+    
         .count{
           font-size: 1.3em;
           text-align: center;
@@ -94,9 +97,8 @@
 
 .addButton{
   margin: auto;
-  margin-left: 30%;
-  margin-top: 6.5%;
-  padding: 1vw vw;
+
+  padding: 1vw 2vw;
   background-color: $saffron;
   color: black;
   font-family: $body;
@@ -115,6 +117,8 @@
   width: 25vw;
 }
 
+
+
 @media only screen and (max-width: 700px){
 
   .sample_menu{
@@ -129,11 +133,13 @@
 
 .countercontainer{
   display: flex;
+  
 }
 .addButton{
   margin: auto;
-  margin-left: 50%;
-  margin-top: 13%;
+
+  margin-top: 5%;
+
   padding: 2vw 4vw;
   background-color: $saffron;
   color: black;
@@ -141,6 +147,29 @@
   border: none;
   font-size: 0.8em;
   cursor: pointer;
+}
+.decButton{
+  font-size: 1.3em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.900);
+  opacity: 1;
+  height: 8vw;
+          width:8vw;
+          margin-right: 2%;
+  display: inline-block;
+  border: 1px solid white;
+}
+
+.incButton{
+  font-size: 1em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.900);
+  opacity: 1;
+  height: 8vw;
+  width:8vw;
+  display: inline-block;
+  margin-left: 2%;
+  border: 1px solid white;
 }
 
 }
