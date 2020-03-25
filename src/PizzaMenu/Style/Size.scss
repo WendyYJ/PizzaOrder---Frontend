@@ -143,3 +143,10 @@ margin:$standard-layout;
     text-align: center;
     color: $flame;
 }
+
+@media screen and (max-width: $for-phone){
+    .crust{
+        flex-wrap: wrap;
+    }
+
+}

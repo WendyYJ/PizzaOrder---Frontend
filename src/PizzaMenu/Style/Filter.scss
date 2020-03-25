@@ -2,7 +2,7 @@
 
 .maincontainer{
     width: 100%;
-    background: rgb(44, 39, 39);
+    background: $smokegrey;
 }
 
 .icon{
@@ -19,7 +19,6 @@
 
 .headercontainer h4{
     color: $flame;
-
     font-size:1em;
     font-family: Georgia;
     margin-top: 0.06em;

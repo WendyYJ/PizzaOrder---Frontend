@@ -6,7 +6,6 @@ import { addCartBuilder } from '../redux/actions/pizzaActions'
 import LinkHeader from '../PageLayout/Header/LinkHeader';
 import Accordion from "./components/Accordion/Accordion";
 import AccordionContent from "./components/AccordionContents/AccordionContent";
-import Crust from "./components/AccordionContents/Crust/Crust";
 import Size from '../PizzaMenu/Components/Size'
 import Footer from '../PageLayout/Footer/Footer';
 import './PizzaBuilder.scss';

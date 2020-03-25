@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import './Carousel.scss';
+import '../style/Carousel.scss';
 import periperi from '../../asset/img/PeriPeri.png';
 import proni from '../../asset/img/proni.png';
 import Carni from '../../asset/img/olive.jpg';

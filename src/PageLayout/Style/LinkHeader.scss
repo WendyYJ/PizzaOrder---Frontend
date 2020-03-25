@@ -12,7 +12,7 @@
 .secondary-header{
     z-index:0;
     text-align: center;
-    background-color: rgb(37, 35, 35);
+    background-color: $smokegrey;
     opacity: 0.9;
     padding-top: 5%;
     padding-bottom: 5%;
@@ -62,7 +62,7 @@
 
 .third-header{
     text-align: center;
-    background-color: rgb(37, 35, 35);
+    background-color: $smokegrey;
     opacity: 0.9;
     padding-top: 5.5em;
     padding-bottom: 3.5em;
@@ -80,7 +80,7 @@
     
 .forth-header{
     text-align: center;
-    background-color: rgb(37, 35, 35);
+    background-color: $smokegrey;
     opacity: 0.9;
     padding-top: 5.5em;
     padding-bottom: 3.5em;
